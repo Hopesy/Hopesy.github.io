@@ -107,4 +107,22 @@ require([], function (){
 		$(".article a[href]").attr("target", "_blank")
 	}
 	
+	if($(".instagram").length) {
+        require(['/js/photo.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
+            obj.init();
+        });
+    }
+	
+	var colorList = ["#6da336", "#ff945c", "#66CC66", "#99CC99", "#CC6666", "#76becc", "#c99979", "#918597", "#4d4d4d"];
+  	var id = Math.ceil(Math.random()*(colorList.length-1));
+  	//移动页面
+  	$("#container #mobile-nav .overlay").css({"background-color": colorList[id],"opacity": .7});
+  	//PC页面
+  	$("#container .left-col .overlay").css({"background-color": colorList[id],"opacity": .3});
+ 
+ 	//随机背景图片
+ 	var backgroundList = ["url(/background/bg-1.jpg)", "url(/background/bg-2.jpg)","url(/background/bg-3.jpg)","url(/background/bg-4.jpg)","url(/background/bg-5.jpg)","url(/background/bg-6.jpg)","url(/background/bg-7.jpg)","url(/background/bg-8.jpg)","url(/background/bg-9.jpg)","url(/background/bg-10.jpg)","url(/background/bg-11.jpg)","url(/background/bg-12.jpg)","url(/background/bg-13.jpg)","url(/background/bg-14.jpg)","url(/background/bg-15.jpg)","url(/background/bg-16.jpg)","url(/background/bg-17.jpg)","url(/background/bg-18.jpg)"];
+ 	var background = Math.floor(Math.random() * backgroundList.length);
+ 	$("body").css({"background": backgroundList[background], "background-attachment": "fixed", "background-size": "cover"});
 });
+
