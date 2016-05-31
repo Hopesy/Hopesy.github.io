@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Hopesy</title>
+  
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="http://yoursite.com/"/>
+  <updated>2016-05-27T16:44:55.967Z</updated>
+  <id>http://yoursite.com/</id>
+  
+  <author>
+    <name>Hopesy</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>This</title>
+    <link href="http://yoursite.com/2016/05/28/This/"/>
+    <id>http://yoursite.com/2016/05/28/This/</id>
+    <published>2016-05-27T16:44:55.000Z</published>
+    <updated>2016-05-27T16:44:55.967Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>window use</title>
+    <link href="http://yoursite.com/2016/05/28/window-use/"/>
+    <id>http://yoursite.com/2016/05/28/window-use/</id>
+    <published>2016-05-27T16:42:19.000Z</published>
+    <updated>2016-05-27T16:42:19.221Z</updated>
+    
+    <content type="html"></content>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Shortcut of linux</title>
+    <link href="http://yoursite.com/2016/05/27/Shortcut-of-linux/"/>
+    <id>http://yoursite.com/2016/05/27/Shortcut-of-linux/</id>
+    <published>2016-05-27T14:53:01.000Z</published>
+    <updated>2016-05-28T04:39:14.567Z</updated>
+    
+    <content type="html">&lt;p&gt;#Ubuntu操作基本快捷键&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开主菜单 = Alt + F1&lt;/li&gt;
+&lt;li&gt;运行 = Alt + F2&lt;/li&gt;
+&lt;li&gt;显示桌面 = Ctrl + Alt + d&lt;/li&gt;
+&lt;li&gt;最小化当前窗口 = Alt + F9&lt;/li&gt;
+&lt;li&gt;最大化当前窗口 = Alt + F10&lt;/li&gt;
+&lt;li&gt;关闭当前窗口 = Alt + F4&lt;/li&gt;
+&lt;li&gt;截取全屏 = Print Screen&lt;/li&gt;
+&lt;li&gt;截取窗口 = Alt + Print Screen&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+##默认特殊快捷键&lt;/li&gt;
+&lt;li&gt;展示所有窗口程序 = F10&lt;/li&gt;
+&lt;li&gt;展示当前窗口最上层程序 = F11&lt;/li&gt;
+&lt;li&gt;展示当前窗口所有程序 = F12&lt;/li&gt;
+&lt;li&gt;切换窗口 = Alt + Tab &lt;/li&gt;
+&lt;li&gt;旋转3D桌面 = Ctrl + Alt + 左/右箭头（也可以把鼠标放在标题栏或桌面使用滚轮切换）&lt;/li&gt;
+&lt;li&gt;旋转3D桌面（ 活动窗口跟随） = Ctrl + Shift + Alt + 左/右箭头&lt;/li&gt;
+&lt;li&gt;手动旋转3D桌面 = Ctrl + Alt + 左键单击并拖拽桌面空白处&lt;/li&gt;
+&lt;li&gt;窗口透明/不透明 = possible with the “transset” utility or Alt + 滚轮&lt;/li&gt;
+&lt;li&gt;放大一次 = 超级键 + 右击&lt;/li&gt;
+&lt;li&gt;手动放大 = 超级键 + 滚轮向上&lt;/li&gt;
+&lt;li&gt;手动缩小 = 超级键 + 滚轮向下&lt;/li&gt;
+&lt;li&gt;移动窗口 = Alt + 左键单击&lt;/li&gt;
+&lt;li&gt;移动窗口时贴住边框 = 左键开始拖动后再 Ctrl + Alt&lt;/li&gt;
+&lt;li&gt;调整窗口大小 = Alt + 中击&lt;/li&gt;
+&lt;li&gt;Bring up the window below the top window = Alt + middle-click&lt;/li&gt;
+&lt;li&gt;动态效果减速 = Shift + F10&lt;/li&gt;
+&lt;li&gt;水纹 = 按住 Ctrl+超级键&lt;/li&gt;
+&lt;li&gt;雨点 = Shift-F9&lt;/li&gt;
+&lt;li&gt;桌面展开＝ Ctrl + Alt + 下箭头，然后按住 Ctrl + Alt      和左/右箭头选择桌面&lt;br&gt;#Ubuntu Gnome的桌面技巧：&lt;br&gt;##1.键盘类&lt;/li&gt;
+&lt;li&gt;先同时按住 Alt + Ctrl 键，再按键盘上的左 右光标 键 可以切换工作区&lt;/li&gt;
+&lt;li&gt;web时按 “/” 键 等于 查找功能,桌面或者目录时按” /” 等于”打开..”&lt;/li&gt;
+&lt;li&gt;当前目录下快速文件(夹)定位, 直接输入文件(夹)名字&lt;/li&gt;
+&lt;li&gt;shift键 可以对scim的中英输入快速切换,windows下的智能ABC一样&lt;/li&gt;
+&lt;li&gt;alt+左右可以前进后退页面&lt;/li&gt;
+&lt;li&gt;屏幕锁定: Alt+Ctrl+L 等价于Windows中的Win键 + L, ctrl+alt+d    相当于Windows中的Win键 +D,换句话说,Alt+Ctrl相当于Win键——&lt;/li&gt;
+&lt;li&gt;Ctrl+Alt+Shift+左右方向键，可以把当前窗口移到上一个或下一个桌面&lt;/li&gt;
+&lt;li&gt;Alt+Tab向左切换窗口,Alt+Shift+Tab向友切换窗口&lt;br&gt;##2.鼠标类&lt;/li&gt;
+&lt;li&gt;直接拖拉在最大化时的窗口标题可以还原窗口大小,再拖放回去就最大化&lt;/li&gt;
+&lt;li&gt;在音量控制处用鼠标滚轮滚动可以直接调整音量,在任务栏中滚动滚轮可以切换任务栏,工作区则切换工作区&lt;/li&gt;
+&lt;li&gt;浏览网页的时候直接把图片落到保存目录既可下载&lt;/li&gt;
+&lt;li&gt;按鼠标滚轮即张贴, 同时按下鼠标 左右键等价于按鼠标中键–&amp;gt;引伸到,在web上选中文字,直接双键(中键)可以张贴选中的文字&lt;/li&gt;
+&lt;li&gt;工作区里的小窗口可以在不同工作区内拖拉,即移动到….(工作区)的功能&lt;/li&gt;
+&lt;li&gt;shift + 鼠标滚轮 可以后退页面&lt;/li&gt;
+&lt;li&gt;鼠标中键点标题栏可以隐藏当前窗口&lt;/li&gt;
+&lt;li&gt;按住shift 拖动窗口可以吸附上下边缘的移动&lt;/li&gt;
+&lt;li&gt;直接将 文件管理器 中的文件拖到 GNOME终端 中就可以在终端中得到完整的路径名&lt;/li&gt;
+&lt;li&gt;修改目录图标：可将文件管理器中的图片直接拖到文件夹属性所在的图标上.&lt;/li&gt;
+&lt;li&gt;鼠标中键直接单击 滚动条 的空白处，屏幕即滚动到那处。&lt;/li&gt;
+&lt;li&gt;中键拖动图片到桌面，可选择设为墙纸&lt;br&gt;##窗口管理&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Win+E – 显示所有桌面，方便的左右选择。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt+Ctrl+Left/Right Arrow -切换桌面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt+Ctrl+Shift+Left/Right Arrow – 移动当前窗口到其他桌面&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt + Shift+ Up Arrow – 以很酷的方式显示当前窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt+F9/F10 – 最小化/最大化当前窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt+F5 -不最大化当前窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt+F7 – 激活当前窗口的移动选项，你可以使用方向键移动当前窗口，甚至移动到其他桌面。&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt+F8 – 用方向键调整当前窗口大小&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + Alt + D – 显示桌面/恢复当前窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt+ Tab – 切换窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;Nautilus&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;&lt;p&gt;Shift+Ctrl+N – 新建文件夹, 很有用&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt + Enter – 查看选择文件/文件夹的属性，代替单击右键选择属性&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + 1/2 – 改变文件夹视图查看方式，图标视图/列表视图&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + W – 关闭当前Nautilus窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + Shift + W – 关闭所有Nautilus窗口&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ctrl+T – 在Nautilus中新建一个标签&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt + Up/Down Arrow – 移动到父文件夹/选择的文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt + Left/Right Arrow – 后退/前进&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt + Home -直接移动到主文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;F9 – 开关显示Nautilus侧边栏&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + H -开关显示隐藏文件夹&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Ctrl + Alt + L -锁屏&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt + F1 – 打开应用程序菜单&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Alt + F2 – 打开运行应用程序对话框&lt;/p&gt;
+&lt;/li&gt;
+&lt;li&gt;&lt;p&gt;Win + 鼠标滚轮 – 放大/缩小屏幕&lt;/p&gt;
+&lt;/li&gt;
+&lt;/ol&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;#Ubuntu操作基本快捷键&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;打开主菜单 = Alt + F1&lt;/li&gt;
+&lt;li&gt;运行 = Alt + F2&lt;/li&gt;
+&lt;li&gt;显示桌面 = Ctrl + Alt + d&lt;/li&gt;
+&lt;li&gt;最小化当前窗口 = Alt + F9&lt;/li&gt;
+&lt;li&gt;最大化当前窗口 = Alt + F10&lt;/li&gt;
+&lt;li&gt;关闭当前窗口 = Alt + F4&lt;/li&gt;
+&lt;li&gt;截取全屏 = Print Screen&lt;/li&gt;
+&lt;li&gt;截取窗口 = Alt + Print Screen
+    
+    </summary>
+    
+    
+      <category term="科技" scheme="http://yoursite.com/tags/%E7%A7%91%E6%8A%80/"/>
+    
+      <category term="杂文" scheme="http://yoursite.com/tags/%E6%9D%82%E6%96%87/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="http://yoursite.com/2016/05/25/hello-world/"/>
+    <id>http://yoursite.com/2016/05/25/hello-world/</id>
+    <published>2016-05-25T13:53:53.218Z</published>
+    <updated>2016-05-28T04:08:21.191Z</updated>
+    
+    <content type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo server&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/server.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Server&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Generate-static-files&quot;&gt;&lt;a href=&quot;#Generate-static-files&quot; class=&quot;headerlink&quot; title=&quot;Generate static files&quot;&gt;&lt;/a&gt;Generate static files&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo generate&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/generating.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Generating&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Deploy-to-remote-sites&quot;&gt;&lt;a href=&quot;#Deploy-to-remote-sites&quot; class=&quot;headerlink&quot; title=&quot;Deploy to remote sites&quot;&gt;&lt;/a&gt;Deploy to remote sites&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo deploy&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/deployment.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Deployment&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt; for more info. If you get any problems when using Hexo, you can find the answer in &lt;a href=&quot;https://hexo.io/docs/troubleshooting.html&quot;&gt;troubleshooting&lt;/a&gt; or you can ask me on &lt;a href=&quot;https://github.com/hexojs/hexo/issues&quot;&gt;GitHub&lt;/a&gt;.&lt;/p&gt;
+&lt;h2 id=&quot;Quick-Start&quot;&gt;&lt;a href=&quot;#Quick-Start&quot; class=&quot;headerlink&quot; title=&quot;Quick Start&quot;&gt;&lt;/a&gt;Quick Start&lt;/h2&gt;&lt;h3 id=&quot;Create-a-new-post&quot;&gt;&lt;a href=&quot;#Create-a-new-post&quot; class=&quot;headerlink&quot; title=&quot;Create a new post&quot;&gt;&lt;/a&gt;Create a new post&lt;/h3&gt;&lt;figure class=&quot;highlight bash&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;1&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;span class=&quot;line&quot;&gt;$ hexo new &lt;span class=&quot;string&quot;&gt;&quot;My New Post&quot;&lt;/span&gt;&lt;/span&gt;&lt;br&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
+&lt;p&gt;More info: &lt;a href=&quot;https://hexo.io/docs/writing.html&quot;&gt;Writing&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&quot;Run-server&quot;&gt;&lt;a href=&quot;#Run-server&quot; class=&quot;headerlink&quot; title=&quot;Run server&quot;&gt;&lt;/a&gt;Run server&lt;/h3&gt;
+    
+    </summary>
+    
+    
+  </entry>
+  
+</feed>
