@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-05-27T16:44:55.967Z</updated>
+  <updated>2016-06-04T17:18:27.684Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>music1</title>
+    <link href="http://yoursite.com/2016/06/05/music1/"/>
+    <id>http://yoursite.com/2016/06/05/music1/</id>
+    <published>2016-06-04T17:15:54.000Z</published>
+    <updated>2016-06-04T17:18:27.684Z</updated>
+    
+    <content type="html">&lt;embed src=&quot;http://music.163.com/style/swf/widget.swf?sid=22841995&amp;type=2&amp;auto=0&amp;width=320&amp;height=66&quot; width=&quot;340&quot; height=&quot;86&quot; allownetworking=&quot;all&quot;&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;embed src=&quot;http://music.163.com/style/swf/widget.swf?sid=22841995&amp;type=2&amp;auto=0&amp;width=320&amp;height=66&quot; width=&quot;340&quot; height=&quot;86&quot; allownetworkin
+    
+    </summary>
+    
+    
+      <category term="音乐" scheme="http://yoursite.com/tags/%E9%9F%B3%E4%B9%90/"/>
+    
+  </entry>
   
   <entry>
     <title>This</title>
