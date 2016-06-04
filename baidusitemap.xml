@@ -4,23 +4,6 @@
 
     
   <url>
-    <loc>http://yoursite.com/2016/06/05/music1/</loc>
-    <lastmod>2016-06-04T17:20:57.157Z</lastmod>
-    <data>
-        <display>
-        <title>music1</title>
-        <pubTime>2016-06-04T17:15:54.000Z</pubTime>
-        
-        <tag>音乐</tag>
-         
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://yoursite.com/2016/05/27/Shortcut-of-linux/</loc>
     <lastmod>2016-05-28T04:39:14.567Z</lastmod>
     <data>
@@ -32,36 +15,6 @@
          
         <tag>杂文</tag>
          
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/05/25/hello-world/</loc>
-    <lastmod>2016-05-28T04:08:21.191Z</lastmod>
-    <data>
-        <display>
-        <title>Hello World</title>
-        <pubTime>2016-05-25T13:53:53.218Z</pubTime>
-        
-         
-           
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://yoursite.com/2016/05/28/This/</loc>
-    <lastmod>2016-05-27T16:44:55.967Z</lastmod>
-    <data>
-        <display>
-        <title>This</title>
-        <pubTime>2016-05-27T16:44:55.000Z</pubTime>
-        
          
            
         </display>
