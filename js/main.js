@@ -125,4 +125,9 @@ require([], function (){
  	var background = Math.floor(Math.random() * backgroundList.length);
  	$("body").css({"background": backgroundList[background], "background-attachment": "fixed", "background-size": "cover"});
 });
+if($(".instagram").length) {
+        require(['/js/photo.js', '/fancybox/jquery.fancybox.js', '/js/jquery.lazyload.js'], function(obj) {
+            obj.init();
+        });
+    }
 

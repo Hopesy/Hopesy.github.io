@@ -1,4 +1,4 @@
-    define([], function () {
+ define([], function () {
         return {
             page: 1,
             offset: 20,
@@ -18,8 +18,8 @@
                 var html, li = "";
                 for (var i = begin; i < end && i < data.length; i++) {
                     li += '<li><div class="img-box">' +
-                        '<a class="img-bg" rel="example_group" href="https://github.com/airingursb/Photos/blob/master/ursb/' + data[i] + '?raw=true"></a>' +
-                        '<img lazy-src="https://github.com/airingursb/Photos/blob/master/ursb/' + data[i] + '?raw=true" />' +
+                        '<a class="img-bg" rel="example_group" href="https://github.com/lwzhang/blog/blob/master/photos/' + data[i] + '?raw=true"></a>' +
+                        '<img lazy-src="https://github.com/lwzhang/blog/blob/master/photos/' + data[i] + '?raw=true" />' +
                         '</li>';
                 }
 
