@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-04T15:29:24.367Z</updated>
+  <updated>2016-07-07T07:21:50.275Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,18 +16,24 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hello,单恋你好</title>
-    <link href="http://yoursite.com/2016/07/04/hello-%E5%8D%95%E6%81%8B%E4%BD%A0%E5%A5%BD/"/>
-    <id>http://yoursite.com/2016/07/04/hello-单恋你好/</id>
-    <published>2016-07-04T15:29:24.000Z</published>
-    <updated>2016-07-04T15:29:24.367Z</updated>
+    <title>Python模块的构建与发布（Windows环境）</title>
+    <link href="http://yoursite.com/2016/07/07/Python%E6%A8%A1%E5%9D%97%E7%9A%84%E6%9E%84%E5%BB%BA%E4%B8%8E%E5%8F%91%E5%B8%83%EF%BC%88Windows%E7%8E%AF%E5%A2%83%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/07/07/Python模块的构建与发布（Windows环境）/</id>
+    <published>2016-07-07T07:06:43.000Z</published>
+    <updated>2016-07-07T07:21:50.275Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;1.首先将写好注释的代码保存在一个文件夹nester(模块名，根据需要自定)&lt;br&gt;2.在这个文件夹下创建一个文件setup.py，用来编辑模块的元数据&lt;br&gt;‘from distutils.core import setup       #从发布工具导入setup函数  &lt;/p&gt;
+&lt;p&gt;setup(&lt;br&gt;    name        =’nester’,&lt;br&gt;    version     =’1.0.0’,&lt;br&gt;    py_modules  =[‘nester’],&lt;br&gt;    author      =’jqm’,&lt;br&gt;    author_email=’jqm2009@gmail.com’,&lt;br&gt;    url         =’&lt;a href=&quot;http://www.headfirstlabs.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.headfirstlabs.com&lt;/a&gt;‘,&lt;br&gt;    description =’A simple printer of nested lists’,&lt;br&gt;    )’&lt;br&gt;  以上author~~description 根据个人需要修改。&lt;br&gt;  3.构建发布&lt;br&gt;    i. 打开“运行”—&amp;gt;键入cmd，回车&lt;br&gt;    ii. 在命令行中键入nester文件夹的路径，例如：&lt;br&gt;       C:\Users\Administrator&amp;gt;cd D:\Python\nester&lt;br&gt;    iii.输入python.exe路径及命令：&lt;br&gt;       D:\python\nester&amp;gt;d:\python\python.exe setup.py sdist&lt;br&gt;    iiii.将发布安装到本地副本中，输入python路径 setup.py install 或者：&lt;br&gt;                                                 D:\python\nester&amp;gt;py setup.py install   &lt;/p&gt;
+</content>
     
     <summary type="html">
     
+      &lt;p&gt;1.首先将写好注释的代码保存在一个文件夹nester(模块名，根据需要自定)&lt;br&gt;2.在这个文件夹下创建一个文件setup.py，用来编辑模块的元数据&lt;br&gt;‘from distutils.core import setup       #从发布工具导入setup函数  
+    
     </summary>
     
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
   </entry>
   
