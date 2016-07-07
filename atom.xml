@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-07T07:43:20.129Z</updated>
+  <updated>2016-07-07T07:50:18.225Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,10 @@
     <link href="http://yoursite.com/2016/07/07/Python%E6%A8%A1%E5%9D%97%E7%9A%84%E6%9E%84%E5%BB%BA%E4%B8%8E%E5%8F%91%E5%B8%83%EF%BC%88Windows%E7%8E%AF%E5%A2%83%EF%BC%89/"/>
     <id>http://yoursite.com/2016/07/07/Python模块的构建与发布（Windows环境）/</id>
     <published>2016-07-07T07:06:43.000Z</published>
-    <updated>2016-07-07T07:43:20.129Z</updated>
+    <updated>2016-07-07T07:50:18.225Z</updated>
     
-    <content type="html">&lt;blockquote&gt;
+    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/8.jpg&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;首先将写好注释的代码保存在一个文件夹nester(模块名，根据需要自定)&lt;/p&gt;
 &lt;p&gt;在这个文件夹下创建一个文件setup.py，用来编辑模块的元数&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -46,7 +47,8 @@ setup(
     
     <summary type="html">
     
-      &lt;blockquote&gt;
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/8.jpg&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;首先将写好注释的代码保存在一个文件夹nester(模块名，根据需要自定)&lt;/p&gt;
 &lt;p&gt;在这个文件夹下创建一个文件setup.py，用来编辑模块的元数&lt;/p&gt;
 &lt;/blockquote&gt;
