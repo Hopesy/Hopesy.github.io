@@ -8,18 +8,21 @@
 
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>Always Waiting | Hopesy</title>
+  <title>Python开发轻量级爬虫 | Hopesy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="###一个简陋的爬虫是一件很简单的事情，不过要实现一个高质量的spider却是非常难的。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Always Waiting">
-<meta property="og:url" content="http://yoursite.com/2016/06/05/Always-Waiting/index.html">
+<meta property="og:title" content="Python开发轻量级爬虫">
+<meta property="og:url" content="http://yoursite.com/2016/07/15/Python开发轻量级爬虫/index.html">
 <meta property="og:site_name" content="Hopesy">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-06-04T17:36:37.947Z">
+<meta property="og:description" content="###一个简陋的爬虫是一件很简单的事情，不过要实现一个高质量的spider却是非常难的。">
+<meta property="og:image" content="https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/hopesy/img/master/流程.jpg">
+<meta property="og:updated_time" content="2016-07-14T17:34:33.960Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Always Waiting">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Python开发轻量级爬虫">
+<meta name="twitter:description" content="###一个简陋的爬虫是一件很简单的事情，不过要实现一个高质量的spider却是非常难的。">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hopesy" type="application/atom+xml">
   
@@ -209,11 +212,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-Always-Waiting" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Python开发轻量级爬虫" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/05/Always-Waiting/" class="article-date">
-  	<time datetime="2016-06-04T17:36:37.000Z" itemprop="datePublished">2016-06-05</time>
+      <a href="/2016/07/15/Python开发轻量级爬虫/" class="article-date">
+  	<time datetime="2016-07-14T17:31:57.000Z" itemprop="datePublished">2016-07-15</time>
 </a>
     </div>
   
@@ -226,7 +229,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Always Waiting
+      Python开发轻量级爬虫
     </h1>
   
 
@@ -234,6 +237,10 @@
       
       <div class="article-info article-info-post">
         
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/技术/">技术</a></li></ul>
+	</div>
+
         
 
         <div class="clearfix"></div>
@@ -242,7 +249,25 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        
+        <p><img src="https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg" alt="少女"></p>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="400" height="100" src="http://music.163.com/outchain/player?type=2&id=34723470&auto=1&height=66"></iframe></p>
+<p>###一个简陋的爬虫是一件很简单的事情，不过要实现一个高质量的spider却是非常难的。<br><a id="more"></a></p>
+<blockquote>
+<p>爬虫基本框架</p>
+</blockquote>
+<p>+调度器<br>+URL管理器<br>+下载器<br>+解析器</p>
+<blockquote>
+<p>运行流程<br><img src="https://raw.githubusercontent.com/hopesy/img/master/流程.jpg" alt="流程"></p>
+<p>常用框架</p>
+</blockquote>
+<p>#Python开发爬虫常用Scrapy框架</p>
+<p>####数据处理流程</p>
+<blockquote>
+<p>引擎打开一个域名，时蜘蛛处理这个域名，并让蜘蛛获取第一个爬取的URL。<br>引擎从蜘蛛那获取第一个需要爬取的URL，然后作为请求在调度中进行调度。<br>引擎从调度那获取接下来进行爬取的页面。<br>调度将下一个爬取的URL返回给引擎，引擎将他们通过下载中间件发送到下载器。<br>当网页被下载器下载完成以后，响应内容通过下载中间件被发送到引擎。<br>引擎收到下载器的响应并将它通过蜘蛛中间件发送到蜘蛛进行处理。<br>蜘蛛处理响应并返回爬取到的项目，然后给引擎发送新的请求。<br>引擎将抓取到的项目项目管道，并向调度发送请求。<br>系统重复第二部后面的操作，直到调度中没有请求，然后断开引擎与域之间的联系。</p>
+<p>简单爬虫实例源码下载</p>
+</blockquote>
+<p>下载链接：<a href="https://github.com/fifths/python_baike_spider" target="_blank" rel="external">https://github.com/fifths/python_baike_spider</a><br>注：该源码抓取百度百科词条信息</p>
+
       
     </div>
     
@@ -251,18 +276,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/05/一直在等/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          一直在等
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/05/27/Shortcut-of-linux/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Shortcut of linux</div>
+    <a href="/2016/07/07/Python模块的构建与发布（Windows环境）/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Python模块的构建与发布（Windows环境）</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -297,7 +313,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="Always-Waiting" data-title="Always Waiting" data-url="http://yoursite.com/2016/06/05/Always-Waiting/"></div>
+	<div class="ds-thread" data-thread-key="Python开发轻量级爬虫" data-title="Python开发轻量级爬虫" data-url="http://yoursite.com/2016/07/15/Python开发轻量级爬虫/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
