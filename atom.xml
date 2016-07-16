@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-07-14T17:43:34.725Z</updated>
+  <updated>2016-07-16T12:25:50.364Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,26 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>囧菌</title>
+    <link href="http://yoursite.com/2016/07/16/%E5%9B%A7%E8%8F%8C/"/>
+    <id>http://yoursite.com/2016/07/16/囧菌/</id>
+    <published>2016-07-16T12:23:57.000Z</published>
+    <updated>2016-07-16T12:25:50.364Z</updated>
+    
+    <content type="html">&lt;embed height=&quot;415&quot; width=&quot;544&quot; quality=&quot;high&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://static.hdslb.com/miniloader.swf&quot; flashvars=&quot;aid=2267251&amp;page=1&quot; pluginspage=&quot;http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash&quot;&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;embed height=&quot;415&quot; width=&quot;544&quot; quality=&quot;high&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://static.hdslb.com/mini
+    
+    </summary>
+    
+    
+      <category term="声优" scheme="http://yoursite.com/tags/%E5%A3%B0%E4%BC%98/"/>
+    
+  </entry>
   
   <entry>
     <title>Python开发轻量级爬虫</title>
