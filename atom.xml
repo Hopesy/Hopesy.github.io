@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-08T16:37:50.700Z</updated>
+  <updated>2016-08-08T17:06:37.159Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,18 +16,50 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>hhh</title>
-    <link href="http://yoursite.com/2016/08/09/hhh/"/>
-    <id>http://yoursite.com/2016/08/09/hhh/</id>
-    <published>2016-08-08T16:37:50.000Z</published>
-    <updated>2016-08-08T16:37:50.700Z</updated>
+    <title>.gitignore详解</title>
+    <link href="http://yoursite.com/2016/08/09/gitignore%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://yoursite.com/2016/08/09/gitignore详解/</id>
+    <published>2016-08-08T16:53:07.000Z</published>
+    <updated>2016-08-08T17:06:37.159Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg&quot; alt=&quot;少女&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;基本说明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;一般来说每个Git项目中都需要一个“.gitignore”文件，这个文件的作用就是告诉Git哪些文件不需要添
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;加到版本管理中。实际项目中，很多文件都是不需要版本管理的，比如Python的.pyc文件和一些包含密码的&lt;br&gt;配置文件等等。这个文件的内容是一些规则，Git会根据这些规则来判断是否将文件添加到版本控制中。&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;blockquote&gt;
+&lt;p&gt;WIN7创建方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;创建一个文件，文件名为：“.gitignore.”，注意前后都有一个点。保存之后系统会自动重命名为“.gitignore”。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;常用规则&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1./mtk/ 过滤整个文件夹&lt;br&gt;2.*.zip 过滤所有.zip文件&lt;br&gt;3./mtk/do.c 过滤某个具体文件&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;进阶&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;开头多了一个感叹号，Git会将满足这类规则的文件添加到版本管理中例如：!/mtk/one.txt&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;END&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;如果你不慎在创建.gitignore文件之前就push了项目，那么即使你在.gitignore文件中写入新的过滤规则，这&lt;br&gt;些规则也不会起作用，Git仍然会对所有文件进行版本管理。&lt;/p&gt;
+</content>
     
     <summary type="html">
     
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg&quot; alt=&quot;少女&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;基本说明&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;pre&gt;&lt;code&gt;一般来说每个Git项目中都需要一个“.gitignore”文件，这个文件的作用就是告诉Git哪些文件不需要添
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;加到版本管理中。实际项目中，很多文件都是不需要版本管理的，比如Python的.pyc文件和一些包含密码的&lt;br&gt;配置文件等等。这个文件的内容是一些规则，Git会根据这些规则来判断是否将文件添加到版本控制中。&lt;/p&gt;
+    
     </summary>
     
+    
+      <category term="git" scheme="http://yoursite.com/tags/git/"/>
     
   </entry>
   
