@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-08T17:06:37.159Z</updated>
+  <updated>2016-08-10T07:35:21.128Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Android之Intent用法</title>
+    <link href="http://yoursite.com/2016/08/10/Android%E4%B9%8BIntent%E7%94%A8%E6%B3%95/"/>
+    <id>http://yoursite.com/2016/08/10/Android之Intent用法/</id>
+    <published>2016-08-10T07:03:37.000Z</published>
+    <updated>2016-08-10T07:35:21.128Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;640&quot; height=&quot;400&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31445554&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Intent使用方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;   Type属性指定Data要操作的数据类型，但是一般Intent指定了Action，Data属性之后，&lt;br&gt;android会自动指定数据类型&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;p&gt;1.&lt;br&gt;Intent intent = new intent(action,uri)&lt;br&gt;startActivity(intent);&lt;br&gt;2.&lt;br&gt;Intent intent = new Intent(action);&lt;br&gt;intent.setDataAndType(URI,String type);&lt;br&gt;startActivity(intent);&lt;br&gt;   如果需要对返回的数据操作，可以不调用startActivity(intent)，可以用startActivityForResult(intent,&lt;br&gt;自定义数据标识);然后在onActivityResult()回调函数中进行操作。&lt;br&gt;3.&lt;br&gt;public class TestMediaActivity extends Activity {&lt;br&gt;    /&lt;em&gt;* Called when the activity is first created. &lt;/em&gt;/&lt;br&gt;    @Override&lt;br&gt;    public void onCreate(Bundle savedInstanceState) {&lt;br&gt;        super.onCreate(savedInstanceState);&lt;br&gt;        setContentView(R.layout.main);&lt;br&gt;        try {&lt;br&gt;             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);&lt;br&gt;             startActivityForResult(intent, 0);&lt;br&gt;        } catch (Exception e) {&lt;br&gt;            System.out.println(e.getMessage());&lt;br&gt;        }&lt;br&gt;    }&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;protected void onActivityResult(int requestCode, int resultCode, Intent data) 
+{ 
+    try { 
+        if (requestCode != 0) { 
+            return; 
+        } 
+        super.onActivityResult(requestCode, resultCode, data); 
+        Bundle extras = data.getExtras(); 
+        Bitmap b = (Bitmap) extras.get(&amp;quot;data&amp;quot;); 
+        /*
+           得到图片对图片处理...
+        */ 
+
+
+    } catch (Exception e) { 
+        // TODO: handle exception 
+        System.out.println(e.getMessage()); 
+    } 
+} 
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;}&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;调用拨号程序&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;// 给移动客服10086拨打电话&lt;br&gt;Uri uri = Uri.parse(“tel:10086”);&lt;br&gt;Intent intent = new Intent(Intent.ACTION_DIAL, uri);&lt;br&gt;startActivity(intent);&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;发送短信或彩信&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;// 给10086发送内容为“Hello”的短信&lt;br&gt;Uri uri = Uri.parse(“smsto:10086”);&lt;br&gt;Intent intent = new Intent(Intent.ACTION_SENDTO, uri);&lt;br&gt;intent.putExtra(“sms_body”, “Hello”);&lt;br&gt;startActivity(intent);&lt;br&gt;// 发送彩信（相当于发送带附件的短信）&lt;br&gt;Intent intent = new Intent(Intent.ACTION_SEND);&lt;br&gt;intent.putExtra(“sms_body”, “Hello”);&lt;br&gt;Uri uri = Uri.parse(“content://media/external/images/media/23”);&lt;br&gt;intent.putExtra(Intent.EXTRA_STREAM, uri);&lt;br&gt;intent.setType(“image/png”);&lt;br&gt;startActivity(intent);&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;通过浏览器打开网页&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;// 打开Google主页&lt;br&gt;Uri uri = Uri.parse(“&lt;a href=&quot;http://www.google.com&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.google.com&lt;/a&gt;“);&lt;br&gt;Intent intent  = new Intent(Intent.ACTION_VIEW, uri);&lt;br&gt;startActivity(intent)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;发送电子邮件&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;// 给someone@domain.com发邮件&lt;br&gt;Uri uri = Uri.parse(“mailto:someone@domain.com”);&lt;br&gt;Intent intent = new Intent(Intent.ACTION_SENDTO, uri);&lt;br&gt;startActivity(intent);&lt;br&gt;// 给someone@domain.com发邮件发送内容为“Hello”的邮件&lt;br&gt;Intent intent = new Intent(Intent.ACTION_SEND);&lt;br&gt;intent.putExtra(Intent.EXTRA_EMAIL, “someone@domain.com”);&lt;br&gt;intent.putExtra(Intent.EXTRA_SUBJECT, “Subject”);&lt;br&gt;intent.putExtra(Intent.EXTRA_TEXT, “Hello”);&lt;br&gt;intent.setType(“text/plain”);&lt;br&gt;startActivity(intent);&lt;br&gt;// 给多人发邮件&lt;br&gt;Intent intent=new Intent(Intent.ACTION_SEND);&lt;br&gt;String[] tos = {“1@abc.com”, “2@abc.com”}; // 收件人&lt;br&gt;String[] ccs = {“3@abc.com”, “4@abc.com”}; // 抄送&lt;br&gt;String[] bccs = {“5@abc.com”, “6@abc.com”}; // 密送&lt;br&gt;intent.putExtra(Intent.EXTRA_EMAIL, tos);&lt;br&gt;intent.putExtra(Intent.EXTRA_CC, ccs);&lt;br&gt;intent.putExtra(Intent.EXTRA_BCC, bccs);&lt;br&gt;intent.putExtra(Intent.EXTRA_SUBJECT, “Subject”);&lt;br&gt;intent.putExtra(Intent.EXTRA_TEXT, “Hello”);&lt;br&gt;intent.setType(“message/rfc822”);&lt;br&gt;startActivity(intent);&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;显示地图与路径规划&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;// 打开Google地图中国北京位置（北纬39.9，东经116.3）&lt;br&gt;Uri uri = Uri.parse(“geo:39.9,116.3”);&lt;br&gt;Intent intent = new Intent(Intent.ACTION_VIEW, uri);&lt;br&gt;startActivity(intent);&lt;br&gt;// 路径规划：从北京某地（北纬39.9，东经116.3）到上海某地（北纬31.2，东经121.4）&lt;br&gt;Uri uri = Uri.parse(“&lt;a href=&quot;http://maps.google.com/maps?f=d&amp;amp;saddr=39.9&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://maps.google.com/maps?f=d&amp;amp;saddr=39.9&lt;/a&gt; 116.3&amp;amp;daddr=31.2 121.4”);&lt;br&gt;Intent intent = new Intent(Intent.ACTION_VIEW, uri);&lt;br&gt;startActivity(intent);&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=640 height=400 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31445554&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Intent使用方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;   Type属性指定Data要操作的数据类型，但是一般Intent指定了Action，Data属性之后，&lt;br&gt;android会自动指定数据类型&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="Android" scheme="http://yoursite.com/tags/Android/"/>
+    
+  </entry>
   
   <entry>
     <title>.gitignore详解</title>

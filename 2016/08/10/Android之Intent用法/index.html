@@ -8,18 +8,24 @@
 
   
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
-  <title>一直在等 | Hopesy</title>
+  <title>Android之Intent用法 | Hopesy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description">
+  <meta name="description" content="Intent使用方法
+
+   Type属性指定Data要操作的数据类型，但是一般Intent指定了Action，Data属性之后，android会自动指定数据类型">
 <meta property="og:type" content="article">
-<meta property="og:title" content="一直在等">
-<meta property="og:url" content="http://yoursite.com/2016/06/05/一直在等/index.html">
+<meta property="og:title" content="Android之Intent用法">
+<meta property="og:url" content="http://yoursite.com/2016/08/10/Android之Intent用法/index.html">
 <meta property="og:site_name" content="Hopesy">
-<meta property="og:description">
-<meta property="og:updated_time" content="2016-06-04T18:19:52.176Z">
+<meta property="og:description" content="Intent使用方法
+
+   Type属性指定Data要操作的数据类型，但是一般Intent指定了Action，Data属性之后，android会自动指定数据类型">
+<meta property="og:updated_time" content="2016-08-10T07:35:21.128Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="一直在等">
-<meta name="twitter:description">
+<meta name="twitter:title" content="Android之Intent用法">
+<meta name="twitter:description" content="Intent使用方法
+
+   Type属性指定Data要操作的数据类型，但是一般Intent指定了Action，Data属性之后，android会自动指定数据类型">
   
     <link rel="alternative" href="/atom.xml" title="Hopesy" type="application/atom+xml">
   
@@ -209,11 +215,11 @@
 	</div>
 </nav>
 
-      <div class="body-wrap"><article id="post-一直在等" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Android之Intent用法" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2016/06/05/一直在等/" class="article-date">
-  	<time datetime="2016-06-04T17:49:11.000Z" itemprop="datePublished">2016-06-05</time>
+      <a href="/2016/08/10/Android之Intent用法/" class="article-date">
+  	<time datetime="2016-08-10T07:03:37.000Z" itemprop="datePublished">2016-08-10</time>
 </a>
     </div>
   
@@ -226,7 +232,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      一直在等
+      Android之Intent用法
     </h1>
   
 
@@ -235,7 +241,7 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/本兮/">本兮</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/音乐/">音乐</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li></ul>
 	</div>
 
         
@@ -246,7 +252,54 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="900" height="100" src="http://music.163.com/outchain/player?type=2&id=35440198&auto=0&height=66"></iframe>
+        <p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="640" height="400" src="http://music.163.com/outchain/player?type=2&id=31445554&auto=0&height=66"></iframe></p>
+<blockquote>
+<p>Intent使用方法</p>
+</blockquote>
+<p>   Type属性指定Data要操作的数据类型，但是一般Intent指定了Action，Data属性之后，<br>android会自动指定数据类型</p>
+<a id="more"></a>
+<p>1.<br>Intent intent = new intent(action,uri)<br>startActivity(intent);<br>2.<br>Intent intent = new Intent(action);<br>intent.setDataAndType(URI,String type);<br>startActivity(intent);<br>   如果需要对返回的数据操作，可以不调用startActivity(intent)，可以用startActivityForResult(intent,<br>自定义数据标识);然后在onActivityResult()回调函数中进行操作。<br>3.<br>public class TestMediaActivity extends Activity {<br>    /<em>* Called when the activity is first created. </em>/<br>    @Override<br>    public void onCreate(Bundle savedInstanceState) {<br>        super.onCreate(savedInstanceState);<br>        setContentView(R.layout.main);<br>        try {<br>             Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);<br>             startActivityForResult(intent, 0);<br>        } catch (Exception e) {<br>            System.out.println(e.getMessage());<br>        }<br>    }</p>
+<pre><code>protected void onActivityResult(int requestCode, int resultCode, Intent data) 
+{ 
+    try { 
+        if (requestCode != 0) { 
+            return; 
+        } 
+        super.onActivityResult(requestCode, resultCode, data); 
+        Bundle extras = data.getExtras(); 
+        Bitmap b = (Bitmap) extras.get(&quot;data&quot;); 
+        /*
+           得到图片对图片处理...
+        */ 
+
+
+    } catch (Exception e) { 
+        // TODO: handle exception 
+        System.out.println(e.getMessage()); 
+    } 
+} 
+</code></pre><p>}</p>
+<blockquote>
+<p>调用拨号程序</p>
+</blockquote>
+<p>// 给移动客服10086拨打电话<br>Uri uri = Uri.parse(“tel:10086”);<br>Intent intent = new Intent(Intent.ACTION_DIAL, uri);<br>startActivity(intent);</p>
+<blockquote>
+<p>发送短信或彩信</p>
+</blockquote>
+<p>// 给10086发送内容为“Hello”的短信<br>Uri uri = Uri.parse(“smsto:10086”);<br>Intent intent = new Intent(Intent.ACTION_SENDTO, uri);<br>intent.putExtra(“sms_body”, “Hello”);<br>startActivity(intent);<br>// 发送彩信（相当于发送带附件的短信）<br>Intent intent = new Intent(Intent.ACTION_SEND);<br>intent.putExtra(“sms_body”, “Hello”);<br>Uri uri = Uri.parse(“content://media/external/images/media/23”);<br>intent.putExtra(Intent.EXTRA_STREAM, uri);<br>intent.setType(“image/png”);<br>startActivity(intent);</p>
+<blockquote>
+<p>通过浏览器打开网页</p>
+</blockquote>
+<p>// 打开Google主页<br>Uri uri = Uri.parse(“<a href="http://www.google.com" target="_blank" rel="external">http://www.google.com</a>“);<br>Intent intent  = new Intent(Intent.ACTION_VIEW, uri);<br>startActivity(intent)</p>
+<blockquote>
+<p>发送电子邮件</p>
+</blockquote>
+<p>// 给someone@domain.com发邮件<br>Uri uri = Uri.parse(“mailto:someone@domain.com”);<br>Intent intent = new Intent(Intent.ACTION_SENDTO, uri);<br>startActivity(intent);<br>// 给someone@domain.com发邮件发送内容为“Hello”的邮件<br>Intent intent = new Intent(Intent.ACTION_SEND);<br>intent.putExtra(Intent.EXTRA_EMAIL, “someone@domain.com”);<br>intent.putExtra(Intent.EXTRA_SUBJECT, “Subject”);<br>intent.putExtra(Intent.EXTRA_TEXT, “Hello”);<br>intent.setType(“text/plain”);<br>startActivity(intent);<br>// 给多人发邮件<br>Intent intent=new Intent(Intent.ACTION_SEND);<br>String[] tos = {“1@abc.com”, “2@abc.com”}; // 收件人<br>String[] ccs = {“3@abc.com”, “4@abc.com”}; // 抄送<br>String[] bccs = {“5@abc.com”, “6@abc.com”}; // 密送<br>intent.putExtra(Intent.EXTRA_EMAIL, tos);<br>intent.putExtra(Intent.EXTRA_CC, ccs);<br>intent.putExtra(Intent.EXTRA_BCC, bccs);<br>intent.putExtra(Intent.EXTRA_SUBJECT, “Subject”);<br>intent.putExtra(Intent.EXTRA_TEXT, “Hello”);<br>intent.setType(“message/rfc822”);<br>startActivity(intent);</p>
+<blockquote>
+<p>显示地图与路径规划</p>
+</blockquote>
+<p>// 打开Google地图中国北京位置（北纬39.9，东经116.3）<br>Uri uri = Uri.parse(“geo:39.9,116.3”);<br>Intent intent = new Intent(Intent.ACTION_VIEW, uri);<br>startActivity(intent);<br>// 路径规划：从北京某地（北纬39.9，东经116.3）到上海某地（北纬31.2，东经121.4）<br>Uri uri = Uri.parse(“<a href="http://maps.google.com/maps?f=d&amp;saddr=39.9" target="_blank" rel="external">http://maps.google.com/maps?f=d&amp;saddr=39.9</a> 116.3&amp;daddr=31.2 121.4”);<br>Intent intent = new Intent(Intent.ACTION_VIEW, uri);<br>startActivity(intent);</p>
+
       
     </div>
     
@@ -255,18 +308,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/06/05/她戴着一个微笑的面具/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          她戴着一个微笑的面具
-        
-      </div>
-    </a>
   
-  
-    <a href="/2016/06/05/Always-Waiting/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Always Waiting</div>
+    <a href="/2016/08/09/gitignore详解/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">.gitignore详解</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -301,7 +345,7 @@
 
 <div class="duoshuo">
 	<!-- 多说评论框 start -->
-	<div class="ds-thread" data-thread-key="一直在等" data-title="一直在等" data-url="http://yoursite.com/2016/06/05/一直在等/"></div>
+	<div class="ds-thread" data-thread-key="Android之Intent用法" data-title="Android之Intent用法" data-url="http://yoursite.com/2016/08/10/Android之Intent用法/"></div>
 	<!-- 多说评论框 end -->
 	<!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 	<script type="text/javascript">
