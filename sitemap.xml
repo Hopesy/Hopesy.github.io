@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://yoursite.com/2016/08/23/test/</loc>
+    
+    <lastmod>2016-08-23T05:11:11.415Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://yoursite.com/2016/08/22/Android-Studio%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    
+    <lastmod>2016-08-22T09:45:07.004Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://yoursite.com/2016/08/10/Android%E4%B9%8BIntent%E7%94%A8%E6%B3%95/</loc>
     
     <lastmod>2016-08-10T07:40:39.045Z</lastmod>

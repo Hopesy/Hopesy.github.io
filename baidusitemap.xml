@@ -4,6 +4,38 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/08/23/test/</loc>
+    <lastmod>2016-08-23T05:11:11.415Z</lastmod>
+    <data>
+        <display>
+        <title>test</title>
+        <pubTime>2016-08-23T05:11:11.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://yoursite.com/2016/08/22/Android-Studio%E5%B8%B8%E7%94%A8%E5%BF%AB%E6%8D%B7%E9%94%AE/</loc>
+    <lastmod>2016-08-22T09:45:07.004Z</lastmod>
+    <data>
+        <display>
+        <title>Android Studio常用快捷键</title>
+        <pubTime>2016-08-22T09:31:30.000Z</pubTime>
+        
+        <tag>Android</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/08/10/Android%E4%B9%8BIntent%E7%94%A8%E6%B3%95/</loc>
     <lastmod>2016-08-10T07:40:39.045Z</lastmod>
     <data>
@@ -151,9 +183,9 @@
         <title>love love love</title>
         <pubTime>2016-06-05T05:04:15.000Z</pubTime>
         
-        <tag>love</tag>
-         
         <tag>声优</tag>
+         
+        <tag>love</tag>
          
          
            
