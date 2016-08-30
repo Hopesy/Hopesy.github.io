@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-26T14:17:24.878Z</updated>
+  <updated>2016-08-30T14:56:55.431Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,40 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Mongo Db常用命令</title>
+    <link href="http://yoursite.com/2016/08/30/Mongo-Db%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
+    <id>http://yoursite.com/2016/08/30/Mongo-Db常用命令/</id>
+    <published>2016-08-30T12:19:09.000Z</published>
+    <updated>2016-08-30T14:56:55.431Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/mongodb.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;##Mong Db常用命令&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;启动方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;####1.默认启动(指定文件目录)&lt;br&gt;‘mongod –dbpath “d:\software\MongoDB\Server\3.0\data” ‘&lt;br&gt;下次启动只需: mongo.exe&lt;/p&gt;
+&lt;p&gt;####2.指定配置文件启动&lt;br&gt;‘mongod –config “d:\software\MongoDB\Server\3.0\conf\mongod.conf”‘&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;配置文件常用选项&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;#可以是相对路径也可以是绝对路径&lt;br&gt;1.日志文件位置&lt;br&gt;‘logpath=/var/log/mongo/mongod.log’&lt;br&gt;2.以追加方式写入日志&lt;br&gt;‘logappend=true’&lt;br&gt;3.是否以守护进程方式运行(WINDOWS无效)&lt;br&gt;‘fork = true’&lt;br&gt;4.默认27017&lt;br&gt;‘port = 27017’&lt;br&gt;5.数据库文件位置&lt;br&gt;‘dbpath=/var/lib/mongo’&lt;br&gt;6.启用定期记录CPU利用率和 I/O 等待&lt;br&gt;‘cpu = true’&lt;br&gt;7.是否以安全认证方式运行，默认是不认证的非安全方式&lt;br&gt;‘noauth = true’&lt;br&gt;‘auth = true’&lt;br&gt;8.详细记录输出&lt;br&gt;‘verbose = true’&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;常用命令&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/mongodb.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="MongoDb" scheme="http://yoursite.com/tags/MongoDb/"/>
+    
+  </entry>
   
   <entry>
     <title>透明色的夏天</title>
