@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-08-30T15:13:06.655Z</updated>
+  <updated>2016-08-30T16:26:00.833Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/08/30/Mongo-Db%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2016/08/30/Mongo-Db常用命令/</id>
     <published>2016-08-30T12:19:09.000Z</published>
-    <updated>2016-08-30T15:13:06.655Z</updated>
+    <updated>2016-08-30T16:26:00.833Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/mongodb.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
@@ -38,6 +38,7 @@
 &lt;blockquote&gt;
 &lt;p&gt;常用命令&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;1.打开连接(默认端口27017无改动时:mongo)&lt;br&gt; mongo localhost:port&lt;br&gt;2.关闭连接&lt;br&gt;use admin&lt;br&gt;db.shutdownServer()&lt;br&gt;exit&lt;br&gt;3.查看数据库列表&lt;br&gt;show dbs&lt;br&gt;4.切换（选择、创建）数据库&lt;br&gt;use db_name&lt;br&gt;5.插入数据（JSON格式)&lt;br&gt;db.collection_name.insert({“key”:”value”})&lt;br&gt;默认情况下自动生成-id,也可以自己指定，但不能重复&lt;br&gt;db.collection_name.insert({“key”:”value”,_id:1})&lt;br&gt;6.查看当前数据库中的表格（首先选择数据库)&lt;br&gt;show collections&lt;br&gt;7.查看表格中的数据(查询条件为空返回所有)&lt;br&gt;db.collection_name.find()&lt;br&gt;8.指定条件查询(条件为JSON)&lt;br&gt;db.collection_name.find({“x”:1})&lt;br&gt;9.多条插入（删除……)&lt;br&gt;for(i=2;i&amp;lt;20;i++)  db.collection_name.insert({x:i})&lt;br&gt;10.计数&lt;br&gt;db.collection_name.find().count()&lt;br&gt;11.跳过：skip(count)限制：limit(count)排序：sort(JSON)&lt;br&gt;db.collection_name.find().skip(3).limit(5).sort({“x”:1})&lt;br&gt;从当前表的第四条数据开始，依次查询五条数据，并按照x的值升序排序&lt;br&gt;12.数据更新&lt;br&gt;db.collection_name.update({x:1},{x:99})&lt;br&gt;13.部分字段更新$set&lt;br&gt;db.collection_name.insert({x:1},{y:99},{z:100})&lt;br&gt;将z=100的数据中字段x改为99&lt;br&gt;db.collection_name.update({z:100},{x:99})&lt;br&gt;错误：y和z将会被覆盖掉，只剩下x字段&lt;br&gt;db.collection_name.update({z:100},{$set{x:99}})&lt;br&gt;正确：只更新x字段，其他字段不变&lt;br&gt;14.&lt;/p&gt;
 &lt;/h3&gt;&lt;/h3&gt;</content>
     
     <summary type="html">

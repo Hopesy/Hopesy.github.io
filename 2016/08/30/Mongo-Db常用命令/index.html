@@ -17,7 +17,7 @@
 <meta property="og:site_name" content="Hopesy">
 <meta property="og:description">
 <meta property="og:image" content="https://raw.githubusercontent.com/hopesy/img/master/mongodb.jpg">
-<meta property="og:updated_time" content="2016-08-30T15:13:06.655Z">
+<meta property="og:updated_time" content="2016-08-30T16:26:00.833Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Mongo Db常用命令">
 <meta name="twitter:description">
@@ -84,7 +84,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -264,6 +264,7 @@
 <blockquote>
 <p>常用命令</p>
 </blockquote>
+<p>1.打开连接(默认端口27017无改动时:mongo)<br> mongo localhost:port<br>2.关闭连接<br>use admin<br>db.shutdownServer()<br>exit<br>3.查看数据库列表<br>show dbs<br>4.切换（选择、创建）数据库<br>use db_name<br>5.插入数据（JSON格式)<br>db.collection_name.insert({“key”:”value”})<br>默认情况下自动生成-id,也可以自己指定，但不能重复<br>db.collection_name.insert({“key”:”value”,_id:1})<br>6.查看当前数据库中的表格（首先选择数据库)<br>show collections<br>7.查看表格中的数据(查询条件为空返回所有)<br>db.collection_name.find()<br>8.指定条件查询(条件为JSON)<br>db.collection_name.find({“x”:1})<br>9.多条插入（删除……)<br>for(i=2;i&lt;20;i++)  db.collection_name.insert({x:i})<br>10.计数<br>db.collection_name.find().count()<br>11.跳过：skip(count)限制：limit(count)排序：sort(JSON)<br>db.collection_name.find().skip(3).limit(5).sort({“x”:1})<br>从当前表的第四条数据开始，依次查询五条数据，并按照x的值升序排序<br>12.数据更新<br>db.collection_name.update({x:1},{x:99})<br>13.部分字段更新$set<br>db.collection_name.insert({x:1},{y:99},{z:100})<br>将z=100的数据中字段x改为99<br>db.collection_name.update({z:100},{x:99})<br>错误：y和z将会被覆盖掉，只剩下x字段<br>db.collection_name.update({z:100},{$set{x:99}})<br>正确：只更新x字段，其他字段不变<br>14.</p>
 </h3></h3>
       
     </div>
