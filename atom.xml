@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-04T14:15:40.414Z</updated>
+  <updated>2016-09-05T08:07:53.479Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,33 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Node.js学习笔记</title>
+    <link href="http://yoursite.com/2016/09/05/Node-js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/09/05/Node-js学习笔记/</id>
+    <published>2016-09-05T07:46:01.000Z</published>
+    <updated>2016-09-05T08:07:53.479Z</updated>
+    
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/node1.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;500&quot; height=&quot;100&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/node1.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;
+
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=500 height=100 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Node" scheme="http://yoursite.com/tags/Node/"/>
+    
+  </entry>
   
   <entry>
     <title>Mongo Db常用命令</title>
@@ -483,9 +510,9 @@ setup(
     </summary>
     
     
-      <category term="love" scheme="http://yoursite.com/tags/love/"/>
-    
       <category term="声优" scheme="http://yoursite.com/tags/%E5%A3%B0%E4%BC%98/"/>
+    
+      <category term="love" scheme="http://yoursite.com/tags/love/"/>
     
   </entry>
   
