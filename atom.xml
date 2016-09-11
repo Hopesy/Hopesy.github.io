@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-11T08:54:38.166Z</updated>
+  <updated>2016-09-11T08:58:27.635Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,16 +20,41 @@
     <link href="http://yoursite.com/2016/09/11/Bootstrap/"/>
     <id>http://yoursite.com/2016/09/11/Bootstrap/</id>
     <published>2016-09-11T02:47:41.000Z</published>
-    <updated>2016-09-11T08:54:38.166Z</updated>
+    <updated>2016-09-11T08:58:27.635Z</updated>
     
-    <content type="html">&lt;p&gt;&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/p&gt;
-&lt;html&gt;&lt;br&gt;&lt;head&gt;&lt;br&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;br&gt;&lt;title&gt;代码&lt;/title&gt;&lt;br&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css&quot;&gt;&lt;br&gt;&lt;/head&gt;&lt;br&gt;&lt;br&gt;&lt;body&gt;&lt;br&gt;高度超出340px，就会在Y轴出现滚动条&lt;br&gt;&lt;!--下面是代码任务部分--&gt;&lt;br&gt;&lt;pre class=&quot;pre-scrollable&quot;&gt;&lt;br&gt;&lt;ol&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;    &lt;li&gt;….&lt;/li&gt;&lt;br&gt;&lt;/ol&gt;&lt;br&gt;&lt;/pre&gt;&lt;br&gt;&lt;/body&gt;&lt;br&gt;&lt;/html&gt;
+    <content type="html">&lt;pre&gt;
+&lt;ol&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+&lt;/ol&gt;
+&lt;/pre&gt;
+
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&amp;lt;!DOCTYPE HTML&amp;gt;&lt;/p&gt;
-&lt;html&gt;&lt;br&gt;&lt;head&gt;&lt;br&gt;&lt;meta charset=&quot;utf-8&quot;&gt;&lt;br&gt;&lt;title&gt;代码&lt;/title&gt;&lt;br&gt;&lt;link rel=&quot;stylesheet&quot; href=&quot;//netdna.bootst
+      &lt;pre&gt;
+&lt;ol&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+    &lt;li&gt;....&lt;/li&gt;
+   
     
     </summary>
     
