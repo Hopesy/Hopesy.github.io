@@ -4,8 +4,25 @@
 
     
   <url>
+    <loc>http://yoursite.com/2016/09/11/Bootstrap/</loc>
+    <lastmod>2016-09-11T08:54:38.166Z</lastmod>
+    <data>
+        <display>
+        <title>Bootstrap</title>
+        <pubTime>2016-09-11T02:47:41.000Z</pubTime>
+        
+        <tag>Bootstrap</tag>
+         
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/09/05/Node-js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</loc>
-    <lastmod>2016-09-05T08:07:53.479Z</lastmod>
+    <lastmod>2016-09-05T08:54:09.945Z</lastmod>
     <data>
         <display>
         <title>Node.js学习笔记</title>
