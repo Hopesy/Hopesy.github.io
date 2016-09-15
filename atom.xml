@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-15T10:18:54.722Z</updated>
+  <updated>2016-09-15T11:09:07.299Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,29 @@
     <link href="http://yoursite.com/2016/09/15/Grunt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/15/Grunt学习笔记/</id>
     <published>2016-09-15T10:13:58.000Z</published>
-    <updated>2016-09-15T10:18:54.722Z</updated>
+    <updated>2016-09-15T11:09:07.299Z</updated>
     
-    <content type="html">&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
-</content>
+    <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  Grunt可以轻松搭建自动化的WEB前端开发环境，Grunt和grunt插件都是基于nodejs来运行的,jQuery在使用grunt，bootstrap在使用grunt，&lt;br&gt;百度UEditor在使用grunt，你没有理由不学、不用。此外，Gulp也是一个不错的选择。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;起步&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;1.安装&lt;br&gt;&lt;code&gt;&lt;br&gt;npm install -g grunt&lt;br&gt;npm install -g grunt-cli&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;　　&lt;/p&gt;
+&lt;/h3&gt;</content>
     
     <summary type="html">
     
-      &lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain
+      &lt;p&gt;&lt;center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;  Grunt可以轻松搭建自动化的WEB前端开发环境，Grunt和grunt插件都是基于nodejs来运行的,jQuery在使用grunt，bootstrap在使用grunt，&lt;br&gt;百度UEditor在使用grunt，你没有理由不学、不用。此外，Gulp也是一个不错的选择。&lt;br&gt;
     
     </summary>
     
@@ -41,12 +56,12 @@
     <link href="http://yoursite.com/2016/09/05/Node-js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/05/Node-js学习笔记/</id>
     <published>2016-09-05T07:46:01.000Z</published>
-    <updated>2016-09-05T08:54:09.945Z</updated>
+    <updated>2016-09-15T10:23:40.312Z</updated>
     
     <content type="html">&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/node1.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;500&quot; height=&quot;100&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;常用命令&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -58,7 +73,7 @@
       &lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/node1.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=500 height=100 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;
     
     </summary>
     
