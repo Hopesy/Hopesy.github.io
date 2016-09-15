@@ -20,7 +20,7 @@
 <meta property="og:description" content="前言
 
   Grunt可以轻松搭建自动化的WEB前端开发环境，Grunt和grunt插件都是基于nodejs来运行的,jQuery在使用grunt，bootstrap在使用grunt，百度UEditor在使用grunt，你没有理由不学、不用。此外，Gulp也是一个不错的选择。">
-<meta property="og:updated_time" content="2016-09-15T11:51:37.693Z">
+<meta property="og:updated_time" content="2016-09-15T13:10:35.380Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Grunt学习笔记">
 <meta name="twitter:description" content="前言
@@ -88,7 +88,7 @@
 						<li>Links</li>
 						
 						
-						<li>Über</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -261,14 +261,20 @@
 <blockquote>
 <p>起步</p>
 </blockquote>
-<p>1.安装<br><code><br>npm install -g grunt<br>npm install -g grunt-cli<br></code><br>2.配置<br>项目目录下npm install grunt<br>新建Gruntfile.js并进行配置(文件名称一致)<br>3.使用<br>运行grunt命令</p>
+<p>1.安装<br><code><br>npm install -g grunt  //项目需要时安装<br>npm install -g grunt-cli //命令行使用grunt命令<br></code><br>2.配置<br>项目目录下npm install grunt<br>新建Gruntfile.js并进行配置(文件名称一致)<br><code><br>//包装函数<br>module.exports =function (grunt){<br>  //任务配置，所有插件的配置信息<br>  grunt.initConfig({<br>    //获取package.json的信息<br>    pkg: grunt.file.readJSON(‘package.json’)<br>  });<br>  //告诉grunt当我们在终端中输入grunt时需要做些什么(注意先后顺序)<br>  grunt.registerTask(‘default’,[]);<br>};<br></code><br>3.使用<br>运行grunt命令</p>
 <blockquote>
 <p>常用插件介绍(contrib前缀为grunt团队贡献的插件)</p>
 </blockquote>
-<p>Grunt官网插件列表页面:<a href="http://www.gruntjs.net/plugins" target="_blank" rel="external">http://www.gruntjs.net/plugins</a><br><em>Contrib-jshint——javascript语法错误检查；
-</em>Contrib-watch——实时监控文件变化、调用相应的任务重新执行；<br><em>Contrib-clean——清空文件、文件夹；
-</em>Contrib-uglify——压缩javascript代码<br><em>Contrib-copy——复制文件、文件夹
-</em>Contrib-concat——合并多个文件的代码到一个文件中<br>*karma——前端自动化测试工具</p>
+<p>Grunt官网插件列表页面:<a href="http://www.gruntjs.net/plugins" target="_blank" rel="external">http://www.gruntjs.net/plugins</a><br>Contrib-jshint——javascript语法错误检查；<br>Contrib-watch——实时监控文件变化、调用相应的任务重新执行；<br>Contrib-clean——清空文件、文件夹；<br>Contrib-uglify——压缩javascript代码<br>Contrib-copy——复制文件、文件夹<br>Contrib-concat——合并多个文件的代码到一个文件中<br>karma——前端自动化测试工具</p>
+<blockquote>
+<p>使用uglify插件（压缩javascript代码**.min.js）</p>
+</blockquote>
+<p>1.插件安装<br>npm install grunt-contrib-uglify –save-dev<br>2.在grunt.initConfig方法中配置 uglify 的配置参数</p>
+<p><node><br>//uglify插件的配置信息<br>    uglify: {<br>      options:{<br>        stripBanners: true,<br>        banner:’/*! &lt;%=pkg.name%&gt;-&lt;%=pkg.version%&gt;.js&lt;%= grunt.template.today(“yyy-mm-d”)’<br>      },<br>      build: {<br>        src: ‘src/test.js’,<br>        dest: ‘build/&lt;%pkg.name%&gt;-&lt;%=pkg.version%&gt;.js.min.js’<br>      }<br>    }<br></node><br>3.加载插件(如果现在不使用就在registerTask写)<br><code><br>  //告诉grunt我们将要使用插件<br>  grunt.loadNpmTasks(‘grunt-contrib-uglify’);<br>  //告诉grunt当我们在终端中输入grunt时需要做些什么(注意先后顺序)<br>  grunt.registerTask(“default”,[‘uglify’]);<br></code></p>
+<blockquote>
+<p>结语</p>
+</blockquote>
+<p>Grunt插件的用法大同小异，具体用法查看官方文档</p>
 <p>　　</p>
 
       
