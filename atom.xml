@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-11T08:58:27.635Z</updated>
+  <updated>2016-09-15T10:18:54.722Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,50 +16,23 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>Bootstrap</title>
-    <link href="http://yoursite.com/2016/09/11/Bootstrap/"/>
-    <id>http://yoursite.com/2016/09/11/Bootstrap/</id>
-    <published>2016-09-11T02:47:41.000Z</published>
-    <updated>2016-09-11T08:58:27.635Z</updated>
+    <title>Grunt学习笔记</title>
+    <link href="http://yoursite.com/2016/09/15/Grunt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/09/15/Grunt学习笔记/</id>
+    <published>2016-09-15T10:13:58.000Z</published>
+    <updated>2016-09-15T10:18:54.722Z</updated>
     
-    <content type="html">&lt;pre&gt;
-&lt;ol&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-&lt;/ol&gt;
-&lt;/pre&gt;
-
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 </content>
     
     <summary type="html">
     
-      &lt;pre&gt;
-&lt;ol&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-    &lt;li&gt;....&lt;/li&gt;
-   
+      &lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain
     
     </summary>
     
     
-      <category term="Bootstrap" scheme="http://yoursite.com/tags/Bootstrap/"/>
+      <category term="grunt" scheme="http://yoursite.com/tags/grunt/"/>
     
   </entry>
   
@@ -562,9 +535,9 @@ setup(
     </summary>
     
     
-      <category term="声优" scheme="http://yoursite.com/tags/%E5%A3%B0%E4%BC%98/"/>
-    
       <category term="love" scheme="http://yoursite.com/tags/love/"/>
+    
+      <category term="声优" scheme="http://yoursite.com/tags/%E5%A3%B0%E4%BC%98/"/>
     
   </entry>
   
