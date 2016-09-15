@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-15T13:10:35.380Z</updated>
+  <updated>2016-09-15T13:13:37.900Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/09/15/Grunt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/15/Grunt学习笔记/</id>
     <published>2016-09-15T10:13:58.000Z</published>
-    <updated>2016-09-15T13:10:35.380Z</updated>
+    <updated>2016-09-15T13:13:37.900Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
@@ -40,7 +40,7 @@
 &lt;p&gt;使用uglify插件（压缩javascript代码**.min.js）&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;1.插件安装&lt;br&gt;npm install grunt-contrib-uglify –save-dev&lt;br&gt;2.在grunt.initConfig方法中配置 uglify 的配置参数&lt;/p&gt;
-&lt;p&gt;&lt;node&gt;&lt;br&gt;//uglify插件的配置信息&lt;br&gt;    uglify: {&lt;br&gt;      options:{&lt;br&gt;        stripBanners: true,&lt;br&gt;        banner:’/*! &amp;lt;%=pkg.name%&amp;gt;-&amp;lt;%=pkg.version%&amp;gt;.js&amp;lt;%= grunt.template.today(“yyy-mm-d”)’&lt;br&gt;      },&lt;br&gt;      build: {&lt;br&gt;        src: ‘src/test.js’,&lt;br&gt;        dest: ‘build/&amp;lt;%pkg.name%&amp;gt;-&amp;lt;%=pkg.version%&amp;gt;.js.min.js’&lt;br&gt;      }&lt;br&gt;    }&lt;br&gt;&lt;/node&gt;&lt;br&gt;3.加载插件(如果现在不使用就在registerTask写)&lt;br&gt;&lt;code&gt;&lt;br&gt;  //告诉grunt我们将要使用插件&lt;br&gt;  grunt.loadNpmTasks(‘grunt-contrib-uglify’);&lt;br&gt;  //告诉grunt当我们在终端中输入grunt时需要做些什么(注意先后顺序)&lt;br&gt;  grunt.registerTask(“default”,[‘uglify’]);&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;node&gt;&lt;br&gt;    uglify: {&lt;br&gt;      options: {&lt;br&gt;        banner: ‘/&lt;em&gt;! &amp;lt;%= pkg.name %&amp;gt; - v&amp;lt;%= pkg.version %&amp;gt; - ‘ +&lt;br&gt;          ‘&amp;lt;%= grunt.template.today(“yyyy-mm-dd”) %&amp;gt; &lt;/em&gt;/‘&lt;br&gt;      },&lt;br&gt;      my_target: {&lt;br&gt;        files: {&lt;br&gt;          ‘build/output.min.js’: [‘src/test.js’]&lt;br&gt;        }&lt;br&gt;      }&lt;br&gt;    }&lt;br&gt;  });&lt;br&gt;&lt;/node&gt;&lt;br&gt;3.加载插件(如果现在不使用就在registerTask写)&lt;br&gt;&lt;code&gt;&lt;br&gt;  //告诉grunt我们将要使用插件&lt;br&gt;  grunt.loadNpmTasks(‘grunt-contrib-uglify’);&lt;br&gt;  //告诉grunt当我们在终端中输入grunt时需要做些什么(注意先后顺序)&lt;br&gt;  grunt.registerTask(“default”,[‘uglify’]);&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;结语&lt;/p&gt;
 &lt;/blockquote&gt;

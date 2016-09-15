@@ -20,7 +20,7 @@
 <meta property="og:description" content="前言
 
   Grunt可以轻松搭建自动化的WEB前端开发环境，Grunt和grunt插件都是基于nodejs来运行的,jQuery在使用grunt，bootstrap在使用grunt，百度UEditor在使用grunt，你没有理由不学、不用。此外，Gulp也是一个不错的选择。">
-<meta property="og:updated_time" content="2016-09-15T13:10:35.380Z">
+<meta property="og:updated_time" content="2016-09-15T13:13:37.900Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Grunt学习笔记">
 <meta name="twitter:description" content="前言
@@ -270,7 +270,7 @@
 <p>使用uglify插件（压缩javascript代码**.min.js）</p>
 </blockquote>
 <p>1.插件安装<br>npm install grunt-contrib-uglify –save-dev<br>2.在grunt.initConfig方法中配置 uglify 的配置参数</p>
-<p><node><br>//uglify插件的配置信息<br>    uglify: {<br>      options:{<br>        stripBanners: true,<br>        banner:’/*! &lt;%=pkg.name%&gt;-&lt;%=pkg.version%&gt;.js&lt;%= grunt.template.today(“yyy-mm-d”)’<br>      },<br>      build: {<br>        src: ‘src/test.js’,<br>        dest: ‘build/&lt;%pkg.name%&gt;-&lt;%=pkg.version%&gt;.js.min.js’<br>      }<br>    }<br></node><br>3.加载插件(如果现在不使用就在registerTask写)<br><code><br>  //告诉grunt我们将要使用插件<br>  grunt.loadNpmTasks(‘grunt-contrib-uglify’);<br>  //告诉grunt当我们在终端中输入grunt时需要做些什么(注意先后顺序)<br>  grunt.registerTask(“default”,[‘uglify’]);<br></code></p>
+<p><node><br>    uglify: {<br>      options: {<br>        banner: ‘/<em>! &lt;%= pkg.name %&gt; - v&lt;%= pkg.version %&gt; - ‘ +<br>          ‘&lt;%= grunt.template.today(“yyyy-mm-dd”) %&gt; </em>/‘<br>      },<br>      my_target: {<br>        files: {<br>          ‘build/output.min.js’: [‘src/test.js’]<br>        }<br>      }<br>    }<br>  });<br></node><br>3.加载插件(如果现在不使用就在registerTask写)<br><code><br>  //告诉grunt我们将要使用插件<br>  grunt.loadNpmTasks(‘grunt-contrib-uglify’);<br>  //告诉grunt当我们在终端中输入grunt时需要做些什么(注意先后顺序)<br>  grunt.registerTask(“default”,[‘uglify’]);<br></code></p>
 <blockquote>
 <p>结语</p>
 </blockquote>
