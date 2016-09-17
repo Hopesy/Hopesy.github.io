@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-16T13:30:33.123Z</updated>
+  <updated>2016-09-17T02:08:58.237Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,18 +16,239 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>test</title>
-    <link href="http://yoursite.com/2016/09/16/test/"/>
-    <id>http://yoursite.com/2016/09/16/test/</id>
-    <published>2016-09-16T13:30:33.000Z</published>
-    <updated>2016-09-16T13:30:33.123Z</updated>
+    <title>MongDb学习笔记之mongoose</title>
+    <link href="http://yoursite.com/2016/09/16/MongDb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8Bmongoose/"/>
+    <id>http://yoursite.com/2016/09/16/MongDb学习笔记之mongoose/</id>
+    <published>2016-09-16T13:40:22.000Z</published>
+    <updated>2016-09-17T02:08:58.237Z</updated>
     
-    <content type="html"></content>
+    <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=35440198&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;安装及引用&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1.安装&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+npm install mongoose
+&lt;/code&gt;&lt;/pre&gt;
+2.引用
+&lt;pre&gt;&lt;code&gt;
+var mongoose = require(&quot;mongoose&quot;)
+&lt;/code&gt;&lt;/pre&gt;
+3.使用mongoose链接数据库
+&lt;pre&gt;&lt;code&gt;
+var db = mongoose(“mongodb://user:pass@localhost:port/database”);
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Example&lt;h3&gt;
+&lt;pre&gt;&lt;code&gt;
+var mongoose = require(“mongoose”); 
+var db = mongoose.connect(“mongodb://127.0.0.1:27017/test”); 
+db.connection.on(“error”, function (error) { 
+console.log(“数据库连接失败：” + error); 
+}); 
+db.connection.on(“open”, function () { 
+console.log(“——数据库连接成功！——”); 
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;MongoDb基础&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;b&gt;Schema:&lt;/b&gt;一种以文件形式存储的数据库模型骨架，不具备数据库的操作能力&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;
+var mongoose = require(&quot;mongoose&quot;)
+var TestSchema = new mongoose.Schema({
+    name : {type:String},
+    age : {type:Number,default:0},
+    time : {type:Date,default:Date.now},
+    emial : {type:String,default:&#39;&#39;}
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;b&gt;Model:&lt;/b&gt; 由Schema发布生成的模型，具有抽象属性和行为的数据库操作,类似于管理数据库属性、行为的类
+&lt;pre&gt;&lt;code&gt;
+var db = mongoose.connect(&quot;mongodb://127.0.0.1:27017/test&quot;);
+// 通过Schema创建Model
+var TestModel = db.model(&quot;test1&quot;, TestSchema);
+&lt;/code&gt;&lt;/pre&gt;
+如果集合test1已经存在，则会保存在其目录下，如果未存在，则会创建集合保存数据
+&lt;b&gt;Entity:&lt;/b&gt; 由Model创建的实体，使用save方法保存数据，Model和Entity都有能影响数据库的操作，但Model比Entity更具操作性。
+&lt;pre&gt;&lt;code&gt;
+var TestEntity = new TestModel({
+    name : &quot;mikai&quot;,
+    age : 20,
+    email : &quot;mikai@163.com&quot;
+});
+console.log(TestEntity.name); // Lenka
+console.log(TestEntity.age); // 36
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Example One&lt;/h3&gt;
+&lt;pre&gt;&lt;code&gt;
+var mongoose = require(&quot;mongoose&quot;);
+var db = mongoose.connect(&quot;mongodb://127.0.0.1:27017/test&quot;);
+var TestSchema = new mongoose.Schema({
+    name : {type:String},
+    age : {type:Number,default:0},
+    email : {type:String},
+    time : {type:Date,default:Date.now}
+});
+var TestModel = db.model(&quot;test1&quot;,TestSchema); //&#39;test&#39;相当于collection
+var TestEntity = new TestModel({
+    name:&#39;helloworld&#39;,
+    age:28,
+    emial:&#39;helloworld@qq.com&#39;
+});
+TestEntity.save(function(err,doc){
+    if(err){
+        console.log(&quot;error :&quot; + err);
+    } else {
+        console.log(doc);
+    }
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Example Two&lt;/h3&gt;
+通过entity、model来完成数据库的增删查改
+&lt;pre&gt;&lt;code&gt;
+var mongoose = require(&#39;mongoose&#39;);
+var db= mongoose.createConnection(&#39;mongodb://127.0.0.1:27017/test&#39;);
+var mongooseSchema = new mongoose.Schema({
+    username : {type : String, default : &#39;匿名用户&#39;},
+    title    : {type : String},
+    content  : {type : String},
+    time     : {type : Date, default: Date.now},
+    age      : {type : Number}
+});
+// 添加 mongoose 实例方法
+mongooseSchema.methods.findbyusername = function(username, callback) {
+    return this.model(&#39;mongoose&#39;).find({username: username}, callback);
+}
+// 添加 mongoose 静态方法，静态方法在Model层就能使用
+mongooseSchema.statics.findbytitle = function(title, callback) {
+    return this.model(&#39;mongoose&#39;).find({title: title}, callback);
+}
+//model结构
+var mongooseModel = db.model(&#39;mongoose&#39;, mongooseSchema);
+//Ebtity结构
+//增加操作
+var doc = {username : &#39;emtity_demo_username&#39;, title : &#39;emtity_demo_title&#39;, content : &#39;emtity_demo_content&#39;};
+var mongooseEntity = new mongooseModel(doc);
+mongooseEntity.save(function(error) {
+    if(error) {
+        console.log(error);
+    } else {
+        console.log(&#39;saved OK!&#39;);
+    }
+    // 关闭数据库链接
+    db.close();
+});
+//查询操作
+var mongooseEntity = new mongooseModel({});
+mongooseEntity.findbyusername(&#39;model_demo_username&#39;, function(error, result){
+    if(error) {
+        console.log(error);
+    } else {
+        console.log(result);
+    }
+    //关闭数据库链接
+    db.close();
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Example Three&lt;/h3&gt;
+基于model的增加、修改与查询
+&lt;pre&gt;&lt;code&gt;
+// 增加记录 基于model操作
+var doc = {username : &#39;model_demo_username&#39;, title : &#39;model_demo_title&#39;, content : &#39;model_demo_content&#39;};
+mongooseModel.create(doc, function(error){
+    if(error) {
+        console.log(error);
+    } else {
+        console.log(&#39;save ok&#39;);
+    }
+    // 关闭数据库链接
+    db.close();
+});
+//修改记录
+//mongooseModel.update(conditions, update, options, callback);
+var conditions = {username : &#39;model_demo_username&#39;};
+var update     = {$set : {age : 27, title : &#39;model_demo_title_update&#39;}};
+var options    = {upsert : true};
+mongooseModel.update(conditions, update, options, function(error){
+    if(error) {
+        console.log(error);
+    } else {
+        console.log(&#39;update ok!&#39;);
+    }
+    //关闭数据库链接
+    db.close();
+});
+// mongoose find
+var criteria = {title : &#39;emtity_demo_title&#39;}; // 查询条件
+var fields   = {title : 1, content : 1, time : 1}; // 待返回的字段
+var options  = {};
+mongooseModel.find(criteria, fields, options, function(error, result){
+    if(error) {
+        console.log(error);
+    } else {
+        console.log(result);
+    }
+    //关闭数据库链接
+    db.close();
+});
+// 删除记录
+var conditions = {username: &#39;emtity_demo_username&#39;};
+mongooseModel.remove(conditions, function(error){
+    if(error) {
+        console.log(error);
+    } else {
+        console.log(&#39;delete ok!&#39;);
+    }
+
+    //关闭数据库链接
+    db.close();
+});
+&lt;/code&gt;&lt;/pre&gt;
+&lt;h3&gt;Example Four&lt;/h3&gt;
+基于实例方法的查询
+&lt;pre&gt;&lt;code&gt;
+var mongooseEntity = new mongooseModel({});
+mongooseEntity.findbyusername(&#39;model_demo_username&#39;, function(error, result){
+    if(error) {
+        console.log(error);
+    } else {
+        console.log(result);
+    }
+    //关闭数据库链接
+    db.close();
+});
+&lt;/code&gt;&lt;/pre&gt;
+基于静态方法的查询
+&lt;pre&gt;&lt;code&gt;
+// 基于静态方法的查询
+mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
+    if(error) {
+        console.log(error);
+    } else {
+        console.log(result);
+    }
+    //关闭数据库链接
+    db.close();
+});
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;blockquote&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;mongoose里面其实就三个概念，schemal、model、entity，把这三个弄清楚了也就好了&lt;/p&gt;
+&lt;/h3&gt;&lt;/h3&gt;</content>
     
     <summary type="html">
     
+      &lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.
+    
     </summary>
     
+    
+      <category term="mongoose" scheme="http://yoursite.com/tags/mongoose/"/>
     
   </entry>
   
