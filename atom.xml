@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-18T09:01:17.116Z</updated>
+  <updated>2016-09-18T09:06:15.455Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/09/18/Less-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/18/Less-学习笔记/</id>
     <published>2016-09-18T07:54:29.000Z</published>
-    <updated>2016-09-18T09:01:17.116Z</updated>
+    <updated>2016-09-18T09:06:15.455Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
@@ -31,9 +31,20 @@
 &lt;blockquote&gt;
 &lt;p&gt;笔记&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;&lt;h3&gt;注释&lt;/h3&gt;&lt;br&gt;1./&lt;em&gt;我是被编译的&lt;/em&gt;/&lt;br&gt;2.//我不会被编译&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;h3&gt;变量&lt;/h3&gt;&lt;br&gt;1.@test_width:300px;&lt;br&gt;混合&lt;br&gt;&lt;code&gt;&lt;br&gt;.box{&lt;br&gt;  width:@test_width;&lt;br&gt;  height:@test_width;&lt;br&gt;  background-color: yellow;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;  .border;&lt;br&gt;}&lt;br&gt;.border&lt;br&gt;{&lt;br&gt;  border:solid 5px pink;&lt;br&gt;}&lt;br&gt;.box2{&lt;br&gt;.box;&lt;br&gt;margin-left:100px;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;br&gt;混合-可带参数&lt;br&gt;&lt;code&gt;&lt;br&gt;.border_test(@border_width){&lt;br&gt;  border:solid yellow @border_width;&lt;br&gt;}&lt;br&gt;.test_hunhe{&lt;br&gt;  .border_test(30px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;混合-带默认值&lt;br&gt;&lt;code&gt;&lt;br&gt;.border_test(@border_width:30px){&lt;br&gt;  border:solid yellow @border_width;&lt;br&gt;}&lt;br&gt;.test_hunhe1{&lt;br&gt;  .border_test();&lt;br&gt;}&lt;br&gt;.test_hunhe2{&lt;br&gt;  .border_test(20px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;h3&gt;注释&lt;/h3&gt;&lt;br&gt;1./&lt;em&gt;我是被编译的&lt;/em&gt;/&lt;br&gt;2.//我不会被编译&lt;br&gt;&lt;h3&gt;变量&lt;/h3&gt;&lt;br&gt;1.@test_width:300px;&lt;br&gt;混合&lt;br&gt;&lt;code&gt;&lt;br&gt;.box{&lt;br&gt;  width:@test_width;&lt;br&gt;  height:@test_width;&lt;br&gt;  background-color: yellow;&lt;br&gt;&lt;br&gt;  .border;&lt;br&gt;}&lt;br&gt;.border&lt;br&gt;{&lt;br&gt;  border:solid 5px pink;&lt;br&gt;}&lt;br&gt;.box2{&lt;br&gt;.box;&lt;br&gt;margin-left:100px;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;混合-可带参数&lt;br&gt;&lt;code&gt;&lt;br&gt;.border_test(@border_width){&lt;br&gt;  border:solid yellow @border_width;&lt;br&gt;}&lt;br&gt;.test_hunhe{&lt;br&gt;  .border_test(30px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;混合-带默认值&lt;br&gt;&lt;code&gt;&lt;br&gt;.border_test(@border_width:30px){&lt;br&gt;  border:solid yellow @border_width;&lt;br&gt;}&lt;br&gt;.test_hunhe1{&lt;br&gt;  .border_test();&lt;br&gt;}&lt;br&gt;.test_hunhe2{&lt;br&gt;  .border_test(20px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;h3&gt;匹配模式&lt;/h3&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
 </content>
     
     <summary type="html">
