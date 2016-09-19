@@ -10,16 +10,24 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Less 学习笔记 | Hopesy</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="&amp;gt;前言Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。Less 可以运行在 Node 或浏览器端。">
+  <meta name="description" content="前言
+
+Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。Less 可以运行在 Node 或浏览器端。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Less 学习笔记">
 <meta property="og:url" content="http://yoursite.com/2016/09/18/Less-学习笔记/index.html">
 <meta property="og:site_name" content="Hopesy">
-<meta property="og:description" content="&amp;gt;前言Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。Less 可以运行在 Node 或浏览器端。">
-<meta property="og:updated_time" content="2016-09-18T09:22:20.543Z">
+<meta property="og:description" content="前言
+
+Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。Less 可以运行在 Node 或浏览器端。">
+<meta property="og:image" content="http://github.com/hopesy/img/raw/master/less.jpg">
+<meta property="og:updated_time" content="2016-09-19T09:13:00.461Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Less 学习笔记">
-<meta name="twitter:description" content="&amp;gt;前言Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。Less 可以运行在 Node 或浏览器端。">
+<meta name="twitter:description" content="前言
+
+Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。Less 可以运行在 Node 或浏览器端。">
+<meta name="twitter:image" content="http://github.com/hopesy/img/raw/master/less.jpg">
   
     <link rel="alternative" href="/atom.xml" title="Hopesy" type="application/atom+xml">
   
@@ -76,13 +84,13 @@
 				<div class="tips-box hide">
 					<div class="tips-arrow"></div>
 					<ul class="tips-inner">
-						<li>菜单</li>
+						<li>Menu</li>
 						<li>Tags</li>
 						
-						<li>友情链接</li>
+						<li>Links</li>
 						
 						
-						<li>A propos</li>
+						<li>About</li>
 						
 					</ul>
 				</div>
@@ -246,21 +254,40 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><center></center></p>
-<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="700" height="120" src="http://music.163.com/outchain/player?type=2&id=133998&auto=0&height=66"></iframe><br><br>&gt;前言<br><br>Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。<br>Less 可以运行在 Node 或浏览器端。<br><a id="more"></a><br>&gt;笔记<br><br><h3>注释</h3><br>1./<em>我是被编译的</em>/<br>2.//我不会被编译<br><h3>变量</h3><br>1.@test_width:300px;<br>混合<br><code><br>.box{<br>  width:@test_width;<br>  height:@test_width;<br>  background-color: yellow;<br><br>  .border;<br>}<br>.border<br>{<br>  border:solid 5px pink;<br>}<br>.box2{<br>.box;<br>margin-left:100px;<br>}<br></code><br>混合-可带参数<br><code><br>.border_test(@border_width){<br>  border:solid yellow @border_width;<br>}<br>.test_hunhe{<br>  .border_test(30px);<br>}<br></code><br>混合-带默认值<br><code><br>.border_test(@border_width:30px){<br>  border:solid yellow @border_width;<br>}<br>.test_hunhe1{<br>  .border_test();<br>}<br>.test_hunhe2{<br>  .border_test(20px);<br>}<br></code><br><h3>匹配模式</h3><br><iframe src="https://docs.google.com/presentation/d/1s9dg0Mz3zgrm1xRBELgPUOgokDmwIrm5DsKWDrjpS6Y/embed?start=false&loop=false&delayms=3000" frameborder="0" width="960" height="569" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
-
-
-
-
-
-
-
-
-
-
-
-
-
+        <p><img src="http://github.com/hopesy/img/raw/master/less.jpg" alt="Less"></p>
+<p><center></center></p>
+<p><iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="700" height="120" src="http://music.163.com/outchain/player?type=2&id=133998&auto=0&height=66"></iframe><br></p>
+<blockquote>
+<p>前言</p>
+</blockquote>
+<p>Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。<br>Less 可以运行在 Node 或浏览器端。<br><a id="more"></a></p>
+<blockquote>
+<p>笔记</p>
+</blockquote>
+<p></p><h3>注释</h3><br>1./<em>我是被编译的</em>/<br>2.//我不会被编译<p></p>
+<p></p><h3>变量</h3><br>1.@test_width:300px;<br>混合<br><code><br>.box{<br>  width:@test_width;<br>  height:@test_width;<br>  background-color: yellow;<p></p>
+<p>  .border;<br>}<br>.border<br>{<br>  border:solid 5px pink;<br>}<br>.box2{<br>.box;<br>margin-left:100px;<br>}<br></p></code><br>混合-可带参数<br><code><br>.border_test(@border_width){<br>  border:solid yellow @border_width;<br>}<br>.test_hunhe{<br>  .border_test(30px);<br>}<br></code><br>混合-带默认值<br><code><br>.border_test(@border_width:30px){<br>  border:solid yellow @border_width;<br>}<br>.test_hunhe1{<br>  .border_test();<br>}<br>.test_hunhe2{<br>  .border_test(20px);<br>}<br></code><p></p>
+<p></p><h3>匹配模式</h3><br><code><br>.triangle(top,@w:5px,@c:#ccc){<br>  border-width:@w;<br>  border-color: transparent transparent @c transparent;<br>  border-style: dashed dashed solid dashed;<br>}<br>.triangle(bottom,@w:5px,@c:#ccc){<br>  border-width:@w;<br>  border-color:@c transparent transparent transparent;<br>  border-style: solid dashed dashed dashed;<br>}<br>//@<em>为默认格式，而且后面的声明不能省略<br>//无论匹配到哪个，一下默认内容均会生成<br>.triangle(@</em>,@w:5px,@c:#ccc){<br>width: 0;<br>height: 0;<br>overflow:hidden;<br>}<br>//如果没有匹配，只会生成默认内容<br>.sanjiao1{<br>  .triangle(top,80px)<br>}<br></code><p></p>
+<blockquote>
+<p>运算</p>
+</blockquote>
+<p>任何数字、颜色或者变量都可以参与运算，运算应该被包裹在括号中<br><code><br>@test_01:300px;<br>.box_01{<br>  width:(@test_01 - 20) * 5;<br>  color:#ccc - 10;<br>}<br></code></p>
+<blockquote>
+<p>嵌套规则</p>
+</blockquote>
+<p><code><br>.list{<br>  width:600px;<br>  margin:30px auto;<br>  padding:0;<br>  list-style: none;<br>  li {<br>    height: 30px;<br>    line-height:30px;<br>    background-color: pink;<br>    maigin-bottom:5px;<br>  }<br>  a{<br>    float:lest;<br>    //代表上一层选择器，此处指a<br>    &amp;：hover{red}<br>  }<br>}<br></code></p>
+<blockquote>
+<p>@arguments变量</p>
+</blockquote>
+<p><code><br>.border_arg(@w:30px,@c:red,@xx:solid){<br>//@arguments会传入所有声明的变量<br>    border:@arguments;<br>}<br>.test_arguments{<br> .border_arg(40px);<br>}<br></code></p>
+<blockquote>
+<p>避免编译</p>
+</blockquote>
+<p>.test_03{<br>  //~’’里面的内容不会被less编译<br>  width: ~’calc(300px - 30px)’;<br>}</p>
+<blockquote>
+<p>结语</p>
+</blockquote>
+<p>以上内容能应付大多数情景,更多用法请参考以下网址<br>Less中文网：<i><a href="http://www.1024i.com/demo/less/index.html" target="_blank" rel="external">http://www.1024i.com/demo/less/index.html</a></i></p>
 
       
     </div>
@@ -285,7 +312,7 @@
 <div class="share_jia">
 	<!-- JiaThis Button BEGIN -->
 	<div class="jiathis_style">
-		<span class="jiathis_txt">分享到: &nbsp; </span>
+		<span class="jiathis_txt">Share to: &nbsp; </span>
 		<a class="jiathis_button_facebook"></a> 
     <a class="jiathis_button_twitter"></a>
     <a class="jiathis_button_plus"></a> 

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-18T09:22:20.543Z</updated>
+  <updated>2016-09-19T09:13:00.461Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,29 +20,53 @@
     <link href="http://yoursite.com/2016/09/18/Less-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/18/Less-学习笔记/</id>
     <published>2016-09-18T07:54:29.000Z</published>
-    <updated>2016-09-18T09:22:20.543Z</updated>
+    <updated>2016-09-19T09:13:00.461Z</updated>
     
-    <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;br&gt;&amp;gt;前言&lt;br&gt;&lt;br&gt;Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。&lt;br&gt;Less 可以运行在 Node 或浏览器端。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;&amp;gt;笔记&lt;br&gt;&lt;br&gt;&lt;h3&gt;注释&lt;/h3&gt;&lt;br&gt;1./&lt;em&gt;我是被编译的&lt;/em&gt;/&lt;br&gt;2.//我不会被编译&lt;br&gt;&lt;h3&gt;变量&lt;/h3&gt;&lt;br&gt;1.@test_width:300px;&lt;br&gt;混合&lt;br&gt;&lt;code&gt;&lt;br&gt;.box{&lt;br&gt;  width:@test_width;&lt;br&gt;  height:@test_width;&lt;br&gt;  background-color: yellow;&lt;br&gt;&lt;br&gt;  .border;&lt;br&gt;}&lt;br&gt;.border&lt;br&gt;{&lt;br&gt;  border:solid 5px pink;&lt;br&gt;}&lt;br&gt;.box2{&lt;br&gt;.box;&lt;br&gt;margin-left:100px;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;混合-可带参数&lt;br&gt;&lt;code&gt;&lt;br&gt;.border_test(@border_width){&lt;br&gt;  border:solid yellow @border_width;&lt;br&gt;}&lt;br&gt;.test_hunhe{&lt;br&gt;  .border_test(30px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;混合-带默认值&lt;br&gt;&lt;code&gt;&lt;br&gt;.border_test(@border_width:30px){&lt;br&gt;  border:solid yellow @border_width;&lt;br&gt;}&lt;br&gt;.test_hunhe1{&lt;br&gt;  .border_test();&lt;br&gt;}&lt;br&gt;.test_hunhe2{&lt;br&gt;  .border_test(20px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;h3&gt;匹配模式&lt;/h3&gt;&lt;br&gt;&lt;iframe src=&quot;https://docs.google.com/presentation/d/1s9dg0Mz3zgrm1xRBELgPUOgokDmwIrm5DsKWDrjpS6Y/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;960&quot; height=&quot;569&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/less.jpg&quot; alt=&quot;Less&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。&lt;br&gt;Less 可以运行在 Node 或浏览器端。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;笔记&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;注释&lt;/h3&gt;&lt;br&gt;1./&lt;em&gt;我是被编译的&lt;/em&gt;/&lt;br&gt;2.//我不会被编译&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;变量&lt;/h3&gt;&lt;br&gt;1.@test_width:300px;&lt;br&gt;混合&lt;br&gt;&lt;code&gt;&lt;br&gt;.box{&lt;br&gt;  width:@test_width;&lt;br&gt;  height:@test_width;&lt;br&gt;  background-color: yellow;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;  .border;&lt;br&gt;}&lt;br&gt;.border&lt;br&gt;{&lt;br&gt;  border:solid 5px pink;&lt;br&gt;}&lt;br&gt;.box2{&lt;br&gt;.box;&lt;br&gt;margin-left:100px;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;br&gt;混合-可带参数&lt;br&gt;&lt;code&gt;&lt;br&gt;.border_test(@border_width){&lt;br&gt;  border:solid yellow @border_width;&lt;br&gt;}&lt;br&gt;.test_hunhe{&lt;br&gt;  .border_test(30px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;混合-带默认值&lt;br&gt;&lt;code&gt;&lt;br&gt;.border_test(@border_width:30px){&lt;br&gt;  border:solid yellow @border_width;&lt;br&gt;}&lt;br&gt;.test_hunhe1{&lt;br&gt;  .border_test();&lt;br&gt;}&lt;br&gt;.test_hunhe2{&lt;br&gt;  .border_test(20px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;匹配模式&lt;/h3&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;.triangle(top,@w:5px,@c:#ccc){&lt;br&gt;  border-width:@w;&lt;br&gt;  border-color: transparent transparent @c transparent;&lt;br&gt;  border-style: dashed dashed solid dashed;&lt;br&gt;}&lt;br&gt;.triangle(bottom,@w:5px,@c:#ccc){&lt;br&gt;  border-width:@w;&lt;br&gt;  border-color:@c transparent transparent transparent;&lt;br&gt;  border-style: solid dashed dashed dashed;&lt;br&gt;}&lt;br&gt;//@&lt;em&gt;为默认格式，而且后面的声明不能省略&lt;br&gt;//无论匹配到哪个，一下默认内容均会生成&lt;br&gt;.triangle(@&lt;/em&gt;,@w:5px,@c:#ccc){&lt;br&gt;width: 0;&lt;br&gt;height: 0;&lt;br&gt;overflow:hidden;&lt;br&gt;}&lt;br&gt;//如果没有匹配，只会生成默认内容&lt;br&gt;.sanjiao1{&lt;br&gt;  .triangle(top,80px)&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;运算&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;任何数字、颜色或者变量都可以参与运算，运算应该被包裹在括号中&lt;br&gt;&lt;code&gt;&lt;br&gt;@test_01:300px;&lt;br&gt;.box_01{&lt;br&gt;  width:(@test_01 - 20) * 5;&lt;br&gt;  color:#ccc - 10;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;嵌套规则&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;&lt;br&gt;.list{&lt;br&gt;  width:600px;&lt;br&gt;  margin:30px auto;&lt;br&gt;  padding:0;&lt;br&gt;  list-style: none;&lt;br&gt;  li {&lt;br&gt;    height: 30px;&lt;br&gt;    line-height:30px;&lt;br&gt;    background-color: pink;&lt;br&gt;    maigin-bottom:5px;&lt;br&gt;  }&lt;br&gt;  a{&lt;br&gt;    float:lest;&lt;br&gt;    //代表上一层选择器，此处指a&lt;br&gt;    &amp;amp;：hover{red}&lt;br&gt;  }&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;@arguments变量&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;code&gt;&lt;br&gt;.border_arg(@w:30px,@c:red,@xx:solid){&lt;br&gt;//@arguments会传入所有声明的变量&lt;br&gt;    border:@arguments;&lt;br&gt;}&lt;br&gt;.test_arguments{&lt;br&gt; .border_arg(40px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;避免编译&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;.test_03{&lt;br&gt;  //~’’里面的内容不会被less编译&lt;br&gt;  width: ~’calc(300px - 30px)’;&lt;br&gt;}&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;以上内容能应付大多数情景,更多用法请参考以下网址&lt;br&gt;Less中文网：&lt;i&gt;&lt;a href=&quot;http://www.1024i.com/demo/less/index.html&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://www.1024i.com/demo/less/index.html&lt;/a&gt;&lt;/i&gt;&lt;/p&gt;
 </content>
     
     <summary type="html">
     
-      &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&amp;gt;前言&lt;br&gt;&lt;br&gt;Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。&lt;br&gt;Less 可以运行在 Node 或浏览器端。&lt;br&gt;
+      &lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/less.jpg&quot; alt=&quot;Less&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Less 是一门 CSS 预处理语言，它扩展了 CSS 语言，增加了变量、Mixin、函数等特性，使 CSS 更易维护和扩展。&lt;br&gt;Less 可以运行在 Node 或浏览器端。&lt;br&gt;
     
     </summary>
     
