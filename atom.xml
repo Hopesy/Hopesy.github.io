@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-19T12:01:17.446Z</updated>
+  <updated>2016-09-19T13:32:33.006Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,19 +20,27 @@
     <link href="http://yoursite.com/2016/09/19/Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/19/Sass学习笔记/</id>
     <published>2016-09-19T09:30:56.000Z</published>
-    <updated>2016-09-19T12:01:17.446Z</updated>
+    <updated>2016-09-19T13:32:33.006Z</updated>
     
-    <content type="html">&lt;center&gt;&lt;br&gt;&lt;/center&gt;
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;Sass 和 CSS 写法的确存在一定的差异，由于 Sass 是基于 Ruby 写出来，所以其延续了 Ruby 的书写规范。在书写 Sass 时&lt;br&gt;不带有大括号和分号，其主要是依靠严格的缩进方式来控制的。&lt;br&gt;SCSS 和 CSS 写法无差别，这也是 Sass 后来越来越受大众喜欢原因之一。简单点说，把你现有的“.css”文件直接修改成“.scss”即&lt;br&gt;可使用。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
+&lt;blockquote&gt;
+&lt;p&gt;起步&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;1.Ruby安装&lt;/h3&gt;&lt;br&gt;Ruby 安装包:  &lt;i&gt;&lt;a href=&quot;http://rubyinstaller.org/downloads&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://rubyinstaller.org/downloads&lt;/a&gt;&lt;/i&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;2.Sass安装&lt;/h3&gt;&lt;br&gt;打开电脑的命令终端，输入下面的命令：&lt;br&gt;&lt;code&gt;&lt;br&gt;gem install sass&lt;br&gt;&lt;/code&gt;&lt;br&gt;更新Sass&lt;br&gt;&lt;code&gt;&lt;br&gt;gem update sass&lt;br&gt;&lt;/code&gt;&lt;br&gt;卸载(删除)Sass&lt;br&gt;gem uninstall sass&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;An simple example&lt;/h3&gt;&lt;br&gt;&lt;b&gt;早期的Sass语法通过 tab 键控制缩进，而且这种缩进要求非常严格。另外其不带有任何的分号和大括号。常常把这种格式称为 Sass 老版本，&lt;br&gt;其文件名以“.sass”为扩展名。&lt;b&gt;&lt;br&gt;&lt;code color=&quot;black&quot;&gt;&lt;br&gt;$font-stack: Helvetica, sans-serif&lt;br&gt;$primary-color: #333&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;body&lt;br&gt;  font: 100% $font-stack&lt;br&gt;  color: $primary-color&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;br&gt;&lt;b&gt;SCSS 是 Sass 的新语法格式，从外形上来判断他和 CSS 长得几乎是一模一样，代码都包裹在一对大括号里，并且末尾结束处都有一个分号。其文&lt;br&gt;件名格式常常以“.scss”为扩展名。&lt;/b&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;$font-stack: Helvetica, sans-serif;&lt;br&gt;$primary-color: #333;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;body {&lt;br&gt;  font: 100% $font-stack;&lt;br&gt;  color: $primary-color;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;/b&gt;&lt;/b&gt;</content>
     
     <summary type="html">
     
-      &lt;center&gt;&lt;br&gt;&lt;/center&gt;
+      &lt;center&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
