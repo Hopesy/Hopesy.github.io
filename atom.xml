@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-19T13:32:33.006Z</updated>
+  <updated>2016-09-19T16:49:07.711Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/09/19/Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/19/Sass学习笔记/</id>
     <published>2016-09-19T09:30:56.000Z</published>
-    <updated>2016-09-19T13:32:33.006Z</updated>
+    <updated>2016-09-19T16:49:07.711Z</updated>
     
     <content type="html">&lt;center&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
@@ -36,6 +36,21 @@
 &lt;p&gt;&lt;/p&gt;&lt;h3&gt;An simple example&lt;/h3&gt;&lt;br&gt;&lt;b&gt;早期的Sass语法通过 tab 键控制缩进，而且这种缩进要求非常严格。另外其不带有任何的分号和大括号。常常把这种格式称为 Sass 老版本，&lt;br&gt;其文件名以“.sass”为扩展名。&lt;b&gt;&lt;br&gt;&lt;code color=&quot;black&quot;&gt;&lt;br&gt;$font-stack: Helvetica, sans-serif&lt;br&gt;$primary-color: #333&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;body&lt;br&gt;  font: 100% $font-stack&lt;br&gt;  color: $primary-color&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;br&gt;&lt;b&gt;SCSS 是 Sass 的新语法格式，从外形上来判断他和 CSS 长得几乎是一模一样，代码都包裹在一对大括号里，并且末尾结束处都有一个分号。其文&lt;br&gt;件名格式常常以“.scss”为扩展名。&lt;/b&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;$font-stack: Helvetica, sans-serif;&lt;br&gt;$primary-color: #333;&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;body {&lt;br&gt;  font: 100% $font-stack;&lt;br&gt;  color: $primary-color;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sass编译&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;1.命令行编译&lt;/h3&gt;&lt;br&gt;&lt;b&gt;单文件编译&lt;/b&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;sass –watch &amp;lt;要编译的Sass文件路径&amp;gt;/style.scss:&amp;lt;要输出CSS文件路径&amp;gt;/style.css&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;b&gt;多文件编译&lt;/b&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;sass sass/:css/&lt;br&gt;&lt;/code&gt;&lt;br&gt;上面的命令表示将项目中“sass”文件夹中所有“.scss”(“.sass”)文件编译成“.css”文件，并且将这些 CSS 文件都放在项目中“css”文件夹中&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;自动化编译&lt;/h3&gt;&lt;br&gt;1.Grunt配置Sass编译实例&lt;br&gt;&lt;code&gt;&lt;br&gt;module.exports = function(grunt) {&lt;br&gt;    grunt.initConfig({&lt;br&gt;        pkg: grunt.file.readJSON(‘package.json’),&lt;br&gt;        sass: {&lt;br&gt;            dist: {&lt;br&gt;                files: {&lt;br&gt;                    ‘style/style.css’ : ‘sass/style.scss’&lt;br&gt;                }&lt;br&gt;            }&lt;br&gt;        },&lt;br&gt;        watch: {&lt;br&gt;            css: {&lt;br&gt;                files: ‘&lt;em&gt;*/&lt;/em&gt;.scss’,&lt;br&gt;                tasks: [‘sass’]&lt;br&gt;            }&lt;br&gt;        }&lt;br&gt;    });&lt;br&gt;    grunt.loadNpmTasks(‘grunt-contrib-sass’);&lt;br&gt;    grunt.loadNpmTasks(‘grunt-contrib-watch’);&lt;br&gt;    grunt.registerTask(‘default’,[‘watch’]);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;2.Gulp 配置 Sass 编译的示例代码&lt;br&gt;&lt;code&gt;&lt;br&gt;var gulp = require(‘gulp’);&lt;br&gt;var sass = require(‘gulp-sass’);&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;gulp.task(‘sass’, function () {&lt;br&gt;    gulp.src(‘./scss/*.scss’)&lt;br&gt;        .pipe(sass())&lt;br&gt;        .pipe(gulp.dest(‘./css’));&lt;br&gt;});&lt;/p&gt;
+&lt;p&gt;gulp.task(‘watch’, function() {&lt;br&gt;    gulp.watch(‘scss/*.scss’, [‘sass’]);&lt;br&gt;});&lt;/p&gt;
+&lt;p&gt;gulp.task(‘default’, [‘sass’,’watch’]);&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;不同样式的输出风格(默认nested)&lt;/h3&gt;&lt;br&gt;&lt;em&gt;嵌套输出方式 nested         –style nested(添加在命令最后)
+&lt;/em&gt;展开输出方式 expanded&lt;br&gt;&lt;em&gt;紧凑输出方式 compact 
+&lt;/em&gt;压缩输出方式 compressed&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sass基础语法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1.声明变量&lt;br&gt;&lt;code&gt;&lt;br&gt;$brand-primary : darken(#428bca, 6.5%) !default; // #337ab7&lt;br&gt;$btn-primary-color : #fff !default;&lt;br&gt;$btn-primary-bg : $brand-primary !default;&lt;br&gt;$btn-primary-border : darken($btn-primary-bg, 5%) !default;&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;$width: 300px;&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
 &lt;/b&gt;&lt;/b&gt;</content>
     
     <summary type="html">
