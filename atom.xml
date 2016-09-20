@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-20T15:17:00.070Z</updated>
+  <updated>2016-09-20T15:22:05.989Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,14 +20,14 @@
     <link href="http://yoursite.com/2016/09/20/Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/"/>
     <id>http://yoursite.com/2016/09/20/Sass学习笔记-二/</id>
     <published>2016-09-20T15:11:01.000Z</published>
-    <updated>2016-09-20T15:17:00.070Z</updated>
+    <updated>2016-09-20T15:22:05.989Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723471&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;Sass又名SCSS，是CSS预处理器之一，它能让你更好的、更轻松的工作。&lt;/p&gt;
+&lt;p&gt;Sass又名SCSS，是CSS预处理器之一，它能让你更好的、更轻松的工作。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Sass进阶&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -35,8 +35,12 @@
     
     <summary type="html">
     
-      &lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.
+      &lt;p&gt;&lt;center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723471&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sass又名SCSS，是CSS预处理器之一，它能让你更好的、更轻松的工作。&lt;br&gt;
     
     </summary>
     
