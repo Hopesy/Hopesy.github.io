@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-19T23:52:05.034Z</updated>
+  <updated>2016-09-20T09:20:50.677Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,9 +20,9 @@
     <link href="http://yoursite.com/2016/09/19/Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/19/Sass学习笔记/</id>
     <published>2016-09-19T09:30:56.000Z</published>
-    <updated>2016-09-19T23:52:05.034Z</updated>
+    <updated>2016-09-20T09:20:50.677Z</updated>
     
-    <content type="html">&lt;center&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
@@ -45,18 +45,62 @@
 &lt;p&gt;gulp.task(‘sass’, function () {&lt;br&gt;    gulp.src(‘./scss/*.scss’)&lt;br&gt;        .pipe(sass())&lt;br&gt;        .pipe(gulp.dest(‘./css’));&lt;br&gt;});&lt;/p&gt;
 &lt;p&gt;gulp.task(‘watch’, function() {&lt;br&gt;    gulp.watch(‘scss/*.scss’, [‘sass’]);&lt;br&gt;});&lt;/p&gt;
 &lt;p&gt;gulp.task(‘default’, [‘sass’,’watch’]);&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/p&gt;&lt;h3&gt;不同样式的输出风格(默认nested)&lt;/h3&gt;&lt;br&gt;&lt;em&gt;嵌套输出方式 nested         –style nested(添加在命令最后)
-&lt;/em&gt;展开输出方式 expanded&lt;br&gt;&lt;em&gt;紧凑输出方式 compact 
-&lt;/em&gt;压缩输出方式 compressed&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;不同样式的输出风格(默认nested)&lt;/h3&gt;&lt;br&gt;嵌套输出方式 nested         –style nested(添加在命令最后)&lt;br&gt;展开输出方式 expanded&lt;br&gt;紧凑输出方式 compact&lt;br&gt;压缩输出方式 compressed&lt;p&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Sass基础语法&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;1.声明变量&lt;br&gt;&lt;code&gt;&lt;br&gt;$brand-primary : darken(#428bca, 6.5%) !default; // #337ab7&lt;br&gt;$btn-primary-color : #fff !default;&lt;br&gt;$btn-primary-bg : $brand-primary !default;&lt;br&gt;$btn-primary-border : darken($btn-primary-bg, 5%) !default;&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;$width: 300px;&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;/b&gt;&lt;/b&gt;</content>
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;1.声明变量&lt;/h3&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;$brand-primary : darken(#428bca, 6.5%) !default; // #337ab7&lt;br&gt;$btn-primary-color : #fff !default;&lt;br&gt;$btn-primary-bg : $brand-primary !default;&lt;br&gt;$btn-primary-border : darken($btn-primary-bg, 5%) !default;&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;$width: 300px;&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;普通变量&lt;/h3&gt;&lt;br&gt;定义之后可以在全局范围内使用。&lt;br&gt;&lt;code&gt;&lt;br&gt;$fontSize: 12px;&lt;br&gt;body{&lt;br&gt;    font-size:$fontSize;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;默认变量(!default)&lt;/h3&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;$baseLineHeight: 2;&lt;br&gt;$baseLineHeight: 1.5 !default;&lt;br&gt;body{&lt;br&gt;    line-height: $baseLineHeight;&lt;br&gt;}&lt;br&gt;//在使用前重新定义，或者在使用时重新赋值都会覆盖&lt;br&gt;&lt;/code&gt;&lt;br&gt;&lt;code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;全局变量和局部变量&lt;br&gt;&lt;code&gt;&lt;br&gt;//SCSS&lt;br&gt;$color: orange !default;//定义全局变量(在选择器、函数、混合宏…的外面定义的变量为全局变量)&lt;br&gt;.block {&lt;br&gt;  color: $color;//调用全局变量&lt;br&gt;}&lt;br&gt;em {&lt;br&gt;  $color: red;//定义局部变量&lt;br&gt;  a {&lt;br&gt;    color: $color;//调用局部变量&lt;br&gt;  }&lt;br&gt;}&lt;br&gt;span {&lt;br&gt;  color: $color;//调用全局变量&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;嵌套&lt;/h3&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;1.选择器嵌套&lt;/p&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;//css&lt;br&gt;nav a {&lt;br&gt;  color:red;&lt;br&gt;}&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;header nav a {&lt;br&gt;  color:green;&lt;br&gt;}&lt;br&gt;//sass &amp;amp;符是对当前选择器的引用,一直引用到父级&lt;br&gt;nav {&lt;br&gt;  a {&lt;br&gt;    color: red;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;header &amp;amp; {
+  color:green;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  }&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;2.属性嵌套&lt;/p&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;//css&lt;br&gt;.box {&lt;br&gt;    border-top: 1px solid red;&lt;br&gt;    border-bottom: 1px solid green;&lt;br&gt;}&lt;br&gt;//sass &amp;amp;符是对当前选择器的引用,一直引用到父级&lt;br&gt;.box {&lt;br&gt;  border: {&lt;br&gt;   top: 1px solid red;&lt;br&gt;   bottom: 1px solid green;&lt;br&gt;  }&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;3.伪类嵌套&lt;/p&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;//css&lt;br&gt;clearfix:before, .clearfix:after {&lt;br&gt;  content: “”;&lt;br&gt;  display: table;&lt;br&gt;}&lt;br&gt;.clearfix:after {&lt;br&gt;  clear: both;&lt;br&gt;  overflow: hidden;&lt;br&gt;}&lt;br&gt;//sass&lt;br&gt;.clearfix{&lt;br&gt;&amp;amp;:before,&lt;br&gt;&amp;amp;:after {&lt;br&gt;    content:””;&lt;br&gt;    display: table;&lt;br&gt;  }&lt;br&gt;&amp;amp;:after {&lt;br&gt;    clear:both;&lt;br&gt;    overflow: hidden;&lt;br&gt;  }&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;混合宏&lt;/h3&gt;&lt;br&gt;在 Sass 中通过 @mixin 关键词声明了一个混合宏，那么在实际调用中，其匹配了一个关键词“@include”来调用声明好的混合宏&lt;br&gt;&lt;code&gt;&lt;br&gt;@mixin border-radius{&lt;br&gt;    -webkit-border-radius: 3px;&lt;br&gt;    border-radius: 3px;&lt;br&gt;}&lt;br&gt;button {&lt;br&gt;    @include border-radius;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;1.混合宏的参数–传一个不带值的参数&lt;/p&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;@mixin border-radius($radius){&lt;br&gt;  -webkit-border-radius: $radius;&lt;br&gt;  border-radius: $radius;&lt;br&gt;}&lt;br&gt;//在调用的时候可以给这个混合宏传一个参数值&lt;br&gt;.box {&lt;br&gt;  @include border-radius(3px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;2.混合宏的参数–传一个不带值的参数&lt;/p&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;@mixin border-radius($radius:3px){&lt;br&gt;  -webkit-border-radius: $radius;&lt;br&gt;  border-radius: $radius;&lt;br&gt;}&lt;br&gt;//调用默认的混合宏“border-radius”&lt;br&gt;.btn {&lt;br&gt;  @include border-radius;&lt;br&gt;}&lt;br&gt;//传值&lt;br&gt;.box {&lt;br&gt;  @include border-radius(50%);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;p&gt;3.混合宏的参数–传多个参数&lt;/p&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;@mixin center($width,$height){&lt;br&gt;  width: $width;&lt;br&gt;  height: $height;&lt;br&gt;  position: absolute;&lt;br&gt;  top: 50%;&lt;br&gt;  left: 50%;&lt;br&gt;  margin-top: -($height) / 2;&lt;br&gt;  margin-left: -($width) / 2;&lt;br&gt;}&lt;br&gt;//调用&lt;br&gt;.box-center {&lt;br&gt;  @include center(500px,300px);&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt; 有一个特别的参数“…”。当混合宏传的参数过多之时，可以使用参数来替代&lt;br&gt; &lt;code&gt;&lt;br&gt; @mixin box-shadow($shadows…){&lt;br&gt;  @if length($shadows) &amp;gt;= 1 {&lt;br&gt;    -webkit-box-shadow: $shadows;&lt;br&gt;    box-shadow: $shadows;&lt;br&gt;  } @else {&lt;br&gt;    $shadows: 0 0 2px rgba(#000,.25);&lt;br&gt;    -webkit-box-shadow: $shadow;&lt;br&gt;    box-shadow: $shadow;&lt;br&gt;  }&lt;br&gt;}&lt;br&gt;//实际调用&lt;br&gt;.box {&lt;br&gt;  @include box-shadow(0 0 1px rgba(#000,.5),0 0 2px rgba(#000,.2));&lt;br&gt;}&lt;br&gt;//编译出来的css&lt;br&gt;.box {&lt;br&gt;  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);&lt;br&gt;  box-shadow: 0 0 1px rgba(0, 0, 0, 0.5), 0 0 2px rgba(0, 0, 0, 0.2);&lt;br&gt;}&lt;br&gt; &lt;/code&gt;&lt;br&gt; &lt;h3&gt;继承&lt;/h3&gt;&lt;br&gt; Sass 中是通过关键词 “@extend”来继承已存在的类样式块，从而实现代码的继承&lt;br&gt; &lt;code&gt;&lt;br&gt; //SCSS&lt;br&gt;.btn {&lt;br&gt;  border: 1px solid #ccc;&lt;br&gt;  padding: 6px 10px;&lt;br&gt;  font-size: 14px;&lt;br&gt;}&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;.btn-primary {&lt;br&gt;  background-color: #f36;&lt;br&gt;  color: #fff;&lt;br&gt;  @extend .btn;&lt;br&gt;}&lt;/p&gt;
+&lt;p&gt;.btn-second {&lt;br&gt;  background-color: orange;&lt;br&gt;  color: #fff;&lt;br&gt;  @extend .btn;&lt;br&gt;}&lt;br&gt;//编译之后的css&lt;br&gt;//CSS&lt;br&gt;.btn, .btn-primary, .btn-second {&lt;br&gt;  border: 1px solid #ccc;&lt;br&gt;  padding: 6px 10px;&lt;br&gt;  font-size: 14px;&lt;br&gt;}&lt;/p&gt;
+&lt;p&gt;.btn-primary {&lt;br&gt;  background-color: #f36;&lt;br&gt;  color: #fff;&lt;br&gt;}&lt;/p&gt;
+&lt;p&gt;.btn-second {&lt;br&gt;  background-clor: orange;&lt;br&gt;  color: #fff;&lt;br&gt;}&lt;br&gt; &lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;占位符 %placeholder&lt;/h3&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;%mt5 {&lt;br&gt;  margin-top: 5px;&lt;br&gt;}&lt;br&gt;%pt5{&lt;br&gt;  padding-top: 5px;&lt;br&gt;}&lt;br&gt;//这段代码没有被引用的时候并不会被编译&lt;br&gt;.btn {&lt;br&gt;  @extend %mt5;&lt;br&gt;  @extend %pt5;&lt;br&gt;}&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;.block {&lt;br&gt;  @extend %mt5;&lt;/p&gt;
+&lt;p&gt;  span {&lt;br&gt;    @extend %pt5;&lt;br&gt;  }&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.btn, .block {&lt;br&gt;  margin-top: 5px;&lt;br&gt;}&lt;/p&gt;
+&lt;p&gt;.btn, .block span {&lt;br&gt;  padding-top: 5px;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;插值#{}&lt;/h3&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;$properties: (margin, padding);&lt;br&gt;@mixin set-value($side, $value) {&lt;br&gt;    @each $prop in $properties {&lt;p&gt;&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    #{$prop}-#{$side}: $value;
+}
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;}&lt;br&gt;.login-box {&lt;br&gt;    @include set-value(top, 14px);&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.login-box {&lt;br&gt;    margin-top: 14px;&lt;br&gt;    padding-top: 14px;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass@mixin generate-sizes($class, $small, $medium, $big) {&lt;br&gt;    .#{$class}-small { font-size: $small; }&lt;br&gt;    .#{$class}-medium { font-size: $medium; }&lt;br&gt;    .#{$class}-big { font-size: $big; }&lt;br&gt;}&lt;br&gt;@include generate-sizes(“header-text”, 12px, 20px, 40px);&lt;br&gt;//css&lt;br&gt;.header-text-small { font-size: 12px; }&lt;br&gt;.header-text-medium { font-size: 20px; }&lt;br&gt;.header-text-big { font-size: 40px; }&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sass运算&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;1.加法&lt;/h3&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;.box {&lt;br&gt;  width: 20px + 8in;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.box {&lt;br&gt;  width: 788px;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;2.减法&lt;/h3&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;$full-width: 960px;&lt;br&gt;$sidebar-width: 200px;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;.content {&lt;br&gt;  width: $full-width -  $sidebar-width;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.content {&lt;br&gt;  width: 760px;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;3.乘法&lt;/h3&gt;&lt;br&gt;如果进行乘法运算时，两个值单位相同时，只需要为一个数值提供单位即可.&lt;br&gt;Sass 的乘法运算和加法、减法运算一样，在运算中有不同类型的单位时，也将会报错(px与em)&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;.box {&lt;br&gt;  width: 10px * 2;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.box {&lt;br&gt;  width: 20px;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;4.除法(/)&lt;/h3&gt;&lt;br&gt;Sass 的乘法运算规则也适用于除法运算。不过除法运算还有一个特殊之处。众所周知“/”符号在 CSS&lt;br&gt;中已做为一种符号使用。因此在 Sass 中做除法运算时，直接使用“/”符号做为除号时，将不会生效，&lt;br&gt;编译时既得不到我们需要的效果，也不会报错&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass(错误方法)&lt;br&gt;.box {&lt;br&gt;  width: 100px / 2;&lt;br&gt;}&lt;br&gt;//编译结果&lt;br&gt;.box {&lt;br&gt;  width: 100px / 2;&lt;br&gt;}&lt;br&gt;//这样的结果对于大家来说没有任何意义。要修正这个问题，只需要给运算的外面添加一个小括号( )即可&lt;br&gt;.box {&lt;br&gt;  width: (100px / 2);&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.box {&lt;br&gt;  width: 50px;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;除了上面情况带有小括号，“/”符号会当作除法运算符之外，如果“/”符号在已有的数学表达式中时，也会被&lt;br&gt;认作除法符号&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;.box {&lt;br&gt;  width: 100px / 2 + 2in;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.box {&lt;br&gt;  width: 242px;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.box {&lt;br&gt;  width: 242px;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;另外，在 Sass 除法运算中，当用变量进行除法运算时，“/”符号也会自动被识别成除法&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;$width: 1000px;&lt;br&gt;$nums: 10;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;.item {&lt;br&gt;  width: $width / 10;&lt;br&gt;}&lt;/p&gt;
+&lt;p&gt;.list {&lt;br&gt;  width: $width / $nums;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.item {&lt;br&gt;  width: 100px;&lt;br&gt;}&lt;/p&gt;
+&lt;p&gt;.list {&lt;br&gt;  width: 100px;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;5.变量运算&lt;/h3&gt;&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;$content-width: 720px;&lt;br&gt;$sidebar-width: 220px;&lt;br&gt;$gutter: 20px;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;.container {&lt;br&gt;  width: $content-width + $sidebar-width + $gutter;&lt;br&gt;  margin: 0 auto;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.container {&lt;br&gt;  width: 960px;&lt;br&gt;  margin: 0 auto;&lt;br&gt;}&lt;br&gt;&lt;/p&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;6.颜色运算&lt;/h3&gt;&lt;br&gt;所有算数运算都支持颜色值，并且是分段运算的。也就是说，红、绿和蓝各颜色分段单独进行运算&lt;br&gt;&lt;code&gt;&lt;br&gt;//sassp {&lt;br&gt;  color: #010203 + #040506;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;p {&lt;br&gt;  color: #050709;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;&lt;h3&gt;7.字符运算&lt;/h3&gt;&lt;br&gt;在 Sass 中可以通过加法符号“+”来对字符串进行连接&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;$content: “Hello” + “” + “Sass!”;&lt;br&gt;.box:before {&lt;br&gt;  content: “ #{$content} “;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.box:before {&lt;br&gt;  content: “ Hello Sass! “;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;除了在变量中做字符连接运算之外，还可以直接通过 +，把字符连接在一起&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;div {&lt;br&gt;  cursor: e + -resize;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;div {&lt;br&gt;  cursor: e-resize;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;注意，如果有引号的字符串被添加了一个没有引号的字符串 （也就是，带引号的字符串在 + 符号左侧），&lt;br&gt;结果会是一个有引号的字符串。同样的，如果一个没有引号的字符串被添加了一个有引号的字符串 （没&lt;br&gt;有引号的字符串在 + 符号左侧）， 结果将是一个没有引号的字符串&lt;p&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;结语&lt;br&gt;Sass很优秀，但我不喜欢，哼╭(╯^╰)╮。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;/h3&gt;&lt;/code&gt;&lt;/b&gt;&lt;/b&gt;</content>
     
     <summary type="html">
     
-      &lt;center&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+      &lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
