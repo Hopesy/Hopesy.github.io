@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-20T09:20:50.677Z</updated>
+  <updated>2016-09-20T15:17:00.070Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,11 +16,41 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>Sass学习笔记(二)</title>
+    <link href="http://yoursite.com/2016/09/20/Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/"/>
+    <id>http://yoursite.com/2016/09/20/Sass学习笔记-二/</id>
+    <published>2016-09-20T15:11:01.000Z</published>
+    <updated>2016-09-20T15:17:00.070Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723471&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;前言&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Sass又名SCSS，是CSS预处理器之一，它能让你更好的、更轻松的工作。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Sass进阶&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.
+    
+    </summary>
+    
+    
+      <category term="sass" scheme="http://yoursite.com/tags/sass/"/>
+    
+  </entry>
+  
+  <entry>
     <title>Sass学习笔记</title>
     <link href="http://yoursite.com/2016/09/19/Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/19/Sass学习笔记/</id>
     <published>2016-09-19T09:30:56.000Z</published>
-    <updated>2016-09-20T09:20:50.677Z</updated>
+    <updated>2016-09-20T09:28:05.712Z</updated>
     
     <content type="html">&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
@@ -94,8 +124,9 @@
 &lt;p&gt;&lt;/p&gt;&lt;h3&gt;6.颜色运算&lt;/h3&gt;&lt;br&gt;所有算数运算都支持颜色值，并且是分段运算的。也就是说，红、绿和蓝各颜色分段单独进行运算&lt;br&gt;&lt;code&gt;&lt;br&gt;//sassp {&lt;br&gt;  color: #010203 + #040506;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;p {&lt;br&gt;  color: #050709;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;p&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;h3&gt;7.字符运算&lt;/h3&gt;&lt;br&gt;在 Sass 中可以通过加法符号“+”来对字符串进行连接&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;$content: “Hello” + “” + “Sass!”;&lt;br&gt;.box:before {&lt;br&gt;  content: “ #{$content} “;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;.box:before {&lt;br&gt;  content: “ Hello Sass! “;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;除了在变量中做字符连接运算之外，还可以直接通过 +，把字符连接在一起&lt;br&gt;&lt;code&gt;&lt;br&gt;//sass&lt;br&gt;div {&lt;br&gt;  cursor: e + -resize;&lt;br&gt;}&lt;br&gt;//css&lt;br&gt;div {&lt;br&gt;  cursor: e-resize;&lt;br&gt;}&lt;br&gt;&lt;/code&gt;&lt;br&gt;注意，如果有引号的字符串被添加了一个没有引号的字符串 （也就是，带引号的字符串在 + 符号左侧），&lt;br&gt;结果会是一个有引号的字符串。同样的，如果一个没有引号的字符串被添加了一个有引号的字符串 （没&lt;br&gt;有引号的字符串在 + 符号左侧）， 结果将是一个没有引号的字符串&lt;p&gt;&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;结语&lt;br&gt;Sass很优秀，但我不喜欢，哼╭(╯^╰)╮。&lt;/p&gt;
+&lt;p&gt;结语&lt;/p&gt;
 &lt;/blockquote&gt;
+&lt;p&gt;Sass很优秀，但我不喜欢，哼╭(╯^╰)╮。&lt;/p&gt;
 &lt;/h3&gt;&lt;/code&gt;&lt;/b&gt;&lt;/b&gt;</content>
     
     <summary type="html">
@@ -1013,22 +1044,6 @@ setup(
       <category term="音乐" scheme="http://yoursite.com/tags/%E9%9F%B3%E4%B9%90/"/>
     
       <category term="本兮" scheme="http://yoursite.com/tags/%E6%9C%AC%E5%85%AE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Always Waiting</title>
-    <link href="http://yoursite.com/2016/06/05/Always-Waiting/"/>
-    <id>http://yoursite.com/2016/06/05/Always-Waiting/</id>
-    <published>2016-06-04T17:36:37.000Z</published>
-    <updated>2016-06-04T17:36:37.947Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
     
   </entry>
   
