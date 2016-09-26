@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-25T03:17:26.183Z</updated>
+  <updated>2016-09-26T14:03:25.430Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,32 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>流量调查表</title>
+    <link href="http://yoursite.com/2016/09/26/%E6%B5%81%E9%87%8F%E8%B0%83%E6%9F%A5%E8%A1%A8/"/>
+    <id>http://yoursite.com/2016/09/26/流量调查表/</id>
+    <published>2016-09-26T13:53:26.000Z</published>
+    <updated>2016-09-26T14:03:25.430Z</updated>
+    
+    <content type="html">&lt;blockquote&gt;
+&lt;p&gt;流量调查表&lt;/p&gt;
+&lt;center&gt;&lt;br&gt;&lt;iframe src=&quot;https://docs.google.com/document/d/17h-HLI0JrLN6lYKEssqDfV0xfgRR2lmfpyFxvCorBXE/pub?embedded=true&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;流量调查表&lt;/p&gt;
+&lt;center&gt;&lt;br&gt;&lt;iframe src=&quot;https://docs.google.com/document/d/17h-HLI0JrLN6lYKEssqDfV0xfgRR2lmfpyFxvCorBXE/pub?embed
+    
+    </summary>
+    
+    
+      <category term="Traffic" scheme="http://yoursite.com/tags/Traffic/"/>
+    
+  </entry>
   
   <entry>
     <title>呜呜呜</title>
@@ -1031,36 +1057,6 @@ setup(
     
     
       <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写给单身的你</title>
-    <link href="http://yoursite.com/2016/07/04/%E5%86%99%E7%BB%99%E5%8D%95%E8%BA%AB%E7%9A%84%E4%BD%A0/"/>
-    <id>http://yoursite.com/2016/07/04/写给单身的你/</id>
-    <published>2016-07-04T13:52:50.000Z</published>
-    <updated>2016-07-04T15:19:43.650Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/单恋.jpg&quot; width=&quot;50&quot; height=&quot;100&quot; alter=&quot;依琳&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;h1 id=&quot;单身&quot;&gt;&lt;a href=&quot;#单身&quot; class=&quot;headerlink&quot; title=&quot;单身&quot;&gt;&lt;/a&gt;单身&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;单身的人就一定可怜吗？人的价值和幸福感，并不是看有没有恋爱谈。很多人谈恋爱谈到伤心欲绝，&lt;br&gt;根本没幸福可言。而真正好的日子，是看每个人内心的平静，是看她有没有享受生活。只要学会对自己&lt;br&gt;好，那有没有谈恋爱又有什么重要呢？等着别人来爱你，还不如爱自己多一点。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;h1 id=&quot;爱情&quot;&gt;&lt;a href=&quot;#爱情&quot; class=&quot;headerlink&quot; title=&quot;爱情&quot;&gt;&lt;/a&gt;爱情&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;一直幻想拥有一场轰轰烈烈的爱情，却始终没有敞开心扉。总是有太多的理由让自己孤单。学习忙，&lt;br&gt;工作忙，年龄还小，抑或是宁缺毋滥，种种种种，其实都是在安慰自己。&lt;/p&gt;
-&lt;h1 id=&quot;等待&quot;&gt;&lt;a href=&quot;#等待&quot; class=&quot;headerlink&quot; title=&quot;等待&quot;&gt;&lt;/a&gt;等待&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;不要担心被剩下，这世上没有人是真正被剩下的。到最后，绝大多数都会有爱人，都会有家庭孩子，&lt;br&gt;而没有结婚的人，也都是不想结婚而已。害怕被剩而随便找个人，大概是最错的决定。因为你放弃了坚&lt;br&gt;持和等待，而好的爱情，恰恰是最需要等待的。记住啊，等待也是爱情的一部分。&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/单恋.jpg&quot; width=&quot;50&quot; height=&quot;100&quot; alter=&quot;依琳&quot; align=&quot;center&quot;/&gt;&lt;/p&gt;
-&lt;hr&gt;
-&lt;blockquote&gt;
-&lt;h1 id=&quot;单身&quot;&gt;&lt;a href=&quot;#单身&quot; class=&quot;headerlink&quot; title=&quot;单身&quot;&gt;&lt;/a&gt;单身&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;单身的人就一定可怜吗？人的价值和幸福感，并不是看有没有恋爱谈。很多人谈恋爱谈到伤心欲绝，&lt;br&gt;根本没幸福可言。而真正好的日子，是看每个人内心的平静，是看她有没有享受生活。只要学会对自己&lt;br&gt;好，那有没有谈恋爱又有什么重要呢？等着别人来爱你，还不如爱自己多一点。&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
     
   </entry>
   
