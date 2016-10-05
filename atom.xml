@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-05T11:11:25.077Z</updated>
+  <updated>2016-10-05T12:11:25.026Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://yoursite.com/2016/10/04/Fullpage-js%E4%BB%8B%E7%BB%8D/"/>
     <id>http://yoursite.com/2016/10/04/Fullpage-js介绍/</id>
     <published>2016-10-04T13:47:03.000Z</published>
-    <updated>2016-10-05T11:11:25.077Z</updated>
+    <updated>2016-10-05T12:11:25.026Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29463821&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
@@ -34,11 +34,14 @@
 &lt;/blockquote&gt;
 &lt;p&gt;1.支持鼠标滚动&lt;br&gt;2.支持前进后退和键盘控制&lt;br&gt;3.多个回调函数&lt;br&gt;4.支持手机、平板触摸事件&lt;br&gt;5.支持 CSS3 动画&lt;br&gt;6.支持窗口缩放&lt;br&gt;7.窗口缩放时自动调整&lt;br&gt;8.可设置滚动宽度、背景颜色、滚动速度、循环选项、回调、文本对齐方式等等&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;使用方式&lt;br&gt;使用cdn添加js库(依赖于jquery)&lt;br&gt;&lt;code&gt;&lt;br&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.bootcss.com/fullPage.js/2.7.8/jquery.fullPage.min.css&quot;&gt;&lt;br&gt; &lt;script src=&quot;http://cdn.bootcss.com/jquery/1.10.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;br&gt; &lt;script src=&quot;http://cdn.bootcss.com/fullPage.js/2.7.8/jquery.fullPage.min.js&quot;&gt;&lt;/script&gt;&lt;br&gt;&lt;/code&gt;&lt;br&gt;配置并启用fullpage&lt;br&gt;&lt;code&gt;&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;使用方式&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用cdn添加js库(依赖于jquery)&lt;br&gt;‘’’’&lt;br&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.bootcss.com/fullPage.js/2.7.8/jquery.fullPage.min.css&quot;&gt;&lt;br&gt; &lt;script src=&quot;http://cdn.bootcss.com/jquery/1.10.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;br&gt; &lt;script src=&quot;http://cdn.bootcss.com/fullPage.js/2.7.8/jquery.fullPage.min.js&quot;&gt;&lt;/script&gt;&lt;br&gt;‘’’’&lt;br&gt;配置并启用fullpage&lt;br&gt;&lt;code&gt;&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;blockquote&gt;
 &lt;p&gt;配置项&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;controlArrows: true|false 是否通过箭头控制slide幻灯片&lt;br&gt;verticalCentered: true| false 默认true,内容是否垂直居中&lt;br&gt;resize: false | true 字体是否随着窗口缩放而缩放&lt;br&gt;scrollingSpeed: 700 页面切换滚动速度，单位为毫秒&lt;br&gt; anchors: [‘page1’,’page2’] 值不要与页面中任意的id或者name相同&lt;br&gt;css3: false| true 是否使用 CSS3 transforms 滚动&lt;br&gt;loopBottom: false | true 滚动到最底部后是否滚回顶部&lt;br&gt;loopTop: false | true 滚动到最顶部后是否滚底部&lt;br&gt;loopHorizontal: true| false 左右滑块是否循环滑动&lt;br&gt;autoScrolling: trur | false 是否使用插件的滚动方式，如果选择 false，则会出现浏览器自带的滚动条&lt;br&gt;scrollBar: false | true 是否出现滚动条&lt;br&gt;paddingTop:0 |’200px’ 与顶部的距离&lt;br&gt;paddingBottom:0 与底部距离&lt;br&gt;fixedElements: 固定的元素，默认为null,需要配置一个jquery选择器，页面滚动的时候所选择的元素固定不变&lt;br&gt;keyboardScrolling: true | false 是否使用键盘方向键导航&lt;br&gt;touchSensitivity: 5 值越大，移动端越难滑动&lt;br&gt;continuousVertical: false | true 是否循环滚动，与 loopTop 及 loopBottom 不兼容，不会出现跳变&lt;br&gt;animateAnchor: true | false 跳转到锚链接的时候是否出现动画&lt;br&gt;recordHistory: true|false 可以记录页面滚动的历史，通过浏览器的前进后退来导航。注意如果设置了&lt;br&gt;    autoScrolling:false ,那么着个配置也被关闭。&lt;br&gt;menu:  绑定菜单，设置的相关属性与anchors的值对应后，菜单可以控制滚动，默认为false。可以设置菜单的jquery选择器&lt;br&gt;&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
-&lt;p&gt;&lt;ul id=&quot;fullpageMenu&quot;&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page1&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#page1&quot;&gt;1 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page2&quot;&gt;&lt;a href=&quot;#page2&quot;&gt;2 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page3&quot;&gt;&lt;a href=&quot;#page3&quot;&gt;3 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page4&quot;&gt;&lt;a href=&quot;#page4&quot;&gt;4 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;br&gt;navigation: false|true 是否显示项目导航&lt;br&gt;navigationPosition: right|left  项目导航的位置，可选 left 或 right&lt;br&gt;navigationColor: #000  项目导航的颜色&lt;br&gt;navigationTooltips: null|数组 项目导航的 tip&lt;br&gt;showActiveTooltips: false|true 是否显示当前页面导航的tooltip信息，默认为false&lt;br&gt;slidesNavigation: false|true 是否显示左右滑块的项目导航&lt;br&gt;slidesNavPosition: bottom|top 左右滑块的项目导航的位置，可选 top 或 bottom&lt;br&gt;scrollOverflow: false|true 内容超过满屏后是否显示滚动条,需要配合jquery.slimScroll插件配合(直接cdn引入)&lt;/p&gt;
+&lt;p&gt;controlArrows: true|false 是否通过箭头控制slide幻灯片&lt;br&gt;verticalCentered: true| false 默认true,内容是否垂直居中&lt;br&gt;resize: false | true 字体是否随着窗口缩放而缩放&lt;br&gt;scrollingSpeed: 700 页面切换滚动速度，单位为毫秒&lt;br&gt; anchors: [‘page1’,’page2’] 值不要与页面中任意的id或者name相同&lt;br&gt;css3: false| true 是否使用 CSS3 transforms 滚动&lt;br&gt;loopBottom: false | true 滚动到最底部后是否滚回顶部&lt;br&gt;loopTop: false | true 滚动到最顶部后是否滚底部&lt;br&gt;loopHorizontal: true| false 左右滑块是否循环滑动&lt;br&gt;autoScrolling: trur | false 是否使用插件的滚动方式，如果选择 false，则会出现浏览器自带的滚动条&lt;br&gt;scrollBar: false | true 是否出现滚动条&lt;br&gt;paddingTop:0 |’200px’ 与顶部的距离&lt;br&gt;paddingBottom:0 与底部距离&lt;br&gt;fixedElements: 固定的元素，默认为null,需要配置一个jquery选择器，页面滚动的时候所选择的元素固定不变&lt;br&gt;keyboardScrolling: true | false 是否使用键盘方向键导航&lt;br&gt;touchSensitivity: 5 值越大，移动端越难滑动&lt;br&gt;continuousVertical: false | true 是否循环滚动，与 loopTop 及 loopBottom 不兼容，不会出现跳变&lt;br&gt;animateAnchor: true | false 跳转到锚链接的时候是否出现动画&lt;br&gt;recordHistory: true|false 可以记录页面滚动的历史，通过浏览器的前进后退来导航。注意如果设置了&lt;br&gt;    autoScrolling:false ,那么着个配置也被关闭。&lt;br&gt;menu:  绑定菜单，设置的相关属性与anchors的值对应后，菜单可以控制滚动，默认为false。可以设置菜单的jquery选择器&lt;br&gt;‘’’’&lt;/p&gt;
+&lt;p&gt;&lt;ul id=&quot;fullpageMenu&quot;&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page1&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#page1&quot;&gt;1 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page2&quot;&gt;&lt;a href=&quot;#page2&quot;&gt;2 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page3&quot;&gt;&lt;a href=&quot;#page3&quot;&gt;3 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page4&quot;&gt;&lt;a href=&quot;#page4&quot;&gt;4 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;‘’’’&lt;br&gt;navigation: false|true 是否显示项目导航&lt;br&gt;navigationPosition: right|left  项目导航的位置，可选 left 或 right&lt;br&gt;navigationColor: #000  项目导航的颜色&lt;br&gt;navigationTooltips: null|数组 项目导航的 tip&lt;br&gt;showActiveTooltips: false|true 是否显示当前页面导航的tooltip信息，默认为false&lt;br&gt;slidesNavigation: false|true 是否显示左右滑块的项目导航&lt;br&gt;slidesNavPosition: bottom|top 左右滑块的项目导航的位置，可选 top 或 bottom&lt;br&gt;scrollOverflow: false|true 内容超过满屏后是否显示滚动条,需要配合jquery.slimScroll插件配合(直接cdn引入)&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Fullpage方法&lt;/p&gt;
 &lt;/blockquote&gt;
