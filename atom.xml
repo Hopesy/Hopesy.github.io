@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-09-26T14:09:13.004Z</updated>
+  <updated>2016-10-05T11:11:25.077Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,29 +16,82 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>流量调查表</title>
-    <link href="http://yoursite.com/2016/09/26/%E6%B5%81%E9%87%8F%E8%B0%83%E6%9F%A5%E8%A1%A8/"/>
-    <id>http://yoursite.com/2016/09/26/流量调查表/</id>
-    <published>2016-09-26T13:53:26.000Z</published>
-    <updated>2016-09-26T14:09:13.004Z</updated>
+    <title>Fullpage.js介绍</title>
+    <link href="http://yoursite.com/2016/10/04/Fullpage-js%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://yoursite.com/2016/10/04/Fullpage-js介绍/</id>
+    <published>2016-10-04T13:47:03.000Z</published>
+    <updated>2016-10-05T11:11:25.077Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29463821&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简介&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站。如今我们经常能见到全屏网站，&lt;br&gt;尤其是国外网站。这些网站用几幅很大的图片或色块做背景，再添加一些简单的内容，显得格外的高端大气上档次。&lt;br&gt;比如 iPhone 5C 的介绍页面（查看），QQ浏览器的官网站。如果你也希望你的网站能设计成全屏的，显得更上档次，&lt;br&gt;你可以试试 fullPage.js&lt;/p&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;blockquote&gt;
+&lt;p&gt;支持功能&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1.支持鼠标滚动&lt;br&gt;2.支持前进后退和键盘控制&lt;br&gt;3.多个回调函数&lt;br&gt;4.支持手机、平板触摸事件&lt;br&gt;5.支持 CSS3 动画&lt;br&gt;6.支持窗口缩放&lt;br&gt;7.窗口缩放时自动调整&lt;br&gt;8.可设置滚动宽度、背景颜色、滚动速度、循环选项、回调、文本对齐方式等等&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;使用方式&lt;br&gt;使用cdn添加js库(依赖于jquery)&lt;br&gt;&lt;code&gt;&lt;br&gt; &lt;link rel=&quot;stylesheet&quot; href=&quot;http://cdn.bootcss.com/fullPage.js/2.7.8/jquery.fullPage.min.css&quot;&gt;&lt;br&gt; &lt;script src=&quot;http://cdn.bootcss.com/jquery/1.10.1/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;br&gt; &lt;script src=&quot;http://cdn.bootcss.com/fullPage.js/2.7.8/jquery.fullPage.min.js&quot;&gt;&lt;/script&gt;&lt;br&gt;&lt;/code&gt;&lt;br&gt;配置并启用fullpage&lt;br&gt;&lt;code&gt;&lt;br&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;配置项&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;controlArrows: true|false 是否通过箭头控制slide幻灯片&lt;br&gt;verticalCentered: true| false 默认true,内容是否垂直居中&lt;br&gt;resize: false | true 字体是否随着窗口缩放而缩放&lt;br&gt;scrollingSpeed: 700 页面切换滚动速度，单位为毫秒&lt;br&gt; anchors: [‘page1’,’page2’] 值不要与页面中任意的id或者name相同&lt;br&gt;css3: false| true 是否使用 CSS3 transforms 滚动&lt;br&gt;loopBottom: false | true 滚动到最底部后是否滚回顶部&lt;br&gt;loopTop: false | true 滚动到最顶部后是否滚底部&lt;br&gt;loopHorizontal: true| false 左右滑块是否循环滑动&lt;br&gt;autoScrolling: trur | false 是否使用插件的滚动方式，如果选择 false，则会出现浏览器自带的滚动条&lt;br&gt;scrollBar: false | true 是否出现滚动条&lt;br&gt;paddingTop:0 |’200px’ 与顶部的距离&lt;br&gt;paddingBottom:0 与底部距离&lt;br&gt;fixedElements: 固定的元素，默认为null,需要配置一个jquery选择器，页面滚动的时候所选择的元素固定不变&lt;br&gt;keyboardScrolling: true | false 是否使用键盘方向键导航&lt;br&gt;touchSensitivity: 5 值越大，移动端越难滑动&lt;br&gt;continuousVertical: false | true 是否循环滚动，与 loopTop 及 loopBottom 不兼容，不会出现跳变&lt;br&gt;animateAnchor: true | false 跳转到锚链接的时候是否出现动画&lt;br&gt;recordHistory: true|false 可以记录页面滚动的历史，通过浏览器的前进后退来导航。注意如果设置了&lt;br&gt;    autoScrolling:false ,那么着个配置也被关闭。&lt;br&gt;menu:  绑定菜单，设置的相关属性与anchors的值对应后，菜单可以控制滚动，默认为false。可以设置菜单的jquery选择器&lt;br&gt;&lt;code&gt;&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;ul id=&quot;fullpageMenu&quot;&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page1&quot; class=&quot;active&quot;&gt;&lt;a href=&quot;#page1&quot;&gt;1 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page2&quot;&gt;&lt;a href=&quot;#page2&quot;&gt;2 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page3&quot;&gt;&lt;a href=&quot;#page3&quot;&gt;3 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;    &lt;li data-menuanchor=&quot;page4&quot;&gt;&lt;a href=&quot;#page4&quot;&gt;4 section&lt;/a&gt;&lt;/li&gt;&lt;br&gt;&lt;/ul&gt;&lt;br&gt;&lt;br&gt;navigation: false|true 是否显示项目导航&lt;br&gt;navigationPosition: right|left  项目导航的位置，可选 left 或 right&lt;br&gt;navigationColor: #000  项目导航的颜色&lt;br&gt;navigationTooltips: null|数组 项目导航的 tip&lt;br&gt;showActiveTooltips: false|true 是否显示当前页面导航的tooltip信息，默认为false&lt;br&gt;slidesNavigation: false|true 是否显示左右滑块的项目导航&lt;br&gt;slidesNavPosition: bottom|top 左右滑块的项目导航的位置，可选 top 或 bottom&lt;br&gt;scrollOverflow: false|true 内容超过满屏后是否显示滚动条,需要配合jquery.slimScroll插件配合(直接cdn引入)&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fullpage方法&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;使用方式&lt;br&gt;&lt;code&gt;&lt;br&gt;$.fn.fullpage.xxx()&lt;br&gt;&lt;/code&gt;&lt;br&gt;主要方法(页面section从1开始,幻灯片slide从0开始)&lt;br&gt;moveSectionUp() 向上滚动&lt;br&gt;moveTo(section, slide) 滚动到&lt;br&gt;moveSlideRight() slide 向右滚动&lt;br&gt;moveSlideLeft() slide 向左滚动&lt;br&gt;setAutoScrolling() 设置页面滚动方式，设置为 true 时自动滚动&lt;br&gt;setAllowScrolling(boolean,[directions]) 添加或删除鼠标滚轮/触控板控制&lt;br&gt;setKeyboardScrolling() 添加或删除键盘方向键控制&lt;br&gt;setScrollingSpeed() 定义以毫秒为单位的滚动速度&lt;br&gt;destroy(type) 不使用type默认为all，fullpage样式全部被删除&lt;br&gt;reBuild()重新&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Fullpage回调函数&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;afterLoad&lt;br&gt;滚动到某一屏后的回调函数，接收 anchorLink 和 index 两个参数&lt;br&gt;anchorLink 是锚链接的名称&lt;br&gt;index 是序号，从1开始计算&lt;br&gt;onLeave&lt;br&gt;滚动前的回调函数，接收 index、nextIndex 和 direction 3个参数：&lt;br&gt;index 是离开的“页面”的序号，从1开始计算；&lt;br&gt;nextIndex 是滚动到的“页面”的序号，从1开始计算；&lt;br&gt;direction 判断往上滚动还是往下滚动，值是 up 或 down。&lt;br&gt;afterRender&lt;br&gt;页面结构生成后的回调函数，或者说页面初始化完成后的回调函数&lt;br&gt;afterSlideLoad&lt;br&gt;滚动到某一水平滑块后的回调函数，与 afterLoad 类似，接收 anchorLink、index、slideIndex、direction 4个参数&lt;br&gt;onSlideLeave&lt;br&gt;某一水平滑块滚动前的回调函数，与 onLeave 类似，接收 anchorLink、index、slideIndex、direction 4个参数&lt;br&gt;afterResize&lt;br&gt;浏览器窗口大小改变触发的函数&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;结语&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;fullPage很好用&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29463821&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;简介&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;fullPage.js 是一个基于 jQuery 的插件，它能够很方便、很轻松的制作出全屏网站。如今我们经常能见到全屏网站，&lt;br&gt;尤其是国外网站。这些网站用几幅很大的图片或色块做背景，再添加一些简单的内容，显得格外的高端大气上档次。&lt;br&gt;比如 iPhone 5C 的介绍页面（查看），QQ浏览器的官网站。如果你也希望你的网站能设计成全屏的，显得更上档次，&lt;br&gt;你可以试试 fullPage.js&lt;/p&gt;
+    
+    </summary>
+    
+    
+      <category term="js，Fullpage" scheme="http://yoursite.com/tags/js%EF%BC%8CFullpage/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>响应式开发笔记</title>
+    <link href="http://yoursite.com/2016/09/28/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
+    <id>http://yoursite.com/2016/09/28/响应式开发笔记/</id>
+    <published>2016-09-28T08:12:09.000Z</published>
+    <updated>2016-09-28T08:34:51.592Z</updated>
     
     <content type="html">&lt;blockquote&gt;
-&lt;p&gt;流量调查表&lt;/p&gt;
+&lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;center&gt;&lt;br&gt;&lt;iframe src=&quot;https://docs.google.com/document/d/17h-HLI0JrLN6lYKEssqDfV0xfgRR2lmfpyFxvCorBXE/pub?embedded=true&quot; width=&quot;1000&quot; height=&quot;800;&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 </content>
     
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;流量调查表&lt;/p&gt;
+&lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;center&gt;&lt;br&gt;&lt;iframe src=&quot;https://docs.google.com/document/d/17h-HLI0JrLN6lYKEssqDfV0xfgRR2lmfpyFxvCo
+
     
     </summary>
     
     
-      <category term="Traffic" scheme="http://yoursite.com/tags/Traffic/"/>
+      <category term="html" scheme="http://yoursite.com/tags/html/"/>
     
   </entry>
   
@@ -47,12 +100,12 @@
     <link href="http://yoursite.com/2016/09/25/%E5%91%9C%E5%91%9C%E5%91%9C/"/>
     <id>http://yoursite.com/2016/09/25/呜呜呜/</id>
     <published>2016-09-25T03:06:01.000Z</published>
-    <updated>2016-09-25T03:17:26.183Z</updated>
+    <updated>2016-10-05T11:14:55.458Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;无语了，别想多，要哭了&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;无语了，别想多，要哭了，我就喜欢，不行吗，喜欢就是喜欢呀，有什么嘛&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;命令&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -65,7 +118,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;无语了，别想多，要哭了&lt;br&gt;
+&lt;p&gt;无语了，别想多，要哭了，我就喜欢，不行吗，喜欢就是喜欢呀，有什么嘛&lt;br&gt;
     
     </summary>
     
@@ -79,12 +132,12 @@
     <link href="http://yoursite.com/2016/09/24/mysql%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/24/mysql学习笔记/</id>
     <published>2016-09-24T01:22:26.000Z</published>
-    <updated>2016-09-24T02:26:14.824Z</updated>
+    <updated>2016-10-05T11:13:58.514Z</updated>
     
     <content type="html">&lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;个人笔记，仅供参考&lt;/p&gt;
+&lt;p&gt;个人笔记，仅供参考,算了，也没人看&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;基础用法&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -96,11 +149,7 @@
       &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
-&lt;p&gt;个人笔记，仅供参考&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;基础用法&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;/p&gt;&lt;h3&gt;服务方式开启mysql&lt;/h3&gt;&lt;br&gt;net start mysl57
+&lt;p&gt;个人笔记，仅供参考,算了，也没人看&lt;br&gt;
     
     </summary>
     
@@ -1013,51 +1062,6 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
       <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
       <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python模块的构建与发布（Windows环境）</title>
-    <link href="http://yoursite.com/2016/07/07/Python%E6%A8%A1%E5%9D%97%E7%9A%84%E6%9E%84%E5%BB%BA%E4%B8%8E%E5%8F%91%E5%B8%83%EF%BC%88Windows%E7%8E%AF%E5%A2%83%EF%BC%89/"/>
-    <id>http://yoursite.com/2016/07/07/Python模块的构建与发布（Windows环境）/</id>
-    <published>2016-07-07T07:06:43.000Z</published>
-    <updated>2016-07-07T08:05:43.597Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女.jpg&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;首先将写好注释的代码保存在一个文件夹nester(模块名，根据需要自定)&lt;/p&gt;
-&lt;p&gt;在这个文件夹下创建一个文件setup.py，用来编辑模块的元数&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;pre&gt;&lt;code&gt;from distutils.core import setup       #从发布工具导入setup函数
-setup(  
-     name        =&amp;apos;nester&amp;apos;,  
-     version     =&amp;apos;1.0.0&amp;apos;,  
-     py_modules  =[&amp;apos;nester&amp;apos;],  
-     author      =&amp;apos;jqm&amp;apos;,  
-     author_email=&amp;apos;jqm2009@gmail.com&amp;apos;,  
-     url         =&amp;apos;http://www.headfirstlabs.com&amp;apos;,  
-     description =&amp;apos;A simple printer of nested lists&amp;apos;,  
-     )
-&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  以上author~~description 根据个人需要修改。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;构建发布&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;1.打开“运行”—&amp;gt;键入cmd，回车&lt;br&gt;2.在命令行中键入nester文件夹的路径，例如： C:\Users\Administrator&amp;gt;cd D:\Python\nester&lt;br&gt;3.将发布安装到本地副本中，输入python路径 setup.py install 或者：D:\python\nester&amp;gt;py setup.py install   &lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女.jpg&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;首先将写好注释的代码保存在一个文件夹nester(模块名，根据需要自定)&lt;/p&gt;
-&lt;p&gt;在这个文件夹下创建一个文件setup.py，用来编辑模块的元数&lt;/p&gt;
-&lt;/blockquote&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
     
   </entry>
   
