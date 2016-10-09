@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2016-10-05T12:11:25.026Z</updated>
+  <updated>2016-10-09T16:00:26.830Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -14,6 +14,27 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>js对象简介</title>
+    <link href="http://yoursite.com/2016/10/09/js%E5%AF%B9%E8%B1%A1%E7%AE%80%E4%BB%8B/"/>
+    <id>http://yoursite.com/2016/10/09/js对象简介/</id>
+    <published>2016-10-09T15:58:47.000Z</published>
+    <updated>2016-10-09T16:00:26.830Z</updated>
+    
+    <content type="html">&lt;iframe src=&quot;https://docs.google.com/presentation/d/1gHBJgfo_mgZrfB8D5mjn_EK4dasbVAbxQKR63drds1c/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;960&quot; height=&quot;569&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;iframe src=&quot;https://docs.google.com/presentation/d/1gHBJgfo_mgZrfB8D5mjn_EK4dasbVAbxQKR63drds1c/embed?start=false&amp;loop=false&amp;delayms=3000&quot; 
+    
+    </summary>
+    
+    
+      <category term="js" scheme="http://yoursite.com/tags/js/"/>
+    
+  </entry>
   
   <entry>
     <title>Fullpage.js介绍</title>
@@ -1023,48 +1044,6 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     
     
       <category term="声优" scheme="http://yoursite.com/tags/%E5%A3%B0%E4%BC%98/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Python开发轻量级爬虫</title>
-    <link href="http://yoursite.com/2016/07/15/Python%E5%BC%80%E5%8F%91%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%88%AC%E8%99%AB/"/>
-    <id>http://yoursite.com/2016/07/15/Python开发轻量级爬虫/</id>
-    <published>2016-07-14T17:31:57.000Z</published>
-    <updated>2016-07-14T17:43:34.725Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg&quot; alt=&quot;少女&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;800&quot; height=&quot;100&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723470&amp;auto=0&amp;height&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;一个简陋的爬虫是一件很简单的事情，不过要实现一个高质量的spider却是非常难的。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;爬虫基本框架&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;+调度器&lt;br&gt;+URL管理器&lt;br&gt;+下载器&lt;br&gt;+解析器&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;运行流程&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/流程.jpg&quot; alt=&quot;流程&quot;&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;常用框架&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Python开发爬虫常用Scrapy框架&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;引擎打开一个域名，时蜘蛛处理这个域名，并让蜘蛛获取第一个爬取的URL。&lt;br&gt;引擎从蜘蛛那获取第一个需要爬取的URL，然后作为请求在调度中进行调度。&lt;br&gt;引擎从调度那获取接下来进行爬取的页面。&lt;br&gt;调度将下一个爬取的URL返回给引擎，引擎将他们通过下载中间件发送到下载器。&lt;br&gt;当网页被下载器下载完成以后，响应内容通过下载中间件被发送到引擎。&lt;br&gt;引擎收到下载器的响应并将它通过蜘蛛中间件发送到蜘蛛进行处理。&lt;br&gt;蜘蛛处理响应并返回爬取到的项目，然后给引擎发送新的请求。&lt;br&gt;引擎将抓取到的项目项目管道，并向调度发送请求。&lt;br&gt;系统重复第二部后面的操作，直到调度中没有请求，然后断开引擎与域之间的联系。&lt;/p&gt;
-&lt;p&gt;简单爬虫实例源码下载&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;下载链接：&lt;a href=&quot;https://github.com/fifths/python_baike_spider&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/fifths/python_baike_spider&lt;/a&gt;&lt;br&gt;注：该源码抓取百度百科词条信息&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg&quot; alt=&quot;少女&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=800 height=100 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723470&amp;auto=0&amp;height&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
-    
-      <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
     
   </entry>
   
