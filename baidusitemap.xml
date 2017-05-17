@@ -4,6 +4,21 @@
 
     
   <url>
+    <loc>http://yoursite.com/2017/03/21/java%E9%9A%8F%E7%AC%94/</loc>
+    <lastmod>2017-03-21T10:41:13.424Z</lastmod>
+    <data>
+        <display>
+        <title>java随笔</title>
+        <pubTime>2017-03-21T10:41:13.000Z</pubTime>
+        
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://yoursite.com/2016/10/11/GZDX-Internet/</loc>
     <lastmod>2016-10-10T17:32:09.743Z</lastmod>
     <data>
@@ -438,9 +453,9 @@
         <title>love love love</title>
         <pubTime>2016-06-05T05:04:15.000Z</pubTime>
         
-        <tag>love</tag>
-         
         <tag>声优</tag>
+         
+        <tag>love</tag>
          
          
            
