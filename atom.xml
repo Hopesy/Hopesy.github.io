@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://yoursite.com/"/>
-  <updated>2017-03-21T10:41:13.424Z</updated>
+  <updated>2017-05-19T11:35:19.262Z</updated>
   <id>http://yoursite.com/</id>
   
   <author>
@@ -16,77 +16,13 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>java随笔</title>
-    <link href="http://yoursite.com/2017/03/21/java%E9%9A%8F%E7%AC%94/"/>
-    <id>http://yoursite.com/2017/03/21/java随笔/</id>
-    <published>2017-03-21T10:41:13.000Z</published>
-    <updated>2017-03-21T10:41:13.424Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>GZDX-Internet</title>
-    <link href="http://yoursite.com/2016/10/11/GZDX-Internet/"/>
-    <id>http://yoursite.com/2016/10/11/GZDX-Internet/</id>
-    <published>2016-10-10T16:54:04.000Z</published>
-    <updated>2016-10-10T17:32:09.743Z</updated>
-    
-    <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;900&quot; height=&quot;100&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=22841995&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;起步&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;断网后,启用VPN可以正常使用网络&lt;/p&gt;
-&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
-&lt;blockquote&gt;
-&lt;p&gt;步骤&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;1.PC端安装VPN（例如:Lantern目前只有andrid和windows版本)&lt;br&gt;2.打开Lantern&lt;br&gt;Lantern下载地址:&lt;br&gt;&lt;a href=&quot;https://github.com/Hopesy/Lantern&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/Hopesy/Lantern&lt;/a&gt;&lt;br&gt;&lt;a href=&quot;https://codeload.github.com/Hopesy/Lantern/zip/master&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://codeload.github.com/Hopesy/Lantern/zip/master&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;WIFI使用方法&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;连接wifi后，android端同样打开lantern即可使用wifi&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;备注&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;经测试&lt;br&gt;1.PC端qq,lol无法正常使用，浏览器可以正常使用&lt;br&gt;2.android端一切正常，都可以连接网络&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;终&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;此方法暂时可以使用。如有任何问题，请关注微信公众号GeLings&lt;/p&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=900 height=100 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=22841995&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;起步&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;断网后,启用VPN可以正常使用网络&lt;/p&gt;
-    
-    </summary>
-    
-    
-      <category term="intrenet" scheme="http://yoursite.com/tags/intrenet/"/>
-    
-  </entry>
-  
-  <entry>
     <title>js对象简介</title>
     <link href="http://yoursite.com/2016/10/09/js%E5%AF%B9%E8%B1%A1%E7%AE%80%E4%BB%8B/"/>
     <id>http://yoursite.com/2016/10/09/js对象简介/</id>
     <published>2016-10-09T15:58:47.000Z</published>
-    <updated>2016-10-09T16:00:26.830Z</updated>
+    <updated>2017-05-19T11:35:19.262Z</updated>
     
-    <content type="html">&lt;iframe src=&quot;https://docs.google.com/presentation/d/1gHBJgfo_mgZrfB8D5mjn_EK4dasbVAbxQKR63drds1c/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;960&quot; height=&quot;569&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
+    <content type="html">&lt;iframe src=&quot;https://docs.google.com/presentation/d/1gHBJgfo_mgZrfB8D5mjn_EK4dasbVAbxQKR63drds1c/embed?start=false&amp;loop=false&amp;delayms=3000&quot; frameborder=&quot;0&quot; width=&quot;600&quot; height=&quot;569&quot; allowfullscreen=&quot;true&quot; mozallowfullscreen=&quot;true&quot; webkitallowfullscreen=&quot;true&quot;&gt;&lt;/iframe&gt;
 </content>
     
     <summary type="html">
@@ -105,10 +41,10 @@
     <link href="http://yoursite.com/2016/10/04/Fullpage-js%E4%BB%8B%E7%BB%8D/"/>
     <id>http://yoursite.com/2016/10/04/Fullpage-js介绍/</id>
     <published>2016-10-04T13:47:03.000Z</published>
-    <updated>2016-10-05T12:11:25.026Z</updated>
+    <updated>2017-05-19T11:33:43.923Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29463821&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;300&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29463821&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;简介&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -144,7 +80,7 @@
     <summary type="html">
     
       &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29463821&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=300 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=29463821&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;简介&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -154,64 +90,6 @@
     
     
       <category term="js，Fullpage" scheme="http://yoursite.com/tags/js%EF%BC%8CFullpage/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>响应式开发笔记</title>
-    <link href="http://yoursite.com/2016/09/28/%E5%93%8D%E5%BA%94%E5%BC%8F%E5%BC%80%E5%8F%91%E7%AC%94%E8%AE%B0/"/>
-    <id>http://yoursite.com/2016/09/28/响应式开发笔记/</id>
-    <published>2016-09-28T08:12:09.000Z</published>
-    <updated>2016-09-28T08:34:51.592Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;前言&lt;/p&gt;
-&lt;/blockquote&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;前言&lt;/p&gt;
-&lt;/blockquote&gt;
-
-    
-    </summary>
-    
-    
-      <category term="html" scheme="http://yoursite.com/tags/html/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>呜呜呜</title>
-    <link href="http://yoursite.com/2016/09/25/%E5%91%9C%E5%91%9C%E5%91%9C/"/>
-    <id>http://yoursite.com/2016/09/25/呜呜呜/</id>
-    <published>2016-09-25T03:06:01.000Z</published>
-    <updated>2016-10-05T11:14:55.458Z</updated>
-    
-    <content type="html">&lt;blockquote&gt;
-&lt;p&gt;前言&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;无语了，别想多，要哭了，我就喜欢，不行吗，喜欢就是喜欢呀，有什么嘛&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;命令&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;命令行启动tomcat7.0服务&lt;/p&gt;
-&lt;node&gt;net start tomcat7&lt;/node&gt;
-</content>
-    
-    <summary type="html">
-    
-      &lt;blockquote&gt;
-&lt;p&gt;前言&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;无语了，别想多，要哭了，我就喜欢，不行吗，喜欢就是喜欢呀，有什么嘛&lt;br&gt;
-    
-    </summary>
-    
-    
-      <category term="哭哭" scheme="http://yoursite.com/tags/%E5%93%AD%E5%93%AD/"/>
     
   </entry>
   
@@ -247,48 +125,14 @@
   </entry>
   
   <entry>
-    <title>mysql教程</title>
-    <link href="http://yoursite.com/2016/09/24/mysql%E6%95%99%E7%A8%8B/"/>
-    <id>http://yoursite.com/2016/09/24/mysql教程/</id>
-    <published>2016-09-24T01:12:37.000Z</published>
-    <updated>2016-09-24T01:32:08.256Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-      <category term="mysql" scheme="http://yoursite.com/tags/mysql/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>简述CSS正则匹配</title>
-    <link href="http://yoursite.com/2016/09/22/%E7%AE%80%E8%BF%B0CSS%E6%AD%A3%E5%88%99%E5%8C%B9%E9%85%8D/"/>
-    <id>http://yoursite.com/2016/09/22/简述CSS正则匹配/</id>
-    <published>2016-09-22T14:45:44.000Z</published>
-    <updated>2016-09-22T14:45:44.411Z</updated>
-    
-    <content type="html"></content>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
     <title>Sass学习笔记(二)</title>
     <link href="http://yoursite.com/2016/09/20/Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0-%E4%BA%8C/"/>
     <id>http://yoursite.com/2016/09/20/Sass学习笔记-二/</id>
     <published>2016-09-20T15:11:01.000Z</published>
-    <updated>2016-09-22T09:19:10.582Z</updated>
+    <updated>2017-05-19T11:38:36.849Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723471&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;400&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723471&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -339,7 +183,7 @@
     <summary type="html">
     
       &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723471&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=400 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723471&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -357,9 +201,9 @@
     <link href="http://yoursite.com/2016/09/19/Sass%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/19/Sass学习笔记/</id>
     <published>2016-09-19T09:30:56.000Z</published>
-    <updated>2016-09-20T09:28:05.712Z</updated>
+    <updated>2017-05-19T11:38:25.126Z</updated>
     
-    <content type="html">&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;400&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
@@ -438,7 +282,7 @@
     
     <summary type="html">
     
-      &lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+      &lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=400 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=33872715&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
@@ -457,11 +301,11 @@
     <link href="http://yoursite.com/2016/09/18/Less-%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/18/Less-学习笔记/</id>
     <published>2016-09-18T07:54:29.000Z</published>
-    <updated>2016-09-19T09:13:00.461Z</updated>
+    <updated>2017-05-19T11:35:38.692Z</updated>
     
     <content type="html">&lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/less.jpg&quot; alt=&quot;Less&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;300&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -499,7 +343,7 @@
     
       &lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/less.jpg&quot; alt=&quot;Less&quot;&gt;&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=300 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=133998&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -517,10 +361,10 @@
     <link href="http://yoursite.com/2016/09/16/MongDb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0%E4%B9%8Bmongoose/"/>
     <id>http://yoursite.com/2016/09/16/MongDb学习笔记之mongoose/</id>
     <published>2016-09-16T13:40:22.000Z</published>
-    <updated>2016-09-17T02:24:00.651Z</updated>
+    <updated>2017-05-19T11:36:17.700Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=35440198&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;300&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=35440198&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -745,7 +589,7 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <summary type="html">
     
       &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=35440198&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=300 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=35440198&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -763,10 +607,10 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <link href="http://yoursite.com/2016/09/15/Grunt%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/15/Grunt学习笔记/</id>
     <published>2016-09-15T10:13:58.000Z</published>
-    <updated>2016-09-15T13:13:37.900Z</updated>
+    <updated>2017-05-19T11:34:07.031Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;300&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -794,7 +638,7 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <summary type="html">
     
       &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=300 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;前言&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -812,12 +656,12 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <link href="http://yoursite.com/2016/09/05/Node-js%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <id>http://yoursite.com/2016/09/05/Node-js学习笔记/</id>
     <published>2016-09-05T07:46:01.000Z</published>
-    <updated>2016-09-15T10:23:40.312Z</updated>
+    <updated>2017-05-19T11:37:20.399Z</updated>
     
     <content type="html">&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/node1.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;300&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;常用命令&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -829,7 +673,7 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
       &lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/node1.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=300 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650845&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;
     
     </summary>
     
@@ -843,11 +687,11 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <link href="http://yoursite.com/2016/08/30/Mongo-Db%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/"/>
     <id>http://yoursite.com/2016/08/30/Mongo-Db常用命令/</id>
     <published>2016-08-30T12:19:09.000Z</published>
-    <updated>2016-09-04T14:15:40.414Z</updated>
+    <updated>2017-05-19T11:36:46.166Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/mongodb.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650841&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;300&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650841&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;/p&gt;&lt;h1&gt;Mong Db常用命令&lt;/h1&gt;&lt;p&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;启动方式&lt;/p&gt;
@@ -876,7 +720,7 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     
       &lt;p&gt;&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/mongodb.jpg&quot; alt=&quot;MongoDb&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650841&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=300 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=409650841&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;
     
     </summary>
     
@@ -890,9 +734,9 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <link href="http://yoursite.com/2016/08/26/%E9%80%8F%E6%98%8E%E8%89%B2%E7%9A%84%E5%A4%8F%E5%A4%A9/"/>
     <id>http://yoursite.com/2016/08/26/透明色的夏天/</id>
     <published>2016-08-26T13:55:26.000Z</published>
-    <updated>2016-08-26T14:17:24.878Z</updated>
+    <updated>2017-05-19T11:39:47.230Z</updated>
     
-    <content type="html">&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/夏天.jpg&quot; alt=&quot;透明的夏天&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=28987157&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/夏天.jpg&quot; alt=&quot;透明的夏天&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;400&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=28987157&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
 &lt;blockquote&gt;
@@ -903,7 +747,7 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     
     <summary type="html">
     
-      &lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/夏天.jpg&quot; alt=&quot;透明的夏天&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=28987157&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+      &lt;center&gt;&lt;br&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/夏天.jpg&quot; alt=&quot;透明的夏天&quot;&gt;&lt;br&gt;&lt;/center&gt;&lt;br&gt;&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=400 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=28987157&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
     
     </summary>
     
@@ -917,9 +761,9 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <link href="http://yoursite.com/2016/08/26/%E6%9C%AA%E9%97%BB%E8%8A%B1%E5%90%8D/"/>
     <id>http://yoursite.com/2016/08/26/未闻花名/</id>
     <published>2016-08-26T13:33:37.000Z</published>
-    <updated>2016-08-26T13:53:50.801Z</updated>
+    <updated>2017-05-19T11:40:05.381Z</updated>
     
-    <content type="html">&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31209775&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;400&quot; height=&quot;120&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31209775&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;明天，不是你想要就能有的。&lt;br&gt;我是一个经常笑的人，可我不是经常开心的人。&lt;/p&gt;
@@ -937,7 +781,7 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     
     <summary type="html">
     
-      &lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31209775&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
+      &lt;center&gt;&lt;br&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=400 height=120 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31209775&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;
 
 &lt;blockquote&gt;
 &lt;p&gt;明天，不是你想要就能有的。&lt;br&gt;我是一个经常笑的人，可我不是经常开心的人。&lt;/p&gt;
@@ -955,10 +799,10 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <link href="http://yoursite.com/2016/08/10/Android%E4%B9%8BIntent%E7%94%A8%E6%B3%95/"/>
     <id>http://yoursite.com/2016/08/10/Android之Intent用法/</id>
     <published>2016-08-10T07:03:37.000Z</published>
-    <updated>2016-08-10T07:40:39.045Z</updated>
+    <updated>2017-05-19T11:33:30.985Z</updated>
     
     <content type="html">&lt;p&gt;&lt;center&gt;&lt;/center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;700&quot; height=&quot;100&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31445554&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;300&quot; height=&quot;100&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31445554&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Intent使用方法&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1010,7 +854,7 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     <summary type="html">
     
       &lt;p&gt;&lt;center&gt;&lt;/p&gt;
-&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=700 height=100 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31445554&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=300 height=100 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=31445554&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;/center&gt;&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;Intent使用方法&lt;/p&gt;
 &lt;/blockquote&gt;
@@ -1068,6 +912,183 @@ mongooseModel.findbytitle(&#39;emtity_demo_title&#39;, function(error, result){
     
     
       <category term="git" scheme="http://yoursite.com/tags/git/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>致单身的你</title>
+    <link href="http://yoursite.com/2016/07/16/%E8%87%B4%E5%8D%95%E8%BA%AB%E7%9A%84%E4%BD%A0/"/>
+    <id>http://yoursite.com/2016/07/16/致单身的你/</id>
+    <published>2016-07-16T12:52:13.000Z</published>
+    <updated>2016-08-26T14:25:19.701Z</updated>
+    
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;embed height=&quot;500&quot; width=&quot;700&quot; quality=&quot;high&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://static.hdslb.com/miniloader.swf&quot; flashvars=&quot;aid=3816548&amp;page=1&quot; pluginspage=&quot;http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash&quot;&gt;&lt;br&gt;&lt;/center&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;&lt;br&gt;&lt;embed height=&quot;500&quot; width=&quot;700&quot; quality=&quot;high&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://static.hd
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>囧菌</title>
+    <link href="http://yoursite.com/2016/07/16/%E5%9B%A7%E8%8F%8C/"/>
+    <id>http://yoursite.com/2016/07/16/囧菌/</id>
+    <published>2016-07-16T12:23:57.000Z</published>
+    <updated>2016-07-16T12:28:35.788Z</updated>
+    
+    <content type="html">&lt;center&gt;&lt;br&gt;&lt;embed height=&quot;415&quot; width=&quot;544&quot; quality=&quot;high&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://static.hdslb.com/miniloader.swf&quot; flashvars=&quot;aid=2267251&amp;page=1&quot; pluginspage=&quot;http://www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash&quot;&gt;&lt;br&gt;&lt;/center&gt;</content>
+    
+    <summary type="html">
+    
+      &lt;center&gt;&lt;br&gt;&lt;embed height=&quot;415&quot; width=&quot;544&quot; quality=&quot;high&quot; allowfullscreen=&quot;true&quot; type=&quot;application/x-shockwave-flash&quot; src=&quot;http://static.hd
+    
+    </summary>
+    
+    
+      <category term="声优" scheme="http://yoursite.com/tags/%E5%A3%B0%E4%BC%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python开发轻量级爬虫</title>
+    <link href="http://yoursite.com/2016/07/15/Python%E5%BC%80%E5%8F%91%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%88%AC%E8%99%AB/"/>
+    <id>http://yoursite.com/2016/07/15/Python开发轻量级爬虫/</id>
+    <published>2016-07-14T17:31:57.000Z</published>
+    <updated>2017-05-19T11:38:00.031Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg&quot; alt=&quot;少女&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=&quot;400&quot; height=&quot;100&quot; src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723470&amp;auto=0&amp;height&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;br&gt;一个简陋的爬虫是一件很简单的事情，不过要实现一个高质量的spider却是非常难的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;爬虫基本框架&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;+调度器&lt;br&gt;+URL管理器&lt;br&gt;+下载器&lt;br&gt;+解析器&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;运行流程&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/流程.jpg&quot; alt=&quot;流程&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;常用框架&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Python开发爬虫常用Scrapy框架&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;引擎打开一个域名，时蜘蛛处理这个域名，并让蜘蛛获取第一个爬取的URL。&lt;br&gt;引擎从蜘蛛那获取第一个需要爬取的URL，然后作为请求在调度中进行调度。&lt;br&gt;引擎从调度那获取接下来进行爬取的页面。&lt;br&gt;调度将下一个爬取的URL返回给引擎，引擎将他们通过下载中间件发送到下载器。&lt;br&gt;当网页被下载器下载完成以后，响应内容通过下载中间件被发送到引擎。&lt;br&gt;引擎收到下载器的响应并将它通过蜘蛛中间件发送到蜘蛛进行处理。&lt;br&gt;蜘蛛处理响应并返回爬取到的项目，然后给引擎发送新的请求。&lt;br&gt;引擎将抓取到的项目项目管道，并向调度发送请求。&lt;br&gt;系统重复第二部后面的操作，直到调度中没有请求，然后断开引擎与域之间的联系。&lt;/p&gt;
+&lt;p&gt;简单爬虫实例源码下载&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;下载链接：&lt;a href=&quot;https://github.com/fifths/python_baike_spider&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;https://github.com/fifths/python_baike_spider&lt;/a&gt;&lt;br&gt;注：该源码抓取百度百科词条信息&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女2.jpg&quot; alt=&quot;少女&quot;&gt;&lt;/p&gt;
+&lt;p&gt;&lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=400 height=100 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=34723470&amp;auto=0&amp;height&amp;height=66&quot;&gt;&lt;/iframe&gt;&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+      <category term="技术" scheme="http://yoursite.com/tags/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Python模块的构建与发布（Windows环境）</title>
+    <link href="http://yoursite.com/2016/07/07/Python%E6%A8%A1%E5%9D%97%E7%9A%84%E6%9E%84%E5%BB%BA%E4%B8%8E%E5%8F%91%E5%B8%83%EF%BC%88Windows%E7%8E%AF%E5%A2%83%EF%BC%89/"/>
+    <id>http://yoursite.com/2016/07/07/Python模块的构建与发布（Windows环境）/</id>
+    <published>2016-07-07T07:06:43.000Z</published>
+    <updated>2016-07-07T08:05:43.597Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女.jpg&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首先将写好注释的代码保存在一个文件夹nester(模块名，根据需要自定)&lt;/p&gt;
+&lt;p&gt;在这个文件夹下创建一个文件setup.py，用来编辑模块的元数&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;
+&lt;pre&gt;&lt;code&gt;from distutils.core import setup       #从发布工具导入setup函数
+setup(  
+     name        =&amp;apos;nester&amp;apos;,  
+     version     =&amp;apos;1.0.0&amp;apos;,  
+     py_modules  =[&amp;apos;nester&amp;apos;],  
+     author      =&amp;apos;jqm&amp;apos;,  
+     author_email=&amp;apos;jqm2009@gmail.com&amp;apos;,  
+     url         =&amp;apos;http://www.headfirstlabs.com&amp;apos;,  
+     description =&amp;apos;A simple printer of nested lists&amp;apos;,  
+     )
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;  以上author~~description 根据个人需要修改。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;构建发布&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;1.打开“运行”—&amp;gt;键入cmd，回车&lt;br&gt;2.在命令行中键入nester文件夹的路径，例如： C:\Users\Administrator&amp;gt;cd D:\Python\nester&lt;br&gt;3.将发布安装到本地副本中，输入python路径 setup.py install 或者：D:\python\nester&amp;gt;py setup.py install   &lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;https://raw.githubusercontent.com/hopesy/img/master/少女.jpg&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;首先将写好注释的代码保存在一个文件夹nester(模块名，根据需要自定)&lt;/p&gt;
+&lt;p&gt;在这个文件夹下创建一个文件setup.py，用来编辑模块的元数&lt;/p&gt;
+&lt;/blockquote&gt;
+    
+    </summary>
+    
+    
+      <category term="Python" scheme="http://yoursite.com/tags/Python/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>写给单身的你</title>
+    <link href="http://yoursite.com/2016/07/04/%E5%86%99%E7%BB%99%E5%8D%95%E8%BA%AB%E7%9A%84%E4%BD%A0/"/>
+    <id>http://yoursite.com/2016/07/04/写给单身的你/</id>
+    <published>2016-07-04T13:52:50.000Z</published>
+    <updated>2016-07-04T15:19:43.650Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/单恋.jpg&quot; width=&quot;50&quot; height=&quot;100&quot; alter=&quot;依琳&quot; align=&quot;center&quot;&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;h1 id=&quot;单身&quot;&gt;&lt;a href=&quot;#单身&quot; class=&quot;headerlink&quot; title=&quot;单身&quot;&gt;&lt;/a&gt;单身&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;单身的人就一定可怜吗？人的价值和幸福感，并不是看有没有恋爱谈。很多人谈恋爱谈到伤心欲绝，&lt;br&gt;根本没幸福可言。而真正好的日子，是看每个人内心的平静，是看她有没有享受生活。只要学会对自己&lt;br&gt;好，那有没有谈恋爱又有什么重要呢？等着别人来爱你，还不如爱自己多一点。&lt;br&gt;&lt;a id=&quot;more&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+&lt;h1 id=&quot;爱情&quot;&gt;&lt;a href=&quot;#爱情&quot; class=&quot;headerlink&quot; title=&quot;爱情&quot;&gt;&lt;/a&gt;爱情&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;一直幻想拥有一场轰轰烈烈的爱情，却始终没有敞开心扉。总是有太多的理由让自己孤单。学习忙，&lt;br&gt;工作忙，年龄还小，抑或是宁缺毋滥，种种种种，其实都是在安慰自己。&lt;/p&gt;
+&lt;h1 id=&quot;等待&quot;&gt;&lt;a href=&quot;#等待&quot; class=&quot;headerlink&quot; title=&quot;等待&quot;&gt;&lt;/a&gt;等待&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;不要担心被剩下，这世上没有人是真正被剩下的。到最后，绝大多数都会有爱人，都会有家庭孩子，&lt;br&gt;而没有结婚的人，也都是不想结婚而已。害怕被剩而随便找个人，大概是最错的决定。因为你放弃了坚&lt;br&gt;持和等待，而好的爱情，恰恰是最需要等待的。记住啊，等待也是爱情的一部分。&lt;/p&gt;
+&lt;/blockquote&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/单恋.jpg&quot; width=&quot;50&quot; height=&quot;100&quot; alter=&quot;依琳&quot; align=&quot;center&quot;/&gt;&lt;/p&gt;
+&lt;hr&gt;
+&lt;blockquote&gt;
+&lt;h1 id=&quot;单身&quot;&gt;&lt;a href=&quot;#单身&quot; class=&quot;headerlink&quot; title=&quot;单身&quot;&gt;&lt;/a&gt;单身&lt;/h1&gt;&lt;p&gt;&amp;nbsp;&amp;nbsp;单身的人就一定可怜吗？人的价值和幸福感，并不是看有没有恋爱谈。很多人谈恋爱谈到伤心欲绝，&lt;br&gt;根本没幸福可言。而真正好的日子，是看每个人内心的平静，是看她有没有享受生活。只要学会对自己&lt;br&gt;好，那有没有谈恋爱又有什么重要呢？等着别人来爱你，还不如爱自己多一点。&lt;br&gt;
+    
+    </summary>
+    
+    
+      <category term="随笔" scheme="http://yoursite.com/tags/%E9%9A%8F%E7%AC%94/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>她戴着一个微笑的面具</title>
+    <link href="http://yoursite.com/2016/06/05/%E5%A5%B9%E6%88%B4%E7%9D%80%E4%B8%80%E4%B8%AA%E5%BE%AE%E7%AC%91%E7%9A%84%E9%9D%A2%E5%85%B7/"/>
+    <id>http://yoursite.com/2016/06/05/她戴着一个微笑的面具/</id>
+    <published>2016-06-04T18:15:06.000Z</published>
+    <updated>2016-06-05T03:49:20.013Z</updated>
+    
+    <content type="html">&lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/mask.jpg&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
+</content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&lt;img src=&quot;http://github.com/hopesy/img/raw/master/mask.jpg&quot; alt=&quot;mask&quot;&gt;&lt;/p&gt;
+
+    
+    </summary>
+    
     
   </entry>
   
