@@ -1,16 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>测试</title>
-    <url>/2022/06/19/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>BIM</tag>
-        <tag>测试</tag>
-      </tags>
+    <title>Hello World</title>
+    <url>/2022/06/20/hexo%20%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! 这个是第一篇文档. 查看<a href="https://hexo.io/docs/">documentation</a> 了解更多信息.</p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
   <entry>
     <title>Echarts学习笔记</title>
@@ -535,21 +541,322 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/06/20/hexo%20%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! 这个是第一篇文档. 查看<a href="https://hexo.io/docs/">documentation</a> 了解更多信息.</p>
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>hexo博客搭建</title>
+    <url>/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
+    <content><![CDATA[<h1 id="Hexo博客搭建"><a href="#Hexo博客搭建" class="headerlink" title="Hexo博客搭建"></a>Hexo博客搭建</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="https://www.zybuluo.com/mdeditor" title="Markdown">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+</blockquote>
+<p><code>优点</code></p>
+<ul>
+<li><p>纯静态文件，打开速度快。(推荐使用typero编辑markdown文件配合picgo搭建图床)。</p>
+</li>
+<li><p>不依赖服务器，托管到Github pages或者coding.net 不需要主机费用或者是空间费用。</p>
+</li>
+<li><p>内容修改很方便。直接在编辑器替换就行，不用连数据库更新数据。</p>
+</li>
+</ul>
+<p><code>缺点</code></p>
+<ul>
+<li><p>必须在部署 Node.js、Git 的电脑环境写文章。(只能在部署了博客的电脑写文章，多台电脑部署需要新建一个branch，本文没介绍)</p>
+</li>
+<li><p>没有原生浏览数统计、没有评论功能。(插件valine可以实现)</p>
+</li>
+</ul>
+<h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><hr>
+<blockquote>
+<p>本案例使用github搭建，利用gitlab搭建流程一样，不再说明。</p>
+</blockquote>
+<h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><blockquote>
+<p>直接去官网默认安装即可(代码管理工具)。<a href="https://git-scm.com/" title="https://git-scm.com/">https://git-scm.com/</a></p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_ZRQLcVvg5s.png"></p>
+<blockquote>
+<p>安装完成后在右键git bash，输入git –version验证是否安装成功</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><blockquote>
+<p>安装<code>node.js</code>默认安装即可(hexo的运行环境)。直接去官网下载最新版本即可<a href="https://nodejs.org/zh-cn/download/" title="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a></p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_Ia7yVHSG0C.png"></p>
+<blockquote>
+<p>直接全部默认安装即可</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_mo2keDcFMQ.png"></p>
+<blockquote>
+<p>打开bash或cmd，查看是否安装成功</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v：显示安装的nodejs版本</span><br><span class="line">npm -v：显示安装的npm版本</span><br></pre></td></tr></table></figure>
 
-<p>了解更多: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<h4 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h4><blockquote>
+<p>注册github账号(无需梯子)。官网如下，点击右上角sign in注册。<a href="https://github.com/" title="https://github.com/">https://github.com/</a></p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_Y5ZwlVIn1W.png"></p>
+<h4 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h4><blockquote>
+<p>登录创建一个名称为<code>hopesy.github.io</code>的仓库(hopesy是注册的用户名，替换成自己的，README初始化也要勾上)。此仓库就是我们的博客仓库。</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_YlOw84qC9o.png"></p>
+<blockquote>
+<p>进入上一步创建好的仓库,<code>settings →pages →choose a theme</code></p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_w-B67yjAPw.png"></p>
+<blockquote>
+<p>任选一个主题提交</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_ij9VzR7dS4.png"></p>
+<blockquote>
+<p>显示如下即成功了，此时进去hopesy.github.io即可看到默认网页了(下面我们需要把hexo本地博客系统推送到此仓库来替换)</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_PZog8bXBJT.png"></p>
+<h4 id="本地连接github"><a href="#本地连接github" class="headerlink" title="本地连接github"></a>本地连接github</h4><blockquote>
+<p>使用SSH配置地连接github(主要是为了避免远程提交文件时多次输入用户名和密码)</p>
+</blockquote>
+<p><code>设置用户名和邮箱</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;hopesy&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;1872638172@qq.com&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
-<p>了解更多: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p><code>本地生成密钥</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&#x27;hopesy`</span></span><br><span class="line"><span class="string"># 一路回车即可</span></span><br><span class="line"><span class="string"># 密钥生成在  c/Users/用户明/.ssh/id_rsa.pub.</span></span><br></pre></td></tr></table></figure>
 
-<p>了解更多: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p><code>连接github</code></p>
+<ul>
+<li>在Github头像下面点击Settings，再点击SSH and GPG keys，新建一个SSH，名字任意。</li>
+</ul>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_4Li3CSLj4L.png"></p>
+<ul>
+<li>将<code>id_rsa.pub</code>文件中的所有内容粘贴进去</li>
+</ul>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_mEaJsdXLc3.png"></p>
+<p><code>测试是否连接成功</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line"> <span class="comment"># 注意不要做任何修改</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_6f3wJjBlEB.png"></p>
+<h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><blockquote>
+<p>本地全局安装<code>hexo</code>博客程序()</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
+
+<h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><h4 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h4><blockquote>
+<p>新建一个存放博客的文件夹，初始化hexo(进入文件夹右键，选择git bash )</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init <span class="comment"># 初始化</span></span><br><span class="line">npm install    <span class="comment"># 安装依赖组件</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>启动本地服务器进行预览，默认浏览器输入<code>localhost:4000</code>即可看到页面</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g   <span class="comment"># 生成页面</span></span><br><span class="line">hexo s   <span class="comment"># 启动预览 hexo server -p 5000更改端口</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_EgoGO5QHNM.png"></p>
+<blockquote>
+<p>Hexo 博客文件夹目录结构如下：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── _config.yml  <span class="comment"># Hexo的配置文件，可以配置主题、语言等</span></span><br><span class="line">├── package.json <span class="comment"># 应用程序的信息。EJS,Stylus和Markdown renderer已默认安装，可以自由移除</span></span><br><span class="line">├── db.json</span><br><span class="line">├── debug.log</span><br><span class="line">├── node_modules</span><br><span class="line">├── public       <span class="comment"># 执行hexo g命令后，生成的内容会在这里，包括所有的文章、页面、分类、tag等.</span></span><br><span class="line">├── scaffolds    <span class="comment"># 保存着默认模板，自定义模板就是修改该目录下的文件</span></span><br><span class="line">│   ├── draft.md <span class="comment"># 默认的草稿模板</span></span><br><span class="line">│   ├── page.md  <span class="comment"># 默认的页面模板</span></span><br><span class="line">│   └── post.md  <span class="comment"># 默认的文章模板，生成新文章用这个模板</span></span><br><span class="line">├── <span class="built_in">source</span>       <span class="comment"># Hexo存放编辑页面的地方，可以使用vim或其他编辑器编辑这里的内容</span></span><br><span class="line">│   ├── 404.html <span class="comment"># 自定义404页面，可以使用腾讯公益404页面</span></span><br><span class="line">│   ├── Staticfile</span><br><span class="line">│   ├── _drafts  <span class="comment"># 存放所有的草稿文件的目录</span></span><br><span class="line">│   ├── _posts   <span class="comment"># 存放所有的文章文件的目录，用的最多，比如执行hexo n &quot;post_name&quot;之后，post_name这篇文章就存放在这个目录下</span></span><br><span class="line">│   ├── categories</span><br><span class="line">│   ├── tags</span><br><span class="line">└── themes     <span class="comment"># Hexo的所有主题</span></span><br><span class="line">    ├── landscape <span class="comment"># 原始hexo主题</span></span><br><span class="line">    ├── next     <span class="comment"># 这是我自己下载解压的主题</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="部署-Hexo-amp-x20"><a href="#部署-Hexo-amp-x20" class="headerlink" title="部署 Hexo&amp;#x20;"></a>部署 Hexo&amp;#x20;</h4><blockquote>
+<p>部署 Hexo 到 GitHub Pages，首先在博客文件夹下安装工具<code> hexo-deployer-git</code></p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下(我的用户名是hopesy替换成自己的):</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:hopesy/hopesy.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
+
+<p>完成后运行 <code>hexo d</code> 将网站上传部署到 GitHub Pages。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>浏览器输入 **<code>.github.io</code>查看是否部署成功。</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_7teeUTykHn.png"></p>
+<h4 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h4><blockquote>
+<p>首先在博客根目录下右键打开<code>Git Bash Here</code>输入以下命令生成文章(删除文章直接进入文件夹把md文件删除掉即可)</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new post `hexo博客搭建`</span><br></pre></td></tr></table></figure>
+
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_cVyhbfhVxM.png"></p>
+<blockquote>
+<p>按照markdown语法，编写文件后，推送到服务器</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g <span class="comment"># 重新生成页面</span></span><br><span class="line">hexo s <span class="comment"># 本地localhost:4000预览效果</span></span><br><span class="line">hexo d <span class="comment"># 预览没问题的话，推送到服务器hopesy.github.io查看</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s <span class="comment"># 等价于 hexo server #Hexo 会监视文件变动并自动更新，除修改站点配置文件外</span></span><br><span class="line">       <span class="comment"># ,无须重启服务器,直接刷新网页即可生效。</span></span><br><span class="line">hexo g <span class="comment"># 等价于 hexo generate 生成静态网页(根目录下生成public&gt;文件夹,hexo会将</span></span><br><span class="line">       <span class="comment"># source下面的.md后缀的文件编译为.html后缀的文件,存放在public下。</span></span><br><span class="line">hexo d <span class="comment"># 等价于 hexo deploy 将本地数据按照配置部署到远端服务器(如github)</span></span><br><span class="line">hexo clean <span class="comment"># 清除缓存,正常情况忽略此命令,执行后会删掉根目录下的public文件夹。</span></span><br><span class="line">hexo new post `新文章` <span class="comment">#生成一遍文章</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h3 id="显示图片"><a href="#显示图片" class="headerlink" title="显示图片"></a>显示图片</h3><blockquote>
+<p>修改博客根目录中<code>_config.yml</code>文件的配置项<code>post_asset_folder</code>为<code>true</code>。完成此设置后，当你通过<code>hexo new 文件名</code>新建文章后，会产生一个和文件同名的文件夹。</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_UzVqLzXtej.png"></p>
+<blockquote>
+<p>然后安装图片路径转换插件,这样就可以显示图片了</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
 ]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>hexo博客美化</title>
+    <url>/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/</url>
+    <content><![CDATA[<h2 id="hexo博客美化"><a href="#hexo博客美化" class="headerlink" title="hexo博客美化"></a>hexo博客美化</h2><h3 id="修改基本信息"><a href="#修改基本信息" class="headerlink" title="修改基本信息"></a>修改基本信息</h3><blockquote>
+<p>打开博客目录下的<code>_config.yml</code>文件，修改网站的标题、标签等基本信息。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>网站的标题</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>网站的副标题</td>
+</tr>
+<tr>
+<td>description</td>
+<td>对于网站的描述，主要用于SEO</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>网站的关键词，支持多个关键词</td>
+</tr>
+<tr>
+<td>author</td>
+<td>作者名</td>
+</tr>
+<tr>
+<td>language</td>
+<td>网站使用的语言，对于简体中文用户来说，语言的设置跟使用不同的主题有关，可以参考各自主题的文档自行配置，一般为zh-CN</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>设置网站的时区，如果不填则默认使用你电脑的时区</td>
+</tr>
+</tbody></table>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><blockquote>
+<p>去官网挑选喜欢的主题<a href="https://hexo.io/themes/" title="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_lfl39VveS2.png"></p>
+<blockquote>
+<p>下载主题，将他放在<code>themes</code>文件夹下。</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_3mMSwqxtqx.png"></p>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_KjDNx_fj6l.png"></p>
+<blockquote>
+<p>修改Hexo配置文件 <code>_config.yml</code> 主题项设置为主题名称，即可查看其效果（每个主题的具体配置方法需要进入其官网查看）</p>
+</blockquote>
+<h3 id="添加Live2D看板娘"><a href="#添加Live2D看板娘" class="headerlink" title="添加Live2D看板娘"></a>添加Live2D看板娘</h3><blockquote>
+<p>安装依赖</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输入以下命令，下载相应的模型，将 packagename 更换成模型名称即可。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-shizuku</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>模型名称如下：</code></p>
+<ul>
+<li><p>live2d-widget-model-chitose</p>
+</li>
+<li><p>live2d-widget-model-epsilon2_1</p>
+</li>
+<li><p>live2d-widget-model-gf</p>
+</li>
+<li><p>live2d-widget-model-haru</p>
+</li>
+<li><p>live2d-widget-model-haruto</p>
+</li>
+<li><p>live2d-widget-model-hibiki</p>
+</li>
+<li><p>live2d-widget-model-hijiki</p>
+</li>
+<li><p>live2d-widget-model-izumi</p>
+</li>
+<li><p>live2d-widget-model-koharu</p>
+</li>
+<li><p>live2d-widget-model-miku</p>
+</li>
+<li><p>live2d-widget-model-ni-j</p>
+</li>
+<li><p>live2d-widget-model-nico</p>
+</li>
+<li><p>live2d-widget-model-nietzsche</p>
+</li>
+<li><p>live2d-widget-model-nipsilon</p>
+</li>
+<li><p>live2d-widget-model-nito</p>
+</li>
+<li><p>live2d-widget-model-shizuku</p>
+</li>
+<li><p>live2d-widget-model-tororo</p>
+</li>
+<li><p>live2d-widget-model-tsumiki</p>
+</li>
+<li><p>live2d-widget-model-unitychan</p>
+</li>
+<li><p>live2d-widget-model-wanko</p>
+</li>
+<li><p>live2d-widget-model-z16</p>
+</li>
+</ul>
+<blockquote>
+<p>复制下载的模型</p>
+</blockquote>
+<ul>
+<li><p>在hexo的根目录创建名为<code>live2d_models</code>的文件夹</p>
+</li>
+<li><p>把之前安装的模型文件夹从<code>node_modules</code>文件夹复制到<code>live2d_models</code>中</p>
+</li>
+</ul>
+<blockquote>
+<p>打开站点目录下的 <code>_config.yml </code>文件，添加如下代码：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># live2d</span></span><br><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span>  <span class="comment"># 是否启动</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span> <span class="comment"># 默认</span></span><br><span class="line">  pluginRootPath: live2dw/  <span class="comment"># 插件在站点上的根目录(相对路径)</span></span><br><span class="line">  pluginJsPath: lib/  <span class="comment"># 脚本文件相对与插件根目录路径</span></span><br><span class="line">  pluginModelPath: assets/  <span class="comment"># 模型文件相对与插件根目录路径</span></span><br><span class="line">  tagMode: <span class="literal">false</span>  <span class="comment"># 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span></span><br><span class="line">  debug: <span class="literal">false</span>  <span class="comment"># 调试, 是否在控制台输出日志</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-shizuku <span class="comment"># npm-module package name</span></span><br><span class="line">  display:</span><br><span class="line">    position: right <span class="comment"># 定位方向 left right top bottom</span></span><br><span class="line">    width: 150  <span class="comment"># 小人宽度</span></span><br><span class="line">    height: 300 <span class="comment">#  小人高度</span></span><br><span class="line">    hOffset: -15  <span class="comment"># 向 偏移</span></span><br><span class="line">    vOffset: -15  <span class="comment"># 像 偏移</span></span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span>  <span class="comment"># 手机端是否显示</span></span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7  <span class="comment"># 模型透明度</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="浏览器网页标题恶搞"><a href="#浏览器网页标题恶搞" class="headerlink" title="浏览器网页标题恶搞"></a>浏览器网页标题恶搞</h3><blockquote>
+<p>首先在目录 <code>\Hexo\themes\hexo-theme-spfk\source\js </code>下新建一个 FunnyTitle.js 文件，在里面填写如下代码：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!--浏览器搞笑标题--&gt;</span><br><span class="line"> <span class="keyword">var</span> <span class="title class_">OriginTitle</span> = <span class="variable language_">document</span>.<span class="property">title</span>;</span><br><span class="line"> <span class="keyword">var</span> titleTime;</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;visibilitychange&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">hidden</span>) &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/img/trhx2.png&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;ヽ(●-`Д´-)ノ你丑你就走！&#x27;</span>;</span><br><span class="line">         <span class="built_in">clearTimeout</span>(titleTime);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/img/trhx2.png&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;ヾ(Ő∀Ő3)ノ你帅就回来！&#x27;</span> + <span class="title class_">OriginTitle</span>;</span><br><span class="line">         titleTime = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">title</span> = <span class="title class_">OriginTitle</span>;</span><br><span class="line">         &#125;, <span class="number">2000</span>);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>然后在<code> \Hexo\themes\hexo-theme-spfk\layout\layout.ejs </code>文件中添加如下代码:</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!--浏览器搞笑标题--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;\js\FunnyTitle.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><blockquote>
+<p>购买域名，去<code>godaddy</code>,<code>阿里云</code>,<code>腾讯云</code>都可以</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_oV8qASw9nT.png"></p>
+<blockquote>
+<p>进入腾讯云后台，添加域名解析</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_Wzv1Y_Stkv.png"></p>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_W8GKwD1cR0.png"></p>
+<blockquote>
+<p>本地<code>hexo</code>设置<code>CNAME</code>。在 hexo 项目下，<code>source </code>文件夹下面创建<code> CNAME 文件（没有后缀名的）</code>，在里面写上购买的域名。</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_lpGUFpmFv7.png"></p>
+<blockquote>
+<p><code>GitHub Pages</code>的<code> Custom domain</code>设置里填上购买的域名。（其他平台coding,gitee类似）</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_mXW_a7aUVk.png"></p>
+<blockquote>
+<p>最后重新生成就可以通过域名直接访问了</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>博客</tag>
+      </tags>
   </entry>
 </search>

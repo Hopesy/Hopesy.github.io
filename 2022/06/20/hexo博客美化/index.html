@@ -1,0 +1,374 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>hexo博客美化 - hopesy</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="/css/mouse.css">
+    <meta name="keywords" content="hopesy,个人博客,"> 
+    <meta name="description" content="hopesy的个人笔记,hexo博客美化修改基本信息
+打开博客目录下的_config.yml文件，修改网站的标题、标签等基本信息。
+
+
+
+
+参数
+描述
+
+
+
+title
+网站的标题
+
+
+subtitle
+网站的副标题
+
+
+,"> 
+    <meta name="author" content="hopesy"> 
+    <link rel="alternative" href="atom.xml" title="hopesy" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+<link rel="stylesheet" href="/css/site.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+
+    <!-- 代码块复制 -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard@latest/dist/clipboard.js"></script>
+
+    <!-- 点击效果 -->
+    
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas>
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/gh/5MayRain/5MayRain.github.io@latest/js/fireworks.js"></script>
+    
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">hopesy</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://hopesy.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">hexo博客美化</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <!-- 帖子视图 -->
+
+    <div class="post_cover" >
+        
+            <img src="https://hopesy.github.io/imags/cover/cover14.jpg" />
+        
+        <div class="post_cover_mask"></div>
+        <div class="post_text">
+            <h1>hexo博客美化</h1>
+            <div>
+                <span>六月 20, 2022</span>
+
+                
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%8D%9A%E5%AE%A2/" rel="tag">博客</a></li></ul>
+
+
+            </div>
+        </div>
+    </div>
+
+
+<div class="article">
+    <div class='main'>
+        <!-- 帖子视图 -->
+        
+        
+        <!-- 更新时间 -->
+        <div class="updated">
+            <div></div>
+            <span>该文章更新于 2022.06.20</span>
+        </div>
+
+        <div class="content markdown">
+            <h2 id="hexo博客美化"><a href="#hexo博客美化" class="headerlink" title="hexo博客美化"></a>hexo博客美化</h2><h3 id="修改基本信息"><a href="#修改基本信息" class="headerlink" title="修改基本信息"></a>修改基本信息</h3><blockquote>
+<p>打开博客目录下的<code>_config.yml</code>文件，修改网站的标题、标签等基本信息。</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>参数</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>title</td>
+<td>网站的标题</td>
+</tr>
+<tr>
+<td>subtitle</td>
+<td>网站的副标题</td>
+</tr>
+<tr>
+<td>description</td>
+<td>对于网站的描述，主要用于SEO</td>
+</tr>
+<tr>
+<td>keywords</td>
+<td>网站的关键词，支持多个关键词</td>
+</tr>
+<tr>
+<td>author</td>
+<td>作者名</td>
+</tr>
+<tr>
+<td>language</td>
+<td>网站使用的语言，对于简体中文用户来说，语言的设置跟使用不同的主题有关，可以参考各自主题的文档自行配置，一般为zh-CN</td>
+</tr>
+<tr>
+<td>timezone</td>
+<td>设置网站的时区，如果不填则默认使用你电脑的时区</td>
+</tr>
+</tbody></table>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><blockquote>
+<p>去官网挑选喜欢的主题<a target="_blank" rel="noopener" href="https://hexo.io/themes/" title="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_lfl39VveS2.png"></p>
+<blockquote>
+<p>下载主题，将他放在<code>themes</code>文件夹下。</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_3mMSwqxtqx.png"></p>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_KjDNx_fj6l.png"></p>
+<blockquote>
+<p>修改Hexo配置文件 <code>_config.yml</code> 主题项设置为主题名称，即可查看其效果（每个主题的具体配置方法需要进入其官网查看）</p>
+</blockquote>
+<h3 id="添加Live2D看板娘"><a href="#添加Live2D看板娘" class="headerlink" title="添加Live2D看板娘"></a>添加Live2D看板娘</h3><blockquote>
+<p>安装依赖</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>输入以下命令，下载相应的模型，将 packagename 更换成模型名称即可。</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install live2d-widget-model-shizuku</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p><code>模型名称如下：</code></p>
+<ul>
+<li><p>live2d-widget-model-chitose</p>
+</li>
+<li><p>live2d-widget-model-epsilon2_1</p>
+</li>
+<li><p>live2d-widget-model-gf</p>
+</li>
+<li><p>live2d-widget-model-haru</p>
+</li>
+<li><p>live2d-widget-model-haruto</p>
+</li>
+<li><p>live2d-widget-model-hibiki</p>
+</li>
+<li><p>live2d-widget-model-hijiki</p>
+</li>
+<li><p>live2d-widget-model-izumi</p>
+</li>
+<li><p>live2d-widget-model-koharu</p>
+</li>
+<li><p>live2d-widget-model-miku</p>
+</li>
+<li><p>live2d-widget-model-ni-j</p>
+</li>
+<li><p>live2d-widget-model-nico</p>
+</li>
+<li><p>live2d-widget-model-nietzsche</p>
+</li>
+<li><p>live2d-widget-model-nipsilon</p>
+</li>
+<li><p>live2d-widget-model-nito</p>
+</li>
+<li><p>live2d-widget-model-shizuku</p>
+</li>
+<li><p>live2d-widget-model-tororo</p>
+</li>
+<li><p>live2d-widget-model-tsumiki</p>
+</li>
+<li><p>live2d-widget-model-unitychan</p>
+</li>
+<li><p>live2d-widget-model-wanko</p>
+</li>
+<li><p>live2d-widget-model-z16</p>
+</li>
+</ul>
+<blockquote>
+<p>复制下载的模型</p>
+</blockquote>
+<ul>
+<li><p>在hexo的根目录创建名为<code>live2d_models</code>的文件夹</p>
+</li>
+<li><p>把之前安装的模型文件夹从<code>node_modules</code>文件夹复制到<code>live2d_models</code>中</p>
+</li>
+</ul>
+<blockquote>
+<p>打开站点目录下的 <code>_config.yml </code>文件，添加如下代码：</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># live2d</span></span><br><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span>  <span class="comment"># 是否启动</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span> <span class="comment"># 默认</span></span><br><span class="line">  pluginRootPath: live2dw/  <span class="comment"># 插件在站点上的根目录(相对路径)</span></span><br><span class="line">  pluginJsPath: lib/  <span class="comment"># 脚本文件相对与插件根目录路径</span></span><br><span class="line">  pluginModelPath: assets/  <span class="comment"># 模型文件相对与插件根目录路径</span></span><br><span class="line">  tagMode: <span class="literal">false</span>  <span class="comment"># 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span></span><br><span class="line">  debug: <span class="literal">false</span>  <span class="comment"># 调试, 是否在控制台输出日志</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-shizuku <span class="comment"># npm-module package name</span></span><br><span class="line">  display:</span><br><span class="line">    position: right <span class="comment"># 定位方向 left right top bottom</span></span><br><span class="line">    width: 150  <span class="comment"># 小人宽度</span></span><br><span class="line">    height: 300 <span class="comment">#  小人高度</span></span><br><span class="line">    hOffset: -15  <span class="comment"># 向 偏移</span></span><br><span class="line">    vOffset: -15  <span class="comment"># 像 偏移</span></span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span>  <span class="comment"># 手机端是否显示</span></span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7  <span class="comment"># 模型透明度</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="浏览器网页标题恶搞"><a href="#浏览器网页标题恶搞" class="headerlink" title="浏览器网页标题恶搞"></a>浏览器网页标题恶搞</h3><blockquote>
+<p>首先在目录 <code>\Hexo\themes\hexo-theme-spfk\source\js </code>下新建一个 FunnyTitle.js 文件，在里面填写如下代码：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--浏览器搞笑标题--&gt;</span><br><span class="line"> <span class="keyword">var</span> <span class="title class_">OriginTitle</span> = <span class="variable language_">document</span>.<span class="property">title</span>;</span><br><span class="line"> <span class="keyword">var</span> titleTime;</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;visibilitychange&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">hidden</span>) &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/img/trhx2.png&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;ヽ(●-`Д´-)ノ你丑你就走！&#x27;</span>;</span><br><span class="line">         <span class="built_in">clearTimeout</span>(titleTime);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/img/trhx2.png&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;ヾ(Ő∀Ő3)ノ你帅就回来！&#x27;</span> + <span class="title class_">OriginTitle</span>;</span><br><span class="line">         titleTime = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">title</span> = <span class="title class_">OriginTitle</span>;</span><br><span class="line">         &#125;, <span class="number">2000</span>);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>然后在<code> \Hexo\themes\hexo-theme-spfk\layout\layout.ejs </code>文件中添加如下代码:</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;!--浏览器搞笑标题--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;\js\FunnyTitle.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
+
+<h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><blockquote>
+<p>购买域名，去<code>godaddy</code>,<code>阿里云</code>,<code>腾讯云</code>都可以</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_oV8qASw9nT.png"></p>
+<blockquote>
+<p>进入腾讯云后台，添加域名解析</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_Wzv1Y_Stkv.png"></p>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_W8GKwD1cR0.png"></p>
+<blockquote>
+<p>本地<code>hexo</code>设置<code>CNAME</code>。在 hexo 项目下，<code>source </code>文件夹下面创建<code> CNAME 文件（没有后缀名的）</code>，在里面写上购买的域名。</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_lpGUFpmFv7.png"></p>
+<blockquote>
+<p><code>GitHub Pages</code>的<code> Custom domain</code>设置里填上购买的域名。（其他平台coding,gitee类似）</p>
+</blockquote>
+<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_mXW_a7aUVk.png"></p>
+<blockquote>
+<p>最后重新生成就可以通过域名直接访问了</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">hexo clean</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="http://domain.com/awesome.mp3">
+            </audio>
+            
+        </div>
+        </br></br></br>
+        <center style="color: #cccccc;">-&nbsp;&nbsp;&nbsp;END&nbsp;&nbsp;&nbsp;-</center>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='false'
+        data-ci='89ba0c99dd53a9c8cd90'
+        data-cs='d4652489373fcfa5d0e3cd07c9ef39ae420324be'
+        data-r='hopesy.github.io'
+        data-o='hopesy'
+        data-a='hopesy'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+    <!--�������Ц����-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":-15,"vOffset":-15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+<script src="/js/codeCopy.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
