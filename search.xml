@@ -19,18 +19,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>测试</title>
-    <url>/2022/06/19/%E6%B5%8B%E8%AF%95/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>BIM</tag>
-        <tag>测试</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Echarts学习笔记</title>
     <url>/2022/04/17/Echarts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="Echarts学习笔记"><a href="#Echarts学习笔记" class="headerlink" title="Echarts学习笔记"></a>Echarts学习笔记</h1><ul>
@@ -550,6 +538,18 @@
       <tags>
         <tag>Echarts</tag>
         <tag>学习笔记</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试</title>
+    <url>/2022/06/19/%E6%B5%8B%E8%AF%95/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>BIM</tag>
+        <tag>测试</tag>
       </tags>
   </entry>
 </search>
