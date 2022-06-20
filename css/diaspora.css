@@ -198,13 +198,13 @@ audio {
   display: inline-block;
   -webkit-background-size: 75px 32px;
   -moz-background-size: 75px 32px;
-  background-size: 75px 32px;
+  background-size: 150px 65px;
   background-repeat: no-repeat;
   background-position: center center;
   -webkit-mask-box-image: url("/img/logo.png");
   background-color: white;
-  width: 90px;
-  height: 38px;
+  width: 150px;
+  height: 65px;
   mask-image: url("/img/logo.png");
   mask-size: contain;
   transition: background-color 0.5s ease-in-out;
