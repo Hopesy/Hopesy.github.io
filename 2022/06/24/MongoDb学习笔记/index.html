@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>MongoDb学习笔记 - hopesy</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="/css/mouse.css">
+    <meta name="keywords" content="hopesy,个人博客,"> 
+    <meta name="description" content="hopesy的个人笔记,MongoDb学习笔记
+MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB 旨在为WEB应用提供可扩,"> 
+    <meta name="author" content="hopesy"> 
+    <link rel="alternative" href="atom.xml" title="hopesy" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+<link rel="stylesheet" href="/css/site.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+
+    <!-- 代码块复制 -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard@latest/dist/clipboard.js"></script>
+
+    <!-- 点击效果 -->
+    
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">hopesy</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://hopesy.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">MongoDb学习笔记</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <!-- 帖子视图 -->
+
+    <div class="post_cover" >
+        
+            <img src="https://hopesy.github.io/imags/cover/cover16.jpg" />
+        
+        <div class="post_cover_mask"></div>
+        <div class="post_text">
+            <h1>MongoDb学习笔记</h1>
+            <div>
+                <span>六月 24, 2022</span>
+
+                
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/MongoDb/" rel="tag">MongoDb</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/sql/" rel="tag">sql</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E5%89%8D%E7%AB%AF/" rel="tag">前端</a></li></ul>
+
+
+            </div>
+        </div>
+    </div>
+
+
+<div class="article">
+    <div class='main'>
+        <!-- 帖子视图 -->
+        
+        
+        <!-- 更新时间 -->
+        <div class="updated">
+            <div></div>
+            <span>该文章更新于 2022.06.24</span>
+        </div>
+
+        <div class="content markdown">
+            <h1 id="MongoDb学习笔记"><a href="#MongoDb学习笔记" class="headerlink" title="MongoDb学习笔记"></a>MongoDb学习笔记</h1><blockquote>
+<p>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB 将数据存储为一个文档，数据结构由键值(key&#x3D;&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://_www.runoob.com_python3_python-mongodb/">https://www.runoob.com/python3/python-mongodb.html</a></p>
+<h3 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1.下载安装"></a>1.下载安装</h3><blockquote>
+<p>Windows直接去官网点击下载。或者<a target="_blank" rel="noopener" href="https://www.aliyundrive.com/s/kFuxf1rvHhU">下载我分享的安装包</a></p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/community">https://www.mongodb.com/try/download/community</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491587-b813f6c5-0cb1-4036-883a-3877f6e949fd.png#crop=0&crop=0&crop=1&crop=1&id=JWyf7&originHeight=861&originWidth=1836&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>双击安装包进行安装</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491709-c0bea4a8-1515-404e-a3d5-05671e156d5c.png#crop=0&crop=0&crop=1&crop=1&id=a0Ayy&originHeight=470&originWidth=607&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491798-4a4ddb3d-7f80-44b7-8685-4a7b3066f4a3.png#crop=0&crop=0&crop=1&crop=1&id=Rksi5&originHeight=364&originWidth=464&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491882-7d811f3e-07c2-4947-95a3-43ef2ec35bf4.png#crop=0&crop=0&crop=1&crop=1&id=Cr9gk&originHeight=337&originWidth=462&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491992-69a6e136-6933-4028-854f-dfcae1c6236d.png#crop=0&crop=0&crop=1&crop=1&id=Gju0W&originHeight=478&originWidth=624&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>为了方便启动，我们将bin目录放在系统环境变量中,这样无论在任何目录启动Bash或者cmd都可以直接使用mongo命令。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492206-5025d848-eb3a-4248-ba01-29f6c934c10d.png#crop=0&crop=0&crop=1&crop=1&id=IcJWP&originHeight=681&originWidth=1506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>MongoDB 默认将<code>数据库文件存</code>储在安装路径下的<code>data目录</code>下，日志默认存放在<code>log</code>目录下。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492311-1d4ec5a7-0bea-4cd1-b812-fd35563511c2.png#crop=0&crop=0&crop=1&crop=1&id=Wgepc&originHeight=619&originWidth=856&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p><code>为了避免文件混乱。</code>我们一般在安装目录下新建一个<code>db目录</code>存放<code>数据库</code>，然后<code>修改配置文件</code>指向此路径。（不想改数据库目录的话这一步不做也行）</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492408-6c4e3acd-4b57-4184-a51e-39d7418943f8.png#crop=0&crop=0&crop=1&crop=1&id=IEbKF&originHeight=334&originWidth=1114&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492573-22a06d5e-2475-4fb6-b6ce-cf867df6a933.png#crop=0&crop=0&crop=1&crop=1&id=RNC1Q&originHeight=602&originWidth=1033&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>注意：我们安装的时候勾选了注册为服务，只有注册了服务才能用<code>net start mongodb</code>的方式启动，否则只能在命令行启动<code>mongod -dbpath &quot;D:\MongoDb\data\db&quot;</code>可以跟很多启动参数。安装时也可以不勾选，然后手动注册服务，命令如下所示。</p>
+<blockquote>
+<p>启动Mongodb服务（不区分大小写）。</p>
+</blockquote>
+<blockquote>
+<p>启动服务之后就能使用<code>mongo</code>命令进入数据库了，默认已经建了个表<code>test</code>。(我们上一步已经将bin目录添加到系统变量了，所以可以直接使用)</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492700-34506362-e11d-4f46-a338-6e9f8f969790.png#crop=0&crop=0&crop=1&crop=1&id=qgSnW&originHeight=952&originWidth=1332&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>如果我们希望操作起来更简单，就需要安装可视化界面。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/compass">https://www.mongodb.com/try/download/compass</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492796-566dde0c-bc4a-43cc-96e4-6ebdff5ef08b.png#crop=0&crop=0&crop=1&crop=1&id=JF0je&originHeight=820&originWidth=1865&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>下载后任意路径解压双击<code>MongoDBCompass</code>即可使用。当然也可以下载安装版本。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492914-7121a3ab-c982-479a-b71e-05405f6708c3.png#crop=0&crop=0&crop=1&crop=1&id=TPAgG&originHeight=608&originWidth=1012&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p><code>net start mongodb</code>启动数据库后，点击<code>fill in connection</code>填写网址端口<code>connect</code>即可连接。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493000-785b6aeb-12d3-4019-a7ad-cebd9757b5f7.png#crop=0&crop=0&crop=1&crop=1&id=zuzkB&originHeight=174&originWidth=1556&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493092-7be4449e-81cd-4618-87e6-e171d3e7b613.png#crop=0&crop=0&crop=1&crop=1&id=okwLi&originHeight=761&originWidth=1577&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493185-fd9b6af2-2510-4c1e-ad3a-eea94dfc5080.png#crop=0&crop=0&crop=1&crop=1&id=yNs9D&originHeight=711&originWidth=1565&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="2-概念、数据类型"><a href="#2-概念、数据类型" class="headerlink" title="2. 概念、数据类型"></a>2. 概念、数据类型</h3><p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493308-2d626245-986d-4daf-ba63-cdc2ce169932.png#crop=0&crop=0&crop=1&crop=1&id=eYmPe&originHeight=238&originWidth=832&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>MongoDB支持以下数据类型:</p>
+</blockquote>
+<p>   String（字符串） <em>: mongodb中的字符串是UTF-8有效的。</em><br>Integer <em>（<strong>整数</strong> ）: 存储数值。整数可以是32位或64位，具体取决于您的服务器。</em><br>Boolean（布尔） _: 存储布尔(true&#x2F;false)值。  _<br>Double（双精度 _）: 存储浮点值。  _<br>Min&#x2F; Max keys（最小&#x2F;最大键 _）: 将值与最低和最高BSON元素进行比较。  _<br>Arrays（数组 _）: 将数组或列表或多个值存储到一个键中。  _<br>Timestamp（时间戳 _）: 存储时间戳。  _<br>Object <em>（<strong>对象</strong> ）: 嵌入式文档。  _<br>Null （空值） <em>: 存储Null值。</em><br>Symbol（符号 <em>）: 与字符串相同，用于具有特定符号类型的语言。</em><br>Date（日期 <em>）: 以UNIX时间格式存储当前日期或时间。</em><br>Object ID（对象ID <em>） : 存储文档ID。</em><br>Binary data（二进制数据 <em>）: 存储二进制数据。</em><br>Code（代码 <em>）: 将JavaScript代码存储到文档中。</em><br>Regular expression （_正则表达式</em> ）: 存储正则表达式</p>
+<blockquote>
+<p>注意点</p>
+</blockquote>
+<p>● 每个⽂档都有⼀个属性， 为_id， 保证每个⽂档的唯⼀性，mongodb默认使用_id作为主键,可以⾃⼰去设置_id插⼊⽂档，如果没有提供， 那么MongoDB为每个⽂档提供了⼀个独特的_id， 类型为objectID<br>● objectID是⼀个12字节的⼗六进制数,每个字节两位，一共是24 位的字符串： 前4个字节为当前时间戳 接下来3个字节的机器ID 接下来的2个字节中MongoDB的服务进程id 最后3个字节是简单的增量值</p>
+<h3 id="3-创建数据库"><a href="#3-创建数据库" class="headerlink" title="3. 创建数据库"></a>3. 创建数据库</h3><blockquote>
+<p><code>use DATABASE_NAME</code>如果数据库不存在，则创建数据库，否则切换到指定数据库。<code>db</code>指的是当前数据库。</p>
+</blockquote>
+<blockquote>
+<p><code>show dbs</code>查看所有数据库。（新创建的数据库只有插入一条记录后才会显示）</p>
+</blockquote>
+<h3 id="4-删除数据库"><a href="#4-删除数据库" class="headerlink" title="4. 删除数据库"></a>4. 删除数据库</h3><blockquote>
+<p><code>db.dropDatabase()</code>删除当前数据库，默认为 test，你可以使用 db 命令查看当前数据库名。</p>
+</blockquote>
+<h3 id="5-创建集合-表格"><a href="#5-创建集合-表格" class="headerlink" title="5. 创建集合(表格)"></a>5. 创建集合(表格)</h3><blockquote>
+<p><code>db.createCollection(name, options)</code>创建集合</p>
+</blockquote>
+<ul>
+<li>name: 要创建的集合名称。</li>
+</ul>
+<p>options: 可选参数, 指定有关内存大小及索引的选项。</p>
+<blockquote>
+<p>查看集合<code>show collections</code>或者<code>show tables</code></p>
+</blockquote>
+<blockquote>
+<p>需要注意的是mongodb会在插入数据的时候自动创建集合，集合的名称会和数据库的名称一样。</p>
+</blockquote>
+<h3 id="6-删除集合"><a href="#6-删除集合" class="headerlink" title="6. 删除集合"></a>6. 删除集合</h3><blockquote>
+<p><code>db.collection.drop()</code>成功删除选定集合，则 drop() 方法返回 true，否则返回 false。(collection代指要删除的集合名称 )</p>
+</blockquote>
+<h3 id="7-插入文档（数据）"><a href="#7-插入文档（数据）" class="headerlink" title="7. 插入文档（数据）"></a>7. 插入文档（数据）</h3><blockquote>
+<p>文档的数据结构和 JSON 基本一样。所有存储在集合中的数据都是 BSON 格式。BSON 是一种类似 JSON 的二进制形式的存储格式，是 Binary JSON 的简称。<strong>文档就是一条json数据，相当于sql中的一行数据。</strong><br><code>db.collectionName.insertOne()</code>插入一条数据(3.2版本以后)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.insertMany()</code>插入多条数据(3.2版本以后)</p>
+</blockquote>
+<p>参数说明：</p>
+<ul>
+<li>document：要写入的文档。</li>
+</ul>
+<p>writeConcern：写入策略，默认为 1，即要求确认写操作，0 是不要求。<br>ordered：指定是否按顺序写入，默认 true，按顺序写入。</p>
+<blockquote>
+<p><code>db.COLLECTION_NAME.insert(document)/db.COLLECTION_NAME.save(document)</code></p>
+</blockquote>
+<p>save()：如果 _id 主键存在则更新数据，如果不存在就插入数据。该方法新版本中已废弃，可以使用 <strong>db.collection.insertOne()</strong> 或 <strong>db.collection.replaceOne()</strong> 来代替。</p>
+<ul>
+<li>insert(): 若插入的数据主键已经存在，则会抛 org.springframework.dao.DuplicateKeyException 异常，提示主键重复，不保存当前数据。<h3 id="8-更新文档"><a href="#8-更新文档" class="headerlink" title="8. 更新文档"></a>8. 更新文档</h3><blockquote>
+<p><code>db.collectionName.updateOne()</code> 向指定集合更新单条文档（3.2版本以后）</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><code>db.collection.updateMany()</code> 向指定集合更新多条文档(3.2版本以后）</p>
+</blockquote>
+<blockquote>
+<p><strong>update()</strong> 方法。低版本中 <code>用于更新已存在的文档。</code></p>
+</blockquote>
+<p><strong>参数说明：</strong><br>   query : update的查询条件，类似sql update查询内where后面的。<br>update : update的对象和一些更新的操作符（如inc…）等，也可以理解为sql update查询内set后面的<br>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。<br>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。<br>writeConcern :可选，抛出异常的级别。<br>实例:</p>
+<blockquote>
+<p><strong>save()</strong> 方法。低版本中 <code>通过传入的文档来替换已有文档，_id 主键存在就更新，不存在就插入。</code></p>
+</blockquote>
+<blockquote>
+<p>异常说明</p>
+</blockquote>
+<ul>
+<li>WriteConcern.NONE:没有异常抛出</li>
+</ul>
+<p>WriteConcern.NORMAL:仅抛出网络错误异常，没有服务器错误异常<br>WriteConcern.SAFE:抛出网络错误异常、服务器错误异常；并等待服务器完成写操作。<br>WriteConcern.MAJORITY: 抛出网络错误异常、服务器错误异常；并等待一个主服务器完成写操作。<br>WriteConcern.FSYNC_SAFE: 抛出网络错误异常、服务器错误异常；写操作等待服务器将数据刷新到磁盘。</p>
+<ul>
+<li>WriteConcern.JOURNAL_SAFE:抛出网络错误异常、服务器错误异常；写操作等待服务器提交到磁盘的日志文件。</li>
+<li>WriteConcern.REPLICAS_SAFE:抛出网络错误异常、服务器错误异常；等待至少2台服务器完成写操作。<blockquote>
+<p>移除集合中的键值对，使用的 <code>$unset</code>操作符。如果指定的字段不存在则操作不做任何处理。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="9-删除文档"><a href="#9-删除文档" class="headerlink" title="9.删除文档"></a>9.删除文档</h3><blockquote>
+<p><code>db.collectionName.deleteOne(&lt;query&gt;)</code>删除单条数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.deleteMany(&lt;query&gt;)</code>删除符合条件的所有数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.deleteMany(&#123;&#125;)</code>删除整个表立面的所有数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>remove()</code> 函数是低版本用来移除集合中的数据。在执行 remove() 函数前先执行 <code>find()</code>命令来判断执行的条件是否正确，是一个比较好的习惯。</p>
+</blockquote>
+<p>基本语法如下：<br><strong>2.6 版本以后的语法格式如下:</strong><br><strong>参数说明：</strong><br>   query :（可选）删除的文档的条件。<br>justOne : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。<br>writeConcern :（可选）抛出异常的级别。</p>
+<h3 id="10-查询文档"><a href="#10-查询文档" class="headerlink" title="10. 查询文档"></a>10. 查询文档</h3><blockquote>
+<p><code>db.collection.find(query, projection)</code>查询数据</p>
+</blockquote>
+<p>query ：可选，使用查询操作符指定查询条件<br>projection ：可选。若不指定 projection，则默认返回所有字段</p>
+<blockquote>
+<p><code>projection</code>的用法。</p>
+</blockquote>
+<blockquote>
+<p><code>db.col.find().pretty()</code> pretty()以格式化的方式来显示文档。</p>
+</blockquote>
+<blockquote>
+<p><code>findOne</code>与<code>find</code>语法一致，但是它只返回一条数据</p>
+</blockquote>
+<blockquote>
+<p>MongoDB 的 find() 方法可以传入多个键(key)，每个键(key)以逗号隔开，即常规 SQL 的 AND 条件。</p>
+</blockquote>
+<p>以下实例通过 by 和 title 键来查询教程 中 MongoDB 教程 的数据</p>
+<blockquote>
+<p>MongoDB OR 条件语句使用了关键字 $or ,语法格式如下：</p>
+</blockquote>
+<p>以下实例中，我们演示了查询键 by 值为 教程 或键 title 值为 MongoDB 教程 的文档。</p>
+<blockquote>
+<p>AND 和 OR 联合使用</p>
+</blockquote>
+<h3 id="11-条件操作符"><a href="#11-条件操作符" class="headerlink" title="11. 条件操作符"></a>11. 条件操作符</h3><blockquote>
+<p>MongoDB 与 RDBMS Where 语句比较</p>
+</blockquote>
+<blockquote>
+<p> 模糊查询</p>
+</blockquote>
+<h3 id="12-type-操作符"><a href="#12-type-操作符" class="headerlink" title="12. $type 操作符"></a>12. $type 操作符</h3><blockquote>
+<p><code>$type</code>操作符是基于BSON类型来检索集合中匹配的数据类型，并返回结果</p>
+</blockquote>
+<blockquote>
+<p>如果想获取 “col” 集合中 title 为 String 的数据，你可以使用以下命令：</p>
+</blockquote>
+<h3 id="13-Limit与Skip方法"><a href="#13-Limit与Skip方法" class="headerlink" title="13. Limit与Skip方法"></a>13. Limit与Skip方法</h3><blockquote>
+<p><code>limit(n)</code>是用来规定显示的条数。</p>
+</blockquote>
+<blockquote>
+<p><code>skip(n)</code>是用来在符合条件的记录中从第一个记录跳过的条数</p>
+</blockquote>
+<blockquote>
+<p>两者一般结合使用。以下实例在集合中跳过前面 10 条返回 100 条数据。</p>
+</blockquote>
+<h3 id="14-排序sort"><a href="#14-排序sort" class="headerlink" title="14. 排序sort"></a>14. 排序sort</h3><blockquote>
+<p>skip(), limilt(), sort()三个放在一起执行的时候，执行的顺序是先 sort(), 然后是 skip()，最后是显示的 limit()。<br><code>sort()</code>方法对数据进行排序，sort() 方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中<code>1 为升序排列</code>，而 <code>-1 是用于降序排列</code>。<code>db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;)</code></p>
+</blockquote>
+<h3 id="15-索引index"><a href="#15-索引index" class="headerlink" title="15. 索引index"></a>15. 索引index</h3><blockquote>
+<p>索引通常能够极大的提高查询的效率，如果没有索引，MongoDB在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。这种扫描全集合的查询效率是非常低的，特别在处理大量的数据时，查询可以要花费几十秒甚至几分钟，这对网站的性能是非常致命的。索引是特殊的数据结构，索引存储在一个易于遍历读取的数据集合中，索引是对数据库表中一列或多列的值进行排序的一种结构。<br><code>db.collection.createIndex(keys, options)</code>创建索引</p>
+</blockquote>
+<p>语法中 Key 值为你要创建的索引字段，1 为指定按升序创建索引，如果你想按降序来创建索引指定为 -1 即可。</p>
+<blockquote>
+<p><code>createIndex()</code> 方法中你也可以设置使用<code>多个字段创建索引</code>（关系型数据库中称作<code>复合索引</code>）。</p>
+</blockquote>
+<blockquote>
+<p>查看索引合集</p>
+</blockquote>
+<blockquote>
+<p>查看集合索引的大小</p>
+</blockquote>
+<blockquote>
+<p>删除集合所有索引</p>
+</blockquote>
+<blockquote>
+<p>删除集合指定索引</p>
+</blockquote>
+<h3 id="16-数据导入导出"><a href="#16-数据导入导出" class="headerlink" title="16. 数据导入导出"></a>16. 数据导入导出</h3><blockquote>
+<p>此命令需要安装<code>database tool</code>工具。安装完成后加入系统环境变量path。</p>
+</blockquote>
+<p><a target="_blank" rel="noopener" href="https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools">https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools</a><br><code>数据导出：mongoexport</code></p>
+<blockquote>
+<p><code>Mongdb</code>中的<code>mongoexport</code>工具可以将<code>collection</code>导出成<code>JSON格式</code>或者<code>CSV格式</code>的文件。可以通过参数指定导出的数据项，也可以根据指定的条件导出数据。</p>
+</blockquote>
+<p><code>数据导入：mongoimport</code><br>注意：如果excel里面有中文、特殊符号，会抛出以下异常：exception:Invalid UTF8 character detected<br>此时，执行mongoimport命令前，您需要先将该csv文件编码转为 utf-8。<br><code>数据备份(导出所有数据)</code><br><code>数据恢复</code><br>注意：恢复的时候可以加–drop 覆盖原来的数据库（慎用），最好提前备份好当前数据库；同时要更改数据库名，不然恢复会失败。</p>
+<h3 id="17-composer导入数据"><a href="#17-composer导入数据" class="headerlink" title="17. composer导入数据"></a>17. composer导入数据</h3><blockquote>
+<p>在<code>collection</code>那里导入数据</p>
+</blockquote>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="http://domain.com/awesome.mp3">
+            </audio>
+            
+        </div>
+        </br></br></br>
+        <center style="color: #cccccc;">-&nbsp;&nbsp;&nbsp;END&nbsp;&nbsp;&nbsp;-</center>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='7c40969f9ae1f09ec22f'
+        data-cs='d6dce2a6144e46354524fc0abcff5bf854690061'
+        data-r='hopesy.github.io'
+        data-o='hopesy'
+        data-a='hopesy'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+    <!--�������Ц����-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":-15,"vOffset":-15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+<script src="/js/codeCopy.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>

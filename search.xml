@@ -1,6 +1,426 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Ajax请求</title>
+    <url>/2022/06/24/Ajax%E8%AF%B7%E6%B1%82/</url>
+    <content><![CDATA[<h1 id="AJAX请求"><a href="#AJAX请求" class="headerlink" title="AJAX请求"></a>AJAX请求</h1><h1 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h1><blockquote>
+<p>AJAX 不是新的编程语言，而是一种使用现有标准的新方法。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
+</blockquote>
+<h2 id="1-常识性知识"><a href="#1-常识性知识" class="headerlink" title="1. 常识性知识"></a>1. 常识性知识</h2><h3 id="1-1-网页中如何请求数据"><a href="#1-1-网页中如何请求数据" class="headerlink" title="1.1 网页中如何请求数据"></a>1.1 网页中如何请求数据</h3><blockquote>
+<p>如果要在网页中请求服务器上的数据资源，则需要用到 <code>XMLHttpRequest</code>对象。</p>
+</blockquote>
+<p><code>XMLHttpRequest</code>（简称 xhr）是浏览器提供的 js 成员，通过它，可以请求服务器上的数据资源。<br>最简单的用法：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> xhrObj = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br></pre></td></tr></table></figure>
+<h3 id="1-2-资源的请求方式"><a href="#1-2-资源的请求方式" class="headerlink" title="1.2 资源的请求方式"></a>1.2 资源的请求方式</h3><blockquote>
+<p>客户端请求服务器时，请求的方式有很多种，最常见的两种请求方式分别为 <code>get</code>和 <code>post</code>请求。</p>
+</blockquote>
+<ul>
+<li><p><code>get</code> 请求通常用于获取服务端资源（向服务器要资源）</p>
+<p>   例如：根据 URL 地址，从服务器获取 HTML 文件、css 文件、js文件、图片文件、数据资源等</p>
+</li>
+</ul>
+<p><code>post</code> 请求通常用于向服务器提交数据（往服务器发送资源）<br>     例如：登录时向服务器提交的登录信息、注册时向服务器提交的注册信息、添加用户时向服务器提交的      用户信息等各种数据提交操作</p>
+<h3 id="1-3-get、post的区别"><a href="#1-3-get、post的区别" class="headerlink" title="1.3 get、post的区别"></a>1.3 get、post的区别</h3><blockquote>
+<p>Get请求的目的是给予服务器一些参数,以便从服务器获取列表.例如:<code>list.aspx?page=1</code>,表示获取第一页的数据Post请求的目的是向服务器发送一些参数,例如form中的内容.与 POST 相比，GET 更简单也更快，并且在大部分情况下都能用。</p>
+</blockquote>
+<p>然而，在以下情况中，请使用 POST 请求：<br>1、无法使用缓存文件（更新服务器上的文件或数据库）<br>2、向服务器发送大量数据（ <em>POST</em> 没有数据量限制）<br>3、发送包含未知字符的用户输入时， <em>POST</em> 比 GET 更稳定也更可靠<br>若符合下列任一情况，则用<strong>GET</strong>方法：<br>1、请求是为了查找资源，HTML表单数据仅用来帮助搜索。<br>2、请求结果无持续性的副作用。<br>3、收集的数据及HTML表单内的输入字段名称的总长不超过1024个字符。</p>
+<h2 id="2-jQuery中的Ajax"><a href="#2-jQuery中的Ajax" class="headerlink" title="2. jQuery中的Ajax"></a>2. jQuery中的Ajax</h2><blockquote>
+<p>浏览器中提供的 <code>XMLHttpRequest</code>用法比较复杂，所以 jQuery 对 XMLHttpRequest 进行了<code>封装</code>，提供了一系列 Ajax 相关的函数，极大地降低了 Ajax 的使用难度。</p>
+</blockquote>
+<p>jQuery 中发起 Ajax 请求最常用的三个方法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">get</span>()</span><br><span class="line">$.<span class="title function_">post</span>()</span><br><span class="line">$.<span class="title function_">ajax</span>()</span><br></pre></td></tr></table></figure>
+<h3 id="2-1-get-的用法"><a href="#2-1-get-的用法" class="headerlink" title="2.1 $.get()的用法"></a>2.1 $.get()的用法</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">get</span>(url, [data], [callback])</span><br><span class="line"><span class="string">``</span><span class="string">`*</span></span><br><span class="line"><span class="string">   url:	要请求的资源地址*</span></span><br><span class="line"><span class="string">   data:  请求资源期间要携带的参数*</span></span><br><span class="line"><span class="string">   callback:	请求成功时的回调函数</span></span><br><span class="line"><span class="string">使用`</span>  $.<span class="title function_">get</span>()  <span class="string">`函数发起不带参数的请求时，直接提供请求的 URL 地址和请求成功之后的回调函数即可，示例代码如下：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>javascript</span><br><span class="line">$.<span class="title function_">get</span>(<span class="string">&#x27;http://www.liulongbin.top:3006/api/getbooks&#x27;</span>, <span class="keyword">function</span>(<span class="params">res</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res) <span class="comment">// 这里的 res 是服务器返回的数据</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>使用<code>$.get()</code> 函数发起带参数的请求时，示例代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">get</span>(<span class="string">&#x27;http://www.liulongbin.top:3006/api/getbooks&#x27;</span>, &#123; <span class="attr">id</span>: <span class="number">1</span> &#125;, <span class="keyword">function</span>(<span class="params">res</span>) &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="2-2-post-函数的用法"><a href="#2-2-post-函数的用法" class="headerlink" title="2.2 $.post()函数的用法"></a>2.2 $.post()函数的用法</h3><blockquote>
+<p>jQuery 中 <code>$.post()</code>函数的功能单一，专门用来发起 post 请求，从而向服务器提交数据。</p>
+</blockquote>
+<p><code>$.post()</code>函数的语法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">post</span>(url, [data], [callback])</span><br></pre></td></tr></table></figure>
+<p>使用 $post() 向服务器提交数据的示例代码如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">post</span>(</span><br><span class="line">   <span class="string">&#x27;http://www.liulongbin.top:3006/api/addbook&#x27;</span>, <span class="comment">// 请求的URL地址</span></span><br><span class="line">   &#123; <span class="attr">bookname</span>: <span class="string">&#x27;水浒传&#x27;</span>, <span class="attr">author</span>: <span class="string">&#x27;施耐庵&#x27;</span>, <span class="attr">publisher</span>: <span class="string">&#x27;上海图书出版社&#x27;</span> &#125;, <span class="comment">// 提交的数据</span></span><br><span class="line">   <span class="keyword">function</span>(<span class="params">res</span>) &#123; <span class="comment">// 回调函数</span></span><br><span class="line">      <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">   &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure>
+<h3 id="2-3-ajax-函数的用法"><a href="#2-3-ajax-函数的用法" class="headerlink" title="2.3 $.ajax()函数的用法"></a>2.3 $.ajax()函数的用法</h3><blockquote>
+<p>相比于<code>$.get()、$.post()</code>函数，jQuery 中提供的<code>$.ajax()</code>函数，是一个功能比较综合的函数，它允许我们对 <code>Ajax 请求</code>进行更详细的配置。</p>
+</blockquote>
+<p><code>$.ajax()</code> 函数的基本语法如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">ajax</span>(&#123;</span><br><span class="line">   <span class="attr">type</span>: <span class="string">&#x27;&#x27;</span>, <span class="comment">// 请求的方式，例如 GET 或 POST</span></span><br><span class="line">   <span class="attr">url</span>: <span class="string">&#x27;&#x27;</span>,  <span class="comment">// 请求的 URL 地址</span></span><br><span class="line">   <span class="attr">data</span>: &#123; &#125;,<span class="comment">// 这次请求要携带的数据</span></span><br><span class="line">   <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params">res</span>) &#123; &#125; <span class="comment">// 请求成功之后的回调函数</span></span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>使用 <code>$.ajax()</code>发起 GET 请求时，只需要将 type 属性的值设置为 ‘GET’ 即可：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">ajax</span>(&#123;</span><br><span class="line">   <span class="attr">type</span>: <span class="string">&#x27;GET&#x27;</span>, <span class="comment">// 请求的方式</span></span><br><span class="line">   <span class="attr">url</span>: <span class="string">&#x27;http://www.liulongbin.top:3006/api/getbooks&#x27;</span>,  <span class="comment">// 请求的 URL 地址</span></span><br><span class="line">   <span class="attr">data</span>: &#123; <span class="attr">id</span>: <span class="number">1</span> &#125;,<span class="comment">// 这次请求要携带的数据</span></span><br><span class="line">   <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params">res</span>) &#123; <span class="comment">// 请求成功之后的回调函数</span></span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<p>使用 <code>$.ajax()</code>发起 POST 请求时，只需要将 type 属性的值设置为 ‘POST’ 即可：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">ajax</span>(&#123;</span><br><span class="line">   <span class="attr">type</span>: <span class="string">&#x27;POST&#x27;</span>, <span class="comment">// 请求的方式</span></span><br><span class="line">   <span class="attr">url</span>: <span class="string">&#x27;http://www.liulongbin.top:3006/api/addbook&#x27;</span>,  <span class="comment">// 请求的 URL 地址</span></span><br><span class="line">   <span class="attr">data</span>: &#123; <span class="comment">// 要提交给服务器的数据</span></span><br><span class="line">      <span class="attr">bookname</span>: <span class="string">&#x27;水浒传&#x27;</span>,</span><br><span class="line">      <span class="attr">author</span>: <span class="string">&#x27;施耐庵&#x27;</span>,</span><br><span class="line">      <span class="attr">publisher</span>: <span class="string">&#x27;上海图书出版社&#x27;</span></span><br><span class="line">    &#125;,</span><br><span class="line">   <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params">res</span>) &#123; <span class="comment">// 请求成功之后的回调函数</span></span><br><span class="line">       <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line">   &#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="3-XMLHttpRequest"><a href="#3-XMLHttpRequest" class="headerlink" title="3. XMLHttpRequest"></a>3. XMLHttpRequest</h2><blockquote>
+<p><code>XMLHttpRequest</code>（简称 xhr）是浏览器提供的 Javascript 对象，通过它，可以请求服务器上的数据资源 。之前所学的 jQuery 中的 Ajax 函数，就是基于<code>xhr 对象封装</code>出来的。</p>
+</blockquote>
+<p><code>常用方法</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title class_">Open</span>(string method,string url,boolean asynch,<span class="title class_">String</span> username,string password)</span><br><span class="line">     <span class="comment">//指定和服务器端交互的HTTP方法，URL地址，即其他请求信息；</span></span><br><span class="line">     <span class="comment">//Method:表示http请求方法，一般使用&quot;GET&quot;,&quot;POST&quot;.</span></span><br><span class="line">     <span class="comment">//url：表示请求的服务器的地址；</span></span><br><span class="line">     <span class="comment">//asynch：表示是否采用异步方法，true为异步，false为同步；</span></span><br><span class="line">     <span class="comment">//后边两个可以不指定，username和password分别表示用户名和密码，提供http认证机制需要的用户名和密码。</span></span><br><span class="line"><span class="title class_">Send</span>(content)</span><br><span class="line">     <span class="comment">//向服务器发出请求，如果采用异步方式，该方法会立即返回。</span></span><br><span class="line">     <span class="comment">//content可以指定为null表示不发送数据，其内容可以是DOM对象，输入流或字符串。</span></span><br><span class="line"><span class="title class_">SetRequestHeader</span>(<span class="title class_">String</span> header,<span class="title class_">String</span> <span class="title class_">Value</span>)</span><br><span class="line">    <span class="comment">//设置HTTP请求中的指定头部header的值为value.</span></span><br><span class="line">    <span class="comment">//此方法需在open方法以后调用，一般在post方式中使用。</span></span><br><span class="line"><span class="title function_">getAllResponseHeaders</span>()</span><br><span class="line">    <span class="comment">//返回包含Http的所有响应头信息，其中相应头包括Content-length,date,uri等内容。</span></span><br><span class="line">    <span class="comment">//返回值是一个字符串，包含所有头信息，其中每个键名和键值用冒号分开，每一组键之间用CR和LF（回车加换行符）来分隔！</span></span><br><span class="line"><span class="title function_">getResponseHeader</span>(<span class="title class_">String</span> header)</span><br><span class="line">    <span class="comment">//返回HTTP响应头中指定的键名header对应的值</span></span><br><span class="line"><span class="title class_">Abort</span>()</span><br><span class="line">    <span class="comment">//停止当前http请求。对应的XMLHttpRequest对象会复位到未初始化的状态。</span></span><br></pre></td></tr></table></figure>
+<p><code>常用属性</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">readyState</span><br><span class="line">      <span class="comment">//表示XMLHttpRequest对象的状态：0：未初始化。对象已创建，未调用open；</span></span><br><span class="line">      <span class="number">1</span>：open方法成功调用，但<span class="title class_">Sendf</span>方法未调用；</span><br><span class="line">      <span class="number">2</span>：send方法已经调用，尚未开始接受数据；</span><br><span class="line">      <span class="number">3</span>：正在接受数据。<span class="title class_">Http</span>响应头信息已经接受，但尚未接收完成；</span><br><span class="line">      <span class="number">4</span>：完成，即响应数据接受完成。</span><br><span class="line"><span class="title class_">Onreadystatechange</span></span><br><span class="line">    <span class="comment">//请求状态改变的事件触发器（readyState变化时会调用这个属性上注册的javascript函数）。</span></span><br><span class="line">responseText</span><br><span class="line">      <span class="comment">//服务器响应的文本内容</span></span><br><span class="line">responseXML</span><br><span class="line">     <span class="comment">//服务器响应的XML内容对应的DOM对象</span></span><br><span class="line"><span class="title class_">Status</span></span><br><span class="line">     <span class="comment">//服务器返回的http状态码。200表示“成功”，404表示“未找到”，500表示“服务器内部错误”等。</span></span><br><span class="line">statusText</span><br><span class="line">     <span class="comment">//服务器返回状态的文本信息。</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-1-使用xhr发起GET请求"><a href="#3-1-使用xhr发起GET请求" class="headerlink" title="3.1 使用xhr发起GET请求"></a>3.1 使用xhr发起GET请求</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1. 创建 XHR 对象</span></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line"><span class="comment">// 2. 调用 open 函数，指定 请求方式 与 URL地址</span></span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>, <span class="string">&#x27;http://www.liulongbin.top:3006/api/getbooks&#x27;</span>)</span><br><span class="line"><span class="comment">// 3. 调用 send 函数，发起 Ajax 请求</span></span><br><span class="line">xhr.<span class="title function_">send</span>()</span><br><span class="line"><span class="comment">// 4. 监听 onreadystatechange 事件</span></span><br><span class="line">xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="comment">// 4.1 监听 xhr 对象的请求状态 readyState ；与服务器响应的状态 status</span></span><br><span class="line">    <span class="keyword">if</span> (xhr.<span class="property">readyState</span> === <span class="number">4</span> &amp;&amp; xhr.<span class="property">status</span> === <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="comment">// 4.2 打印服务器响应回来的数据</span></span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(xhr.<span class="property">responseText</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="3-2-xhr对象的readyState属性"><a href="#3-2-xhr对象的readyState属性" class="headerlink" title="3.2 xhr对象的readyState属性"></a>3.2 xhr对象的readyState属性</h3><blockquote>
+<p><code>XMLHttpRequest</code>对象的 readyState 属性，用来表示当前 Ajax 请求所处的状态 。每个 Ajax 请求必然处于以下状态中的一个：</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060428635-f8aa3dfa-dd4f-482a-86fa-8fc9f4c438c9.png#crop=0&crop=0&crop=1&crop=1&id=GDJTa&originHeight=352&originWidth=1102&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="3-3-使用xhr发起带参数的GET请求"><a href="#3-3-使用xhr发起带参数的GET请求" class="headerlink" title="3.3 使用xhr发起带参数的GET请求"></a>3.3 使用xhr发起带参数的GET请求</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// ...省略不必要的代码</span></span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;GET&#x27;</span>, <span class="string">&#x27;http://www.liulongbin.top:3006/api/getbooks?id=1&#x27;</span>)</span><br><span class="line"><span class="comment">// ...省略不必要的代码</span></span><br></pre></td></tr></table></figure>
+<p>这种在 URL 地址后面拼接的参数，叫做查询字符串 。</p>
+<h3 id="3-4-查询字符串"><a href="#3-4-查询字符串" class="headerlink" title="3.4 查询字符串"></a>3.4 查询字符串</h3><blockquote>
+<p>定义：查询字符串（URL 参数）是指在 URL 的末尾加上用于向服务器发送信息的字符串（变量）。</p>
+</blockquote>
+<p>格式：将英文的<code>?</code>放在URL 的末尾，然后再加上 <code>参数＝值</code>，想加上多个参数的话，使用 <code>&amp;</code>符号进行分隔。以这个形式，可以将想要发送给服务器的数据添加到 URL 中。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 不带参数的 URL 地址</span></span><br><span class="line"><span class="attr">http</span>:<span class="comment">//www.liulongbin.top:3006/api/getbooks</span></span><br><span class="line"><span class="comment">// 带一个参数的 URL 地址</span></span><br><span class="line"><span class="attr">http</span>:<span class="comment">//www.liulongbin.top:3006/api/getbooks?id=1</span></span><br><span class="line"><span class="comment">// 带两个参数的 URL 地址</span></span><br><span class="line"><span class="attr">http</span>:<span class="comment">//www.liulongbin.top:3006/api/getbooks?id=1&amp;bookname=西游记</span></span><br></pre></td></tr></table></figure>
+<h3 id="3-5-GET请求携带参数的本质"><a href="#3-5-GET请求携带参数的本质" class="headerlink" title="3.5 GET请求携带参数的本质"></a>3.5 GET请求携带参数的本质</h3><blockquote>
+<p>无论使用<code>$.ajax()</code>，还是使用<code>$ .get()</code>，又或者<code>直接使用 xhr 对象</code>发起 GET 请求，当需要携带参数的时候，本质上，都是直接将参数以查询字符串的形式，追加到 URL 地址的后面，发送到服务器的。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">$.<span class="title function_">get</span>(<span class="string">&#x27;url&#x27;</span>, &#123;<span class="attr">name</span>: <span class="string">&#x27;zs&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span>&#125;, <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;)</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line">$.<span class="title function_">get</span>(<span class="string">&#x27;url?name=zs&amp;age=20&#x27;</span>, <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;)</span><br><span class="line">$.<span class="title function_">ajax</span>(&#123; <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>, <span class="attr">url</span>: <span class="string">&#x27;url&#x27;</span>, <span class="attr">data</span>: &#123;<span class="attr">name</span>: <span class="string">&#x27;zs&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span>&#125;, <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125; &#125;)</span><br><span class="line"><span class="comment">// 等价于</span></span><br><span class="line">$.<span class="title function_">ajax</span>(&#123; <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>, <span class="attr">url</span>: <span class="string">&#x27;url?name=zs&amp;age=20&#x27;</span>, <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125; &#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="3-6-使用xhr发起POST请求"><a href="#3-6-使用xhr发起POST请求" class="headerlink" title="3.6 使用xhr发起POST请求"></a>3.6 使用xhr发起POST请求</h3><figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1. 创建 xhr 对象</span></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line"><span class="comment">// 2. 调用 open()</span></span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;http://www.liulongbin.top:3006/api/addbook&#x27;</span>)</span><br><span class="line"><span class="comment">// 3. 设置 Content-Type 属性（固定写法）</span></span><br><span class="line">xhr.<span class="title function_">setRequestHeader</span>(<span class="string">&#x27;Content-Type&#x27;</span>, <span class="string">&#x27;application/x-www-form-urlencoded&#x27;</span>)</span><br><span class="line"><span class="comment">// 4. 调用 send()，同时将数据以查询字符串的形式，提交给服务器</span></span><br><span class="line">xhr.<span class="title function_">send</span>(<span class="string">&#x27;bookname=水浒传&amp;author=施耐庵&amp;publisher=天津图书出版社&#x27;</span>)</span><br><span class="line"><span class="comment">// 5. 监听 onreadystatechange 事件</span></span><br><span class="line">xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;</span><br><span class="line">    <span class="keyword">if</span> (xhr.<span class="property">readyState</span> === <span class="number">4</span> &amp;&amp; xhr.<span class="property">status</span> === <span class="number">200</span>) &#123;</span><br><span class="line">        <span class="variable language_">console</span>.<span class="title function_">log</span>(xhr.<span class="property">responseText</span>)</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="4-URL编码与解码"><a href="#4-URL编码与解码" class="headerlink" title="4. URL编码与解码"></a>4. URL编码与解码</h2><h3 id="4-1-什么是URL编码"><a href="#4-1-什么是URL编码" class="headerlink" title="4.1 什么是URL编码"></a>4.1 什么是URL编码</h3><blockquote>
+<p>URL 地址中，只允许出现英文相关的字母、标点符号、数字，因此，在 URL 地址中不允许出现中文字符。</p>
+</blockquote>
+<ul>
+<li>如果 URL 中需要包含中文这样的字符，则必须对中文字符进行编码 （转义）。</li>
+<li>URL编码的原则：使用安全的字符（没有特殊用途或者特殊意义的可打印字符）去表示那些不安全的字符。</li>
+</ul>
+<p>URL编码原则的通俗理解：使用英文字符去表示非英文字符。</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">http</span>:<span class="comment">//www.liulongbin.top:3006/api/getbooks?id=1&amp;bookname=西游记</span></span><br><span class="line"><span class="comment">// 经过 URL 编码之后，URL地址变成了如下格式：</span></span><br><span class="line"><span class="attr">http</span>:<span class="comment">//www.liulongbin.top:3006/api/getbooks?id=1&amp;bookname=%E8%A5%BF%E6%B8%B8%E8%AE%B0</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-2-如何对URL进行编码与解码"><a href="#4-2-如何对URL进行编码与解码" class="headerlink" title="4.2 如何对URL进行编码与解码"></a>4.2 如何对URL进行编码与解码</h3><blockquote>
+<p>浏览器提供了 URL 编码与解码的 API，分别是：</p>
+</blockquote>
+<p><code>lencodeURI()</code>编码的函数<br><code>decodeURI()</code>解码的函数</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="built_in">encodeURI</span>(<span class="string">&#x27;黑马程序员&#x27;</span>)</span><br><span class="line"><span class="comment">// 输出字符串  %E9%BB%91%E9%A9%AC%E7%A8%8B%E5%BA%8F%E5%91%98</span></span><br><span class="line"><span class="built_in">decodeURI</span>(<span class="string">&#x27;%E9%BB%91%E9%A9%AC&#x27;</span>)</span><br><span class="line"><span class="comment">// 输出字符串  黑马</span></span><br></pre></td></tr></table></figure>
+<h3 id="4-3-AJAX乱码问题"><a href="#4-3-AJAX乱码问题" class="headerlink" title="4.3 AJAX乱码问题"></a>4.3 AJAX乱码问题</h3><blockquote>
+<p>产生乱码的原因</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">返回的数据默认的字符编码是**utf-8* *，如果客户端页面是**gb2312**或者其它编码数据就会产生乱码 &amp;#x20;***</span><br></pre></td></tr></table></figure>
+<p>post<strong>方法提交数据默认的字符编码是</strong>utf-8 ，如果服务器端是<strong>gb2312</strong>或其他编码数据就会产生乱码</p>
+<blockquote>
+<p>解决办法有</p>
+</blockquote>
+<p>若客户端是<strong>gb2312</strong>编码，则在服务器指定输出流编码<br>服务器端和客户端都使用<strong>utf-8</strong>编码</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">gb2312</span>:<span class="title function_">header</span>(<span class="string">&#x27;Content-Type:text/html;charset=GB2312&#x27;</span>);</span><br><span class="line">utf-<span class="number">8</span>:<span class="title function_">header</span>(<span class="string">&#x27;Content-Type:text/html;charset=utf-8&#x27;</span>);</span><br><span class="line"><span class="string">``</span><span class="string">`**</span></span><br><span class="line"><span class="string">注意：**如果你已经按上面的方法做了，还是返回乱码的话,检查你的方式是否为**get* *,对于**get**请求（或凡涉及到url传递参数的），被传递的参数都要先经**encodeURIComponent**方法处理.如果没有用**encodeURIComponent**处理的话,也会产生乱码。</span></span><br><span class="line"><span class="string">## 5. JSON</span></span><br><span class="line"><span class="string">&gt; `</span><span class="title class_">JSON</span><span class="string">` 是 JS 对象的字符串表示法，它使用文本表示一个 `</span><span class="variable constant_">JS</span> 对象的信息<span class="string">`，本质是一个`</span>字符串<span class="string">`。例如：</span></span><br><span class="line"><span class="string">`</span><span class="string">``</span>json</span><br><span class="line"><span class="comment">//这是一个对象</span></span><br><span class="line"><span class="keyword">var</span> obj = &#123;<span class="attr">a</span>: <span class="string">&#x27;Hello&#x27;</span>, <span class="attr">b</span>: <span class="string">&#x27;World&#x27;</span>&#125;</span><br><span class="line"><span class="comment">//这是一个 JSON 字符串，本质是一个字符串</span></span><br><span class="line"><span class="keyword">var</span> json = <span class="string">&#x27;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-1-JSON和JS对象的互转"><a href="#5-1-JSON和JS对象的互转" class="headerlink" title="5.1 JSON和JS对象的互转:"></a>5.1 JSON和JS对象的互转:</h3><blockquote>
+<p>要实现从 JSON 字符串转换为 JS 对象，使用<code>JSON.parse()</code>方法：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> obj = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(<span class="string">&#x27;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#x27;</span>)</span><br><span class="line"><span class="comment">//结果是 &#123;a: &#x27;Hello&#x27;, b: &#x27;World&#x27;&#125;</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>要实现从 JS 对象转换为 JSON 字符串，使用 <code>JSON.stringify()</code>方法：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> json = <span class="title class_">JSON</span>.<span class="title function_">stringify</span>(&#123;<span class="attr">a</span>: <span class="string">&#x27;Hello&#x27;</span>, <span class="attr">b</span>: <span class="string">&#x27;World&#x27;</span>&#125;)</span><br><span class="line"><span class="comment">//结果是 &#x27;&#123;&quot;a&quot;: &quot;Hello&quot;, &quot;b&quot;: &quot;World&quot;&#125;&#x27;</span></span><br></pre></td></tr></table></figure>
+<h3 id="5-2-序列化和反序列化"><a href="#5-2-序列化和反序列化" class="headerlink" title="5.2 序列化和反序列化"></a>5.2 序列化和反序列化</h3><blockquote>
+<p> 把数据对象转换为字符串的过程 ，叫做序列化 ，例如：<code>调用 JSON.stringify() 函数</code>的操作，叫做 JSON 序列化。<br> 把字符串转换为数据对象的过程 ，叫做反序列化 ，例如：<code>调用 JSON.parse() 函数</code>的操作，叫做 JSON 反序列化。</p>
+</blockquote>
+<h2 id="6-XMLHttpRequest-Level2"><a href="#6-XMLHttpRequest-Level2" class="headerlink" title="6. XMLHttpRequest Level2"></a>6. XMLHttpRequest Level2</h2><blockquote>
+<p>旧版<strong>XMLHttpRequest</strong>的缺点</p>
+</blockquote>
+<p>只支持文本数据的传输，无法用来读取和上传文件<br>传送和接收数据时，没有进度信息，只能提示有没有完成</p>
+<blockquote>
+<p>XMLHttpRequest Level2的新功能</p>
+</blockquote>
+<p>可以设置 HTTP 请求的时限<br>可以使用 FormData 对象管理表单数据<br>可以上传文件<br>可以获得数据传输的进度信息</p>
+<h3 id="6-1-设置HTTP请求时限"><a href="#6-1-设置HTTP请求时限" class="headerlink" title="6.1 设置HTTP请求时限"></a>6.1 设置HTTP请求时限</h3><blockquote>
+<p>有时，Ajax 操作很耗时，而且无法预知要花多少时间。如果网速很慢，用户可能要等很久。新版本的 XMLHttpRequest 对象，增加了 timeout 属性，可以设置 HTTP 请求的时限：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">xhr.<span class="property">timeout</span> = <span class="number">3000</span></span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>上面的语句，将最长等待时间设为 3000 毫秒。过了这个时限，就自动停止HTTP请求。与之配套的还有一个 timeout 事件，用来指定回调函数：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">xhr.<span class="property">ontimeout</span> = <span class="keyword">function</span>(<span class="params">event</span>)&#123;</span><br><span class="line">     <span class="title function_">alert</span>(<span class="string">&#x27;请求超时！&#x27;</span>)</span><br><span class="line"> &#125;</span><br></pre></td></tr></table></figure>
+<h3 id="6-2-FormData对象管理表单数据"><a href="#6-2-FormData对象管理表单数据" class="headerlink" title="6.2 FormData对象管理表单数据"></a>6.2 FormData对象管理表单数据</h3><blockquote>
+<p>Ajax 操作往往用来提交表单数据。为了方便表单处理，<code>HTML5 新增了一个 FormData 对象</code>，可以模拟表单操作：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 1. 新建 FormData 对象</span></span><br><span class="line"><span class="keyword">var</span> fd = <span class="keyword">new</span> <span class="title class_">FormData</span>()</span><br><span class="line"><span class="comment">// 2. 为 FormData 添加表单项</span></span><br><span class="line">fd.<span class="title function_">append</span>(<span class="string">&#x27;uname&#x27;</span>, <span class="string">&#x27;zs&#x27;</span>)</span><br><span class="line">fd.<span class="title function_">append</span>(<span class="string">&#x27;upwd&#x27;</span>, <span class="string">&#x27;123456&#x27;</span>)</span><br><span class="line"><span class="comment">// 3. 创建 XHR 对象</span></span><br><span class="line"><span class="keyword">var</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line"><span class="comment">// 4. 指定请求类型与URL地址</span></span><br><span class="line">xhr.<span class="title function_">open</span>(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;http://www.liulongbin.top:3006/api/formdata&#x27;</span>)</span><br><span class="line"><span class="comment">// 5. 直接提交 FormData 对象，这与提交网页表单的效果，完全一样</span></span><br><span class="line">xhr.<span class="title function_">send</span>(fd)</span><br></pre></td></tr></table></figure>
+<blockquote>
+<p>FormData对象也可以用来获取网页表单的值，示例代码如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 获取表单元素</span></span><br><span class="line"> <span class="keyword">var</span> form = <span class="variable language_">document</span>.<span class="title function_">querySelector</span>(<span class="string">&#x27;#form1&#x27;</span>)</span><br><span class="line"> <span class="comment">// 监听表单元素的 submit 事件</span></span><br><span class="line"> form.<span class="title function_">addEventListener</span>(<span class="string">&#x27;submit&#x27;</span>, <span class="keyword">function</span>(<span class="params">e</span>) &#123;</span><br><span class="line">    e.<span class="title function_">preventDefault</span>()</span><br><span class="line">     <span class="comment">// 根据 form 表单创建 FormData 对象，会自动将表单数据填充到 FormData 对象中</span></span><br><span class="line">     <span class="keyword">var</span> fd = <span class="keyword">new</span> <span class="title class_">FormData</span>(form)</span><br><span class="line">     <span class="keyword">var</span> xhr = <span class="keyword">new</span> <span class="title class_">XMLHttpRequest</span>()</span><br><span class="line">     xhr.<span class="title function_">open</span>(<span class="string">&#x27;POST&#x27;</span>, <span class="string">&#x27;http://www.liulongbin.top:3006/api/formdata&#x27;</span>)</span><br><span class="line">     xhr.<span class="title function_">send</span>(fd)</span><br><span class="line">     xhr.<span class="property">onreadystatechange</span> = <span class="keyword">function</span>(<span class="params"></span>) &#123;&#125;</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="7-axios"><a href="#7-axios" class="headerlink" title="7. axios"></a>7. axios</h2><blockquote>
+<p>Axios 是一个基于 <code>promise</code>网络请求库，作用于<code>node.js 和浏览器中</code>。在服务器端（Node），它依赖于本地<code>Node.js HTTP</code>模块，而在客户端（浏览器），它使用<code>XMLHttpRequests</code>。由于是同构的，Axios是少数几个在浏览器和服务器端都可以毫不费力地使用的库之一。</p>
+</blockquote>
+<h3 id="7-1-axios发起GET请求"><a href="#7-1-axios发起GET请求" class="headerlink" title="7.1 axios发起GET请求"></a>7.1 axios发起GET请求</h3><blockquote>
+<p>axios 发起 get 请求的语法：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios.<span class="title function_">get</span>(<span class="string">&#x27;url&#x27;</span>, &#123; <span class="attr">params</span>: &#123; <span class="comment">/* 参数 */</span> &#125; &#125;).<span class="title function_">then</span>(callback)</span><br></pre></td></tr></table></figure>
+<p>具体的请求示例如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 请求的 URL 地址</span></span><br><span class="line"> <span class="keyword">var</span> url = <span class="string">&#x27;http://www.liulongbin.top:3006/api/get&#x27;</span></span><br><span class="line"> <span class="comment">// 请求的参数对象</span></span><br><span class="line"> <span class="keyword">var</span> paramsObj = &#123; <span class="attr">name</span>: <span class="string">&#x27;zs&#x27;</span>, <span class="attr">age</span>: <span class="number">20</span> &#125;</span><br><span class="line"> <span class="comment">// 调用 axios.get() 发起 GET 请求</span></span><br><span class="line"> axios.<span class="title function_">get</span>(url, &#123; <span class="attr">params</span>: paramsObj &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">res</span>) &#123;</span><br><span class="line">     <span class="comment">// res.data 是服务器返回的数据</span></span><br><span class="line">     <span class="keyword">var</span> result = res.<span class="property">data</span></span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(res)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="7-2-axios发起POST请求"><a href="#7-2-axios发起POST请求" class="headerlink" title="7.2 axios发起POST请求"></a>7.2 axios发起POST请求</h3><blockquote>
+<p>axios 发起 post 请求的语法：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">axios.<span class="title function_">post</span>(<span class="string">&#x27;url&#x27;</span>, &#123; <span class="comment">/* 参数 */</span> &#125;).<span class="title function_">then</span>(callback)</span><br></pre></td></tr></table></figure>
+<p>具体的请求示例如下：</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// 请求的 URL 地址</span></span><br><span class="line"> <span class="keyword">var</span> url = <span class="string">&#x27;http://www.liulongbin.top:3006/api/post&#x27;</span></span><br><span class="line"> <span class="comment">// 要提交到服务器的数据</span></span><br><span class="line"> <span class="keyword">var</span> dataObj = &#123; <span class="attr">location</span>: <span class="string">&#x27;北京&#x27;</span>, <span class="attr">address</span>: <span class="string">&#x27;顺义&#x27;</span> &#125;</span><br><span class="line"> <span class="comment">// 调用 axios.post() 发起 POST 请求</span></span><br><span class="line"> axios.<span class="title function_">post</span>(url, dataObj).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">res</span>) &#123;</span><br><span class="line">     <span class="comment">// res.data 是服务器返回的数据</span></span><br><span class="line">     <span class="keyword">var</span> result = res.<span class="property">data</span></span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(result)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<h3 id="7-3-直接使用axios发起请求"><a href="#7-3-直接使用axios发起请求" class="headerlink" title="7.3 直接使用axios发起请求"></a>7.3 直接使用axios发起请求</h3><blockquote>
+<p>axios 也提供了类似于 jQuery 中 $.ajax() 的函数，语法如下：</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line">     <span class="attr">method</span>: <span class="string">&#x27;请求类型&#x27;</span>,</span><br><span class="line">     <span class="attr">url</span>: <span class="string">&#x27;请求的URL地址&#x27;</span>,</span><br><span class="line">     <span class="attr">data</span>: &#123; <span class="comment">/* POST数据 */</span> &#125;,</span><br><span class="line">     <span class="attr">params</span>: &#123; <span class="comment">/* GET参数 */</span> &#125;</span><br><span class="line"> &#125;) .<span class="title function_">then</span>(callback)</span><br><span class="line"><span class="comment">//直接使用**axios**发起**GET请求</span></span><br><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line">     <span class="attr">method</span>: <span class="string">&#x27;GET&#x27;</span>,</span><br><span class="line">     <span class="attr">url</span>: <span class="string">&#x27;http://www.liulongbin.top:3006/api/get&#x27;</span>,</span><br><span class="line">     <span class="attr">params</span>: &#123; <span class="comment">// GET 参数要通过 params 属性提供</span></span><br><span class="line">         <span class="attr">name</span>: <span class="string">&#x27;zs&#x27;</span>,</span><br><span class="line">         <span class="attr">age</span>: <span class="number">20</span></span><br><span class="line">     &#125;</span><br><span class="line"> &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">res</span>) &#123;</span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>)</span><br><span class="line"> &#125;)</span><br><span class="line"><span class="comment">//直接使用axios发起POST**请求</span></span><br><span class="line"><span class="title function_">axios</span>(&#123;</span><br><span class="line">     <span class="attr">method</span>: <span class="string">&#x27;POST&#x27;</span>,</span><br><span class="line">     <span class="attr">url</span>: <span class="string">&#x27;http://www.liulongbin.top:3006/api/post&#x27;</span>,</span><br><span class="line">     <span class="attr">data</span>: &#123; <span class="comment">// POST 数据要通过 data 属性提供</span></span><br><span class="line">         <span class="attr">bookname</span>: <span class="string">&#x27;程序员的自我修养&#x27;</span>,</span><br><span class="line">         <span class="attr">price</span>: <span class="number">666</span></span><br><span class="line">     &#125;</span><br><span class="line"> &#125;).<span class="title function_">then</span>(<span class="keyword">function</span>(<span class="params">res</span>) &#123;</span><br><span class="line">     <span class="variable language_">console</span>.<span class="title function_">log</span>(res.<span class="property">data</span>)</span><br><span class="line"> &#125;)</span><br></pre></td></tr></table></figure>
+<h2 id="8-跨域和JSONP"><a href="#8-跨域和JSONP" class="headerlink" title="8. 跨域和JSONP"></a>8. 跨域和JSONP</h2><h3 id="8-1同源"><a href="#8-1同源" class="headerlink" title="8.1同源"></a>8.1同源</h3><blockquote>
+<p>如果两个页面的协议，域名和端口都相同，则两个页面具有相同的源 。</p>
+</blockquote>
+<p>例如，下表给出了相对于 <a href="http://_www.test.com_index/">http://www.test.com/index.html</a> 页面的同源检测（默认80端口）：<br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060428787-c72777e9-a209-4c4f-9793-d70564664ebc.png#crop=0&crop=0&crop=1&crop=1&id=wmJCT&originHeight=338&originWidth=1195&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>同源策略 （英文全称 Same origin policy）是浏览器提供的一个安全功能。</p>
+</blockquote>
+<ul>
+<li>MDN 官方给定的概念：同源策略限制了从同一个源加载的文档或脚本如何与来自另一个源的资源进行交互。这是一个用于隔离潜在恶意文件的重要安全机制。</li>
+</ul>
+<p>通俗的理解：浏览器规定，A 网站的 JavaScript，不允许和非同源的网站 C 之间，进行资源的交互，例如：无法读取非同源网页的 Cookie、LocalStorage 和 IndexedDB;无法接触非同源网页的 DOM;无法向非同源地址发送 Ajax 请求</p>
+<h3 id="8-2-跨域"><a href="#8-2-跨域" class="headerlink" title="8.2 跨域"></a>8.2 跨域</h3><blockquote>
+<p>同源<strong>指的是两个 URL 的协议、域名、端口一致，反之，则是</strong>跨域 。出现跨域的根本原因： 浏览器的同源策略不允许非同源的 URL 之间进行资源的交互。</p>
+</blockquote>
+<p>下面这两个页面跨域<br>网页：<a href="http://_www.test.com_index/">http://www.test.com/index.html</a><br>接口：<a href="http://www.api.com/userlist">http://www.api.com/userlist</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060428959-16cffd43-22db-4ad1-9a99-0f9146bda90d.png#crop=0&crop=0&crop=1&crop=1&id=w3Mo9&originHeight=450&originWidth=1161&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="8-3-如何实现跨域数据请求"><a href="#8-3-如何实现跨域数据请求" class="headerlink" title="8.3 如何实现跨域数据请求"></a>8.3 如何实现跨域数据请求</h3><blockquote>
+<p>现如今，实现跨域数据请求，最主要的两种解决方案，分别是 <code>JSONP</code>和 <code>CORS</code>。跨域主要是后端来解决，jsonp缺陷太大，基本上不使用。</p>
+</blockquote>
+<ul>
+<li>JSONP：出现的早，兼容性好（兼容低版本IE）。是前端程序员为了解决跨域问题，被迫想出来的一种临时解决方案。缺点是<code>只支持 GET 请求</code>，不支持 POST 请求。</li>
+</ul>
+<p>CORS：出现的较晚，它是 W3C 标准，属于<strong>请求的</strong> 。支持 GET 和 POST 请求。缺点是不兼容某些低版本的浏览器。</p>
+<h3 id="8-4-防抖与节流"><a href="#8-4-防抖与节流" class="headerlink" title="8.4 防抖与节流"></a>8.4 防抖与节流</h3><p>防抖策略 （debounce）是当事件被触发后，延迟 n 秒后再执行回调，如果在这 n 秒内事件又被触发，则重新计时。<br><code>应用场景：</code></p>
+<blockquote>
+<p>用户在输入框中连续输入一串字符时，可以通过防抖策略，只在输入完后，才执行查询的请求，这样可以有效减少请求次数，节约请求资源；</p>
+</blockquote>
+<ul>
+<li>节流策略 （throttle），顾名思义，可以减少一段时间内事件的触发频率。</li>
+</ul>
+<p>①鼠标连续不断地触发某事件（如点击），只在单位时间内只触发一次；<br>②懒加载时要监听计算滚动条的位置，但不必每次滑动都触发，可以降低计算的频率，而不必去浪费 CPU 资源；<br><code>应用场景</code></p>
+<blockquote>
+<p> 控制轮播图的速度</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Ajax</tag>
+        <tag>http</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>MongoDb学习笔记</title>
+    <url>/2022/06/24/MongoDb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<h1 id="MongoDb学习笔记"><a href="#MongoDb学习笔记" class="headerlink" title="MongoDb学习笔记"></a>MongoDb学习笔记</h1><blockquote>
+<p>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB 将数据存储为一个文档，数据结构由键值(key&#x3D;&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</p>
+</blockquote>
+<p><a href="https://_www.runoob.com_python3_python-mongodb/">https://www.runoob.com/python3/python-mongodb.html</a></p>
+<h3 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1.下载安装"></a>1.下载安装</h3><blockquote>
+<p>Windows直接去官网点击下载。或者<a href="https://www.aliyundrive.com/s/kFuxf1rvHhU">下载我分享的安装包</a></p>
+</blockquote>
+<p><a href="https://www.mongodb.com/try/download/community">https://www.mongodb.com/try/download/community</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491587-b813f6c5-0cb1-4036-883a-3877f6e949fd.png#crop=0&crop=0&crop=1&crop=1&id=JWyf7&originHeight=861&originWidth=1836&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>双击安装包进行安装</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491709-c0bea4a8-1515-404e-a3d5-05671e156d5c.png#crop=0&crop=0&crop=1&crop=1&id=a0Ayy&originHeight=470&originWidth=607&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491798-4a4ddb3d-7f80-44b7-8685-4a7b3066f4a3.png#crop=0&crop=0&crop=1&crop=1&id=Rksi5&originHeight=364&originWidth=464&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491882-7d811f3e-07c2-4947-95a3-43ef2ec35bf4.png#crop=0&crop=0&crop=1&crop=1&id=Cr9gk&originHeight=337&originWidth=462&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491992-69a6e136-6933-4028-854f-dfcae1c6236d.png#crop=0&crop=0&crop=1&crop=1&id=Gju0W&originHeight=478&originWidth=624&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>为了方便启动，我们将bin目录放在系统环境变量中,这样无论在任何目录启动Bash或者cmd都可以直接使用mongo命令。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492206-5025d848-eb3a-4248-ba01-29f6c934c10d.png#crop=0&crop=0&crop=1&crop=1&id=IcJWP&originHeight=681&originWidth=1506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>MongoDB 默认将<code>数据库文件存</code>储在安装路径下的<code>data目录</code>下，日志默认存放在<code>log</code>目录下。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492311-1d4ec5a7-0bea-4cd1-b812-fd35563511c2.png#crop=0&crop=0&crop=1&crop=1&id=Wgepc&originHeight=619&originWidth=856&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p><code>为了避免文件混乱。</code>我们一般在安装目录下新建一个<code>db目录</code>存放<code>数据库</code>，然后<code>修改配置文件</code>指向此路径。（不想改数据库目录的话这一步不做也行）</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492408-6c4e3acd-4b57-4184-a51e-39d7418943f8.png#crop=0&crop=0&crop=1&crop=1&id=IEbKF&originHeight=334&originWidth=1114&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492573-22a06d5e-2475-4fb6-b6ce-cf867df6a933.png#crop=0&crop=0&crop=1&crop=1&id=RNC1Q&originHeight=602&originWidth=1033&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>注意：我们安装的时候勾选了注册为服务，只有注册了服务才能用<code>net start mongodb</code>的方式启动，否则只能在命令行启动<code>mongod -dbpath &quot;D:\MongoDb\data\db&quot;</code>可以跟很多启动参数。安装时也可以不勾选，然后手动注册服务，命令如下所示。</p>
+<blockquote>
+<p>启动Mongodb服务（不区分大小写）。</p>
+</blockquote>
+<blockquote>
+<p>启动服务之后就能使用<code>mongo</code>命令进入数据库了，默认已经建了个表<code>test</code>。(我们上一步已经将bin目录添加到系统变量了，所以可以直接使用)</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492700-34506362-e11d-4f46-a338-6e9f8f969790.png#crop=0&crop=0&crop=1&crop=1&id=qgSnW&originHeight=952&originWidth=1332&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>如果我们希望操作起来更简单，就需要安装可视化界面。</p>
+</blockquote>
+<p><a href="https://www.mongodb.com/try/download/compass">https://www.mongodb.com/try/download/compass</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492796-566dde0c-bc4a-43cc-96e4-6ebdff5ef08b.png#crop=0&crop=0&crop=1&crop=1&id=JF0je&originHeight=820&originWidth=1865&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>下载后任意路径解压双击<code>MongoDBCompass</code>即可使用。当然也可以下载安装版本。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492914-7121a3ab-c982-479a-b71e-05405f6708c3.png#crop=0&crop=0&crop=1&crop=1&id=TPAgG&originHeight=608&originWidth=1012&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p><code>net start mongodb</code>启动数据库后，点击<code>fill in connection</code>填写网址端口<code>connect</code>即可连接。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493000-785b6aeb-12d3-4019-a7ad-cebd9757b5f7.png#crop=0&crop=0&crop=1&crop=1&id=zuzkB&originHeight=174&originWidth=1556&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493092-7be4449e-81cd-4618-87e6-e171d3e7b613.png#crop=0&crop=0&crop=1&crop=1&id=okwLi&originHeight=761&originWidth=1577&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493185-fd9b6af2-2510-4c1e-ad3a-eea94dfc5080.png#crop=0&crop=0&crop=1&crop=1&id=yNs9D&originHeight=711&originWidth=1565&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="2-概念、数据类型"><a href="#2-概念、数据类型" class="headerlink" title="2. 概念、数据类型"></a>2. 概念、数据类型</h3><p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493308-2d626245-986d-4daf-ba63-cdc2ce169932.png#crop=0&crop=0&crop=1&crop=1&id=eYmPe&originHeight=238&originWidth=832&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>MongoDB支持以下数据类型:</p>
+</blockquote>
+<p>   String（字符串） <em>: mongodb中的字符串是UTF-8有效的。</em><br>Integer <em>（<strong>整数</strong> ）: 存储数值。整数可以是32位或64位，具体取决于您的服务器。</em><br>Boolean（布尔） _: 存储布尔(true&#x2F;false)值。  _<br>Double（双精度 _）: 存储浮点值。  _<br>Min&#x2F; Max keys（最小&#x2F;最大键 _）: 将值与最低和最高BSON元素进行比较。  _<br>Arrays（数组 _）: 将数组或列表或多个值存储到一个键中。  _<br>Timestamp（时间戳 _）: 存储时间戳。  _<br>Object <em>（<strong>对象</strong> ）: 嵌入式文档。  _<br>Null （空值） <em>: 存储Null值。</em><br>Symbol（符号 <em>）: 与字符串相同，用于具有特定符号类型的语言。</em><br>Date（日期 <em>）: 以UNIX时间格式存储当前日期或时间。</em><br>Object ID（对象ID <em>） : 存储文档ID。</em><br>Binary data（二进制数据 <em>）: 存储二进制数据。</em><br>Code（代码 <em>）: 将JavaScript代码存储到文档中。</em><br>Regular expression （_正则表达式</em> ）: 存储正则表达式</p>
+<blockquote>
+<p>注意点</p>
+</blockquote>
+<p>● 每个⽂档都有⼀个属性， 为_id， 保证每个⽂档的唯⼀性，mongodb默认使用_id作为主键,可以⾃⼰去设置_id插⼊⽂档，如果没有提供， 那么MongoDB为每个⽂档提供了⼀个独特的_id， 类型为objectID<br>● objectID是⼀个12字节的⼗六进制数,每个字节两位，一共是24 位的字符串： 前4个字节为当前时间戳 接下来3个字节的机器ID 接下来的2个字节中MongoDB的服务进程id 最后3个字节是简单的增量值</p>
+<h3 id="3-创建数据库"><a href="#3-创建数据库" class="headerlink" title="3. 创建数据库"></a>3. 创建数据库</h3><blockquote>
+<p><code>use DATABASE_NAME</code>如果数据库不存在，则创建数据库，否则切换到指定数据库。<code>db</code>指的是当前数据库。</p>
+</blockquote>
+<blockquote>
+<p><code>show dbs</code>查看所有数据库。（新创建的数据库只有插入一条记录后才会显示）</p>
+</blockquote>
+<h3 id="4-删除数据库"><a href="#4-删除数据库" class="headerlink" title="4. 删除数据库"></a>4. 删除数据库</h3><blockquote>
+<p><code>db.dropDatabase()</code>删除当前数据库，默认为 test，你可以使用 db 命令查看当前数据库名。</p>
+</blockquote>
+<h3 id="5-创建集合-表格"><a href="#5-创建集合-表格" class="headerlink" title="5. 创建集合(表格)"></a>5. 创建集合(表格)</h3><blockquote>
+<p><code>db.createCollection(name, options)</code>创建集合</p>
+</blockquote>
+<ul>
+<li>name: 要创建的集合名称。</li>
+</ul>
+<p>options: 可选参数, 指定有关内存大小及索引的选项。</p>
+<blockquote>
+<p>查看集合<code>show collections</code>或者<code>show tables</code></p>
+</blockquote>
+<blockquote>
+<p>需要注意的是mongodb会在插入数据的时候自动创建集合，集合的名称会和数据库的名称一样。</p>
+</blockquote>
+<h3 id="6-删除集合"><a href="#6-删除集合" class="headerlink" title="6. 删除集合"></a>6. 删除集合</h3><blockquote>
+<p><code>db.collection.drop()</code>成功删除选定集合，则 drop() 方法返回 true，否则返回 false。(collection代指要删除的集合名称 )</p>
+</blockquote>
+<h3 id="7-插入文档（数据）"><a href="#7-插入文档（数据）" class="headerlink" title="7. 插入文档（数据）"></a>7. 插入文档（数据）</h3><blockquote>
+<p>文档的数据结构和 JSON 基本一样。所有存储在集合中的数据都是 BSON 格式。BSON 是一种类似 JSON 的二进制形式的存储格式，是 Binary JSON 的简称。<strong>文档就是一条json数据，相当于sql中的一行数据。</strong><br><code>db.collectionName.insertOne()</code>插入一条数据(3.2版本以后)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.insertMany()</code>插入多条数据(3.2版本以后)</p>
+</blockquote>
+<p>参数说明：</p>
+<ul>
+<li>document：要写入的文档。</li>
+</ul>
+<p>writeConcern：写入策略，默认为 1，即要求确认写操作，0 是不要求。<br>ordered：指定是否按顺序写入，默认 true，按顺序写入。</p>
+<blockquote>
+<p><code>db.COLLECTION_NAME.insert(document)/db.COLLECTION_NAME.save(document)</code></p>
+</blockquote>
+<p>save()：如果 _id 主键存在则更新数据，如果不存在就插入数据。该方法新版本中已废弃，可以使用 <strong>db.collection.insertOne()</strong> 或 <strong>db.collection.replaceOne()</strong> 来代替。</p>
+<ul>
+<li>insert(): 若插入的数据主键已经存在，则会抛 org.springframework.dao.DuplicateKeyException 异常，提示主键重复，不保存当前数据。<h3 id="8-更新文档"><a href="#8-更新文档" class="headerlink" title="8. 更新文档"></a>8. 更新文档</h3><blockquote>
+<p><code>db.collectionName.updateOne()</code> 向指定集合更新单条文档（3.2版本以后）</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><code>db.collection.updateMany()</code> 向指定集合更新多条文档(3.2版本以后）</p>
+</blockquote>
+<blockquote>
+<p><strong>update()</strong> 方法。低版本中 <code>用于更新已存在的文档。</code></p>
+</blockquote>
+<p><strong>参数说明：</strong><br>   query : update的查询条件，类似sql update查询内where后面的。<br>update : update的对象和一些更新的操作符（如inc…）等，也可以理解为sql update查询内set后面的<br>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。<br>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。<br>writeConcern :可选，抛出异常的级别。<br>实例:</p>
+<blockquote>
+<p><strong>save()</strong> 方法。低版本中 <code>通过传入的文档来替换已有文档，_id 主键存在就更新，不存在就插入。</code></p>
+</blockquote>
+<blockquote>
+<p>异常说明</p>
+</blockquote>
+<ul>
+<li>WriteConcern.NONE:没有异常抛出</li>
+</ul>
+<p>WriteConcern.NORMAL:仅抛出网络错误异常，没有服务器错误异常<br>WriteConcern.SAFE:抛出网络错误异常、服务器错误异常；并等待服务器完成写操作。<br>WriteConcern.MAJORITY: 抛出网络错误异常、服务器错误异常；并等待一个主服务器完成写操作。<br>WriteConcern.FSYNC_SAFE: 抛出网络错误异常、服务器错误异常；写操作等待服务器将数据刷新到磁盘。</p>
+<ul>
+<li>WriteConcern.JOURNAL_SAFE:抛出网络错误异常、服务器错误异常；写操作等待服务器提交到磁盘的日志文件。</li>
+<li>WriteConcern.REPLICAS_SAFE:抛出网络错误异常、服务器错误异常；等待至少2台服务器完成写操作。<blockquote>
+<p>移除集合中的键值对，使用的 <code>$unset</code>操作符。如果指定的字段不存在则操作不做任何处理。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="9-删除文档"><a href="#9-删除文档" class="headerlink" title="9.删除文档"></a>9.删除文档</h3><blockquote>
+<p><code>db.collectionName.deleteOne(&lt;query&gt;)</code>删除单条数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.deleteMany(&lt;query&gt;)</code>删除符合条件的所有数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.deleteMany(&#123;&#125;)</code>删除整个表立面的所有数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>remove()</code> 函数是低版本用来移除集合中的数据。在执行 remove() 函数前先执行 <code>find()</code>命令来判断执行的条件是否正确，是一个比较好的习惯。</p>
+</blockquote>
+<p>基本语法如下：<br><strong>2.6 版本以后的语法格式如下:</strong><br><strong>参数说明：</strong><br>   query :（可选）删除的文档的条件。<br>justOne : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。<br>writeConcern :（可选）抛出异常的级别。</p>
+<h3 id="10-查询文档"><a href="#10-查询文档" class="headerlink" title="10. 查询文档"></a>10. 查询文档</h3><blockquote>
+<p><code>db.collection.find(query, projection)</code>查询数据</p>
+</blockquote>
+<p>query ：可选，使用查询操作符指定查询条件<br>projection ：可选。若不指定 projection，则默认返回所有字段</p>
+<blockquote>
+<p><code>projection</code>的用法。</p>
+</blockquote>
+<blockquote>
+<p><code>db.col.find().pretty()</code> pretty()以格式化的方式来显示文档。</p>
+</blockquote>
+<blockquote>
+<p><code>findOne</code>与<code>find</code>语法一致，但是它只返回一条数据</p>
+</blockquote>
+<blockquote>
+<p>MongoDB 的 find() 方法可以传入多个键(key)，每个键(key)以逗号隔开，即常规 SQL 的 AND 条件。</p>
+</blockquote>
+<p>以下实例通过 by 和 title 键来查询教程 中 MongoDB 教程 的数据</p>
+<blockquote>
+<p>MongoDB OR 条件语句使用了关键字 $or ,语法格式如下：</p>
+</blockquote>
+<p>以下实例中，我们演示了查询键 by 值为 教程 或键 title 值为 MongoDB 教程 的文档。</p>
+<blockquote>
+<p>AND 和 OR 联合使用</p>
+</blockquote>
+<h3 id="11-条件操作符"><a href="#11-条件操作符" class="headerlink" title="11. 条件操作符"></a>11. 条件操作符</h3><blockquote>
+<p>MongoDB 与 RDBMS Where 语句比较</p>
+</blockquote>
+<blockquote>
+<p> 模糊查询</p>
+</blockquote>
+<h3 id="12-type-操作符"><a href="#12-type-操作符" class="headerlink" title="12. $type 操作符"></a>12. $type 操作符</h3><blockquote>
+<p><code>$type</code>操作符是基于BSON类型来检索集合中匹配的数据类型，并返回结果</p>
+</blockquote>
+<blockquote>
+<p>如果想获取 “col” 集合中 title 为 String 的数据，你可以使用以下命令：</p>
+</blockquote>
+<h3 id="13-Limit与Skip方法"><a href="#13-Limit与Skip方法" class="headerlink" title="13. Limit与Skip方法"></a>13. Limit与Skip方法</h3><blockquote>
+<p><code>limit(n)</code>是用来规定显示的条数。</p>
+</blockquote>
+<blockquote>
+<p><code>skip(n)</code>是用来在符合条件的记录中从第一个记录跳过的条数</p>
+</blockquote>
+<blockquote>
+<p>两者一般结合使用。以下实例在集合中跳过前面 10 条返回 100 条数据。</p>
+</blockquote>
+<h3 id="14-排序sort"><a href="#14-排序sort" class="headerlink" title="14. 排序sort"></a>14. 排序sort</h3><blockquote>
+<p>skip(), limilt(), sort()三个放在一起执行的时候，执行的顺序是先 sort(), 然后是 skip()，最后是显示的 limit()。<br><code>sort()</code>方法对数据进行排序，sort() 方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中<code>1 为升序排列</code>，而 <code>-1 是用于降序排列</code>。<code>db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;)</code></p>
+</blockquote>
+<h3 id="15-索引index"><a href="#15-索引index" class="headerlink" title="15. 索引index"></a>15. 索引index</h3><blockquote>
+<p>索引通常能够极大的提高查询的效率，如果没有索引，MongoDB在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。这种扫描全集合的查询效率是非常低的，特别在处理大量的数据时，查询可以要花费几十秒甚至几分钟，这对网站的性能是非常致命的。索引是特殊的数据结构，索引存储在一个易于遍历读取的数据集合中，索引是对数据库表中一列或多列的值进行排序的一种结构。<br><code>db.collection.createIndex(keys, options)</code>创建索引</p>
+</blockquote>
+<p>语法中 Key 值为你要创建的索引字段，1 为指定按升序创建索引，如果你想按降序来创建索引指定为 -1 即可。</p>
+<blockquote>
+<p><code>createIndex()</code> 方法中你也可以设置使用<code>多个字段创建索引</code>（关系型数据库中称作<code>复合索引</code>）。</p>
+</blockquote>
+<blockquote>
+<p>查看索引合集</p>
+</blockquote>
+<blockquote>
+<p>查看集合索引的大小</p>
+</blockquote>
+<blockquote>
+<p>删除集合所有索引</p>
+</blockquote>
+<blockquote>
+<p>删除集合指定索引</p>
+</blockquote>
+<h3 id="16-数据导入导出"><a href="#16-数据导入导出" class="headerlink" title="16. 数据导入导出"></a>16. 数据导入导出</h3><blockquote>
+<p>此命令需要安装<code>database tool</code>工具。安装完成后加入系统环境变量path。</p>
+</blockquote>
+<p><a href="https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools">https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools</a><br><code>数据导出：mongoexport</code></p>
+<blockquote>
+<p><code>Mongdb</code>中的<code>mongoexport</code>工具可以将<code>collection</code>导出成<code>JSON格式</code>或者<code>CSV格式</code>的文件。可以通过参数指定导出的数据项，也可以根据指定的条件导出数据。</p>
+</blockquote>
+<p><code>数据导入：mongoimport</code><br>注意：如果excel里面有中文、特殊符号，会抛出以下异常：exception:Invalid UTF8 character detected<br>此时，执行mongoimport命令前，您需要先将该csv文件编码转为 utf-8。<br><code>数据备份(导出所有数据)</code><br><code>数据恢复</code><br>注意：恢复的时候可以加–drop 覆盖原来的数据库（慎用），最好提前备份好当前数据库；同时要更改数据库名，不然恢复会失败。</p>
+<h3 id="17-composer导入数据"><a href="#17-composer导入数据" class="headerlink" title="17. composer导入数据"></a>17. composer导入数据</h3><blockquote>
+<p>在<code>collection</code>那里导入数据</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>MongoDb</tag>
+        <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Echarts学习笔记</title>
     <url>/2022/04/17/Echarts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     <content><![CDATA[<h1 id="Echarts学习笔记"><a href="#Echarts学习笔记" class="headerlink" title="Echarts学习笔记"></a>Echarts学习笔记</h1><ul>
@@ -523,28 +943,277 @@
       </tags>
   </entry>
   <entry>
-    <title>Hello World</title>
-    <url>/2022/06/20/hexo%20%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! 这个是第一篇文档. 查看<a href="https://hexo.io/docs/">documentation</a> 了解更多信息.</p>
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+    <title>Mysql基础使用</title>
+    <url>/2022/06/24/Mysql%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="MySql基础操作"><a href="#MySql基础操作" class="headerlink" title="MySql基础操作"></a>MySql基础操作</h1><hr>
+<h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><p><a href="https://blog.csdn.net/lingyiwin/article/details/81839435">https://blog.csdn.net/lingyiwin/article/details/81839435</a></p>
+<p><a href="https://www.runoob.com/mysql/mysql-install.html">https://www.runoob.com/mysql/mysql-install.html</a></p>
+<h3 id="1-create-database创建数据库"><a href="#1-create-database创建数据库" class="headerlink" title="1.create database创建数据库"></a>1.create database创建数据库</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> dtabase test;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+<h3 id="2-create-table创建数据表"><a href="#2-create-table创建数据表" class="headerlink" title="2.create table创建数据表"></a>2.create table创建数据表</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> IF <span class="keyword">NOT</span> <span class="keyword">EXISTS</span> `runoob_tbl`(</span><br><span class="line">   `runoob_id` <span class="type">INT</span> UNSIGNED AUTO_INCREMENT,</span><br><span class="line">   `runoob_title` <span class="type">VARCHAR</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">   `runoob_author` <span class="type">VARCHAR</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">   `submission_date` <span class="type">DATE</span>,</span><br><span class="line">   <span class="keyword">PRIMARY</span> KEY ( `runoob_id` )</span><br><span class="line">)ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br></pre></td></tr></table></figure>
 
-<p>了解更多: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+<ul>
+<li>如果你不想字段为 NULL 可以设置字段的属性为 NOT NULL， 在操作数据库时如果输入该字段的数据为NULL  ，就会报错。</li>
+</ul>
+<p>AUTO_INCREMENT定义列为自增的属性，一般用于主键，数值会自动加1。</p>
+<ul>
+<li>PRIMARY KEY关键字用于定义列为主键。 您可以使用多列来定义主键，列间以逗号分隔。</li>
+</ul>
+<p>ENGINE 设置存储引擎，CHARSET 设置编码。</p>
+<h3 id="3-表格相关操作"><a href="#3-表格相关操作" class="headerlink" title="3.表格相关操作"></a>3.表格相关操作</h3><p>3.1 <code>delete</code> 删除表内记录，对于 MyISAM 会立刻释放磁盘空间，InnoDB 不会释放磁盘空间</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span>  student <span class="keyword">where</span>  T_name <span class="operator">=</span> &quot;张三&quot;;<span class="operator">/</span><span class="operator">/</span>条件删除</span><br><span class="line"><span class="keyword">delete</span> <span class="keyword">from</span> student;<span class="operator">/</span><span class="operator">/</span>删除全部数据，保留表结构</span><br></pre></td></tr></table></figure>
 
-<p>了解更多: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+<p>3.2 <code>truncate</code>删除表全部数据，保留表结构，立刻释放磁盘空间 ，不管是 Innodb 和 MyISAM</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">truncate</span>  <span class="keyword">table</span>  student;</span><br></pre></td></tr></table></figure>
 
-<p>了解更多: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+<p>3.3 <code>drop</code>删除表全部数据和表结构，立刻释放磁盘空间，不管是 Innodb 和 MyISAM;</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">drop</span> <span class="keyword">table</span> student;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>当你不再需要该表时， 用 drop;</li>
+</ul>
+<p>当你仍要保留该表，但要删除所有记录时， 用 truncate</p>
+<p>当你要删除部分记录时， 用 delete。</p>
+<h3 id="4-inser-into插入数据"><a href="#4-inser-into插入数据" class="headerlink" title="4.inser into插入数据"></a>4.inser into插入数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> runoob_tbl (runoob_title, runoob_author, submission_date)</span><br><span class="line">                        <span class="keyword">VALUES</span></span><br><span class="line">                       (&quot;学习 PHP&quot;, &quot;菜鸟教程&quot;, NOW());<span class="operator">/</span><span class="operator">/</span>主键设置为自增，可以不规定主键列field</span><br><span class="line"> <span class="keyword">select</span><span class="operator">*</span>  <span class="keyword">from</span> runoob_tbl;<span class="operator">/</span><span class="operator">/</span>查询表格的每条数据搭配<span class="keyword">where</span>使用</span><br><span class="line"> <span class="keyword">select</span> <span class="built_in">count</span>( <span class="operator">*</span>) <span class="keyword">from</span> runoob_tbl;<span class="operator">/</span><span class="operator">/</span>返回查询到的记录数量</span><br><span class="line"> <span class="operator">/</span><span class="operator">/</span>插入多条数据</span><br><span class="line"> <span class="keyword">INSERT</span> <span class="keyword">INTO</span> table_name  (field1, field2,...fieldN)  <span class="keyword">VALUES</span>  (valueA1,valueA2,...valueAN),(valueB1,valueB2,...valueBN),(valueC1,valueC2,...valueCN)......;</span><br></pre></td></tr></table></figure>
+
+<p>如果所有的列都要添加数据可以不规定列进行添加数据,此时如果主键设置为自增，可以写0或者null</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">INSERT</span> <span class="keyword">INTO</span> runoob_tbl</span><br><span class="line">       <span class="keyword">VALUES</span></span><br><span class="line">     (<span class="number">0</span>, &quot;JAVA 教程&quot;, &quot;RUNOOB.COM&quot;, <span class="string">&#x27;2016-05-06&#x27;</span>);</span><br></pre></td></tr></table></figure>
+
+<h3 id="5-select查询数据"><a href="#5-select查询数据" class="headerlink" title="5.select查询数据"></a>5.select查询数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> column_name,column_name</span><br><span class="line"><span class="keyword">FROM</span> table_name</span><br><span class="line">[<span class="keyword">WHERE</span> Clause]</span><br><span class="line">[LIMIT N][ <span class="keyword">OFFSET</span> M]</span><br><span class="line">```<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">select</span> \<span class="operator">*</span> : 返回所有记录</span><br><span class="line"></span><br><span class="line"><span class="operator">*</span>   limit N : 返回 N 条记录<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">offset</span> M : 跳过 M 条记录, 默认 M<span class="operator">=</span><span class="number">0</span>, 单独使用似乎不起作用<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   limit N,M : 相当于 limit M <span class="keyword">offset</span> N , 从第 N 条记录开始, 返回 M 条记录</span><br><span class="line"></span><br><span class="line">```<span class="keyword">sql</span></span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> <span class="keyword">table</span> LIMIT <span class="number">5</span>,<span class="number">10</span>; <span class="operator">/</span><span class="operator">/</span> 检索记录行 <span class="number">6</span><span class="number">-15</span></span><br><span class="line">  <span class="operator">/</span><span class="operator">/</span>为了检索从某一个偏移量到记录集的结束所有的记录行，可以指定第二个参数为 <span class="number">-1</span>：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> <span class="keyword">table</span> LIMIT <span class="number">95</span>,<span class="number">-1</span>; <span class="operator">/</span><span class="operator">/</span> 检索记录行 <span class="number">96</span><span class="operator">-</span>last.</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>如果只给定一个参数，它表示返回最大的记录行数目：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> <span class="keyword">table</span> LIMIT <span class="number">5</span>; <span class="operator">/</span><span class="operator">/</span>检索前 <span class="number">5</span> 个记录行</span><br><span class="line">  <span class="operator">/</span><span class="operator">/</span>换句话说，LIMIT n 等价于 LIMIT <span class="number">0</span>,n。</span><br><span class="line">Mysql 的分页查询语句的性能分析</span><br></pre></td></tr></table></figure>
+
+<p>越往后分页，LIMIT 语句的偏移量就会越大，速度也会明显变慢。此时，我们可以通过子查询的方式来提高分页效率</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> articles <span class="keyword">WHERE</span>  id <span class="operator">&gt;=</span></span><br><span class="line"> (<span class="keyword">SELECT</span> id <span class="keyword">FROM</span> articles  <span class="keyword">WHERE</span> category_id <span class="operator">=</span> <span class="number">123</span> <span class="keyword">ORDER</span> <span class="keyword">BY</span> id LIMIT <span class="number">10000</span>, <span class="number">1</span>) LIMIT <span class="number">10</span></span><br></pre></td></tr></table></figure>
+
+<p>简单查询语句</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="comment">/*websites  表名   NAME alexa url country  字段*/</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> websites;                      <span class="comment">/* 查询表所有数据 */</span></span><br><span class="line"><span class="keyword">SELECT</span> NAME <span class="keyword">FROM</span> websites;                   <span class="comment">/* 查询表字段数据 */</span></span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> websites <span class="keyword">where</span> name <span class="operator">=</span> &quot;广西&quot;;   <span class="comment">/* 查询表字段下条件数据 */</span></span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">from</span> websites <span class="keyword">where</span> name <span class="keyword">like</span> &quot;_o%&quot;; <span class="comment">/* 模糊查询表下数据* /</span></span><br><span class="line"><span class="comment">SELECT*  FROM websites where id BETWEEN &quot;1&quot; AND &quot;5&quot;;    /* 查询表下字段范围数据 */</span></span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> websites <span class="keyword">WHERE</span> name <span class="keyword">in</span> (&quot;广西&quot;,&quot;百度&quot;);    <span class="comment">/* 查询表字段下固定条件数据 */</span></span><br><span class="line"><span class="keyword">SELECT</span> <span class="keyword">DISTINCT</span> country <span class="keyword">FROM</span> Websites;                  <span class="comment">/* 查询去重值 */</span></span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> Websites <span class="keyword">WHERE</span> country <span class="operator">=</span> &quot;CN&quot; <span class="keyword">AND</span> alexa <span class="operator">&gt;</span> <span class="number">50</span>;  <span class="comment">/*查询表下范围条件数据 */</span></span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> Websites <span class="keyword">WHERE</span> country <span class="operator">=</span> &quot;USA&quot; <span class="keyword">OR</span> country<span class="operator">=</span>&quot;sh&quot;; <span class="comment">/* 查询表下条件不同值 */</span></span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> Websites <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">desc</span> alexa;                      <span class="comment">/* 查询表下值排序结果 */</span></span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> Websites <span class="keyword">ORDER</span> <span class="keyword">BY</span> alexa <span class="keyword">DESC</span>;                 <span class="comment">/* 查询表下排序结果降序ESC升序 */</span></span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> Websites LIMIT <span class="number">2</span>;      <span class="comment">/* 查询表下范围数据 */</span></span><br><span class="line"><span class="keyword">SELECT</span> name <span class="keyword">as</span> zzz <span class="keyword">from</span> websites;    <span class="comment">/*别名查询表下数据 */</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="6-Where语句"><a href="#6-Where语句" class="headerlink" title="6.Where语句"></a>6.Where语句</h3><blockquote>
+<p>MySQL 的 WHERE 子句的字符串比较是不区分大小写的。 你可以使用 BINARY 关键字来设定 WHERE 子句的字符串比较是区分大小写的</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">from</span> runoob_tbl <span class="keyword">WHERE</span> <span class="type">BINARY</span> runoob_author<span class="operator">=</span><span class="string">&#x27;runoob.com&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> field1, field2,...fieldN <span class="keyword">FROM</span> table_name1, table_name2...</span><br><span class="line">[<span class="keyword">WHERE</span> condition1 [<span class="keyword">AND</span> [<span class="keyword">OR</span>]] condition2.....</span><br><span class="line">```<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   询语句中你可以使用一个或者多个表，表之间使用逗号, 分割，并使用<span class="keyword">WHERE</span>语句来设定查询条件。<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   你可以在 <span class="keyword">WHERE</span> 子句中指定任何条件。<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   你可以使用 <span class="keyword">AND</span> 或者 <span class="keyword">OR</span> 指定一个或多个条件。<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">WHERE</span> 子句也可以运用于 <span class="keyword">SQL</span> 的 <span class="keyword">DELETE</span> 或者 <span class="keyword">UPDATE</span> 命令。</span><br><span class="line"></span><br><span class="line">```<span class="keyword">sql</span></span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>子语句的执行顺序</span><br><span class="line"><span class="keyword">FROM</span>, including JOINs –<span class="operator">&gt;</span><span class="keyword">where</span> –<span class="operator">&gt;</span> <span class="keyword">group</span> <span class="keyword">by</span>–<span class="operator">&gt;</span> <span class="keyword">having</span>–<span class="operator">&gt;</span><span class="keyword">WINDOW</span> functions–<span class="operator">&gt;</span><span class="keyword">SELECT</span>–<span class="operator">&gt;</span>DISTINC–<span class="operator">&gt;</span>UNIONT–<span class="operator">&gt;</span> <span class="keyword">order</span> <span class="keyword">by</span>–<span class="operator">&gt;</span> LIMIT <span class="keyword">and</span> <span class="keyword">OFFSET</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="7-UPDATE更新数据"><a href="#7-UPDATE更新数据" class="headerlink" title="7.UPDATE更新数据"></a>7.UPDATE更新数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>例子</span><br><span class="line"><span class="keyword">update</span> students <span class="keyword">set</span> name<span class="operator">=</span>&quot;小明&quot;, age<span class="operator">=</span><span class="number">19</span> <span class="keyword">where</span> tel<span class="operator">=</span>&quot;13288097888&quot;;</span><br><span class="line"><span class="keyword">update</span> students <span class="keyword">set</span> age<span class="operator">=</span>age<span class="operator">+</span><span class="number">1</span> <span class="keyword">where</span> id<span class="operator">=</span><span class="number">5</span>;</span><br><span class="line"><span class="keyword">UPDATE</span> runoob_tbl <span class="keyword">SET</span> runoob_title <span class="operator">=</span> REPLACE(runoob_title, <span class="string">&#x27;C++&#x27;</span>, <span class="string">&#x27;Python&#x27;</span>) <span class="keyword">where</span></span><br><span class="line">runoob_id <span class="operator">=</span> <span class="number">3</span>;<span class="operator">/</span><span class="operator">/</span>和replace函数配合使用</span><br></pre></td></tr></table></figure>
+
+<h3 id="8-DELETE-from删除数据"><a href="#8-DELETE-from删除数据" class="headerlink" title="8.DELETE from删除数据"></a>8.DELETE from删除数据</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>例子</span><br><span class="line"><span class="keyword">DELETE</span> <span class="keyword">FROM</span> runoob_tbl <span class="keyword">WHERE</span> runoob_id<span class="operator">=</span><span class="number">3</span>;</span><br></pre></td></tr></table></figure>
+
+<p>注意：不使用 WHERE 子句将数据表的全部数据进行更新，所以要慎重。</p>
+<h3 id="9-like子语句"><a href="#9-like子语句" class="headerlink" title="9.like子语句"></a>9.like子语句</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>例子</span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">from</span> runoob_tbl  <span class="keyword">WHERE</span> runoob_author <span class="keyword">LIKE</span> <span class="string">&#x27;%COM&#x27;</span>;</span><br><span class="line"><span class="string">&#x27;%a&#x27;</span>     <span class="operator">/</span><span class="operator">/</span>以a结尾的数据</span><br><span class="line"><span class="string">&#x27;a%&#x27;</span>     <span class="operator">/</span><span class="operator">/</span>以a开头的数据</span><br><span class="line"><span class="string">&#x27;%a%&#x27;</span>    <span class="operator">/</span><span class="operator">/</span>含有a的数据</span><br><span class="line"><span class="string">&#x27;_a_&#x27;</span>    <span class="operator">/</span><span class="operator">/</span>三位且中间字母是a的</span><br><span class="line"><span class="string">&#x27;_a&#x27;</span>     <span class="operator">/</span><span class="operator">/</span>两位且结尾字母是a的</span><br><span class="line"><span class="string">&#x27;a_&#x27;</span>     <span class="operator">/</span><span class="operator">/</span>两位且开头字母是a的</span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> position <span class="keyword">WHERE</span> name <span class="keyword">LIKE</span> <span class="string">&#x27;%java%&#x27;</span>;</span><br><span class="line">```<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   `<span class="operator">%</span>`：表示任意 <span class="number">0</span> 个或多个字符。可匹配任意类型和长度的字符，有些情况下若是中文，请使用两个百分号（<span class="operator">%</span><span class="operator">%</span>）表示。<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   ` _`：表示任意单个字符。匹配单个任意字符，它常用来限制表达式的字符长度语句。</span><br><span class="line"></span><br><span class="line"><span class="operator">*</span>   `[]`：表示括号内所列字符中的一个（类似正则表达式）。指定一个字符、字符串或范围，要求所匹配对象为它们中的任一个。<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   `[<span class="operator">^</span>]` ：表示不在括号所列之内的单个字符。其取值和 \[] 相同，但它要求所匹配对象为指定字符以外的任一个字符。<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   查询内容包含通配符时,由于通配符的缘故，导致我们查询特殊字符 “<span class="operator">%</span>”、“\ _”、“\[” 的语句无法正常实现，而把特殊字符用 “\[ ]” 括起便可正常查询。</span><br><span class="line"></span><br><span class="line">### <span class="number">10.</span><span class="keyword">UNION</span>操作符</span><br><span class="line"></span><br><span class="line"><span class="operator">*</span>   <span class="keyword">UNION</span> 语句：用于将不同表中相同列中查询的数据展示出来；（不包括重复数据）<span class="operator">*</span></span><br><span class="line"></span><br><span class="line">   <span class="keyword">UNION</span> <span class="keyword">ALL</span> 语句：用于将不同表中相同列中查询的数据展示出来；（包括重复数据）</span><br><span class="line"></span><br><span class="line">```<span class="keyword">sql</span></span><br><span class="line"><span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称 <span class="keyword">UNION</span> <span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称 <span class="keyword">ORDER</span> <span class="keyword">BY</span> 列名称；</span><br><span class="line"><span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称 <span class="keyword">UNION</span> <span class="keyword">ALL</span> <span class="keyword">SELECT</span> 列名称 <span class="keyword">FROM</span> 表名称 <span class="keyword">ORDER</span> <span class="keyword">BY</span> 列名称；</span><br><span class="line"><span class="keyword">SELECT</span> country <span class="keyword">FROM</span> Websites <span class="keyword">UNION</span> <span class="keyword">ALL</span> <span class="keyword">SELECT</span> country <span class="keyword">FROM</span> apps <span class="keyword">ORDER</span> <span class="keyword">BY</span> country;</span><br></pre></td></tr></table></figure>
+
+<h3 id="11-ORDER-BY排序"><a href="#11-ORDER-BY排序" class="headerlink" title="11.ORDER BY排序"></a>11.ORDER BY排序</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>后面可以跟<span class="keyword">where</span>子语句</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>使用 <span class="keyword">ASC</span> 或 <span class="keyword">DESC</span> 关键字来设置查询结果是按升序或降序排列。 默认情况下，它是按升序排列</span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">from</span> runoob_tbl <span class="keyword">ORDER</span> <span class="keyword">BY</span> submission_date <span class="keyword">ASC</span>, sunId <span class="keyword">DESC</span> ;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>如果字符集采用的是 gbk(汉字编码字符集)，直接在查询语句后边添加 <span class="keyword">ORDER</span> <span class="keyword">BY</span>：</span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> runoob_tbl <span class="keyword">ORDER</span> <span class="keyword">BY</span> runoob_title;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>如果字符集采用的是 utf8(万国码)，需要先对字段进行转码然后排序：</span><br><span class="line"><span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> runoob_tbl <span class="keyword">ORDER</span> <span class="keyword">BY</span> <span class="keyword">CONVERT</span>(runoob_title <span class="keyword">using</span> gbk);</span><br></pre></td></tr></table></figure>
+
+<h3 id="12-GROUP-BY语句"><a href="#12-GROUP-BY语句" class="headerlink" title="12.GROUP BY语句"></a>12.GROUP BY语句</h3><blockquote>
+<p>GROUP BY 语句根据一个或多个列对结果集进行分组在分组的列上我们可以使用 COUNT, SUM, AVG,等函数。</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>创建数据库</span><br><span class="line"><span class="keyword">SET</span> NAMES utf8;</span><br><span class="line"><span class="keyword">SET</span> FOREIGN_KEY_CHECKS <span class="operator">=</span> <span class="number">0</span>;</span><br><span class="line"><span class="keyword">DROP</span> <span class="keyword">TABLE</span> IF <span class="keyword">EXISTS</span> `employee_tbl`;</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `employee_tbl` (</span><br><span class="line">  `id` <span class="type">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">  `name` <span class="type">char</span>(<span class="number">10</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  `<span class="type">date</span>` datetime <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">  `singin` tinyint(<span class="number">4</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="string">&#x27;0&#x27;</span> COMMENT <span class="string">&#x27;登录次数&#x27;</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY (`id`)</span><br><span class="line">) ENGINE<span class="operator">=</span>InnoDB <span class="keyword">DEFAULT</span> CHARSET<span class="operator">=</span>utf8;</span><br><span class="line"><span class="keyword">BEGIN</span>;</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> `employee_tbl` <span class="keyword">VALUES</span> (<span class="string">&#x27;1&#x27;</span>, <span class="string">&#x27;小明&#x27;</span>, <span class="string">&#x27;2016-04-22 15:25:33&#x27;</span>, <span class="string">&#x27;1&#x27;</span>), (<span class="string">&#x27;2&#x27;</span>, <span class="string">&#x27;小王&#x27;</span>, <span class="string">&#x27;2016-04-20 15:25:47&#x27;</span>, <span class="string">&#x27;3&#x27;</span>), (<span class="string">&#x27;3&#x27;</span>, <span class="string">&#x27;小丽&#x27;</span>, <span class="string">&#x27;2016-04-19 15:26:02&#x27;</span>, <span class="string">&#x27;2&#x27;</span>), (<span class="string">&#x27;4&#x27;</span>, <span class="string">&#x27;小王&#x27;</span>, <span class="string">&#x27;2016-04-07 15:26:14&#x27;</span>, <span class="string">&#x27;4&#x27;</span>), (<span class="string">&#x27;5&#x27;</span>, <span class="string">&#x27;小明&#x27;</span>, <span class="string">&#x27;2016-04-11 15:26:40&#x27;</span>, <span class="string">&#x27;4&#x27;</span>), (<span class="string">&#x27;6&#x27;</span>, <span class="string">&#x27;小明&#x27;</span>, <span class="string">&#x27;2016-04-04 15:26:54&#x27;</span>, <span class="string">&#x27;2&#x27;</span>);</span><br><span class="line"><span class="keyword">COMMIT</span>;</span><br><span class="line"><span class="keyword">SET</span> FOREIGN_KEY_CHECKS <span class="operator">=</span> <span class="number">1</span>;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> employee_tbl;</span><br><span class="line"><span class="operator">+</span><span class="comment">----+--------+---------------------+--------+</span></span><br><span class="line"><span class="operator">|</span> id <span class="operator">|</span> name   <span class="operator">|</span> <span class="type">date</span>                <span class="operator">|</span> singin <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+--------+---------------------+--------+</span></span><br><span class="line"><span class="operator">|</span>  <span class="number">1</span> <span class="operator">|</span> 小明 <span class="operator">|</span> <span class="number">2016</span><span class="number">-04</span><span class="number">-22</span> <span class="number">15</span>:<span class="number">25</span>:<span class="number">33</span> <span class="operator">|</span>      <span class="number">1</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>  <span class="number">2</span> <span class="operator">|</span> 小王 <span class="operator">|</span> <span class="number">2016</span><span class="number">-04</span><span class="number">-20</span> <span class="number">15</span>:<span class="number">25</span>:<span class="number">47</span> <span class="operator">|</span>      <span class="number">3</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>  <span class="number">3</span> <span class="operator">|</span> 小丽 <span class="operator">|</span> <span class="number">2016</span><span class="number">-04</span><span class="number">-19</span> <span class="number">15</span>:<span class="number">26</span>:<span class="number">02</span> <span class="operator">|</span>      <span class="number">2</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>  <span class="number">4</span> <span class="operator">|</span> 小王 <span class="operator">|</span> <span class="number">2016</span><span class="number">-04</span><span class="number">-07</span> <span class="number">15</span>:<span class="number">26</span>:<span class="number">14</span> <span class="operator">|</span>      <span class="number">4</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>  <span class="number">5</span> <span class="operator">|</span> 小明 <span class="operator">|</span> <span class="number">2016</span><span class="number">-04</span><span class="number">-11</span> <span class="number">15</span>:<span class="number">26</span>:<span class="number">40</span> <span class="operator">|</span>      <span class="number">4</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span>  <span class="number">6</span> <span class="operator">|</span> 小明 <span class="operator">|</span> <span class="number">2016</span><span class="number">-04</span><span class="number">-04</span> <span class="number">15</span>:<span class="number">26</span>:<span class="number">54</span> <span class="operator">|</span>      <span class="number">2</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">----+--------+---------------------+--------+</span></span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>接下来我们使用 <span class="keyword">GROUP</span> <span class="keyword">BY</span> 语句 将数据表按名字进行分组，并统计每个人有多少条记录：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span> name, <span class="built_in">COUNT</span>( <span class="operator">*</span>) <span class="keyword">FROM</span>   employee_tbl <span class="keyword">GROUP</span> <span class="keyword">BY</span> name;</span><br><span class="line"><span class="operator">+</span><span class="comment">--------+----------+</span></span><br><span class="line"><span class="operator">|</span> name   <span class="operator">|</span> <span class="built_in">COUNT</span>( <span class="operator">*</span>) <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------+----------+</span></span><br><span class="line"><span class="operator">|</span> 小丽 <span class="operator">|</span>        <span class="number">1</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> 小明 <span class="operator">|</span>        <span class="number">3</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> 小王 <span class="operator">|</span>        <span class="number">2</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------+----------+</span></span><br><span class="line"><span class="number">3</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.01</span> sec)</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span><span class="keyword">WITH</span> <span class="keyword">ROLLUP</span> 可以实现在分组统计数据基础上再进行相同的统计（SUM,AVG,COUNT…）。</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span> name, <span class="built_in">SUM</span>(singin) <span class="keyword">as</span> singin_count <span class="keyword">FROM</span>  employee_tbl <span class="keyword">GROUP</span> <span class="keyword">BY</span> name <span class="keyword">WITH</span> <span class="keyword">ROLLUP</span>;</span><br><span class="line"><span class="operator">+</span><span class="comment">--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> name   <span class="operator">|</span> singin_count <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------+--------------+</span></span><br><span class="line"><span class="operator">|</span> 小丽 <span class="operator">|</span>            <span class="number">2</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> 小明 <span class="operator">|</span>            <span class="number">7</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> 小王 <span class="operator">|</span>            <span class="number">7</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="keyword">NULL</span>   <span class="operator">|</span>           <span class="number">16</span> <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">--------+--------------+</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="13-JOIN在多个表查询数据，默认为INNER"><a href="#13-JOIN在多个表查询数据，默认为INNER" class="headerlink" title="13.JOIN在多个表查询数据，默认为INNER"></a>13.JOIN在多个表查询数据，默认为INNER</h3><ul>
+<li>INNER JOIN（内连接,或等值连接）：获取两个表中字段匹配关系的记录。</li>
+</ul>
+<p>LEFT JOIN（左连接）：获取左表所有记录，即使右表没有对应匹配的记录。</p>
+<p>RIGHT JOIN（右连接）：与 LEFT JOIN 相反，用于获取右表所有记录，即使左表没有对应匹配的记录。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> tcount_tbl;</span><br><span class="line"><span class="operator">+</span><span class="comment">---------------+--------------+</span></span><br><span class="line"><span class="operator">|</span> runoob_author <span class="operator">|</span> runoob_count <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">---------------+--------------+</span></span><br><span class="line"><span class="operator">|</span> 菜鸟教程  <span class="operator">|</span> <span class="number">10</span>           <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> RUNOOB.COM    <span class="operator">|</span> <span class="number">20</span>           <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Google        <span class="operator">|</span> <span class="number">22</span>           <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">---------------+--------------+</span></span><br><span class="line"><span class="number">3</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.01</span> sec)</span><br><span class="line"></span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">from</span> runoob_tbl;</span><br><span class="line"><span class="operator">+</span><span class="comment">-----------+---------------+---------------+-----------------+</span></span><br><span class="line"><span class="operator">|</span> runoob_id <span class="operator">|</span> runoob_title  <span class="operator">|</span> runoob_author <span class="operator">|</span> submission_date <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------+---------------+---------------+-----------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>         <span class="operator">|</span> 学习 PHP    <span class="operator">|</span> 菜鸟教程  <span class="operator">|</span> <span class="number">2017</span><span class="number">-04</span><span class="number">-12</span>      <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>         <span class="operator">|</span> 学习 MySQL  <span class="operator">|</span> 菜鸟教程  <span class="operator">|</span> <span class="number">2017</span><span class="number">-04</span><span class="number">-12</span>      <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>         <span class="operator">|</span> 学习 Java   <span class="operator">|</span> RUNOOB.COM    <span class="operator">|</span> <span class="number">2015</span><span class="number">-05</span><span class="number">-01</span>      <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>         <span class="operator">|</span> 学习 Python <span class="operator">|</span> RUNOOB.COM    <span class="operator">|</span> <span class="number">2016</span><span class="number">-03</span><span class="number">-06</span>      <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5</span>         <span class="operator">|</span> 学习 C      <span class="operator">|</span> FK            <span class="operator">|</span> <span class="number">2017</span><span class="number">-04</span><span class="number">-05</span>      <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-----------+---------------+---------------+-----------------+</span></span><br><span class="line"><span class="keyword">SELECT</span> a.runoob_id, a.runoob_author, b.runoob_count <span class="keyword">FROM</span> runoob_tbl a <span class="keyword">INNER</span> <span class="keyword">JOIN</span> tcount_tbl b <span class="keyword">ON</span> a.runoob_author <span class="operator">=</span> b.runoob_author;</span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br><span class="line"><span class="operator">|</span> a.runoob_id <span class="operator">|</span> a.runoob_author <span class="operator">|</span> b.runoob_count <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>           <span class="operator">|</span> 菜鸟教程    <span class="operator">|</span> <span class="number">10</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>           <span class="operator">|</span> 菜鸟教程    <span class="operator">|</span> <span class="number">10</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>           <span class="operator">|</span> RUNOOB.COM      <span class="operator">|</span> <span class="number">20</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>           <span class="operator">|</span> RUNOOB.COM      <span class="operator">|</span> <span class="number">20</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br><span class="line"> <span class="keyword">SELECT</span> a.runoob_id, a.runoob_author, b.runoob_count <span class="keyword">FROM</span> runoob_tbl a <span class="keyword">LEFT</span> <span class="keyword">JOIN</span> tcount_tbl b <span class="keyword">ON</span> a.runoob_author <span class="operator">=</span> b.runoob_author;</span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br><span class="line"><span class="operator">|</span> a.runoob_id <span class="operator">|</span> a.runoob_author <span class="operator">|</span> b.runoob_count <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>           <span class="operator">|</span> 菜鸟教程    <span class="operator">|</span> <span class="number">10</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>           <span class="operator">|</span> 菜鸟教程    <span class="operator">|</span> <span class="number">10</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>           <span class="operator">|</span> RUNOOB.COM      <span class="operator">|</span> <span class="number">20</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>           <span class="operator">|</span> RUNOOB.COM      <span class="operator">|</span> <span class="number">20</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">5</span>           <span class="operator">|</span> FK              <span class="operator">|</span> <span class="keyword">NULL</span>           <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br><span class="line"><span class="keyword">SELECT</span> a.runoob_id, a.runoob_author, b.runoob_count <span class="keyword">FROM</span> runoob_tbl a <span class="keyword">RIGHT</span> <span class="keyword">JOIN</span> tcount_tbl b <span class="keyword">ON</span> a.runoob_author <span class="operator">=</span> b.runoob_author;</span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br><span class="line"><span class="operator">|</span> a.runoob_id <span class="operator">|</span> a.runoob_author <span class="operator">|</span> b.runoob_count <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br><span class="line"><span class="operator">|</span> <span class="number">1</span>           <span class="operator">|</span> 菜鸟教程    <span class="operator">|</span> <span class="number">10</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">2</span>           <span class="operator">|</span> 菜鸟教程    <span class="operator">|</span> <span class="number">10</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">3</span>           <span class="operator">|</span> RUNOOB.COM      <span class="operator">|</span> <span class="number">20</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="number">4</span>           <span class="operator">|</span> RUNOOB.COM      <span class="operator">|</span> <span class="number">20</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> <span class="keyword">NULL</span>        <span class="operator">|</span> <span class="keyword">NULL</span>            <span class="operator">|</span> <span class="number">22</span>             <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">-------------+-----------------+----------------+</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="14-NULL值处理"><a href="#14-NULL值处理" class="headerlink" title="14.NULL值处理"></a>14.NULL值处理</h3><ol>
+<li><p>IS NULL: 当列的值是 NULL,此运算符返回 true。</p>
+</li>
+<li><p>IS NOT NULL: 当列的值不为 NULL, 运算符返回 true。</p>
+</li>
+<li><p>&lt;&#x3D;&gt;: 比较操作符（不同于 &#x3D; 运算符），当比较的的两个值相等或者都为 NULL 时返回 true。</p>
+</li>
+</ol>
+<p>你不能使用 &#x3D; NULL 或 !&#x3D; NULL 在列中查找 NULL 值 。在 MySQL 中，NULL 值与任何其它值的比较（即使是 NULL）永远返回 NULL，即 NULL &#x3D; NULL 返回 NULL 。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">select</span> <span class="operator">*</span> , columnName1<span class="operator">+</span>ifnull(columnName2,<span class="number">0</span>) <span class="keyword">from</span> tableName;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>columnName1，columnName2 为 <span class="type">int</span> 型，当 columnName2 中，有值为 <span class="keyword">null</span> <span class="operator">/</span><span class="operator">/</span>时，columnName1<span class="operator">+</span>columnName2<span class="operator">=</span><span class="keyword">null</span>， ifnull(columnName2,<span class="number">0</span>) 把 columnName2 中 <span class="keyword">null</span> 值转为 <span class="number">0</span>。</span><br><span class="line"> <span class="keyword">SELECT</span><span class="operator">*</span>  <span class="keyword">FROM</span> runoob_test_tbl <span class="keyword">WHERE</span> runoob_count <span class="operator">=</span> <span class="keyword">NULL</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>不起作用，结果为空<span class="keyword">Empty</span> <span class="keyword">set</span> (<span class="number">0.00</span> sec)</span><br><span class="line"> <span class="keyword">SELECT</span> <span class="operator">*</span> <span class="keyword">FROM</span> runoob_test_tbl <span class="keyword">WHERE</span> runoob_count <span class="keyword">IS</span> <span class="keyword">NULL</span>;</span><br><span class="line"><span class="operator">+</span><span class="comment">---------------+--------------+</span></span><br><span class="line"><span class="operator">|</span> runoob_author <span class="operator">|</span> runoob_count <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">---------------+--------------+</span></span><br><span class="line"><span class="operator">|</span> 菜鸟教程  <span class="operator">|</span> <span class="keyword">NULL</span>         <span class="operator">|</span></span><br><span class="line"><span class="operator">|</span> Google        <span class="operator">|</span> <span class="keyword">NULL</span>         <span class="operator">|</span></span><br><span class="line"><span class="operator">+</span><span class="comment">---------------+--------------+</span></span><br><span class="line"><span class="number">2</span> <span class="keyword">rows</span> <span class="keyword">in</span> <span class="keyword">set</span> (<span class="number">0.01</span> sec)</span><br></pre></td></tr></table></figure>
+
+<h3 id="15-正则表达式"><a href="#15-正则表达式" class="headerlink" title="15.正则表达式"></a>15.正则表达式</h3><ul>
+<li><code>^</code>	匹配输入字符串的开始位置。如果设置了 RegExp 对象的 Multiline 属性，^ 也匹配 ‘\n’ 或 ‘\r’ 之后的位置。</li>
+</ul>
+<p><code>$</code>	匹配输入字符串的结束位置。如果设置了RegExp 对象的 Multiline 属性，$ 也匹配 ‘\n’ 或 ‘\r’ 之前的位置。</p>
+<p><code>.</code>	匹配除 “\n” 之外的任何单个字符。要匹配包括 ‘\n’ 在内的任何字符，请使用像 ‘[.\n]’ 的模式。</p>
+<p><code>[...]</code>	字符集合。匹配所包含的任意一个字符。例如， ‘[abc]’ 可以匹配 “plain” 中的 ‘a’。</p>
+<p><code>[^...]</code>	负值字符集合。匹配未包含的任意字符。例如， ‘[^abc]’ 可以匹配 “plain” 中的’p’。</p>
+<p><code>p1|p2|p3</code>	匹配 p1 或 p2 或 p3。例如，’z|food’ 能匹配 “z” 或 “food”。’(z|f)ood’ 则匹配 “zood” 或 “food”。</p>
+<p><code>*</code>	匹配前面的子表达式零次或多次。例如，zo 能匹配 “z” 以及 “zoo”。 等价于{0,}。</p>
+<ul>
+<li><code>+</code>	匹配前面的子表达式一次或多次。例如，’zo+’ 能匹配 “zo” 以及 “zoo”，但不能匹配 “z”。+ 等价于 {1,}。</li>
+</ul>
+<p><code>&#123;n&#125;</code>	n 是一个非负整数。匹配确定的 n 次。例如，’o{2}’ 不能匹配 “Bob” 中的 ‘o’，但是能匹配 “food” 中的两个 o。</p>
+<p><code>&#123;n,m&#125;</code>	m 和 n 均为非负整数，其中n &lt;&#x3D; m。最少匹配 n 次且最多匹配 m 次。</p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>查找name字段中以<span class="string">&#x27;st&#x27;</span>为开头的所有数据：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span> name <span class="keyword">FROM</span> person_tbl <span class="keyword">WHERE</span> name REGEXP <span class="string">&#x27;^st&#x27;</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>查找name字段中以<span class="string">&#x27;ok&#x27;</span>为结尾的所有数据：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span> name <span class="keyword">FROM</span> person_tbl <span class="keyword">WHERE</span> name REGEXP <span class="string">&#x27;ok$&#x27;</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>查找name字段中包含<span class="string">&#x27;mar&#x27;</span>字符串的所有数据：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span> name <span class="keyword">FROM</span> person_tbl <span class="keyword">WHERE</span> name REGEXP <span class="string">&#x27;mar&#x27;</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>查找name字段中以元音字符开头或以<span class="string">&#x27;ok&#x27;</span>字符串结尾的所有数据：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SELECT</span> name <span class="keyword">FROM</span> person_tbl <span class="keyword">WHERE</span> name REGEXP <span class="string">&#x27;^[aeiou]|ok$&#x27;</span>;</span><br></pre></td></tr></table></figure>
+
+<h3 id="16-事务"><a href="#16-事务" class="headerlink" title="16.事务"></a>16.事务</h3><ol>
+<li><p>在 MySQL 中只有使用了 Innodb 数据库引擎的数据库或表才支持事务。</p>
+</li>
+<li><p>事务处理可以用来维护数据库的完整性，保证成批的 SQL 语句要么全部执行，要么全部不执行。</p>
+</li>
+<li><p>事务用来管理 insert,update,delete 语句</p>
+</li>
+<li><p>原子性；一致性；隔离性；持久性</p>
+</li>
+<li><p>在 MySQL 命令行的默认设置下，事务都是自动提交的，即执行 SQL 语句后就会马上执行 COMMIT 操作。因此要显式地开启一个事务务须使用命令 BEGIN 或 START TRANSACTION，或者执行命令 SET AUTOCOMMIT&#x3D;0，用来禁止使用当前会话的自动提交。</p>
+</li>
+</ol>
+<p>BEGIN 或 START TRANSACTION 显式地开启一个事务；</p>
+<p>COMMIT 也可以使用 COMMIT WORK，不过二者是等价的。COMMIT 会提交事务，并使已对数据库进行的所有修改成为永久性的；</p>
+<p>ROLLBACK 也可以使用 ROLLBACK WORK，不过二者是等价的。回滚会结束用户的事务，并撤销正在进行的所有未提交的修改；</p>
+<p>SAVEPOINT identifier，SAVEPOINT 允许在事务中创建一个保存点，一个事务中可以有多个 SAVEPOINT；</p>
+<p>RELEASE SAVEPOINT identifier 删除一个事务的保存点，当没有指定的保存点时，执行该语句会抛出一个异常；</p>
+<p>ROLLBACK TO identifier 把事务回滚到标记点；</p>
+<p>SET TRANSACTION 用来设置事务的隔离级别。InnoDB 存储引擎提供事务的隔离级别有READ UNCOMMITTED、READ COMMITTED、REPEATABLE READ 和 SERIALIZABLE。</p>
+<h3 id="17-ALTER命令"><a href="#17-ALTER命令" class="headerlink" title="17.ALTER命令"></a>17.ALTER命令</h3><blockquote>
+<p>当我们需要修改数据表名或者修改数据表字段时，就需要使用到MySQL ALTER命令。</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>使用了 <span class="keyword">ALTER</span> 命令及 <span class="keyword">DROP</span> 子句来删除以上创建表的 i 字段</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl  <span class="keyword">DROP</span> i;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>使用 <span class="keyword">ADD</span> 子句来向数据表中添加列</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ADD</span> i <span class="type">INT</span>;</span><br><span class="line"><span class="keyword">SHOW</span> COLUMNS <span class="keyword">FROM</span> testalter_tbl; ;<span class="operator">/</span><span class="operator">/</span>查看表结构</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>如果你需要指定新增字段的位置，可以使用MySQL提供的关键字 <span class="keyword">FIRST</span> (设定位第一列)， AFTER 字段名（设定位于某个字段之后）。</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">DROP</span> i;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ADD</span> i <span class="type">INT</span> <span class="keyword">FIRST</span>;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">DROP</span> i;</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ADD</span> i <span class="type">INT</span> AFTER c;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>需要修改字段类型及名称, 你可以在<span class="keyword">ALTER</span>命令中使用`MODIFY`或 `CHANGE`子句 。</span><br><span class="line"> <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl MODIFY c <span class="type">CHAR</span>(<span class="number">10</span>);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>使用 CHANGE 子句, 语法有很大的不同。 在 CHANGE 关键字之后，紧跟着的是你要修改的字段名，然后指定新字段名及类型</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl CHANGE i j <span class="type">BIGINT</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>修改字段时，你可以指定是否包含值或者是否设置默认值</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl</span><br><span class="line">MODIFY j <span class="type">BIGINT</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">100</span>;<span class="operator">/</span><span class="operator">/</span>如果你不设置默认值，MySQL会自动设置该字段默认为 <span class="keyword">NULL</span>。</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>可以使用 <span class="keyword">ALTER</span> 来修改字段的默认值</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ALTER</span> i <span class="keyword">SET</span> <span class="keyword">DEFAULT</span> <span class="number">1000</span>;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>可以使用 <span class="keyword">ALTER</span> 命令及 <span class="keyword">DROP</span>子句来删除字段的默认值;删除之后就变成<span class="keyword">NULL</span></span><br><span class="line"> <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ALTER</span> i <span class="keyword">DROP</span> <span class="keyword">DEFAULT</span>;</span><br><span class="line"> <span class="operator">/</span><span class="operator">/</span>修改数据表类型，可以使用 <span class="keyword">ALTER</span> 命令及 TYPE 子句来完成。尝试以下实例，我们将表 testalter_tbl 的类型修改为 MYISAM</span><br><span class="line"> <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl ENGINE <span class="operator">=</span> MYISAM;</span><br><span class="line"> <span class="operator">/</span><span class="operator">/</span>查看数据表类型</span><br><span class="line">  <span class="keyword">SHOW</span> <span class="keyword">TABLE</span> STATUS <span class="keyword">LIKE</span> <span class="string">&#x27;testalter_tbl&#x27;</span>\G</span><br><span class="line">  <span class="operator">/</span><span class="operator">/</span>如果需要修改数据表的名称，可以在 <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> 语句中使用 RENAME 子句来实现。</span><br><span class="line">  <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl RENAME <span class="keyword">TO</span> alter_tbl;</span><br><span class="line"> <span class="operator">/</span><span class="operator">/</span>删除外键约束：keyName是外键别名</span><br><span class="line"><span class="keyword">alter</span> <span class="keyword">table</span> tableName <span class="keyword">drop</span> <span class="keyword">foreign</span> key keyName;</span><br></pre></td></tr></table></figure>
+
+<h3 id="18-索引"><a href="#18-索引" class="headerlink" title="18.索引"></a>18.索引</h3><blockquote>
+<p>MySQL索引的建立对于MySQL的高效运行是很重要的，索引可以大大提高MySQL的检索速度。索引分单列索引和组合索引。单列索引，即一个索引只包含单个列，一个表可以有多个单列索引，但这不是组合索引。组合索引，即一个索引包含多个列。实际上，索引也是一张表，该表保存了主键与索引字段，并指向实体表的记录。</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>创建普通索引</span><br><span class="line"><span class="keyword">CREATE</span> INDEX indexName <span class="keyword">ON</span> table_name (column_name)</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>修改表结构(添加索引)</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">table</span> tableName <span class="keyword">ADD</span> INDEX indexName(columnName)</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>创建表的时候直接指定索引</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> mytable(</span><br><span class="line">ID <span class="type">INT</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">username <span class="type">VARCHAR</span>(<span class="number">16</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line">INDEX [indexName] (username(length))</span><br><span class="line">);</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>删除索引</span><br><span class="line"><span class="keyword">DROP</span> INDEX [indexName] <span class="keyword">ON</span> mytable;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>创建唯一索引。索引列的值必须唯一，但允许有空值。如果是组合索引，则列值的组合必须唯一</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">UNIQUE</span> INDEX indexName <span class="keyword">ON</span> mytable(username(length))</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>修改表结构</span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">table</span> mytable <span class="keyword">ADD</span> <span class="keyword">UNIQUE</span> [indexName] (username(length))</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>创建表的时候直接指定</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> mytable(</span><br><span class="line"> ID <span class="type">INT</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line"> username <span class="type">VARCHAR</span>(<span class="number">16</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span>,</span><br><span class="line"><span class="keyword">UNIQUE</span> [indexName] (username(length))</span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<p><strong>使用ALTER 命令添加和删除索引</strong></p>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY (column_list):</span><br><span class="line">   该语句添加一个主键，这意味着索引值必须是唯一的，且不能为<span class="keyword">NULL</span>。</span><br><span class="line">   <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">ADD</span> <span class="keyword">UNIQUE</span> index_name (column_list):</span><br><span class="line">  这条语句创建索引的值必须是唯一的（除了<span class="keyword">NULL</span>外，<span class="keyword">NULL</span>可能会出现多次）。</span><br><span class="line">  <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">ADD</span> INDEX index_name (column_list): 添加普通索引，索引值可出现多次。</span><br><span class="line">  <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> tbl_name <span class="keyword">ADD</span> FULLTEXT index_name (column_list):该语句指定了索引为 FULLTEXT ，用于全文索引。</span><br><span class="line"></span><br><span class="line">```<span class="operator">*</span><span class="operator">*</span></span><br><span class="line"></span><br><span class="line">使用 <span class="keyword">ALTER</span> 命令添加和删除主键<span class="operator">*</span><span class="operator">*</span></span><br><span class="line"></span><br><span class="line">```<span class="keyword">sql</span></span><br><span class="line"></span><br><span class="line">主键作用于列上（可以一个列或多个列联合主键），添加主键索引时，你需要确保该主键默认不为空（<span class="keyword">NOT</span> <span class="keyword">NULL</span>）。实例如下：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl MODIFY i <span class="type">INT</span> <span class="keyword">NOT</span> <span class="keyword">NULL</span>;</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">ADD</span> <span class="keyword">PRIMARY</span> KEY (i);</span><br><span class="line">你也可以使用 <span class="keyword">ALTER</span> 命令删除主键：</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">ALTER</span> <span class="keyword">TABLE</span> testalter_tbl <span class="keyword">DROP</span> <span class="keyword">PRIMARY</span> KEY;</span><br><span class="line">删除主键时只需指定<span class="keyword">PRIMARY</span> KEY，但在删除索引时，你必须知道索引名。</span><br><span class="line"> 显示索引信息</span><br><span class="line">你可以使用 <span class="keyword">SHOW</span> INDEX 命令来列出表中的相关的索引信息。可以通过添加 \G 来格式化输出信息。</span><br><span class="line">mysql<span class="operator">&gt;</span> <span class="keyword">SHOW</span> INDEX <span class="keyword">FROM</span> table_name; \G</span><br></pre></td></tr></table></figure>
+
+<h3 id="19-临时表"><a href="#19-临时表" class="headerlink" title="19.临时表"></a>19.临时表</h3><blockquote>
+<p>MySQL 临时表在我们需要保存一些临时数据时是非常有用的。临时表只在当前连接可见，当关闭连接时，Mysql会自动删除表并释放所有空间。当你使用 SHOW TABLES命令显示数据表列表时，你将无法看到 SalesSummary表。</p>
+</blockquote>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">CREATE</span> TEMPORARY <span class="keyword">TABLE</span> SalesSummary (</span><br><span class="line">   product_name <span class="type">VARCHAR</span>(<span class="number">50</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span></span><br><span class="line">  , total_sales <span class="type">DECIMAL</span>(<span class="number">12</span>,<span class="number">2</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0.00</span></span><br><span class="line">   , avg_unit_price <span class="type">DECIMAL</span>(<span class="number">7</span>,<span class="number">2</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0.00</span></span><br><span class="line">   , total_units_sold <span class="type">INT</span> UNSIGNED <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">DEFAULT</span> <span class="number">0</span></span><br><span class="line">);</span><br></pre></td></tr></table></figure>
+
+<h3 id="20-复制表"><a href="#20-复制表" class="headerlink" title="20.复制表"></a>20.复制表</h3><ol>
+<li><p>使用 SHOW CREATE TABLE 命令获取创建数据表(CREATE TABLE)语句，该语句包含了原数据表的结构，索引等。</p>
+</li>
+<li><p>复制以下命令显示的SQL语句，修改数据表名，并执行SQL语句，通过以上命令 将完全的复制数据表结构。</p>
+</li>
+<li><p>如果你想复制表的内容，你就可以使用 INSERT INTO … SELECT 语句来实现。</p>
+</li>
+</ol>
+<figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="operator">/</span><span class="operator">/</span>步骤一：获取数据表的完整结构。</span><br><span class="line"> <span class="keyword">SHOW</span> <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> runoob_tbl \G;</span><br><span class="line">        <span class="keyword">Table</span>: runoob_tbl</span><br><span class="line"><span class="keyword">Create</span> <span class="keyword">Table</span>: <span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `runoob_tbl` (</span><br><span class="line">  `runoob_id` <span class="type">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> auto_increment,</span><br><span class="line">  `runoob_title` <span class="type">varchar</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  `runoob_author` <span class="type">varchar</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">  `submission_date` <span class="type">date</span> <span class="keyword">default</span> <span class="keyword">NULL</span>,</span><br><span class="line">  <span class="keyword">PRIMARY</span> KEY  (`runoob_id`),</span><br><span class="line">  <span class="keyword">UNIQUE</span> KEY `AUTHOR_INDEX` (`runoob_author`)</span><br><span class="line">) ENGINE<span class="operator">=</span>InnoDB</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>步骤二:修改<span class="keyword">SQL</span>语句的数据表名，并执行<span class="keyword">SQL</span>语句。</span><br><span class="line"><span class="keyword">CREATE</span> <span class="keyword">TABLE</span> `clone_tbl` (</span><br><span class="line">   `runoob_id` <span class="type">int</span>(<span class="number">11</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> auto_increment,</span><br><span class="line">  `runoob_title` <span class="type">varchar</span>(<span class="number">100</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span>,</span><br><span class="line">   `runoob_author` <span class="type">varchar</span>(<span class="number">40</span>) <span class="keyword">NOT</span> <span class="keyword">NULL</span> <span class="keyword">default</span> <span class="string">&#x27;&#x27;</span>,</span><br><span class="line"> `submission_date` <span class="type">date</span> <span class="keyword">default</span> <span class="keyword">NULL</span>,</span><br><span class="line">   <span class="keyword">PRIMARY</span> KEY  (`runoob_id`),</span><br><span class="line">  <span class="keyword">UNIQUE</span> KEY `AUTHOR_INDEX` (`runoob_author`)</span><br><span class="line">) ENGINE<span class="operator">=</span>InnoDB;</span><br><span class="line"><span class="operator">/</span><span class="operator">/</span>步骤三：拷贝数据表的数据</span><br><span class="line"><span class="keyword">INSERT</span> <span class="keyword">INTO</span> clone_tbl (runoob_id,</span><br><span class="line">                     runoob_title,</span><br><span class="line">                   runoob_author,</span><br><span class="line">                    submission_date)</span><br><span class="line"><span class="keyword">SELECT</span> runoob_id,runoob_title,</span><br><span class="line">     runoob_author,submission_date</span><br><span class="line"> <span class="keyword">FROM</span> runoob_tbl;</span><br></pre></td></tr></table></figure>
 ]]></content>
+      <categories>
+        <category>前端</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>MySql</tag>
+        <tag>数据库</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebSocket基本使用</title>
+    <url>/2022/06/24/WebSocket%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<h1 id="websocket基本使用"><a href="#websocket基本使用" class="headerlink" title="websocket基本使用"></a>websocket基本使用</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><hr>
+<blockquote>
+<p>HTTP 协议有一个缺陷：通信只能由客户端发起。举例来说，我们想了解今天的天气，只能是客户端向服务器发出请求，服务器返回查询结果。HTTP 协议做不到服务器主动向客户端推送信息。</p>
+</blockquote>
+<p>早期，很多网站为了实现推送技术，所用的技术都是轮询（也叫短轮询）。轮询是指由浏览器每隔一段时间向服务器发出 HTTP 请求，然后服务器返回最新的数据给客户端。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519580-0346483d-b96b-49c7-84ac-6308c9d222c6.png#crop=0&crop=0&crop=1&crop=1&id=Ooh9L&originHeight=425&originWidth=913&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519720-ab191b32-57a7-4304-a833-01b36ff24cc7.png#crop=0&crop=0&crop=1&crop=1&id=JbfwO&originHeight=239&originWidth=847&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>这种传统的模式带来很明显的缺点，即浏览器需要不断的向服务器发出请求，然而 HTTP 请求与响应可能会包含较长的头部，其中真正有效的数据可能只是很小的一部分，所以这样会消耗很多带宽资源。</p>
+<h3 id="websocket简介"><a href="#websocket简介" class="headerlink" title="websocket简介"></a>websocket简介</h3><blockquote>
+<p>WebSocket 是一种网络传输协议，可在单个 TCP 连接上进行全双工通信，位于 OSI 模型的应用层,它使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。在 WebSocket API 中，<strong>浏览器和服务器只需要完成一次握手，两者之间就可以创建持久性的连接，并进行双向数据传输。</strong></p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519834-eab3354d-d019-43ea-a2a8-82239786640f.png#crop=0&crop=0&crop=1&crop=1&id=rWW5K&originHeight=444&originWidth=834&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ul>
+<li>建立在 TCP 协议之上，服务器端的实现比较容易。</li>
+</ul>
+<p>与 HTTP 协议有着良好的兼容性。默认端口也是80和443 <em>，并且握手阶段采用 HTTP 协议，因此握手时不容易屏蔽，能通过各种 HTTP 代理服务器。</em><br>数据格式比较轻量，性能开销小，通信高效。<br>可以发送文本，也可以发送二进制数据 <em>。</em><br>没有同源限制，客户端可以与任意服务器通信。<br>协议标识符是 <em>（如果加密，则为</em> <em>），服务器网址就是 URL。</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">ws</span>:<span class="comment">//example.com:80/some/path</span></span><br></pre></td></tr></table></figure>
+<p>![](image&#x2F;image _-xV1C1x15i.png)</p>
+<h3 id="简单实现"><a href="#简单实现" class="headerlink" title="简单实现"></a>简单实现</h3><hr>
+<h4 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h4><blockquote>
+<p>服务端需要安装websocket模块。已koa服务器为例<code>npm install ws --save</code></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> fileUtils = <span class="built_in">require</span>(<span class="string">&#x27;../utils/file_utils&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocket</span> = <span class="built_in">require</span>(<span class="string">&#x27;ws&#x27;</span>)</span><br><span class="line"><span class="comment">// 创建WebSocket服务端的对象, 绑定的端口号是9998</span></span><br><span class="line"><span class="keyword">const</span> wss = <span class="keyword">new</span> <span class="title class_">WebSocket</span>.<span class="title class_">Server</span>(&#123;</span><br><span class="line">  <span class="attr">port</span>: <span class="number">9998</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 服务端开启了监听</span></span><br><span class="line"><span class="comment">// 对客户端的连接事件进行监听</span></span><br><span class="line"><span class="comment">// client:代表的是客户端的连接socket对象</span></span><br><span class="line">wss.<span class="title function_">on</span>(<span class="string">&#x27;connection&#x27;</span>, <span class="function"><span class="params">client</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;有客户端连接成功了...&#x27;</span>)</span><br><span class="line">  <span class="comment">// 对客户端的连接对象进行message事件的监听</span></span><br><span class="line">  <span class="comment">// msg: 由客户端发给服务端的数据</span></span><br><span class="line">  client.<span class="title function_">on</span>(<span class="string">&#x27;message&#x27;</span>, <span class="keyword">async</span> msg =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;客户端发送数据给服务端了: &#x27;</span> + msg)</span><br><span class="line">    <span class="keyword">let</span> payload = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(msg)</span><br><span class="line">    <span class="keyword">const</span> action = payload.<span class="property">action</span></span><br><span class="line">    <span class="keyword">if</span> (action === <span class="string">&#x27;getData&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> filePath = <span class="string">&#x27;../data/&#x27;</span> + payload.<span class="property">chartName</span> + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">      <span class="comment">// payload.chartName // trend seller map rank hot stock</span></span><br><span class="line">      filePath = path.<span class="title function_">join</span>(__dirname, filePath)</span><br><span class="line">      <span class="keyword">const</span> ret = <span class="keyword">await</span> fileUtils.<span class="title function_">getFileJsonData</span>(filePath)</span><br><span class="line">      <span class="comment">// 需要在服务端获取到数据的基础之上, 增加一个data的字段</span></span><br><span class="line">      <span class="comment">// data所对应的值,就是某个json文件的内容</span></span><br><span class="line">      payload.<span class="property">data</span> = ret</span><br><span class="line">      client.<span class="title function_">send</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(payload))</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 原封不动的将所接收到的数据转发给每一个处于连接状态的客户端</span></span><br><span class="line">      <span class="comment">// wss.clients // 所有客户端的连接</span></span><br><span class="line">      wss.<span class="property">clients</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">client</span> =&gt;</span> &#123;</span><br><span class="line">        client.<span class="title function_">send</span>(msg)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 由服务端往客户端发送数据</span></span><br><span class="line">    <span class="comment">// client.send(&#x27;hello socket from backend&#x27;)</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h4><blockquote>
+<p>客户端运行在浏览器，本身已经存在websocket对象可以直接使用。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;button id=&quot;connect&quot;&gt;连接&lt;/button&gt;</span><br><span class="line">  &lt;button id=&quot;send&quot; disabled=&quot;true&quot;&gt;发送数据&lt;/button&gt; &lt;br&gt;</span><br><span class="line">  从服务端接收的数据如下: &lt;br&gt;</span><br><span class="line">  &lt;span id=&quot;recv&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var connect = document.querySelector(&#x27;#connect&#x27;)</span><br><span class="line">    var send = document.querySelector(&#x27;#send&#x27;)</span><br><span class="line">    var recv = document.querySelector(&#x27;#recv&#x27;)</span><br><span class="line">    let ws = null</span><br><span class="line">    connect.onclick = function()&#123;</span><br><span class="line">      ws = new WebSocket(&#x27;ws://localhost:9998&#x27;)</span><br><span class="line">      ws.onopen = () =&gt; &#123;</span><br><span class="line">        console.log(&#x27;连接服务端成功了...&#x27;)</span><br><span class="line">        send.disabled = false</span><br><span class="line">      &#125;</span><br><span class="line">      ws.onclose = () =&gt; &#123;</span><br><span class="line">        console.log(&#x27;连接服务器失败/关闭&#x27;)</span><br><span class="line">        send.disabled = true</span><br><span class="line">      &#125;</span><br><span class="line">      ws.onmessage = msg =&gt; &#123;</span><br><span class="line">        console.log(&#x27;接收到从服务端发送过来的数据了&#x27;)</span><br><span class="line">        console.log(msg)</span><br><span class="line">        recv.innerHTML = msg.data</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    send.onclick = function()&#123;</span><br><span class="line">      ws.send(JSON.stringify(&#123;</span><br><span class="line">        action: &#x27;themeChange&#x27;,</span><br><span class="line">        socketType: &#x27;themeChange&#x27;,</span><br><span class="line">        chartName: &#x27;&#x27;,</span><br><span class="line">        value: &#x27;chalk&#x27;</span><br><span class="line">      &#125;))</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="websocket常用方法"><a href="#websocket常用方法" class="headerlink" title="websocket常用方法"></a>websocket常用方法</h3><hr>
+<blockquote>
+<p>WebSocket 协议本质上是一个基于 TCP 的协议。为了建立一个 WebSocket 连接，客户端浏览器首先要向服务器发起一个 HTTP 请求，这个请求和通常的 HTTP 请求不同，包含了一些附加头信息，其中附加头信息”Upgrade: WebSocket”表明这是一个申请协议升级的 HTTP 请求，服务器端解析这些附加的头信息然后产生应答信息返回给客户端，客户端和服务器端的 WebSocket 连接就建立起来了，双方就可以通过这个连接通道自由的传递信息，并且这个连接会持续存在直到客户端或者服务器端的某一方主动的关闭连接。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">Socket</span> = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(url, [protocol] );</span><br></pre></td></tr></table></figure>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><blockquote>
+<p>socket指的是websocket实例，例如上面例子的<code>wss、ws</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Socket.readyState</td>
+<td>只读属性 readyState 表示连接状态，可以是以下值： 0 - 表示连接尚未建立。  1 - 表示连接已建立，可以进行通信。  2 - 表示连接正在进行关闭。  3 - 表示连接已经关闭或者连接不能打开。</td>
+</tr>
+<tr>
+<td>Socket.bufferedAmount</td>
+<td>只读属性 bufferedAmount 已被 send() 放入正在队列中等待传输，但是还没有发出的 UTF-8 文本字节数。</td>
+</tr>
+</tbody></table>
+<p><code>示例</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (ws.<span class="property">readyState</span>) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CONNECTING</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">OPEN</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CLOSING</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CLOSED</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="attr">default</span>:</span><br><span class="line">    <span class="comment">// this never happens</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>事件处理程序</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>open</td>
+<td>Socket.onopen</td>
+<td>连接建立时触发</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Socket.onmessage</td>
+<td>客户端接收服务端数据时触发</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Socket.onerror</td>
+<td>通信发生错误时触发</td>
+</tr>
+<tr>
+<td>close</td>
+<td>Socket.onclose</td>
+<td>连接关闭时触发</td>
+</tr>
+</tbody></table>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Socket.send()</td>
+<td>使用连接发送数据</td>
+</tr>
+<tr>
+<td>Socket.close()</td>
+<td>关闭连接</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>http</tag>
+        <tag>websocket</tag>
+      </tags>
   </entry>
   <entry>
     <title>hexo博客搭建</title>
     <url>/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     <content><![CDATA[<h1 id="Hexo博客搭建"><a href="#Hexo博客搭建" class="headerlink" title="Hexo博客搭建"></a>Hexo博客搭建</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
-<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="https://www.zybuluo.com/mdeditor" title="Markdown">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
+<p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="https://www.zybuluo.com/mdeditor">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 </blockquote>
 <p><code>优点</code></p>
 <ul>
@@ -567,128 +1236,112 @@
 <p>本案例使用github搭建，利用gitlab搭建流程一样，不再说明。</p>
 </blockquote>
 <h4 id="安装git"><a href="#安装git" class="headerlink" title="安装git"></a>安装git</h4><blockquote>
-<p>直接去官网默认安装即可(代码管理工具)。<a href="https://git-scm.com/" title="https://git-scm.com/">https://git-scm.com/</a></p>
+<p>直接去官网默认安装即可(代码管理工具)。<a href="https://git-scm.com/">https://git-scm.com/</a></p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_ZRQLcVvg5s.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712353291-e6a9b7d5-cc42-4de6-acb1-2b716b089d09.png#"></p>
 <blockquote>
 <p>安装完成后在右键git bash，输入git –version验证是否安装成功</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git --version</span><br></pre></td></tr></table></figure>
-
 <h4 id="安装node-js"><a href="#安装node-js" class="headerlink" title="安装node.js"></a>安装node.js</h4><blockquote>
-<p>安装<code>node.js</code>默认安装即可(hexo的运行环境)。直接去官网下载最新版本即可<a href="https://nodejs.org/zh-cn/download/" title="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a></p>
+<p>安装<code>node.js</code>默认安装即可(hexo的运行环境)。直接去官网下载最新版本即可<a href="https://nodejs.org/zh-cn/download/">https://nodejs.org/zh-cn/download/</a></p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_Ia7yVHSG0C.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712353412-80b56e35-99f5-4488-a282-32985ebaed14.png#"></p>
 <blockquote>
 <p>直接全部默认安装即可</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_mo2keDcFMQ.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712353504-70f3c64a-8910-4951-8f3b-b627750f689c.png#"></p>
 <blockquote>
 <p>打开bash或cmd，查看是否安装成功</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">node -v：显示安装的nodejs版本</span><br><span class="line">npm -v：显示安装的npm版本</span><br></pre></td></tr></table></figure>
-
 <h4 id="注册github账号"><a href="#注册github账号" class="headerlink" title="注册github账号"></a>注册github账号</h4><blockquote>
-<p>注册github账号(无需梯子)。官网如下，点击右上角sign in注册。<a href="https://github.com/" title="https://github.com/">https://github.com/</a></p>
+<p>注册github账号(无需梯子)。官网如下，点击右上角sign in注册。<a href="https://github.com/">https://github.com/</a></p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_Y5ZwlVIn1W.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712353655-5b2f98ff-d7e7-48ca-b953-ddb9bbcd47e2.png#"></p>
 <h4 id="创建github仓库"><a href="#创建github仓库" class="headerlink" title="创建github仓库"></a>创建github仓库</h4><blockquote>
 <p>登录创建一个名称为<code>hopesy.github.io</code>的仓库(hopesy是注册的用户名，替换成自己的，README初始化也要勾上)。此仓库就是我们的博客仓库。</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_YlOw84qC9o.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712354166-43c456bb-782e-4e63-beb2-f585e943e324.png#"></p>
 <blockquote>
 <p>进入上一步创建好的仓库,<code>settings →pages →choose a theme</code></p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_w-B67yjAPw.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712354327-848a6d23-2359-4843-a7a4-2bc135aaf428.png#"></p>
 <blockquote>
 <p>任选一个主题提交</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_ij9VzR7dS4.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712354408-3695e202-d8db-404c-b1e3-8d3095ec2f16.png#"></p>
 <blockquote>
 <p>显示如下即成功了，此时进去hopesy.github.io即可看到默认网页了(下面我们需要把hexo本地博客系统推送到此仓库来替换)</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_PZog8bXBJT.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712354501-38c48fba-14b7-4ffc-992f-9f4232886966.png#"></p>
 <h4 id="本地连接github"><a href="#本地连接github" class="headerlink" title="本地连接github"></a>本地连接github</h4><blockquote>
 <p>使用SSH配置地连接github(主要是为了避免远程提交文件时多次输入用户名和密码)</p>
 </blockquote>
 <p><code>设置用户名和邮箱</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;hopesy&quot;</span></span><br><span class="line"></span><br><span class="line">git config --global user.email <span class="string">&quot;1872638172@qq.com&quot;</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;hopesy&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;1872638172@qq.com&quot;</span></span><br></pre></td></tr></table></figure>
 <p><code>本地生成密钥</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&#x27;hopesy`</span></span><br><span class="line"><span class="string"># 一路回车即可</span></span><br><span class="line"><span class="string"># 密钥生成在  c/Users/用户明/.ssh/id_rsa.pub.</span></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">&#x27;hopesy`</span></span><br><span class="line"><span class="string"> # 一路回车即可</span></span><br><span class="line"><span class="string"> # 密钥生成在  c/Users/用户明/.ssh/id_rsa.pub.</span></span><br></pre></td></tr></table></figure>
 <p><code>连接github</code></p>
 <ul>
 <li>在Github头像下面点击Settings，再点击SSH and GPG keys，新建一个SSH，名字任意。</li>
 </ul>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_4Li3CSLj4L.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712354675-5e79ad01-5212-40fd-a680-05340c850282.png#"></p>
 <ul>
 <li>将<code>id_rsa.pub</code>文件中的所有内容粘贴进去</li>
 </ul>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_mEaJsdXLc3.png"></p>
-<p><code>测试是否连接成功</code></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712354814-cc9f171b-3b52-4b87-936c-f8c5fa5151a5.png#"><br><code>测试是否连接成功</code></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">ssh -T git@github.com</span><br><span class="line"> <span class="comment"># 注意不要做任何修改</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_6f3wJjBlEB.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712354910-7b865a03-3b18-445c-ab59-317c76fc1973.png#"></p>
 <h4 id="安装Hexo"><a href="#安装Hexo" class="headerlink" title="安装Hexo"></a>安装Hexo</h4><blockquote>
 <p>本地全局安装<code>hexo</code>博客程序()</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-
 <h3 id="搭建博客"><a href="#搭建博客" class="headerlink" title="搭建博客"></a>搭建博客</h3><h4 id="初始化hexo"><a href="#初始化hexo" class="headerlink" title="初始化hexo"></a>初始化hexo</h4><blockquote>
 <p>新建一个存放博客的文件夹，初始化hexo(进入文件夹右键，选择git bash )</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init <span class="comment"># 初始化</span></span><br><span class="line">npm install    <span class="comment"># 安装依赖组件</span></span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>启动本地服务器进行预览，默认浏览器输入<code>localhost:4000</code>即可看到页面</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g   <span class="comment"># 生成页面</span></span><br><span class="line">hexo s   <span class="comment"># 启动预览 hexo server -p 5000更改端口</span></span><br></pre></td></tr></table></figure>
-
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_EgoGO5QHNM.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712355030-0531ea07-c425-4a3c-a254-9c16d215fa3c.png#"></p>
 <blockquote>
 <p>Hexo 博客文件夹目录结构如下：</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">├── _config.yml  <span class="comment"># Hexo的配置文件，可以配置主题、语言等</span></span><br><span class="line">├── package.json <span class="comment"># 应用程序的信息。EJS,Stylus和Markdown renderer已默认安装，可以自由移除</span></span><br><span class="line">├── db.json</span><br><span class="line">├── debug.log</span><br><span class="line">├── node_modules</span><br><span class="line">├── public       <span class="comment"># 执行hexo g命令后，生成的内容会在这里，包括所有的文章、页面、分类、tag等.</span></span><br><span class="line">├── scaffolds    <span class="comment"># 保存着默认模板，自定义模板就是修改该目录下的文件</span></span><br><span class="line">│   ├── draft.md <span class="comment"># 默认的草稿模板</span></span><br><span class="line">│   ├── page.md  <span class="comment"># 默认的页面模板</span></span><br><span class="line">│   └── post.md  <span class="comment"># 默认的文章模板，生成新文章用这个模板</span></span><br><span class="line">├── <span class="built_in">source</span>       <span class="comment"># Hexo存放编辑页面的地方，可以使用vim或其他编辑器编辑这里的内容</span></span><br><span class="line">│   ├── 404.html <span class="comment"># 自定义404页面，可以使用腾讯公益404页面</span></span><br><span class="line">│   ├── Staticfile</span><br><span class="line">│   ├── _drafts  <span class="comment"># 存放所有的草稿文件的目录</span></span><br><span class="line">│   ├── _posts   <span class="comment"># 存放所有的文章文件的目录，用的最多，比如执行hexo n &quot;post_name&quot;之后，post_name这篇文章就存放在这个目录下</span></span><br><span class="line">│   ├── categories</span><br><span class="line">│   ├── tags</span><br><span class="line">└── themes     <span class="comment"># Hexo的所有主题</span></span><br><span class="line">    ├── landscape <span class="comment"># 原始hexo主题</span></span><br><span class="line">    ├── next     <span class="comment"># 这是我自己下载解压的主题</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="部署-Hexo-amp-x20"><a href="#部署-Hexo-amp-x20" class="headerlink" title="部署 Hexo&amp;#x20;"></a>部署 Hexo&amp;#x20;</h4><blockquote>
-<p>部署 Hexo 到 GitHub Pages，首先在博客文件夹下安装工具<code> hexo-deployer-git</code></p>
+<h4 id="部署-Hexo"><a href="#部署-Hexo" class="headerlink" title="部署 Hexo"></a>部署 Hexo</h4><blockquote>
+<p>部署 Hexo 到 GitHub Pages，首先在博客文件夹下安装工具<code>hexo-deployer-git</code></p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>然后修改 _config.yml 文件末尾的 Deployment 部分，修改成如下(我的用户名是hopesy替换成自己的):</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: git</span><br><span class="line">  repository: git@github.com:hopesy/hopesy.github.io.git</span><br><span class="line">  branch: master</span><br></pre></td></tr></table></figure>
-
 <p>完成后运行 <code>hexo d</code> 将网站上传部署到 GitHub Pages。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>浏览器输入 **<code>.github.io</code>查看是否部署成功。</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_7teeUTykHn.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712355224-09b619c3-2dd2-4cf3-8b96-ac4aeb342be0.png#"></p>
 <h4 id="写文章"><a href="#写文章" class="headerlink" title="写文章"></a>写文章</h4><blockquote>
 <p>首先在博客根目录下右键打开<code>Git Bash Here</code>输入以下命令生成文章(删除文章直接进入文件夹把md文件删除掉即可)</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo new post `hexo博客搭建`</span><br></pre></td></tr></table></figure>
-
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_cVyhbfhVxM.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712355370-36bd36ff-254c-4217-ba88-d7c9e22a1c4c.png#"></p>
 <blockquote>
 <p>按照markdown语法，编写文件后，推送到服务器</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo g <span class="comment"># 重新生成页面</span></span><br><span class="line">hexo s <span class="comment"># 本地localhost:4000预览效果</span></span><br><span class="line">hexo d <span class="comment"># 预览没问题的话，推送到服务器hopesy.github.io查看</span></span><br></pre></td></tr></table></figure>
-
-<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s <span class="comment"># 等价于 hexo server #Hexo 会监视文件变动并自动更新，除修改站点配置文件外</span></span><br><span class="line">       <span class="comment"># ,无须重启服务器,直接刷新网页即可生效。</span></span><br><span class="line">hexo g <span class="comment"># 等价于 hexo generate 生成静态网页(根目录下生成public&gt;文件夹,hexo会将</span></span><br><span class="line">       <span class="comment"># source下面的.md后缀的文件编译为.html后缀的文件,存放在public下。</span></span><br><span class="line">hexo d <span class="comment"># 等价于 hexo deploy 将本地数据按照配置部署到远端服务器(如github)</span></span><br><span class="line">hexo clean <span class="comment"># 清除缓存,正常情况忽略此命令,执行后会删掉根目录下的public文件夹。</span></span><br><span class="line">hexo new post `新文章` <span class="comment">#生成一遍文章</span></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<h4 id="常用命令"><a href="#常用命令" class="headerlink" title="常用命令"></a>常用命令</h4><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo s <span class="comment"># 等价于 hexo server #Hexo 会监视文件变动并自动更新，除修改站点配置文件外</span></span><br><span class="line">       <span class="comment"># ,无须重启服务器,直接刷新网页即可生效。</span></span><br><span class="line">hexo g <span class="comment"># 等价于 hexo generate 生成静态网页(根目录下生成public&gt;文件夹,hexo会将</span></span><br><span class="line">       <span class="comment"># source下面的.md后缀的文件编译为.html后缀的文件,存放在public下。</span></span><br><span class="line">hexo d <span class="comment"># 等价于 hexo deploy 将本地数据按照配置部署到远端服务器(如github)</span></span><br><span class="line">hexo clean <span class="comment"># 清除缓存,正常情况忽略此命令,执行后会删掉根目录下的public文件夹。</span></span><br><span class="line">hexo new post `新文章` <span class="comment">#生成一遍文章</span></span><br></pre></td></tr></table></figure>
 <h3 id="显示图片"><a href="#显示图片" class="headerlink" title="显示图片"></a>显示图片</h3><blockquote>
 <p>修改博客根目录中<code>_config.yml</code>文件的配置项<code>post_asset_folder</code>为<code>true</code>。完成此设置后，当你通过<code>hexo new 文件名</code>新建文章后，会产生一个和文件同名的文件夹。</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/image_UzVqLzXtej.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712355520-e95fbd71-a2eb-40d6-b65a-f9b75a5f85da.png#"></p>
 <blockquote>
 <p>然后安装图片路径转换插件,这样就可以显示图片了</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install https://github.com/CodeFalling/hexo-asset-image --save</span><br></pre></td></tr></table></figure>
 
 ]]></content>
       <categories>
@@ -741,14 +1394,13 @@
 </tr>
 </tbody></table>
 <h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><blockquote>
-<p>去官网挑选喜欢的主题<a href="https://hexo.io/themes/" title="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
+<p>去官网挑选喜欢的主题<a href="https://hexo.io/themes/">https://hexo.io/themes/</a></p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_lfl39VveS2.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712355808-423d2875-5cb3-48c7-bed8-01c11e04b401.png#"></p>
 <blockquote>
 <p>下载主题，将他放在<code>themes</code>文件夹下。</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_3mMSwqxtqx.png"></p>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_KjDNx_fj6l.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712355989-b04ebaee-4bb4-4d25-ac8f-c0cb7908103b.png#"><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712356135-24091a8d-ade1-4042-ba00-3b54700bbc26.png#"></p>
 <blockquote>
 <p>修改Hexo配置文件 <code>_config.yml</code> 主题项设置为主题名称，即可查看其效果（每个主题的具体配置方法需要进入其官网查看）</p>
 </blockquote>
@@ -756,12 +1408,10 @@
 <p>安装依赖</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <p>输入以下命令，下载相应的模型，将 packagename 更换成模型名称即可。</p>
 </blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-shizuku</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-shizuku</span><br></pre></td></tr></table></figure>
 <p><code>模型名称如下：</code></p>
 <ul>
 <li><p>live2d-widget-model-chitose</p>
@@ -817,37 +1467,33 @@
 </li>
 </ul>
 <blockquote>
-<p>打开站点目录下的 <code>_config.yml </code>文件，添加如下代码：</p>
+<p>打开站点目录下的 <code>_config.yml</code>文件，添加如下代码：</p>
 </blockquote>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># live2d</span></span><br><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span>  <span class="comment"># 是否启动</span></span><br><span class="line">  scriptFrom: <span class="built_in">local</span> <span class="comment"># 默认</span></span><br><span class="line">  pluginRootPath: live2dw/  <span class="comment"># 插件在站点上的根目录(相对路径)</span></span><br><span class="line">  pluginJsPath: lib/  <span class="comment"># 脚本文件相对与插件根目录路径</span></span><br><span class="line">  pluginModelPath: assets/  <span class="comment"># 模型文件相对与插件根目录路径</span></span><br><span class="line">  tagMode: <span class="literal">false</span>  <span class="comment"># 标签模式, 是否仅替换 live2d tag标签而非插入到所有页面中</span></span><br><span class="line">  debug: <span class="literal">false</span>  <span class="comment"># 调试, 是否在控制台输出日志</span></span><br><span class="line">  model:</span><br><span class="line">    use: live2d-widget-model-shizuku <span class="comment"># npm-module package name</span></span><br><span class="line">  display:</span><br><span class="line">    position: right <span class="comment"># 定位方向 left right top bottom</span></span><br><span class="line">    width: 150  <span class="comment"># 小人宽度</span></span><br><span class="line">    height: 300 <span class="comment">#  小人高度</span></span><br><span class="line">    hOffset: -15  <span class="comment"># 向 偏移</span></span><br><span class="line">    vOffset: -15  <span class="comment"># 像 偏移</span></span><br><span class="line">  mobile:</span><br><span class="line">    show: <span class="literal">true</span>  <span class="comment"># 手机端是否显示</span></span><br><span class="line">  react:</span><br><span class="line">    opacity: 0.7  <span class="comment"># 模型透明度</span></span><br></pre></td></tr></table></figure>
-
 <h3 id="浏览器网页标题恶搞"><a href="#浏览器网页标题恶搞" class="headerlink" title="浏览器网页标题恶搞"></a>浏览器网页标题恶搞</h3><blockquote>
-<p>首先在目录 <code>\Hexo\themes\hexo-theme-spfk\source\js </code>下新建一个 FunnyTitle.js 文件，在里面填写如下代码：</p>
+<p>首先在目录 <code>\Hexo\themes\hexo-theme-spfk\source\js</code>下新建一个 FunnyTitle.js 文件，在里面填写如下代码：</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!--浏览器搞笑标题--&gt;</span><br><span class="line"> <span class="keyword">var</span> <span class="title class_">OriginTitle</span> = <span class="variable language_">document</span>.<span class="property">title</span>;</span><br><span class="line"> <span class="keyword">var</span> titleTime;</span><br><span class="line"> <span class="variable language_">document</span>.<span class="title function_">addEventListener</span>(<span class="string">&#x27;visibilitychange&#x27;</span>, <span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">     <span class="keyword">if</span> (<span class="variable language_">document</span>.<span class="property">hidden</span>) &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/img/trhx2.png&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;ヽ(●-`Д´-)ノ你丑你就走！&#x27;</span>;</span><br><span class="line">         <span class="built_in">clearTimeout</span>(titleTime);</span><br><span class="line">     &#125;</span><br><span class="line">     <span class="keyword">else</span> &#123;</span><br><span class="line">         $(<span class="string">&#x27;[rel=&quot;icon&quot;]&#x27;</span>).<span class="title function_">attr</span>(<span class="string">&#x27;href&#x27;</span>, <span class="string">&quot;/img/trhx2.png&quot;</span>);</span><br><span class="line">         <span class="variable language_">document</span>.<span class="property">title</span> = <span class="string">&#x27;ヾ(Ő∀Ő3)ノ你帅就回来！&#x27;</span> + <span class="title class_">OriginTitle</span>;</span><br><span class="line">         titleTime = <span class="built_in">setTimeout</span>(<span class="keyword">function</span> (<span class="params"></span>) &#123;</span><br><span class="line">             <span class="variable language_">document</span>.<span class="property">title</span> = <span class="title class_">OriginTitle</span>;</span><br><span class="line">         &#125;, <span class="number">2000</span>);</span><br><span class="line">     &#125;</span><br><span class="line"> &#125;);</span><br></pre></td></tr></table></figure>
-
 <blockquote>
-<p>然后在<code> \Hexo\themes\hexo-theme-spfk\layout\layout.ejs </code>文件中添加如下代码:</p>
+<p>然后在<code>\Hexo\themes\hexo-theme-spfk\layout\layout.ejs</code>文件中添加如下代码:</p>
 </blockquote>
 <figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!--浏览器搞笑标题--&gt;</span><br><span class="line"><span class="language-xml"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;\js\FunnyTitle.js&quot;</span>&gt;</span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></span></span><br></pre></td></tr></table></figure>
-
 <h3 id="绑定域名"><a href="#绑定域名" class="headerlink" title="绑定域名"></a>绑定域名</h3><blockquote>
 <p>购买域名，去<code>godaddy</code>,<code>阿里云</code>,<code>腾讯云</code>都可以</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_oV8qASw9nT.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712356304-bdb1f0f3-be8f-4afd-b532-5a55ee348574.png#"></p>
 <blockquote>
 <p>进入腾讯云后台，添加域名解析</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_Wzv1Y_Stkv.png"></p>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_W8GKwD1cR0.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712356419-d0c6d1f2-b313-4663-a985-eb2041b9c621.png#"><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712356507-23a63d4a-3c1e-4df7-ba91-57c7027fdc4b.png#"></p>
 <blockquote>
-<p>本地<code>hexo</code>设置<code>CNAME</code>。在 hexo 项目下，<code>source </code>文件夹下面创建<code> CNAME 文件（没有后缀名的）</code>，在里面写上购买的域名。</p>
+<p>本地<code>hexo</code>设置<code>CNAME</code>。在 hexo 项目下，<code>source</code>文件夹下面创建<code>CNAME 文件（没有后缀名的）</code>，在里面写上购买的域名。</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_lpGUFpmFv7.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712356591-9e4a1ca8-ef43-4cdf-b736-e6bc82947458.png#"></p>
 <blockquote>
-<p><code>GitHub Pages</code>的<code> Custom domain</code>设置里填上购买的域名。（其他平台coding,gitee类似）</p>
+<p><code>GitHub Pages</code>的<code>Custom domain</code>设置里填上购买的域名。（其他平台coding,gitee类似）</p>
 </blockquote>
-<p><img src="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/image_mXW_a7aUVk.png"></p>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1655712356780-abd751bd-0bbc-4fa7-88b7-2d18f2f99915.png#"></p>
 <blockquote>
 <p>最后重新生成就可以通过域名直接访问了</p>
 </blockquote>
@@ -857,6 +1503,135 @@
       </categories>
       <tags>
         <tag>博客</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hexo基础命令</title>
+    <url>/2022/06/20/hexo%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! 这个是第一篇文档. 查看<a href="https://hexo.io/docs/">documentation</a> 了解更多信息.</p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+  </entry>
+  <entry>
+    <title>跨域请求</title>
+    <url>/2022/06/24/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/</url>
+    <content><![CDATA[<h1 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h1><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><blockquote>
+<p>在 HTML 中，<code>&lt;a&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;link&gt;</code> 等标签以及 Ajax 都可以指向一个资源地址，而所谓的<strong>跨域请求</strong>就是指：当前发起请求的域与该请求指向的资源所在的域不一样。<strong>这里的域指的是这样的一个概念：我们认为若协议 + 域名 + 端口号均相同，那么就是同域。</strong></p>
+</blockquote>
+<h4 id="跨域请求的安全问题"><a href="#跨域请求的安全问题" class="headerlink" title="跨域请求的安全问题"></a>跨域请求的安全问题</h4><blockquote>
+<p>通常，浏览器会对上面提到的跨域请求作出限制。浏览器之所以要对跨域请求作出限制，是出于安全方面的考虑，因为跨域请求有可能被不法分子利用来发动 <strong>CSRF</strong>攻击。</p>
+</blockquote>
+<h4 id="CSRF攻击："><a href="#CSRF攻击：" class="headerlink" title="CSRF攻击："></a>CSRF攻击：</h4><blockquote>
+<p>CSRF（Cross-site request forgery），中文名称：跨站请求伪造，也被称为：one click attack&#x2F;session riding，缩写为：CSRF&#x2F;XSRF。CSRF攻击者在用户已经登录目标网站之后，诱使用户访问一个攻击页面，利用目标网站对用户的信任，以用户身份在攻击页面对目标网站发起伪造用户操作的请求，达到攻击目的。</p>
+</blockquote>
+<p>CSRF 攻击的原理大致描述如下：有两个网站，其中A网站是真实受信任的网站，而B网站是危险网站。在用户登陆了受信任的A网站是，本地会存储A网站相关的Cookie，并且浏览器也维护这一个Session会话。这时，如果用户在没有登出A网站的情况下访问危险网站B，那么危险网站B就可以模拟发出一个对A网站的请求（跨域请求）对A网站进行操作，而在A网站的角度来看是并不知道请求是由B网站发出来的（Session和Cookie均为A网站的），这时便成功发动一次CSRF 攻击。</p>
+<p>因而 CSRF 攻击可以简单理解为：攻击者盗用了你的身份，以你的名义发送而已请求。CSRF能够做的事情包括：以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账……造成的问题包括：个人隐私泄露以及财产安全。</p>
+<p>因此，大多数浏览器都会跨域请求作出限制，这是从浏览器层面上的对 CSRF 攻击的一种防御，但是需要注意的是在复杂的网络环境中借助浏览器来防御 CSRF 攻击并不足够，还需要从服务端或者客户端方面入手防御。详细可以参考这篇文章<a href="https://link.jianshu.com/?t=http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html">浅谈CSRF攻击方式</a></p>
+<h2 id="同源策略-Same-origin-Policy"><a href="#同源策略-Same-origin-Policy" class="headerlink" title="同源策略(Same-origin Policy)"></a>同源策略(Same-origin Policy)</h2><h4 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h4><ul>
+<li>同源策略是 Netscape 提出的一个著名的安全策略</li>
+</ul>
+<p>同源策略是浏览器最核心最基础的安全策略</p>
+<p>现在所有的可支持 Javascript 的浏览器都会使用这个策略</p>
+<p>web构建在同源策略基础之上，浏览器对非同源脚本的限制措施是对同源策略的具体实现</p>
+<h4 id="同源策略的含义"><a href="#同源策略的含义" class="headerlink" title="同源策略的含义"></a>同源策略的含义</h4><p>DOM 层面的同源策略：限制了来自不同源的”Document”对象或 JS 脚本，对当前“document”对象的读取或设置某些属性</p>
+<p>Cookie和XMLHttprequest层面的同源策略：禁止 Ajax 直接发起跨域HTTP请求（其实可以发送请求，结果被浏览器拦截，不展示），同时 Ajax 请求不能携带与本网站不同源的 Cookie。</p>
+<p>同源策略的非绝对性：<code>&lt;script&gt;&lt;img&gt;&lt;iframe&gt;&lt;link&gt;&lt;video&gt;&lt;audio&gt;</code>等带有src属性的标签可以从不同的域加载和执行资源。</p>
+<p>其他插件的同源策略：<code>flash、java applet、silverlight、googlegears</code>等浏览器加载的第三方插件也有各自的同源策略，只是这些同源策略不属于浏览器原生的同源策略，如果有漏洞则可能被黑客利用，从而留下XSS攻击的后患</p>
+<h4 id="同源的具体含义"><a href="#同源的具体含义" class="headerlink" title="同源的具体含义"></a>同源的具体含义</h4><p>域名、协议、端口有一个不同就不是同源，三者均相同，这两个网站才是同源</p>
+<h2 id="跨域解决方法"><a href="#跨域解决方法" class="headerlink" title="跨域解决方法"></a>跨域解决方法</h2><p>虽然在安全层面上同源限制是必要的，但有时同源策略会对我们的合理用途造成影响，为了避免开发的应用受到限制，有多种方式可以绕开同源策略，下面介绍的是经常使用的 JSONP, CORS 方法。</p>
+<h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><h4 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h4><p>JSONP 是一种非官方的跨域数据交互协议</p>
+<p>JSONP 本质上是利用 <code>&lt;script&gt;&lt;img&gt;&lt;iframe&gt;</code> 等标签不受同源策略限制，可以从不同域加载并执行资源的特性，来实现数据跨域传输。</p>
+<p>JSONP由两部分组成：回调函数和数据。回调函数是当响应到来时应该在页面中调用的函数，而数据就是传入回调函数中的JSON数据。</p>
+<p>JSONP 的理念就是，与服务端约定好一个回调函数名，服务端接收到请求后，将返回一段 Javascript，在这段 Javascript 代码中调用了约定好的回调函数，并且将数据作为参数进行传递。当网页接收到这段 Javascript 代码后，就会执行这个回调函数，这时数据已经成功传输到客户端了。</p>
+<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>首先当前页面中声明有这样的一个函数，它将作为 JSONP 的回调函数处理作为函数参数传入的数据</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">dosomething</span>(<span class="params">jsondata</span>)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//处理获得的json数据</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>然后，我们就可以借助 <code>&lt;script&gt;&lt;img&gt;&lt;iframe&gt;</code> 等标签可以引入不同域资源的特性，将需要发送的请求的路径作为src参数，其中需要注意的是：需要告知服务端回调函数的函数名。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;[http://example.com/data.php?callback=dosomething](http://example.com/data.php?callback=dosomething)&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这时服务端在返回数据的时候，就会返回一端 Javascript 代码，在 Javascript代码中调用了回调函数，并且需要返回的数据作为回调函数的参数</p>
+</blockquote>
+<blockquote>
+<p><code>dosomething([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]);</code></p>
+</blockquote>
+<blockquote>
+<p>最后页面成功加载了刚才指定路径的资源后，将会执行该 Javascript 代码，<code>dosomething</code>函数将执行，这时一次跨域请求完成。</p>
+</blockquote>
+<p>另外，如果页面引入了 jQuery，那么可以通过它封装的方法很方便的实现JSONP操作了</p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="comment">// Using YQL and JSONP</span></span><br><span class="line"></span><br><span class="line">$.<span class="title function_">ajax</span>(&#123;</span><br><span class="line"></span><br><span class="line">  <span class="attr">url</span>: <span class="string">&quot;[http://query.yahooapis.com/v1/public/yql](http://query.yahooapis.com/v1/public/yql)&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// The name of the callback parameter, as specified by the YQL service</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">jsonp</span>: <span class="string">&quot;callback&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Tell jQuery we&#x27;re expecting JSONP</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">dataType</span>: <span class="string">&quot;jsonp&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Tell YQL what we want and that we want JSON</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line"></span><br><span class="line">    <span class="attr">q</span>: <span class="string">&quot;select title,abstract,url from search.news where query=\&quot;cat\&quot;&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="attr">format</span>: <span class="string">&quot;json&quot;</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Work with the response</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params"> response </span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>( response ); <span class="comment">// server response</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="优缺点："><a href="#优缺点：" class="headerlink" title="优缺点："></a>优缺点：</h4><p>JSONP 的优点是：它不像<code>XMLHttpRequest</code>对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都可以运行。</p>
+<p>JSONP 的缺点是：它只支持 GET 请求，而不支持 POST 请求等其他类型的 HTTP 请求</p>
+<h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><blockquote>
+<p>跨源资源共享 Cross-Origin Resource Sharing(CORS)  是一个新的 W3C 标准，它新增的一组HTTP首部字段，允许服务端其声明哪些源站有权限访问哪些资源。换言之，它允许浏览器向声明了 CORS 的跨域服务器，发出 XMLHttpReuest 请求，从而克服 Ajax 只能同源使用的限制。</p>
+</blockquote>
+<blockquote>
+<p>另外，规范也要求对于非简单请求，浏览器必须首先使用 OPTION 方法发起一个预检请求(preflight request)，从而获知服务端是否允许该跨域请求，在服务器确定允许后，才发起实际的HTTP请求。对于简单请求、非简单请求以及预检请求的详细资料可以阅读<a href="https://link.jianshu.com/?t=https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS">HTTP访问控制（CORS）</a> 。</p>
+</blockquote>
+<h4 id="HTTP-协议-Header-简析"><a href="#HTTP-协议-Header-简析" class="headerlink" title="HTTP 协议 Header 简析"></a>HTTP 协议 Header 简析</h4><blockquote>
+<p>下面对 CORS 中新增的 HTTP 首部字段进行简析：</p>
+</blockquote>
+<p>Access-Control-Allow-Origin</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">响应首部中可以携带这个头部表示服务器允许哪些域可以访问该资源，其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Allow-Origin: &lt;origin&gt; |`&amp;#x20;</span><br><span class="line"></span><br><span class="line">其中，origin 参数的值指定了允许访问该资源的外域 URI。对于不需要携带身份凭证的请求，服务器可以指定该字段的值为通配符，表示允许来自所有域的请求。*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Allow-Methods</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">该首部字段用于预检请求的响应，指明实际请求所允许使用的HTTP方法。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]`*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Allow-Headers</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">该首部字段用于预检请求的响应。指明了实际请求中允许携带的首部字段。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Allow-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]`*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Max-Age</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">该首部字段用于预检请求的响应，指定了预检请求能够被缓存多久，其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Max-Age: &lt;delta-seconds&gt;`*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Allow-Credentials</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为`true`，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Allow-Credentials: true`</span><br><span class="line"></span><br><span class="line">另外，如果要把 Cookie 发送到服务器，除了服务端要带上`Access-Control-Allow-Credentials`首部字段外，另一方面请求中也要带上`withCredentials`属性。</span><br><span class="line"></span><br><span class="line">但是需要注意的是：如果需要在 Ajax 中设置和获取 Cookie，那么`Access-Control-Allow-Origin`首部字段不能设置为`*` ，必须设置为具体的 origin 源站。详细可阅读文章[CORS 跨域 Cookie 的设置与获取](https://www.jianshu.com/p/13d53acc124f &quot;CORS 跨域 Cookie 的设置与获取&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Origin该首部字段表明预检请求或实际请求的源站。不管是否为跨域请求，Origin字段总是被发送。其语法如下：</li>
+</ul>
+<p>      <code>Origin: &lt;origin&gt;</code></p>
+<p>Access-Control-Request-Method</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">该首部字段用于预检请求。其作用是，将实际请求所使用的 HTTP 方法告诉服务器。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Request-Method: &lt;method&gt;`*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Request-Headers</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">该首部字段用于预检请求。其作用是，将实际请求所携带的首部字段告诉服务器。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]`</span><br></pre></td></tr></table></figure>
+
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>假设我们在 <a href="http://bbb.cn/">bbb.cn</a> 域名下，发送一个 Ajax 请求到 <a href="http://aaa.cn/">aaa.cn</a> 域名，其路径如下：<code>http://aaa.cn/localserver/api/corsTest</code> 。由于同源策略，这样的 Ajax 请求将会被浏览器所拦截，得到下面的信息：</p>
+</blockquote>
+<p><img src="//upload-images.jianshu.io/upload_images/5805218-a1c76ebcaf18557e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/613/format/webp#alt="></p>
+<blockquote>
+<p>若想能够发送跨域请求，我们只需要在服务器的响应中配置适当的CORS HTTP 首部字段就可以了，例如可以加入以下的首部字段：<code>Access-Control-Allow-Methods：</code></p>
+</blockquote>
+<p>此时，Ajax请求就可以顺利的发送和接收了，对应的请求和响应头部如下：</p>
+<p><img src="//upload-images.jianshu.io/upload_images/5805218-b12fc2691e46fcea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/876/format/webp#alt="></p>
+<p><img src="//upload-images.jianshu.io/upload_images/5805218-bfc1301590eaaeda.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/725/format/webp#alt="></p>
+<h4 id="与-JSONP-的比较"><a href="#与-JSONP-的比较" class="headerlink" title="与 JSONP 的比较"></a>与 JSONP 的比较</h4><ul>
+<li>JSONP 只能实现 GET 请求，而 CORS 支持所有类型的 HTTP 请求</li>
+</ul>
+<p>使用 CORS ，开发者可以是使用普通的 XMLHttpRequest 发起请求和获取数据，比起 JSONP 有更好的错误处理</p>
+<p>虽然绝大多数现代的浏览器都已经支持 CORS，但是 CORS 的兼容性比不上 JSONP，一些比较老的浏览器只支持 JSONP</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>跨域请求</tag>
+        <tag>cors</tag>
       </tags>
   </entry>
 </search>

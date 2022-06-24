@@ -5,7 +5,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>归档: 2022/4</title>
+    <title>标签: cors - hopesy</title>
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="google" content="notranslate" />
@@ -43,80 +43,117 @@
 <body class="loading">
     <span id="config-title" style="display:none">hopesy</span>
     <div id="loader"></div>
-    <div id="single" class="page">
-    <div id="top">
-        <a class="iconfont icon-left image-icon" href="javascript:history.back()"></a>
-    </div>
-    <div class="section">
-        <div class="article">
-            <div class="main">
-                <div class="content">
-                    <div class="timeline">
-                      <h2 class="timeline-title">归档: 9篇</h2><hr>
-                      
-                      
-                        
-                          <h3 class="timeline-subtitle">2022</h3>
-                        
-                        <div class="timeline-item">
-                          <time>2022-06-24</time>
-                          <a target="_self" href="/2022/06/24/Mysql%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/">Mysql基础使用</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2022-06-24</time>
-                          <a target="_self" href="/2022/06/24/WebSocket%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/">WebSocket基本使用</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2022-06-24</time>
-                          <a target="_self" href="/2022/06/24/MongoDb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">MongoDb学习笔记</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2022-06-24</time>
-                          <a target="_self" href="/2022/06/24/Ajax%E8%AF%B7%E6%B1%82/">Ajax请求</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2022-06-24</time>
-                          <a target="_self" href="/2022/06/24/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/">跨域请求</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2022-06-20</time>
-                          <a target="_self" href="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/">hexo博客美化</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2022-06-20</time>
-                          <a target="_self" href="/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/">hexo博客搭建</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2022-06-20</time>
-                          <a target="_self" href="/2022/06/20/hexo%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/">Hexo基础命令</a>
-                        </div>
-                      
-                        
-                        <div class="timeline-item">
-                          <time>2022-04-17</time>
-                          <a target="_self" href="/2022/04/17/Echarts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/">Echarts学习笔记</a>
-                        </div>
-                      
-                    </div>
-                </div>
-            </div>
+    <div class="nav">
+    <ul id="menu-menu" class="menu">
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/../" title="首页" target="_blank" rel="noopener">首页</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/categories/" title="分类" target="_blank" rel="noopener">分类</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/tags/" title="标签" target="_blank" rel="noopener">标签</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/archives/" title="归档" target="_blank" rel="noopener">归档</a>
+        </li>
+        
+        <li class="pview menu-item menu-item-type-post_type menu-item-object-page">
+            <a href="/about/" title="关于" target="_blank" rel="noopener">关于</a>
+        </li>
+        
+    </ul>
+	<span class="target"></span>
+	<center>
+	<div class="hitokoto">
+		<span class="typed" id="hitokoto" data-st="true"></span>
+	</div>
+	</center>
+	
+	<!--
+	<p class="footerlinks">
+		<a href="#" class="iconfont icon-null"></a>
+		
+            <a href="/" title="facebook" class="iconfont icon-facebook" target="_blank" rel="noopener"> </a>
+        
+            <a href="/" title="twitter" class="iconfont icon-twitter" target="_blank" rel="noopener"> </a>
+        
+            <a href="/" title="github" class="iconfont icon-github" target="_blank" rel="noopener"> </a>
+        
+            <a href="/img/logo.png" title="wechat" class="iconfont icon-wechat" target="_blank" rel="noopener"> </a>
+        
+            <a href="mailto:hopesy@gmail.com" title="email" class="iconfont icon-email" target="_blank" rel="noopener"> </a>
+        
+		<a href="#" class="iconfont icon-null"></a>
+	</p>
+	-->
+	
+	<p class="copyright">
+		<a target="_blank"><img src="https://img.shields.io/badge/2022-hopesy-blue?logo=Elastic Cloud&style=flat-square&color=FF4747"></a>
+		<a href="https://hexo.io/zh-cn/" target="_blank" title="本站框架为Hexo"><img src="https://img.shields.io/badge/Frame-Hexo-blue?logo=Hexo&style=flat-square&logoColor=ffffff"></a>
+		<a href="https://github.com/Fechin/hexo-theme-diaspora" target="_blank" title="主题为Diaspora"><img src="https://img.shields.io/badge/Theme-Diaspora-blue?logo=Thumbtack&style=flat-square&logoColor=ffffff&color=FF7102"></a>
+		<a href="https://www.jsdelivr.com/" target="_blank" title="本站使用jsDelivr为静态资源使用CDN加速"><img src="https://img.shields.io/badge/CDN-jsDelivr-blue?logo=jsDelivr&style=flat-square&logoColor=ffffff&color=512BD4"></a>
+		<a href="https://vercel.com/dashboard" target="_blank" title="本站使用双线部署，托管于Vercel"><img src="https://img.shields.io/badge/Hosted-Vercel-blue?logo=Vercel&style=flat-square&logoColor=ffffff&color=4BB749"></a>
+		<a href="https://coding.net/" target="_blank" title="本站使用双线部署，托管于Coding"><img src="https://img.shields.io/badge/Hosted-Coding-blue?logo=Codio&style=flat-square&logoColor=ffffff&color=4574E0"></a>
+		<a href="https://github.com/" target="_blank" title="本站项目由GitHub托管"><img src="https://img.shields.io/badge/Source-Github-blue?logo=Github&style=flat-square&logoColor=ffffff&color=A81C7D"></a>
+	</p>
+
+	<!--
+    <p id="copyright">
+        &copy; 2022 hopesy.
+        <span> | </span>Powered by <a href="https://hexo.io/" title="Hexo" target="_blank" rel="noopener">Hexo</a>
+        <span> | </span>Theme <a href="https://github.com/Fechin/hexo-theme-diaspora" title="Diaspora" target="_blank" rel="noopener">Diaspora</a> by Fechin
+		
+    </p>
+    -->
+    
+</div>
+
+<div id="container">
+    
+<div id="screen">
+    <div id="mark">
+        <div class="layer" data-depth="0.4">
+            <img src="/img/welcome-cover.jpg" id="cover" crossorigin="anonymous" width="1920" height="1080">
         </div>
     </div>
+    <div id="vibrant">
+        <svg viewBox="0 0 2880 1620" height="100%" preserveAspectRatio="xMaxYMax slice">
+            <polygon opacity="0.7" points="2000,1620 0,1620 0,0 600,0 "/>
+        </svg>
+        <div></div>
+    </div>
+    <div id="header">
+        <div>
+            <a class="image-logo" href="/"></a>
+			
+			<div class="iconfont icon-search switchsearch" href="/search/" title="搜索"></div>
+			
+            <div class="iconfont icon-menu switchmenu"></div>
+        </div>
+    </div>
+    
+    <div id="post0">
+        <p>六月 24, 2022</p>
+        <h2><a href="/2022/06/24/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/" title="跨域请求" class="posttitle">跨域请求</a></h2>
+        <p class="summary">跨域请求概述
+在 HTML 中，&lt;a&gt;, &lt;form&gt;, &lt;img&gt;, &lt...</p>
+    </div>
+    
 </div>
+
+    <div id="primary">
+        
+    </div>
+    
+</div>
+<div id="preview"></div>
+
+
 
     <!--�������Ц����-->
 <script type="text/javascript" src="\js\FunnyTitle.js"></script>

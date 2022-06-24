@@ -1,0 +1,301 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN" class="loading">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>跨域请求 - hopesy</title>
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="google" content="notranslate" />
+    <link rel="stylesheet" href="/css/mouse.css">
+    <meta name="keywords" content="hopesy,个人博客,"> 
+    <meta name="description" content="hopesy的个人笔记,跨域请求概述
+在 HTML 中，&amp;lt;a&amp;gt;, &amp;lt;form&amp;gt;, &amp;lt;img&amp;gt;, &amp;lt;script&amp;gt;, &amp;lt;iframe&amp;gt;, &amp;lt;link&amp;gt; ,"> 
+    <meta name="author" content="hopesy"> 
+    <link rel="alternative" href="atom.xml" title="hopesy" type="application/atom+xml"> 
+    <link rel="icon" href="/img/favicon.png"> 
+    
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.css">
+
+    
+<link rel="stylesheet" href="/css/diaspora.css">
+<link rel="stylesheet" href="/css/site.css">
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <script>
+         (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-8691406134231910",
+              enable_page_level_ads: true
+         });
+    </script>
+    <script async custom-element="amp-auto-ads"
+        src="https://cdn.ampproject.org/v0/amp-auto-ads-0.1.js">
+    </script>
+
+    <!-- 代码块复制 -->
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/clipboard@latest/dist/clipboard.js"></script>
+
+    <!-- 点击效果 -->
+    
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body class="loading">
+    <span id="config-title" style="display:none">hopesy</span>
+    <div id="loader"></div>
+    <div id="single">
+    <div id="top" style="display: block;">
+    <div class="bar" style="width: 0;"></div>
+    <a class="iconfont icon-home image-icon" href="javascript:;" data-url="https://hopesy.github.io"></a>
+    <div title="播放/暂停" class="iconfont icon-play"></div>
+    <h3 class="subtitle">跨域请求</h3>
+    <div class="social">
+        <div>
+            <div class="share">
+                <a title="获取二维码" class="iconfont icon-scan" href="javascript:;"></a>
+            </div>
+            <div id="qr"></div>
+        </div>
+    </div>
+    <div class="scrollbar"></div>
+</div>
+
+    <div class="section">
+        <!-- 帖子视图 -->
+
+    <div class="post_cover" >
+        
+            <img src="https://hopesy.github.io/imags/cover/cover8.jpg" />
+        
+        <div class="post_cover_mask"></div>
+        <div class="post_text">
+            <h1>跨域请求</h1>
+            <div>
+                <span>六月 24, 2022</span>
+
+                
+  <ul class="post-tags-list" itemprop="keywords"><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/cors/" rel="tag">cors</a></li><li class="post-tags-list-item"><a class="post-tags-list-link" href="/tags/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/" rel="tag">跨域请求</a></li></ul>
+
+
+            </div>
+        </div>
+    </div>
+
+
+<div class="article">
+    <div class='main'>
+        <!-- 帖子视图 -->
+        
+        
+        <!-- 更新时间 -->
+        <div class="updated">
+            <div></div>
+            <span>该文章更新于 2022.06.24</span>
+        </div>
+
+        <div class="content markdown">
+            <h1 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h1><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><blockquote>
+<p>在 HTML 中，<code>&lt;a&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;link&gt;</code> 等标签以及 Ajax 都可以指向一个资源地址，而所谓的<strong>跨域请求</strong>就是指：当前发起请求的域与该请求指向的资源所在的域不一样。<strong>这里的域指的是这样的一个概念：我们认为若协议 + 域名 + 端口号均相同，那么就是同域。</strong></p>
+</blockquote>
+<h4 id="跨域请求的安全问题"><a href="#跨域请求的安全问题" class="headerlink" title="跨域请求的安全问题"></a>跨域请求的安全问题</h4><blockquote>
+<p>通常，浏览器会对上面提到的跨域请求作出限制。浏览器之所以要对跨域请求作出限制，是出于安全方面的考虑，因为跨域请求有可能被不法分子利用来发动 <strong>CSRF</strong>攻击。</p>
+</blockquote>
+<h4 id="CSRF攻击："><a href="#CSRF攻击：" class="headerlink" title="CSRF攻击："></a>CSRF攻击：</h4><blockquote>
+<p>CSRF（Cross-site request forgery），中文名称：跨站请求伪造，也被称为：one click attack&#x2F;session riding，缩写为：CSRF&#x2F;XSRF。CSRF攻击者在用户已经登录目标网站之后，诱使用户访问一个攻击页面，利用目标网站对用户的信任，以用户身份在攻击页面对目标网站发起伪造用户操作的请求，达到攻击目的。</p>
+</blockquote>
+<p>CSRF 攻击的原理大致描述如下：有两个网站，其中A网站是真实受信任的网站，而B网站是危险网站。在用户登陆了受信任的A网站是，本地会存储A网站相关的Cookie，并且浏览器也维护这一个Session会话。这时，如果用户在没有登出A网站的情况下访问危险网站B，那么危险网站B就可以模拟发出一个对A网站的请求（跨域请求）对A网站进行操作，而在A网站的角度来看是并不知道请求是由B网站发出来的（Session和Cookie均为A网站的），这时便成功发动一次CSRF 攻击。</p>
+<p>因而 CSRF 攻击可以简单理解为：攻击者盗用了你的身份，以你的名义发送而已请求。CSRF能够做的事情包括：以你名义发送邮件，发消息，盗取你的账号，甚至于购买商品，虚拟货币转账……造成的问题包括：个人隐私泄露以及财产安全。</p>
+<p>因此，大多数浏览器都会跨域请求作出限制，这是从浏览器层面上的对 CSRF 攻击的一种防御，但是需要注意的是在复杂的网络环境中借助浏览器来防御 CSRF 攻击并不足够，还需要从服务端或者客户端方面入手防御。详细可以参考这篇文章<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=http://www.cnblogs.com/hyddd/archive/2009/04/09/1432744.html">浅谈CSRF攻击方式</a></p>
+<h2 id="同源策略-Same-origin-Policy"><a href="#同源策略-Same-origin-Policy" class="headerlink" title="同源策略(Same-origin Policy)"></a>同源策略(Same-origin Policy)</h2><h4 id="概述-1"><a href="#概述-1" class="headerlink" title="概述"></a>概述</h4><ul>
+<li>同源策略是 Netscape 提出的一个著名的安全策略</li>
+</ul>
+<p>同源策略是浏览器最核心最基础的安全策略</p>
+<p>现在所有的可支持 Javascript 的浏览器都会使用这个策略</p>
+<p>web构建在同源策略基础之上，浏览器对非同源脚本的限制措施是对同源策略的具体实现</p>
+<h4 id="同源策略的含义"><a href="#同源策略的含义" class="headerlink" title="同源策略的含义"></a>同源策略的含义</h4><p>DOM 层面的同源策略：限制了来自不同源的”Document”对象或 JS 脚本，对当前“document”对象的读取或设置某些属性</p>
+<p>Cookie和XMLHttprequest层面的同源策略：禁止 Ajax 直接发起跨域HTTP请求（其实可以发送请求，结果被浏览器拦截，不展示），同时 Ajax 请求不能携带与本网站不同源的 Cookie。</p>
+<p>同源策略的非绝对性：<code>&lt;script&gt;&lt;img&gt;&lt;iframe&gt;&lt;link&gt;&lt;video&gt;&lt;audio&gt;</code>等带有src属性的标签可以从不同的域加载和执行资源。</p>
+<p>其他插件的同源策略：<code>flash、java applet、silverlight、googlegears</code>等浏览器加载的第三方插件也有各自的同源策略，只是这些同源策略不属于浏览器原生的同源策略，如果有漏洞则可能被黑客利用，从而留下XSS攻击的后患</p>
+<h4 id="同源的具体含义"><a href="#同源的具体含义" class="headerlink" title="同源的具体含义"></a>同源的具体含义</h4><p>域名、协议、端口有一个不同就不是同源，三者均相同，这两个网站才是同源</p>
+<h2 id="跨域解决方法"><a href="#跨域解决方法" class="headerlink" title="跨域解决方法"></a>跨域解决方法</h2><p>虽然在安全层面上同源限制是必要的，但有时同源策略会对我们的合理用途造成影响，为了避免开发的应用受到限制，有多种方式可以绕开同源策略，下面介绍的是经常使用的 JSONP, CORS 方法。</p>
+<h3 id="JSONP"><a href="#JSONP" class="headerlink" title="JSONP"></a>JSONP</h3><h4 id="原理："><a href="#原理：" class="headerlink" title="原理："></a>原理：</h4><p>JSONP 是一种非官方的跨域数据交互协议</p>
+<p>JSONP 本质上是利用 <code>&lt;script&gt;&lt;img&gt;&lt;iframe&gt;</code> 等标签不受同源策略限制，可以从不同域加载并执行资源的特性，来实现数据跨域传输。</p>
+<p>JSONP由两部分组成：回调函数和数据。回调函数是当响应到来时应该在页面中调用的函数，而数据就是传入回调函数中的JSON数据。</p>
+<p>JSONP 的理念就是，与服务端约定好一个回调函数名，服务端接收到请求后，将返回一段 Javascript，在这段 Javascript 代码中调用了约定好的回调函数，并且将数据作为参数进行传递。当网页接收到这段 Javascript 代码后，就会执行这个回调函数，这时数据已经成功传输到客户端了。</p>
+<h4 id="示例："><a href="#示例：" class="headerlink" title="示例："></a>示例：</h4><p>首先当前页面中声明有这样的一个函数，它将作为 JSONP 的回调函数处理作为函数参数传入的数据</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&lt;script type=<span class="string">&quot;text/javascript&quot;</span>&gt;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">function</span> <span class="title function_">dosomething</span>(<span class="params">jsondata</span>)&#123;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//处理获得的json数据</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>然后，我们就可以借助 <code>&lt;script&gt;&lt;img&gt;&lt;iframe&gt;</code> 等标签可以引入不同域资源的特性，将需要发送的请求的路径作为src参数，其中需要注意的是：需要告知服务端回调函数的函数名。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;script src=<span class="string">&quot;[http://example.com/data.php?callback=dosomething](http://example.com/data.php?callback=dosomething)&quot;</span>&gt;&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这时服务端在返回数据的时候，就会返回一端 Javascript 代码，在 Javascript代码中调用了回调函数，并且需要返回的数据作为回调函数的参数</p>
+</blockquote>
+<blockquote>
+<p><code>dosomething([&#39;a&#39;,&#39;b&#39;,&#39;c&#39;]);</code></p>
+</blockquote>
+<blockquote>
+<p>最后页面成功加载了刚才指定路径的资源后，将会执行该 Javascript 代码，<code>dosomething</code>函数将执行，这时一次跨域请求完成。</p>
+</blockquote>
+<p>另外，如果页面引入了 jQuery，那么可以通过它封装的方法很方便的实现JSONP操作了</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Using YQL and JSONP</span></span><br><span class="line"></span><br><span class="line">$.<span class="title function_">ajax</span>(&#123;</span><br><span class="line"></span><br><span class="line">  <span class="attr">url</span>: <span class="string">&quot;[http://query.yahooapis.com/v1/public/yql](http://query.yahooapis.com/v1/public/yql)&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// The name of the callback parameter, as specified by the YQL service</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">jsonp</span>: <span class="string">&quot;callback&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Tell jQuery we&#x27;re expecting JSONP</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">dataType</span>: <span class="string">&quot;jsonp&quot;</span>,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Tell YQL what we want and that we want JSON</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">data</span>: &#123;</span><br><span class="line"></span><br><span class="line">    <span class="attr">q</span>: <span class="string">&quot;select title,abstract,url from search.news where query=\&quot;cat\&quot;&quot;</span>,</span><br><span class="line"></span><br><span class="line">    <span class="attr">format</span>: <span class="string">&quot;json&quot;</span></span><br><span class="line"></span><br><span class="line">  &#125;,</span><br><span class="line"></span><br><span class="line">  <span class="comment">// Work with the response</span></span><br><span class="line"></span><br><span class="line">  <span class="attr">success</span>: <span class="keyword">function</span>(<span class="params"> response </span>) &#123;</span><br><span class="line"></span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>( response ); <span class="comment">// server response</span></span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+
+<h4 id="优缺点："><a href="#优缺点：" class="headerlink" title="优缺点："></a>优缺点：</h4><p>JSONP 的优点是：它不像<code>XMLHttpRequest</code>对象实现的Ajax请求那样受到同源策略的限制；它的兼容性更好，在更加古老的浏览器中都可以运行。</p>
+<p>JSONP 的缺点是：它只支持 GET 请求，而不支持 POST 请求等其他类型的 HTTP 请求</p>
+<h3 id="CORS"><a href="#CORS" class="headerlink" title="CORS"></a>CORS</h3><h4 id="介绍"><a href="#介绍" class="headerlink" title="介绍"></a>介绍</h4><blockquote>
+<p>跨源资源共享 Cross-Origin Resource Sharing(CORS)  是一个新的 W3C 标准，它新增的一组HTTP首部字段，允许服务端其声明哪些源站有权限访问哪些资源。换言之，它允许浏览器向声明了 CORS 的跨域服务器，发出 XMLHttpReuest 请求，从而克服 Ajax 只能同源使用的限制。</p>
+</blockquote>
+<blockquote>
+<p>另外，规范也要求对于非简单请求，浏览器必须首先使用 OPTION 方法发起一个预检请求(preflight request)，从而获知服务端是否允许该跨域请求，在服务器确定允许后，才发起实际的HTTP请求。对于简单请求、非简单请求以及预检请求的详细资料可以阅读<a target="_blank" rel="noopener" href="https://link.jianshu.com/?t=https://developer.mozilla.org/zh-CN/docs/Web/HTTP/Access_control_CORS">HTTP访问控制（CORS）</a> 。</p>
+</blockquote>
+<h4 id="HTTP-协议-Header-简析"><a href="#HTTP-协议-Header-简析" class="headerlink" title="HTTP 协议 Header 简析"></a>HTTP 协议 Header 简析</h4><blockquote>
+<p>下面对 CORS 中新增的 HTTP 首部字段进行简析：</p>
+</blockquote>
+<p>Access-Control-Allow-Origin</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">响应首部中可以携带这个头部表示服务器允许哪些域可以访问该资源，其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Allow-Origin: &lt;origin&gt; |`&amp;#x20;</span><br><span class="line"></span><br><span class="line">其中，origin 参数的值指定了允许访问该资源的外域 URI。对于不需要携带身份凭证的请求，服务器可以指定该字段的值为通配符，表示允许来自所有域的请求。*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Allow-Methods</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">该首部字段用于预检请求的响应，指明实际请求所允许使用的HTTP方法。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Allow-Methods: &lt;method&gt;[, &lt;method&gt;]`*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Allow-Headers</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">该首部字段用于预检请求的响应。指明了实际请求中允许携带的首部字段。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Allow-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]`*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Max-Age</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">该首部字段用于预检请求的响应，指定了预检请求能够被缓存多久，其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Max-Age: &lt;delta-seconds&gt;`*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Allow-Credentials</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">该字段可选。它的值是一个布尔值，表示是否允许发送Cookie。默认情况下，Cookie不包括在CORS请求之中。设为`true`，即表示服务器明确许可，Cookie可以包含在请求中，一起发给服务器。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Allow-Credentials: true`</span><br><span class="line"></span><br><span class="line">另外，如果要把 Cookie 发送到服务器，除了服务端要带上`Access-Control-Allow-Credentials`首部字段外，另一方面请求中也要带上`withCredentials`属性。</span><br><span class="line"></span><br><span class="line">但是需要注意的是：如果需要在 Ajax 中设置和获取 Cookie，那么`Access-Control-Allow-Origin`首部字段不能设置为`*` ，必须设置为具体的 origin 源站。详细可阅读文章[CORS 跨域 Cookie 的设置与获取](https://www.jianshu.com/p/13d53acc124f &quot;CORS 跨域 Cookie 的设置与获取&quot;)</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>Origin该首部字段表明预检请求或实际请求的源站。不管是否为跨域请求，Origin字段总是被发送。其语法如下：</li>
+</ul>
+<p>      <code>Origin: &lt;origin&gt;</code></p>
+<p>Access-Control-Request-Method</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">该首部字段用于预检请求。其作用是，将实际请求所使用的 HTTP 方法告诉服务器。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Request-Method: &lt;method&gt;`*</span><br></pre></td></tr></table></figure>
+
+<p>Access-Control-Request-Headers</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">该首部字段用于预检请求。其作用是，将实际请求所携带的首部字段告诉服务器。其语法如下：</span><br><span class="line"></span><br><span class="line">`Access-Control-Request-Headers: &lt;field-name&gt;[, &lt;field-name&gt;]`</span><br></pre></td></tr></table></figure>
+
+<h4 id="示例"><a href="#示例" class="headerlink" title="示例"></a>示例</h4><blockquote>
+<p>假设我们在 <a target="_blank" rel="noopener" href="http://bbb.cn/">bbb.cn</a> 域名下，发送一个 Ajax 请求到 <a target="_blank" rel="noopener" href="http://aaa.cn/">aaa.cn</a> 域名，其路径如下：<code>http://aaa.cn/localserver/api/corsTest</code> 。由于同源策略，这样的 Ajax 请求将会被浏览器所拦截，得到下面的信息：</p>
+</blockquote>
+<p><img src="//upload-images.jianshu.io/upload_images/5805218-a1c76ebcaf18557e.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/613/format/webp#alt="></p>
+<blockquote>
+<p>若想能够发送跨域请求，我们只需要在服务器的响应中配置适当的CORS HTTP 首部字段就可以了，例如可以加入以下的首部字段：<code>Access-Control-Allow-Methods：</code></p>
+</blockquote>
+<p>此时，Ajax请求就可以顺利的发送和接收了，对应的请求和响应头部如下：</p>
+<p><img src="//upload-images.jianshu.io/upload_images/5805218-b12fc2691e46fcea.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/876/format/webp#alt="></p>
+<p><img src="//upload-images.jianshu.io/upload_images/5805218-bfc1301590eaaeda.jpg?imageMogr2/auto-orient/strip%7CimageView2/2/w/725/format/webp#alt="></p>
+<h4 id="与-JSONP-的比较"><a href="#与-JSONP-的比较" class="headerlink" title="与 JSONP 的比较"></a>与 JSONP 的比较</h4><ul>
+<li>JSONP 只能实现 GET 请求，而 CORS 支持所有类型的 HTTP 请求</li>
+</ul>
+<p>使用 CORS ，开发者可以是使用普通的 XMLHttpRequest 发起请求和获取数据，比起 JSONP 有更好的错误处理</p>
+<p>虽然绝大多数现代的浏览器都已经支持 CORS，但是 CORS 的兼容性比不上 JSONP，一些比较老的浏览器只支持 JSONP</p>
+
+            <!--[if lt IE 9]><script>document.createElement('audio');</script><![endif]-->
+            <audio id="audio" loop="1" preload="auto" controls="controls" data-autoplay="false">
+                <source type="audio/mpeg" src="http://domain.com/awesome.mp3">
+            </audio>
+            
+        </div>
+        </br></br></br>
+        <center style="color: #cccccc;">-&nbsp;&nbsp;&nbsp;END&nbsp;&nbsp;&nbsp;-</center>
+        
+    <div id='gitalk-container' class="comment link"
+		data-enable='true'
+        data-ae='true'
+        data-ci='7c40969f9ae1f09ec22f'
+        data-cs='d6dce2a6144e46354524fc0abcff5bf854690061'
+        data-r='hopesy.github.io'
+        data-o='hopesy'
+        data-a='hopesy'
+        data-d='true'
+    >查看评论</div>
+
+
+    </div>
+    
+</div>
+
+
+    </div>
+</div>
+    <!--�������Ц����-->
+<script type="text/javascript" src="\js\FunnyTitle.js"></script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"right","width":150,"height":300,"hOffset":-15,"vOffset":-15},"mobile":{"show":true},"react":{"opacity":0.7},"log":false});</script></body>
+
+<script src="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js"></script>
+
+
+<script src="//lib.baomitu.com/jquery/1.8.3/jquery.min.js"></script>
+<script src="/js/plugin.js"></script>
+<script src="/js/typed.js"></script>
+<script src="/js/diaspora.js"></script>
+<script src="/js/codeCopy.js"></script>
+
+
+<link rel="stylesheet" href="/photoswipe/photoswipe.css">
+<link rel="stylesheet" href="/photoswipe/default-skin/default-skin.css">
+
+
+<script src="/photoswipe/photoswipe.min.js"></script>
+<script src="/photoswipe/photoswipe-ui-default.min.js"></script>
+
+
+<!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+            <div class="pswp__top-bar">
+                <!--  Controls are self-explanatory. Order can be changed. -->
+                <div class="pswp__counter"></div>
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+                <button class="pswp__button pswp__button--share" title="Share"></button>
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+</html>
