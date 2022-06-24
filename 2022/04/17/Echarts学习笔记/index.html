@@ -11,23 +11,19 @@
     <meta name="google" content="notranslate" />
     <link rel="stylesheet" href="/css/mouse.css">
     <meta name="keywords" content="hopesy,个人博客,"> 
-    <meta name="description" content="hopesy的个人笔记,Echarts学习笔记
+    <meta name="description" content="hopesy的个人笔记,
+
+Echarts学习笔记
 快速上手
 
 引入ECharts
 模块化安装echarts
 
 
-基础使用
 
-通用配置
-
-常见效果
-标题title
-提示框tooltip
-图例legend
-工具栏toolbox
-,"> 
+快速上手
+引入ECharts
+在 https://www.jsdelivr.com/package/npm,"> 
     <meta name="author" content="hopesy"> 
     <link rel="alternative" href="atom.xml" title="hopesy" type="application/atom+xml"> 
     <link rel="icon" href="/img/favicon.png"> 
@@ -106,80 +102,17 @@
         <!-- 更新时间 -->
         <div class="updated">
             <div></div>
-            <span>该文章更新于 2022.06.20</span>
+            <span>该文章更新于 2022.06.24</span>
         </div>
 
         <div class="content markdown">
-            <h1 id="Echarts学习笔记"><a href="#Echarts学习笔记" class="headerlink" title="Echarts学习笔记"></a>Echarts学习笔记</h1><ul>
+            <meta name="referrer" content="no-referrer">
+
+<h1 id="Echarts学习笔记"><a href="#Echarts学习笔记" class="headerlink" title="Echarts学习笔记"></a>Echarts学习笔记</h1><ul>
 <li><p><a href="#%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B">快速上手</a></p>
 <ul>
 <li><a href="#%E5%BC%95%E5%85%A5echarts">引入ECharts</a></li>
 <li><a href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85echarts">模块化安装echarts</a></li>
-</ul>
-</li>
-<li><p><a href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8">基础使用</a></p>
-<ul>
-<li><p><a href="#%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE">通用配置</a></p>
-<ul>
-<li><a href="#%E5%B8%B8%E8%A7%81%E6%95%88%E6%9E%9C">常见效果</a></li>
-<li><a href="#%E6%A0%87%E9%A2%98title">标题title</a></li>
-<li><a href="#%E6%8F%90%E7%A4%BA%E6%A1%86tooltip">提示框tooltip</a></li>
-<li><a href="#%E5%9B%BE%E4%BE%8Blegend">图例legend</a></li>
-<li><a href="#%E5%B7%A5%E5%85%B7%E6%A0%8Ftoolbox">工具栏toolbox</a></li>
-</ul>
-</li>
-<li><p><a href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE">柱状图</a></p>
-</li>
-<li><p><a href="#%E6%8A%98%E7%BA%BF%E5%9B%BE">折线图</a></p>
-</li>
-<li><p><a href="#%E6%95%A3%E7%82%B9%E5%9B%BE">散点图</a></p>
-</li>
-<li><p><a href="#%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%9F%B1%E7%8A%B6%E5%9B%BE%E6%8A%98%E7%BA%BF%E5%9B%BE%E6%95%A3%E7%82%B9%E5%9B%BE">直角坐标系的常用配置（柱状图，折线图，散点图）</a></p>
-<ul>
-<li><a href="#%E7%BD%91%E6%A0%BCgrid">网格grid</a></li>
-<li><a href="#%E5%9D%90%E6%A0%87%E8%BD%B4axis">坐标轴axis</a></li>
-<li><a href="#%E5%8C%BA%E5%9F%9F%E7%BC%A9%E6%94%BEdatazoom">区域缩放dataZoom</a></li>
-</ul>
-</li>
-<li><p><a href="#%E9%A5%BC%E5%9B%BE">饼图</a></p>
-</li>
-<li><p><a href="#%E5%9C%B0%E5%9B%BE">地图</a></p>
-</li>
-<li><p><a href="#%E9%9B%B7%E8%BE%BE%E5%9B%BE">雷达图</a></p>
-</li>
-<li><p><a href="#%E4%BB%AA%E8%A1%A8%E7%9B%98">仪表盘</a></p>
-</li>
-</ul>
-</li>
-<li><p><a href="#%E8%BF%9B%E9%98%B6">进阶</a></p>
-<ul>
-<li><p><a href="#%E4%B8%BB%E9%A2%98">主题</a></p>
-<ul>
-<li><a href="#%E5%86%85%E7%BD%AE%E4%B8%BB%E9%A2%98">内置主题</a></li>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a></li>
-</ul>
-</li>
-<li><p><a href="#%E8%B0%83%E8%89%B2%E7%9B%98">调色盘</a></p>
-</li>
-<li><p><a href="#%E9%A2%9C%E8%89%B2%E6%B8%90%E5%8F%98">颜色渐变</a></p>
-</li>
-<li><p><a href="#%E6%A0%B7%E5%BC%8F">样式</a></p>
-</li>
-<li><p><a href="#%E8%87%AA%E9%80%82%E5%BA%94">自适应</a></p>
-</li>
-<li><p><a href="#%E5%8A%A8%E7%94%BB">动画</a></p>
-<ul>
-<li><a href="#%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB">加载动画</a></li>
-<li><a href="#%E5%A2%9E%E9%87%8F%E5%8A%A8%E7%94%BB">增量动画</a></li>
-<li><a href="#%E5%8A%A8%E7%94%BB%E9%85%8D%E7%BD%AE">动画配置</a></li>
-</ul>
-</li>
-<li><p><a href="#%E4%BA%A4%E4%BA%92api">交互API</a></p>
-<ul>
-<li><a href="#%E5%85%A8%E5%B1%80echarts%E5%AF%B9%E8%B1%A1">全局echarts对象</a></li>
-<li><a href="#echartsinstance%E5%AF%B9%E8%B1%A1">echartsInstance对象</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>

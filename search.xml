@@ -3,7 +3,9 @@
   <entry>
     <title>Ajax请求</title>
     <url>/2022/06/24/Ajax%E8%AF%B7%E6%B1%82/</url>
-    <content><![CDATA[<h1 id="AJAX请求"><a href="#AJAX请求" class="headerlink" title="AJAX请求"></a>AJAX请求</h1><h1 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h1><blockquote>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="AJAX请求"><a href="#AJAX请求" class="headerlink" title="AJAX请求"></a>AJAX请求</h1><h1 id="AJAX"><a href="#AJAX" class="headerlink" title="AJAX"></a>AJAX</h1><blockquote>
 <p>AJAX 不是新的编程语言，而是一种使用现有标准的新方法。AJAX 是一种用于创建快速动态网页的技术。通过在后台与服务器进行少量数据交换，AJAX 可以使网页实现异步更新。这意味着可以在不重新加载整个网页的情况下，对网页的某部分进行更新。</p>
 </blockquote>
 <h2 id="1-常识性知识"><a href="#1-常识性知识" class="headerlink" title="1. 常识性知识"></a>1. 常识性知识</h2><h3 id="1-1-网页中如何请求数据"><a href="#1-1-网页中如何请求数据" class="headerlink" title="1.1 网页中如何请求数据"></a>1.1 网页中如何请求数据</h3><blockquote>
@@ -194,305 +196,15 @@
       </tags>
   </entry>
   <entry>
-    <title>MongoDb学习笔记</title>
-    <url>/2022/06/24/MongoDb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="MongoDb学习笔记"><a href="#MongoDb学习笔记" class="headerlink" title="MongoDb学习笔记"></a>MongoDb学习笔记</h1><blockquote>
-<p>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB 将数据存储为一个文档，数据结构由键值(key&#x3D;&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</p>
-</blockquote>
-<p><a href="https://_www.runoob.com_python3_python-mongodb/">https://www.runoob.com/python3/python-mongodb.html</a></p>
-<h3 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1.下载安装"></a>1.下载安装</h3><blockquote>
-<p>Windows直接去官网点击下载。或者<a href="https://www.aliyundrive.com/s/kFuxf1rvHhU">下载我分享的安装包</a></p>
-</blockquote>
-<p><a href="https://www.mongodb.com/try/download/community">https://www.mongodb.com/try/download/community</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491587-b813f6c5-0cb1-4036-883a-3877f6e949fd.png#crop=0&crop=0&crop=1&crop=1&id=JWyf7&originHeight=861&originWidth=1836&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<blockquote>
-<p>双击安装包进行安装</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491709-c0bea4a8-1515-404e-a3d5-05671e156d5c.png#crop=0&crop=0&crop=1&crop=1&id=a0Ayy&originHeight=470&originWidth=607&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491798-4a4ddb3d-7f80-44b7-8685-4a7b3066f4a3.png#crop=0&crop=0&crop=1&crop=1&id=Rksi5&originHeight=364&originWidth=464&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491882-7d811f3e-07c2-4947-95a3-43ef2ec35bf4.png#crop=0&crop=0&crop=1&crop=1&id=Cr9gk&originHeight=337&originWidth=462&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491992-69a6e136-6933-4028-854f-dfcae1c6236d.png#crop=0&crop=0&crop=1&crop=1&id=Gju0W&originHeight=478&originWidth=624&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<blockquote>
-<p>为了方便启动，我们将bin目录放在系统环境变量中,这样无论在任何目录启动Bash或者cmd都可以直接使用mongo命令。</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492206-5025d848-eb3a-4248-ba01-29f6c934c10d.png#crop=0&crop=0&crop=1&crop=1&id=IcJWP&originHeight=681&originWidth=1506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<blockquote>
-<p>MongoDB 默认将<code>数据库文件存</code>储在安装路径下的<code>data目录</code>下，日志默认存放在<code>log</code>目录下。</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492311-1d4ec5a7-0bea-4cd1-b812-fd35563511c2.png#crop=0&crop=0&crop=1&crop=1&id=Wgepc&originHeight=619&originWidth=856&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<blockquote>
-<p><code>为了避免文件混乱。</code>我们一般在安装目录下新建一个<code>db目录</code>存放<code>数据库</code>，然后<code>修改配置文件</code>指向此路径。（不想改数据库目录的话这一步不做也行）</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492408-6c4e3acd-4b57-4184-a51e-39d7418943f8.png#crop=0&crop=0&crop=1&crop=1&id=IEbKF&originHeight=334&originWidth=1114&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492573-22a06d5e-2475-4fb6-b6ce-cf867df6a933.png#crop=0&crop=0&crop=1&crop=1&id=RNC1Q&originHeight=602&originWidth=1033&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>注意：我们安装的时候勾选了注册为服务，只有注册了服务才能用<code>net start mongodb</code>的方式启动，否则只能在命令行启动<code>mongod -dbpath &quot;D:\MongoDb\data\db&quot;</code>可以跟很多启动参数。安装时也可以不勾选，然后手动注册服务，命令如下所示。</p>
-<blockquote>
-<p>启动Mongodb服务（不区分大小写）。</p>
-</blockquote>
-<blockquote>
-<p>启动服务之后就能使用<code>mongo</code>命令进入数据库了，默认已经建了个表<code>test</code>。(我们上一步已经将bin目录添加到系统变量了，所以可以直接使用)</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492700-34506362-e11d-4f46-a338-6e9f8f969790.png#crop=0&crop=0&crop=1&crop=1&id=qgSnW&originHeight=952&originWidth=1332&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<blockquote>
-<p>如果我们希望操作起来更简单，就需要安装可视化界面。</p>
-</blockquote>
-<p><a href="https://www.mongodb.com/try/download/compass">https://www.mongodb.com/try/download/compass</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492796-566dde0c-bc4a-43cc-96e4-6ebdff5ef08b.png#crop=0&crop=0&crop=1&crop=1&id=JF0je&originHeight=820&originWidth=1865&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<blockquote>
-<p>下载后任意路径解压双击<code>MongoDBCompass</code>即可使用。当然也可以下载安装版本。</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492914-7121a3ab-c982-479a-b71e-05405f6708c3.png#crop=0&crop=0&crop=1&crop=1&id=TPAgG&originHeight=608&originWidth=1012&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<blockquote>
-<p><code>net start mongodb</code>启动数据库后，点击<code>fill in connection</code>填写网址端口<code>connect</code>即可连接。</p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493000-785b6aeb-12d3-4019-a7ad-cebd9757b5f7.png#crop=0&crop=0&crop=1&crop=1&id=zuzkB&originHeight=174&originWidth=1556&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493092-7be4449e-81cd-4618-87e6-e171d3e7b613.png#crop=0&crop=0&crop=1&crop=1&id=okwLi&originHeight=761&originWidth=1577&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493185-fd9b6af2-2510-4c1e-ad3a-eea94dfc5080.png#crop=0&crop=0&crop=1&crop=1&id=yNs9D&originHeight=711&originWidth=1565&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<h3 id="2-概念、数据类型"><a href="#2-概念、数据类型" class="headerlink" title="2. 概念、数据类型"></a>2. 概念、数据类型</h3><p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493308-2d626245-986d-4daf-ba63-cdc2ce169932.png#crop=0&crop=0&crop=1&crop=1&id=eYmPe&originHeight=238&originWidth=832&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<blockquote>
-<p>MongoDB支持以下数据类型:</p>
-</blockquote>
-<p>   String（字符串） <em>: mongodb中的字符串是UTF-8有效的。</em><br>Integer <em>（<strong>整数</strong> ）: 存储数值。整数可以是32位或64位，具体取决于您的服务器。</em><br>Boolean（布尔） _: 存储布尔(true&#x2F;false)值。  _<br>Double（双精度 _）: 存储浮点值。  _<br>Min&#x2F; Max keys（最小&#x2F;最大键 _）: 将值与最低和最高BSON元素进行比较。  _<br>Arrays（数组 _）: 将数组或列表或多个值存储到一个键中。  _<br>Timestamp（时间戳 _）: 存储时间戳。  _<br>Object <em>（<strong>对象</strong> ）: 嵌入式文档。  _<br>Null （空值） <em>: 存储Null值。</em><br>Symbol（符号 <em>）: 与字符串相同，用于具有特定符号类型的语言。</em><br>Date（日期 <em>）: 以UNIX时间格式存储当前日期或时间。</em><br>Object ID（对象ID <em>） : 存储文档ID。</em><br>Binary data（二进制数据 <em>）: 存储二进制数据。</em><br>Code（代码 <em>）: 将JavaScript代码存储到文档中。</em><br>Regular expression （_正则表达式</em> ）: 存储正则表达式</p>
-<blockquote>
-<p>注意点</p>
-</blockquote>
-<p>● 每个⽂档都有⼀个属性， 为_id， 保证每个⽂档的唯⼀性，mongodb默认使用_id作为主键,可以⾃⼰去设置_id插⼊⽂档，如果没有提供， 那么MongoDB为每个⽂档提供了⼀个独特的_id， 类型为objectID<br>● objectID是⼀个12字节的⼗六进制数,每个字节两位，一共是24 位的字符串： 前4个字节为当前时间戳 接下来3个字节的机器ID 接下来的2个字节中MongoDB的服务进程id 最后3个字节是简单的增量值</p>
-<h3 id="3-创建数据库"><a href="#3-创建数据库" class="headerlink" title="3. 创建数据库"></a>3. 创建数据库</h3><blockquote>
-<p><code>use DATABASE_NAME</code>如果数据库不存在，则创建数据库，否则切换到指定数据库。<code>db</code>指的是当前数据库。</p>
-</blockquote>
-<blockquote>
-<p><code>show dbs</code>查看所有数据库。（新创建的数据库只有插入一条记录后才会显示）</p>
-</blockquote>
-<h3 id="4-删除数据库"><a href="#4-删除数据库" class="headerlink" title="4. 删除数据库"></a>4. 删除数据库</h3><blockquote>
-<p><code>db.dropDatabase()</code>删除当前数据库，默认为 test，你可以使用 db 命令查看当前数据库名。</p>
-</blockquote>
-<h3 id="5-创建集合-表格"><a href="#5-创建集合-表格" class="headerlink" title="5. 创建集合(表格)"></a>5. 创建集合(表格)</h3><blockquote>
-<p><code>db.createCollection(name, options)</code>创建集合</p>
-</blockquote>
-<ul>
-<li>name: 要创建的集合名称。</li>
-</ul>
-<p>options: 可选参数, 指定有关内存大小及索引的选项。</p>
-<blockquote>
-<p>查看集合<code>show collections</code>或者<code>show tables</code></p>
-</blockquote>
-<blockquote>
-<p>需要注意的是mongodb会在插入数据的时候自动创建集合，集合的名称会和数据库的名称一样。</p>
-</blockquote>
-<h3 id="6-删除集合"><a href="#6-删除集合" class="headerlink" title="6. 删除集合"></a>6. 删除集合</h3><blockquote>
-<p><code>db.collection.drop()</code>成功删除选定集合，则 drop() 方法返回 true，否则返回 false。(collection代指要删除的集合名称 )</p>
-</blockquote>
-<h3 id="7-插入文档（数据）"><a href="#7-插入文档（数据）" class="headerlink" title="7. 插入文档（数据）"></a>7. 插入文档（数据）</h3><blockquote>
-<p>文档的数据结构和 JSON 基本一样。所有存储在集合中的数据都是 BSON 格式。BSON 是一种类似 JSON 的二进制形式的存储格式，是 Binary JSON 的简称。<strong>文档就是一条json数据，相当于sql中的一行数据。</strong><br><code>db.collectionName.insertOne()</code>插入一条数据(3.2版本以后)</p>
-</blockquote>
-<blockquote>
-<p><code>db.collectionName.insertMany()</code>插入多条数据(3.2版本以后)</p>
-</blockquote>
-<p>参数说明：</p>
-<ul>
-<li>document：要写入的文档。</li>
-</ul>
-<p>writeConcern：写入策略，默认为 1，即要求确认写操作，0 是不要求。<br>ordered：指定是否按顺序写入，默认 true，按顺序写入。</p>
-<blockquote>
-<p><code>db.COLLECTION_NAME.insert(document)/db.COLLECTION_NAME.save(document)</code></p>
-</blockquote>
-<p>save()：如果 _id 主键存在则更新数据，如果不存在就插入数据。该方法新版本中已废弃，可以使用 <strong>db.collection.insertOne()</strong> 或 <strong>db.collection.replaceOne()</strong> 来代替。</p>
-<ul>
-<li>insert(): 若插入的数据主键已经存在，则会抛 org.springframework.dao.DuplicateKeyException 异常，提示主键重复，不保存当前数据。<h3 id="8-更新文档"><a href="#8-更新文档" class="headerlink" title="8. 更新文档"></a>8. 更新文档</h3><blockquote>
-<p><code>db.collectionName.updateOne()</code> 向指定集合更新单条文档（3.2版本以后）</p>
-</blockquote>
-</li>
-</ul>
-<blockquote>
-<p><code>db.collection.updateMany()</code> 向指定集合更新多条文档(3.2版本以后）</p>
-</blockquote>
-<blockquote>
-<p><strong>update()</strong> 方法。低版本中 <code>用于更新已存在的文档。</code></p>
-</blockquote>
-<p><strong>参数说明：</strong><br>   query : update的查询条件，类似sql update查询内where后面的。<br>update : update的对象和一些更新的操作符（如inc…）等，也可以理解为sql update查询内set后面的<br>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。<br>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。<br>writeConcern :可选，抛出异常的级别。<br>实例:</p>
-<blockquote>
-<p><strong>save()</strong> 方法。低版本中 <code>通过传入的文档来替换已有文档，_id 主键存在就更新，不存在就插入。</code></p>
-</blockquote>
-<blockquote>
-<p>异常说明</p>
-</blockquote>
-<ul>
-<li>WriteConcern.NONE:没有异常抛出</li>
-</ul>
-<p>WriteConcern.NORMAL:仅抛出网络错误异常，没有服务器错误异常<br>WriteConcern.SAFE:抛出网络错误异常、服务器错误异常；并等待服务器完成写操作。<br>WriteConcern.MAJORITY: 抛出网络错误异常、服务器错误异常；并等待一个主服务器完成写操作。<br>WriteConcern.FSYNC_SAFE: 抛出网络错误异常、服务器错误异常；写操作等待服务器将数据刷新到磁盘。</p>
-<ul>
-<li>WriteConcern.JOURNAL_SAFE:抛出网络错误异常、服务器错误异常；写操作等待服务器提交到磁盘的日志文件。</li>
-<li>WriteConcern.REPLICAS_SAFE:抛出网络错误异常、服务器错误异常；等待至少2台服务器完成写操作。<blockquote>
-<p>移除集合中的键值对，使用的 <code>$unset</code>操作符。如果指定的字段不存在则操作不做任何处理。</p>
-</blockquote>
-</li>
-</ul>
-<h3 id="9-删除文档"><a href="#9-删除文档" class="headerlink" title="9.删除文档"></a>9.删除文档</h3><blockquote>
-<p><code>db.collectionName.deleteOne(&lt;query&gt;)</code>删除单条数据 (高版本官方推荐)</p>
-</blockquote>
-<blockquote>
-<p><code>db.collectionName.deleteMany(&lt;query&gt;)</code>删除符合条件的所有数据 (高版本官方推荐)</p>
-</blockquote>
-<blockquote>
-<p><code>db.collectionName.deleteMany(&#123;&#125;)</code>删除整个表立面的所有数据 (高版本官方推荐)</p>
-</blockquote>
-<blockquote>
-<p><code>remove()</code> 函数是低版本用来移除集合中的数据。在执行 remove() 函数前先执行 <code>find()</code>命令来判断执行的条件是否正确，是一个比较好的习惯。</p>
-</blockquote>
-<p>基本语法如下：<br><strong>2.6 版本以后的语法格式如下:</strong><br><strong>参数说明：</strong><br>   query :（可选）删除的文档的条件。<br>justOne : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。<br>writeConcern :（可选）抛出异常的级别。</p>
-<h3 id="10-查询文档"><a href="#10-查询文档" class="headerlink" title="10. 查询文档"></a>10. 查询文档</h3><blockquote>
-<p><code>db.collection.find(query, projection)</code>查询数据</p>
-</blockquote>
-<p>query ：可选，使用查询操作符指定查询条件<br>projection ：可选。若不指定 projection，则默认返回所有字段</p>
-<blockquote>
-<p><code>projection</code>的用法。</p>
-</blockquote>
-<blockquote>
-<p><code>db.col.find().pretty()</code> pretty()以格式化的方式来显示文档。</p>
-</blockquote>
-<blockquote>
-<p><code>findOne</code>与<code>find</code>语法一致，但是它只返回一条数据</p>
-</blockquote>
-<blockquote>
-<p>MongoDB 的 find() 方法可以传入多个键(key)，每个键(key)以逗号隔开，即常规 SQL 的 AND 条件。</p>
-</blockquote>
-<p>以下实例通过 by 和 title 键来查询教程 中 MongoDB 教程 的数据</p>
-<blockquote>
-<p>MongoDB OR 条件语句使用了关键字 $or ,语法格式如下：</p>
-</blockquote>
-<p>以下实例中，我们演示了查询键 by 值为 教程 或键 title 值为 MongoDB 教程 的文档。</p>
-<blockquote>
-<p>AND 和 OR 联合使用</p>
-</blockquote>
-<h3 id="11-条件操作符"><a href="#11-条件操作符" class="headerlink" title="11. 条件操作符"></a>11. 条件操作符</h3><blockquote>
-<p>MongoDB 与 RDBMS Where 语句比较</p>
-</blockquote>
-<blockquote>
-<p> 模糊查询</p>
-</blockquote>
-<h3 id="12-type-操作符"><a href="#12-type-操作符" class="headerlink" title="12. $type 操作符"></a>12. $type 操作符</h3><blockquote>
-<p><code>$type</code>操作符是基于BSON类型来检索集合中匹配的数据类型，并返回结果</p>
-</blockquote>
-<blockquote>
-<p>如果想获取 “col” 集合中 title 为 String 的数据，你可以使用以下命令：</p>
-</blockquote>
-<h3 id="13-Limit与Skip方法"><a href="#13-Limit与Skip方法" class="headerlink" title="13. Limit与Skip方法"></a>13. Limit与Skip方法</h3><blockquote>
-<p><code>limit(n)</code>是用来规定显示的条数。</p>
-</blockquote>
-<blockquote>
-<p><code>skip(n)</code>是用来在符合条件的记录中从第一个记录跳过的条数</p>
-</blockquote>
-<blockquote>
-<p>两者一般结合使用。以下实例在集合中跳过前面 10 条返回 100 条数据。</p>
-</blockquote>
-<h3 id="14-排序sort"><a href="#14-排序sort" class="headerlink" title="14. 排序sort"></a>14. 排序sort</h3><blockquote>
-<p>skip(), limilt(), sort()三个放在一起执行的时候，执行的顺序是先 sort(), 然后是 skip()，最后是显示的 limit()。<br><code>sort()</code>方法对数据进行排序，sort() 方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中<code>1 为升序排列</code>，而 <code>-1 是用于降序排列</code>。<code>db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;)</code></p>
-</blockquote>
-<h3 id="15-索引index"><a href="#15-索引index" class="headerlink" title="15. 索引index"></a>15. 索引index</h3><blockquote>
-<p>索引通常能够极大的提高查询的效率，如果没有索引，MongoDB在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。这种扫描全集合的查询效率是非常低的，特别在处理大量的数据时，查询可以要花费几十秒甚至几分钟，这对网站的性能是非常致命的。索引是特殊的数据结构，索引存储在一个易于遍历读取的数据集合中，索引是对数据库表中一列或多列的值进行排序的一种结构。<br><code>db.collection.createIndex(keys, options)</code>创建索引</p>
-</blockquote>
-<p>语法中 Key 值为你要创建的索引字段，1 为指定按升序创建索引，如果你想按降序来创建索引指定为 -1 即可。</p>
-<blockquote>
-<p><code>createIndex()</code> 方法中你也可以设置使用<code>多个字段创建索引</code>（关系型数据库中称作<code>复合索引</code>）。</p>
-</blockquote>
-<blockquote>
-<p>查看索引合集</p>
-</blockquote>
-<blockquote>
-<p>查看集合索引的大小</p>
-</blockquote>
-<blockquote>
-<p>删除集合所有索引</p>
-</blockquote>
-<blockquote>
-<p>删除集合指定索引</p>
-</blockquote>
-<h3 id="16-数据导入导出"><a href="#16-数据导入导出" class="headerlink" title="16. 数据导入导出"></a>16. 数据导入导出</h3><blockquote>
-<p>此命令需要安装<code>database tool</code>工具。安装完成后加入系统环境变量path。</p>
-</blockquote>
-<p><a href="https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools">https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools</a><br><code>数据导出：mongoexport</code></p>
-<blockquote>
-<p><code>Mongdb</code>中的<code>mongoexport</code>工具可以将<code>collection</code>导出成<code>JSON格式</code>或者<code>CSV格式</code>的文件。可以通过参数指定导出的数据项，也可以根据指定的条件导出数据。</p>
-</blockquote>
-<p><code>数据导入：mongoimport</code><br>注意：如果excel里面有中文、特殊符号，会抛出以下异常：exception:Invalid UTF8 character detected<br>此时，执行mongoimport命令前，您需要先将该csv文件编码转为 utf-8。<br><code>数据备份(导出所有数据)</code><br><code>数据恢复</code><br>注意：恢复的时候可以加–drop 覆盖原来的数据库（慎用），最好提前备份好当前数据库；同时要更改数据库名，不然恢复会失败。</p>
-<h3 id="17-composer导入数据"><a href="#17-composer导入数据" class="headerlink" title="17. composer导入数据"></a>17. composer导入数据</h3><blockquote>
-<p>在<code>collection</code>那里导入数据</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>前端</category>
-        <category>数据库</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>MongoDb</tag>
-        <tag>sql</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Echarts学习笔记</title>
     <url>/2022/04/17/Echarts%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
-    <content><![CDATA[<h1 id="Echarts学习笔记"><a href="#Echarts学习笔记" class="headerlink" title="Echarts学习笔记"></a>Echarts学习笔记</h1><ul>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="Echarts学习笔记"><a href="#Echarts学习笔记" class="headerlink" title="Echarts学习笔记"></a>Echarts学习笔记</h1><ul>
 <li><p><a href="#%E5%BF%AB%E9%80%9F%E4%B8%8A%E6%89%8B">快速上手</a></p>
 <ul>
 <li><a href="#%E5%BC%95%E5%85%A5echarts">引入ECharts</a></li>
 <li><a href="#%E6%A8%A1%E5%9D%97%E5%8C%96%E5%AE%89%E8%A3%85echarts">模块化安装echarts</a></li>
-</ul>
-</li>
-<li><p><a href="#%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8">基础使用</a></p>
-<ul>
-<li><p><a href="#%E9%80%9A%E7%94%A8%E9%85%8D%E7%BD%AE">通用配置</a></p>
-<ul>
-<li><a href="#%E5%B8%B8%E8%A7%81%E6%95%88%E6%9E%9C">常见效果</a></li>
-<li><a href="#%E6%A0%87%E9%A2%98title">标题title</a></li>
-<li><a href="#%E6%8F%90%E7%A4%BA%E6%A1%86tooltip">提示框tooltip</a></li>
-<li><a href="#%E5%9B%BE%E4%BE%8Blegend">图例legend</a></li>
-<li><a href="#%E5%B7%A5%E5%85%B7%E6%A0%8Ftoolbox">工具栏toolbox</a></li>
-</ul>
-</li>
-<li><p><a href="#%E6%9F%B1%E7%8A%B6%E5%9B%BE">柱状图</a></p>
-</li>
-<li><p><a href="#%E6%8A%98%E7%BA%BF%E5%9B%BE">折线图</a></p>
-</li>
-<li><p><a href="#%E6%95%A3%E7%82%B9%E5%9B%BE">散点图</a></p>
-</li>
-<li><p><a href="#%E7%9B%B4%E8%A7%92%E5%9D%90%E6%A0%87%E7%B3%BB%E7%9A%84%E5%B8%B8%E7%94%A8%E9%85%8D%E7%BD%AE%E6%9F%B1%E7%8A%B6%E5%9B%BE%E6%8A%98%E7%BA%BF%E5%9B%BE%E6%95%A3%E7%82%B9%E5%9B%BE">直角坐标系的常用配置（柱状图，折线图，散点图）</a></p>
-<ul>
-<li><a href="#%E7%BD%91%E6%A0%BCgrid">网格grid</a></li>
-<li><a href="#%E5%9D%90%E6%A0%87%E8%BD%B4axis">坐标轴axis</a></li>
-<li><a href="#%E5%8C%BA%E5%9F%9F%E7%BC%A9%E6%94%BEdatazoom">区域缩放dataZoom</a></li>
-</ul>
-</li>
-<li><p><a href="#%E9%A5%BC%E5%9B%BE">饼图</a></p>
-</li>
-<li><p><a href="#%E5%9C%B0%E5%9B%BE">地图</a></p>
-</li>
-<li><p><a href="#%E9%9B%B7%E8%BE%BE%E5%9B%BE">雷达图</a></p>
-</li>
-<li><p><a href="#%E4%BB%AA%E8%A1%A8%E7%9B%98">仪表盘</a></p>
-</li>
-</ul>
-</li>
-<li><p><a href="#%E8%BF%9B%E9%98%B6">进阶</a></p>
-<ul>
-<li><p><a href="#%E4%B8%BB%E9%A2%98">主题</a></p>
-<ul>
-<li><a href="#%E5%86%85%E7%BD%AE%E4%B8%BB%E9%A2%98">内置主题</a></li>
-<li><a href="#%E8%87%AA%E5%AE%9A%E4%B9%89%E4%B8%BB%E9%A2%98">自定义主题</a></li>
-</ul>
-</li>
-<li><p><a href="#%E8%B0%83%E8%89%B2%E7%9B%98">调色盘</a></p>
-</li>
-<li><p><a href="#%E9%A2%9C%E8%89%B2%E6%B8%90%E5%8F%98">颜色渐变</a></p>
-</li>
-<li><p><a href="#%E6%A0%B7%E5%BC%8F">样式</a></p>
-</li>
-<li><p><a href="#%E8%87%AA%E9%80%82%E5%BA%94">自适应</a></p>
-</li>
-<li><p><a href="#%E5%8A%A8%E7%94%BB">动画</a></p>
-<ul>
-<li><a href="#%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB">加载动画</a></li>
-<li><a href="#%E5%A2%9E%E9%87%8F%E5%8A%A8%E7%94%BB">增量动画</a></li>
-<li><a href="#%E5%8A%A8%E7%94%BB%E9%85%8D%E7%BD%AE">动画配置</a></li>
-</ul>
-</li>
-<li><p><a href="#%E4%BA%A4%E4%BA%92api">交互API</a></p>
-<ul>
-<li><a href="#%E5%85%A8%E5%B1%80echarts%E5%AF%B9%E8%B1%A1">全局echarts对象</a></li>
-<li><a href="#echartsinstance%E5%AF%B9%E8%B1%A1">echartsInstance对象</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -943,9 +655,351 @@
       </tags>
   </entry>
   <entry>
+    <title>MongoDb学习笔记</title>
+    <url>/2022/06/24/MongoDb%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="MongoDb学习笔记"><a href="#MongoDb学习笔记" class="headerlink" title="MongoDb学习笔记"></a>MongoDb学习笔记</h1><blockquote>
+<p>MongoDB 是由C++语言编写的，是一个基于分布式文件存储的开源数据库系统。在高负载的情况下，添加更多的节点，可以保证服务器性能。MongoDB 旨在为WEB应用提供可扩展的高性能数据存储解决方案。MongoDB 将数据存储为一个文档，数据结构由键值(key&#x3D;&gt;value)对组成。MongoDB 文档类似于 JSON 对象。字段值可以包含其他文档，数组及文档数组。</p>
+</blockquote>
+<p><a href="https://_www.runoob.com_python3_python-mongodb/">https://www.runoob.com/python3/python-mongodb.html</a></p>
+<h3 id="1-下载安装"><a href="#1-下载安装" class="headerlink" title="1.下载安装"></a>1.下载安装</h3><blockquote>
+<p>Windows直接去官网点击下载。或者<a href="https://www.aliyundrive.com/s/kFuxf1rvHhU">下载我分享的安装包</a></p>
+</blockquote>
+<p><a href="https://www.mongodb.com/try/download/community">https://www.mongodb.com/try/download/community</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491587-b813f6c5-0cb1-4036-883a-3877f6e949fd.png#crop=0&crop=0&crop=1&crop=1&id=JWyf7&originHeight=861&originWidth=1836&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>双击安装包进行安装</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491709-c0bea4a8-1515-404e-a3d5-05671e156d5c.png#crop=0&crop=0&crop=1&crop=1&id=a0Ayy&originHeight=470&originWidth=607&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491798-4a4ddb3d-7f80-44b7-8685-4a7b3066f4a3.png#crop=0&crop=0&crop=1&crop=1&id=Rksi5&originHeight=364&originWidth=464&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491882-7d811f3e-07c2-4947-95a3-43ef2ec35bf4.png#crop=0&crop=0&crop=1&crop=1&id=Cr9gk&originHeight=337&originWidth=462&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060491992-69a6e136-6933-4028-854f-dfcae1c6236d.png#crop=0&crop=0&crop=1&crop=1&id=Gju0W&originHeight=478&originWidth=624&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>为了方便启动，我们将bin目录放在系统环境变量中,这样无论在任何目录启动Bash或者cmd都可以直接使用mongo命令。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492206-5025d848-eb3a-4248-ba01-29f6c934c10d.png#crop=0&crop=0&crop=1&crop=1&id=IcJWP&originHeight=681&originWidth=1506&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>MongoDB 默认将<code>数据库文件存</code>储在安装路径下的<code>data目录</code>下，日志默认存放在<code>log</code>目录下。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492311-1d4ec5a7-0bea-4cd1-b812-fd35563511c2.png#crop=0&crop=0&crop=1&crop=1&id=Wgepc&originHeight=619&originWidth=856&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p><code>为了避免文件混乱。</code>我们一般在安装目录下新建一个<code>db目录</code>存放<code>数据库</code>，然后<code>修改配置文件</code>指向此路径。（不想改数据库目录的话这一步不做也行）</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492408-6c4e3acd-4b57-4184-a51e-39d7418943f8.png#crop=0&crop=0&crop=1&crop=1&id=IEbKF&originHeight=334&originWidth=1114&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492573-22a06d5e-2475-4fb6-b6ce-cf867df6a933.png#crop=0&crop=0&crop=1&crop=1&id=RNC1Q&originHeight=602&originWidth=1033&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>注意：我们安装的时候勾选了注册为服务，只有注册了服务才能用<code>net start mongodb</code>的方式启动，否则只能在命令行启动<code>mongod -dbpath &quot;D:\MongoDb\data\db&quot;</code>可以跟很多启动参数。安装时也可以不勾选，然后手动注册服务，命令如下所示。</p>
+<blockquote>
+<p>启动Mongodb服务（不区分大小写）。</p>
+</blockquote>
+<blockquote>
+<p>启动服务之后就能使用<code>mongo</code>命令进入数据库了，默认已经建了个表<code>test</code>。(我们上一步已经将bin目录添加到系统变量了，所以可以直接使用)</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492700-34506362-e11d-4f46-a338-6e9f8f969790.png#crop=0&crop=0&crop=1&crop=1&id=qgSnW&originHeight=952&originWidth=1332&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>如果我们希望操作起来更简单，就需要安装可视化界面。</p>
+</blockquote>
+<p><a href="https://www.mongodb.com/try/download/compass">https://www.mongodb.com/try/download/compass</a><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492796-566dde0c-bc4a-43cc-96e4-6ebdff5ef08b.png#crop=0&crop=0&crop=1&crop=1&id=JF0je&originHeight=820&originWidth=1865&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>下载后任意路径解压双击<code>MongoDBCompass</code>即可使用。当然也可以下载安装版本。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060492914-7121a3ab-c982-479a-b71e-05405f6708c3.png#crop=0&crop=0&crop=1&crop=1&id=TPAgG&originHeight=608&originWidth=1012&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p><code>net start mongodb</code>启动数据库后，点击<code>fill in connection</code>填写网址端口<code>connect</code>即可连接。</p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493000-785b6aeb-12d3-4019-a7ad-cebd9757b5f7.png#crop=0&crop=0&crop=1&crop=1&id=zuzkB&originHeight=174&originWidth=1556&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493092-7be4449e-81cd-4618-87e6-e171d3e7b613.png#crop=0&crop=0&crop=1&crop=1&id=okwLi&originHeight=761&originWidth=1577&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493185-fd9b6af2-2510-4c1e-ad3a-eea94dfc5080.png#crop=0&crop=0&crop=1&crop=1&id=yNs9D&originHeight=711&originWidth=1565&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<h3 id="2-概念、数据类型"><a href="#2-概念、数据类型" class="headerlink" title="2. 概念、数据类型"></a>2. 概念、数据类型</h3><p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060493308-2d626245-986d-4daf-ba63-cdc2ce169932.png#crop=0&crop=0&crop=1&crop=1&id=eYmPe&originHeight=238&originWidth=832&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<blockquote>
+<p>MongoDB支持以下数据类型:</p>
+</blockquote>
+<p>   String（字符串） <em>: mongodb中的字符串是UTF-8有效的。</em><br>Integer <em>（<strong>整数</strong> ）: 存储数值。整数可以是32位或64位，具体取决于您的服务器。</em><br>Boolean（布尔） _: 存储布尔(true&#x2F;false)值。  _<br>Double（双精度 _）: 存储浮点值。  _<br>Min&#x2F; Max keys（最小&#x2F;最大键 _）: 将值与最低和最高BSON元素进行比较。  _<br>Arrays（数组 _）: 将数组或列表或多个值存储到一个键中。  _<br>Timestamp（时间戳 _）: 存储时间戳。  _<br>Object <em>（<strong>对象</strong> ）: 嵌入式文档。  _<br>Null （空值） <em>: 存储Null值。</em><br>Symbol（符号 <em>）: 与字符串相同，用于具有特定符号类型的语言。</em><br>Date（日期 <em>）: 以UNIX时间格式存储当前日期或时间。</em><br>Object ID（对象ID <em>） : 存储文档ID。</em><br>Binary data（二进制数据 <em>）: 存储二进制数据。</em><br>Code（代码 <em>）: 将JavaScript代码存储到文档中。</em><br>Regular expression （_正则表达式</em> ）: 存储正则表达式</p>
+<blockquote>
+<p>注意点</p>
+</blockquote>
+<p>● 每个⽂档都有⼀个属性， 为_id， 保证每个⽂档的唯⼀性，mongodb默认使用_id作为主键,可以⾃⼰去设置_id插⼊⽂档，如果没有提供， 那么MongoDB为每个⽂档提供了⼀个独特的_id， 类型为objectID<br>● objectID是⼀个12字节的⼗六进制数,每个字节两位，一共是24 位的字符串： 前4个字节为当前时间戳 接下来3个字节的机器ID 接下来的2个字节中MongoDB的服务进程id 最后3个字节是简单的增量值</p>
+<h3 id="3-创建数据库"><a href="#3-创建数据库" class="headerlink" title="3. 创建数据库"></a>3. 创建数据库</h3><blockquote>
+<p><code>use DATABASE_NAME</code>如果数据库不存在，则创建数据库，否则切换到指定数据库。<code>db</code>指的是当前数据库。</p>
+</blockquote>
+<blockquote>
+<p><code>show dbs</code>查看所有数据库。（新创建的数据库只有插入一条记录后才会显示）</p>
+</blockquote>
+<h3 id="4-删除数据库"><a href="#4-删除数据库" class="headerlink" title="4. 删除数据库"></a>4. 删除数据库</h3><blockquote>
+<p><code>db.dropDatabase()</code>删除当前数据库，默认为 test，你可以使用 db 命令查看当前数据库名。</p>
+</blockquote>
+<h3 id="5-创建集合-表格"><a href="#5-创建集合-表格" class="headerlink" title="5. 创建集合(表格)"></a>5. 创建集合(表格)</h3><blockquote>
+<p><code>db.createCollection(name, options)</code>创建集合</p>
+</blockquote>
+<ul>
+<li>name: 要创建的集合名称。</li>
+</ul>
+<p>options: 可选参数, 指定有关内存大小及索引的选项。</p>
+<blockquote>
+<p>查看集合<code>show collections</code>或者<code>show tables</code></p>
+</blockquote>
+<blockquote>
+<p>需要注意的是mongodb会在插入数据的时候自动创建集合，集合的名称会和数据库的名称一样。</p>
+</blockquote>
+<h3 id="6-删除集合"><a href="#6-删除集合" class="headerlink" title="6. 删除集合"></a>6. 删除集合</h3><blockquote>
+<p><code>db.collection.drop()</code>成功删除选定集合，则 drop() 方法返回 true，否则返回 false。(collection代指要删除的集合名称 )</p>
+</blockquote>
+<h3 id="7-插入文档（数据）"><a href="#7-插入文档（数据）" class="headerlink" title="7. 插入文档（数据）"></a>7. 插入文档（数据）</h3><blockquote>
+<p>文档的数据结构和 JSON 基本一样。所有存储在集合中的数据都是 BSON 格式。BSON 是一种类似 JSON 的二进制形式的存储格式，是 Binary JSON 的简称。<strong>文档就是一条json数据，相当于sql中的一行数据。</strong><br><code>db.collectionName.insertOne()</code>插入一条数据(3.2版本以后)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.insertMany()</code>插入多条数据(3.2版本以后)</p>
+</blockquote>
+<p>参数说明：</p>
+<ul>
+<li>document：要写入的文档。</li>
+</ul>
+<p>writeConcern：写入策略，默认为 1，即要求确认写操作，0 是不要求。<br>ordered：指定是否按顺序写入，默认 true，按顺序写入。</p>
+<blockquote>
+<p><code>db.COLLECTION_NAME.insert(document)/db.COLLECTION_NAME.save(document)</code></p>
+</blockquote>
+<p>save()：如果 _id 主键存在则更新数据，如果不存在就插入数据。该方法新版本中已废弃，可以使用 <strong>db.collection.insertOne()</strong> 或 <strong>db.collection.replaceOne()</strong> 来代替。</p>
+<ul>
+<li>insert(): 若插入的数据主键已经存在，则会抛 org.springframework.dao.DuplicateKeyException 异常，提示主键重复，不保存当前数据。<h3 id="8-更新文档"><a href="#8-更新文档" class="headerlink" title="8. 更新文档"></a>8. 更新文档</h3><blockquote>
+<p><code>db.collectionName.updateOne()</code> 向指定集合更新单条文档（3.2版本以后）</p>
+</blockquote>
+</li>
+</ul>
+<blockquote>
+<p><code>db.collection.updateMany()</code> 向指定集合更新多条文档(3.2版本以后）</p>
+</blockquote>
+<blockquote>
+<p><strong>update()</strong> 方法。低版本中 <code>用于更新已存在的文档。</code></p>
+</blockquote>
+<p><strong>参数说明：</strong><br>   query : update的查询条件，类似sql update查询内where后面的。<br>update : update的对象和一些更新的操作符（如inc…）等，也可以理解为sql update查询内set后面的<br>upsert : 可选，这个参数的意思是，如果不存在update的记录，是否插入objNew,true为插入，默认是false，不插入。<br>multi : 可选，mongodb 默认是false,只更新找到的第一条记录，如果这个参数为true,就把按条件查出来多条记录全部更新。<br>writeConcern :可选，抛出异常的级别。<br>实例:</p>
+<blockquote>
+<p><strong>save()</strong> 方法。低版本中 <code>通过传入的文档来替换已有文档，_id 主键存在就更新，不存在就插入。</code></p>
+</blockquote>
+<blockquote>
+<p>异常说明</p>
+</blockquote>
+<ul>
+<li>WriteConcern.NONE:没有异常抛出</li>
+</ul>
+<p>WriteConcern.NORMAL:仅抛出网络错误异常，没有服务器错误异常<br>WriteConcern.SAFE:抛出网络错误异常、服务器错误异常；并等待服务器完成写操作。<br>WriteConcern.MAJORITY: 抛出网络错误异常、服务器错误异常；并等待一个主服务器完成写操作。<br>WriteConcern.FSYNC_SAFE: 抛出网络错误异常、服务器错误异常；写操作等待服务器将数据刷新到磁盘。</p>
+<ul>
+<li>WriteConcern.JOURNAL_SAFE:抛出网络错误异常、服务器错误异常；写操作等待服务器提交到磁盘的日志文件。</li>
+<li>WriteConcern.REPLICAS_SAFE:抛出网络错误异常、服务器错误异常；等待至少2台服务器完成写操作。<blockquote>
+<p>移除集合中的键值对，使用的 <code>$unset</code>操作符。如果指定的字段不存在则操作不做任何处理。</p>
+</blockquote>
+</li>
+</ul>
+<h3 id="9-删除文档"><a href="#9-删除文档" class="headerlink" title="9.删除文档"></a>9.删除文档</h3><blockquote>
+<p><code>db.collectionName.deleteOne(&lt;query&gt;)</code>删除单条数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.deleteMany(&lt;query&gt;)</code>删除符合条件的所有数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>db.collectionName.deleteMany(&#123;&#125;)</code>删除整个表立面的所有数据 (高版本官方推荐)</p>
+</blockquote>
+<blockquote>
+<p><code>remove()</code> 函数是低版本用来移除集合中的数据。在执行 remove() 函数前先执行 <code>find()</code>命令来判断执行的条件是否正确，是一个比较好的习惯。</p>
+</blockquote>
+<p>基本语法如下：<br><strong>2.6 版本以后的语法格式如下:</strong><br><strong>参数说明：</strong><br>   query :（可选）删除的文档的条件。<br>justOne : （可选）如果设为 true 或 1，则只删除一个文档，如果不设置该参数，或使用默认值 false，则删除所有匹配条件的文档。<br>writeConcern :（可选）抛出异常的级别。</p>
+<h3 id="10-查询文档"><a href="#10-查询文档" class="headerlink" title="10. 查询文档"></a>10. 查询文档</h3><blockquote>
+<p><code>db.collection.find(query, projection)</code>查询数据</p>
+</blockquote>
+<p>query ：可选，使用查询操作符指定查询条件<br>projection ：可选。若不指定 projection，则默认返回所有字段</p>
+<blockquote>
+<p><code>projection</code>的用法。</p>
+</blockquote>
+<blockquote>
+<p><code>db.col.find().pretty()</code> pretty()以格式化的方式来显示文档。</p>
+</blockquote>
+<blockquote>
+<p><code>findOne</code>与<code>find</code>语法一致，但是它只返回一条数据</p>
+</blockquote>
+<blockquote>
+<p>MongoDB 的 find() 方法可以传入多个键(key)，每个键(key)以逗号隔开，即常规 SQL 的 AND 条件。</p>
+</blockquote>
+<p>以下实例通过 by 和 title 键来查询教程 中 MongoDB 教程 的数据</p>
+<blockquote>
+<p>MongoDB OR 条件语句使用了关键字 $or ,语法格式如下：</p>
+</blockquote>
+<p>以下实例中，我们演示了查询键 by 值为 教程 或键 title 值为 MongoDB 教程 的文档。</p>
+<blockquote>
+<p>AND 和 OR 联合使用</p>
+</blockquote>
+<h3 id="11-条件操作符"><a href="#11-条件操作符" class="headerlink" title="11. 条件操作符"></a>11. 条件操作符</h3><blockquote>
+<p>MongoDB 与 RDBMS Where 语句比较</p>
+</blockquote>
+<blockquote>
+<p> 模糊查询</p>
+</blockquote>
+<h3 id="12-type-操作符"><a href="#12-type-操作符" class="headerlink" title="12. $type 操作符"></a>12. $type 操作符</h3><blockquote>
+<p><code>$type</code>操作符是基于BSON类型来检索集合中匹配的数据类型，并返回结果</p>
+</blockquote>
+<blockquote>
+<p>如果想获取 “col” 集合中 title 为 String 的数据，你可以使用以下命令：</p>
+</blockquote>
+<h3 id="13-Limit与Skip方法"><a href="#13-Limit与Skip方法" class="headerlink" title="13. Limit与Skip方法"></a>13. Limit与Skip方法</h3><blockquote>
+<p><code>limit(n)</code>是用来规定显示的条数。</p>
+</blockquote>
+<blockquote>
+<p><code>skip(n)</code>是用来在符合条件的记录中从第一个记录跳过的条数</p>
+</blockquote>
+<blockquote>
+<p>两者一般结合使用。以下实例在集合中跳过前面 10 条返回 100 条数据。</p>
+</blockquote>
+<h3 id="14-排序sort"><a href="#14-排序sort" class="headerlink" title="14. 排序sort"></a>14. 排序sort</h3><blockquote>
+<p>skip(), limilt(), sort()三个放在一起执行的时候，执行的顺序是先 sort(), 然后是 skip()，最后是显示的 limit()。<br><code>sort()</code>方法对数据进行排序，sort() 方法可以通过参数指定排序的字段，并使用 1 和 -1 来指定排序的方式，其中<code>1 为升序排列</code>，而 <code>-1 是用于降序排列</code>。<code>db.COLLECTION_NAME.find().sort(&#123;KEY:1&#125;)</code></p>
+</blockquote>
+<h3 id="15-索引index"><a href="#15-索引index" class="headerlink" title="15. 索引index"></a>15. 索引index</h3><blockquote>
+<p>索引通常能够极大的提高查询的效率，如果没有索引，MongoDB在读取数据时必须扫描集合中的每个文件并选取那些符合查询条件的记录。这种扫描全集合的查询效率是非常低的，特别在处理大量的数据时，查询可以要花费几十秒甚至几分钟，这对网站的性能是非常致命的。索引是特殊的数据结构，索引存储在一个易于遍历读取的数据集合中，索引是对数据库表中一列或多列的值进行排序的一种结构。<br><code>db.collection.createIndex(keys, options)</code>创建索引</p>
+</blockquote>
+<p>语法中 Key 值为你要创建的索引字段，1 为指定按升序创建索引，如果你想按降序来创建索引指定为 -1 即可。</p>
+<blockquote>
+<p><code>createIndex()</code> 方法中你也可以设置使用<code>多个字段创建索引</code>（关系型数据库中称作<code>复合索引</code>）。</p>
+</blockquote>
+<blockquote>
+<p>查看索引合集</p>
+</blockquote>
+<blockquote>
+<p>查看集合索引的大小</p>
+</blockquote>
+<blockquote>
+<p>删除集合所有索引</p>
+</blockquote>
+<blockquote>
+<p>删除集合指定索引</p>
+</blockquote>
+<h3 id="16-数据导入导出"><a href="#16-数据导入导出" class="headerlink" title="16. 数据导入导出"></a>16. 数据导入导出</h3><blockquote>
+<p>此命令需要安装<code>database tool</code>工具。安装完成后加入系统环境变量path。</p>
+</blockquote>
+<p><a href="https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools">https://www.mongodb.com/try/download/database-tools?tck=docs_databasetools</a><br><code>数据导出：mongoexport</code></p>
+<blockquote>
+<p><code>Mongdb</code>中的<code>mongoexport</code>工具可以将<code>collection</code>导出成<code>JSON格式</code>或者<code>CSV格式</code>的文件。可以通过参数指定导出的数据项，也可以根据指定的条件导出数据。</p>
+</blockquote>
+<p><code>数据导入：mongoimport</code><br>注意：如果excel里面有中文、特殊符号，会抛出以下异常：exception:Invalid UTF8 character detected<br>此时，执行mongoimport命令前，您需要先将该csv文件编码转为 utf-8。<br><code>数据备份(导出所有数据)</code><br><code>数据恢复</code><br>注意：恢复的时候可以加–drop 覆盖原来的数据库（慎用），最好提前备份好当前数据库；同时要更改数据库名，不然恢复会失败。</p>
+<h3 id="17-composer导入数据"><a href="#17-composer导入数据" class="headerlink" title="17. composer导入数据"></a>17. composer导入数据</h3><blockquote>
+<p>在<code>collection</code>那里导入数据</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>数据库</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>MongoDb</tag>
+        <tag>sql</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>WebSocket基本使用</title>
+    <url>/2022/06/24/WebSocket%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="websocket基本使用"><a href="#websocket基本使用" class="headerlink" title="websocket基本使用"></a>websocket基本使用</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><hr>
+<blockquote>
+<p>HTTP 协议有一个缺陷：通信只能由客户端发起。举例来说，我们想了解今天的天气，只能是客户端向服务器发出请求，服务器返回查询结果。HTTP 协议做不到服务器主动向客户端推送信息。</p>
+</blockquote>
+<p>早期，很多网站为了实现推送技术，所用的技术都是轮询（也叫短轮询）。轮询是指由浏览器每隔一段时间向服务器发出 HTTP 请求，然后服务器返回最新的数据给客户端。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519580-0346483d-b96b-49c7-84ac-6308c9d222c6.png#crop=0&crop=0&crop=1&crop=1&id=Ooh9L&originHeight=425&originWidth=913&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519720-ab191b32-57a7-4304-a833-01b36ff24cc7.png#crop=0&crop=0&crop=1&crop=1&id=JbfwO&originHeight=239&originWidth=847&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>这种传统的模式带来很明显的缺点，即浏览器需要不断的向服务器发出请求，然而 HTTP 请求与响应可能会包含较长的头部，其中真正有效的数据可能只是很小的一部分，所以这样会消耗很多带宽资源。</p>
+<h3 id="websocket简介"><a href="#websocket简介" class="headerlink" title="websocket简介"></a>websocket简介</h3><blockquote>
+<p>WebSocket 是一种网络传输协议，可在单个 TCP 连接上进行全双工通信，位于 OSI 模型的应用层,它使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。在 WebSocket API 中，<strong>浏览器和服务器只需要完成一次握手，两者之间就可以创建持久性的连接，并进行双向数据传输。</strong></p>
+</blockquote>
+<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519834-eab3354d-d019-43ea-a2a8-82239786640f.png#crop=0&crop=0&crop=1&crop=1&id=rWW5K&originHeight=444&originWidth=834&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
+<ul>
+<li>建立在 TCP 协议之上，服务器端的实现比较容易。</li>
+</ul>
+<p>与 HTTP 协议有着良好的兼容性。默认端口也是80和443 <em>，并且握手阶段采用 HTTP 协议，因此握手时不容易屏蔽，能通过各种 HTTP 代理服务器。</em><br>数据格式比较轻量，性能开销小，通信高效。<br>可以发送文本，也可以发送二进制数据 <em>。</em><br>没有同源限制，客户端可以与任意服务器通信。<br>协议标识符是 <em>（如果加密，则为</em> <em>），服务器网址就是 URL。</em></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">ws</span>:<span class="comment">//example.com:80/some/path</span></span><br></pre></td></tr></table></figure>
+<p>![](image&#x2F;image _-xV1C1x15i.png)</p>
+<h3 id="简单实现"><a href="#简单实现" class="headerlink" title="简单实现"></a>简单实现</h3><hr>
+<h4 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h4><blockquote>
+<p>服务端需要安装websocket模块。已koa服务器为例<code>npm install ws --save</code></p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> fileUtils = <span class="built_in">require</span>(<span class="string">&#x27;../utils/file_utils&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocket</span> = <span class="built_in">require</span>(<span class="string">&#x27;ws&#x27;</span>)</span><br><span class="line"><span class="comment">// 创建WebSocket服务端的对象, 绑定的端口号是9998</span></span><br><span class="line"><span class="keyword">const</span> wss = <span class="keyword">new</span> <span class="title class_">WebSocket</span>.<span class="title class_">Server</span>(&#123;</span><br><span class="line">  <span class="attr">port</span>: <span class="number">9998</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 服务端开启了监听</span></span><br><span class="line"><span class="comment">// 对客户端的连接事件进行监听</span></span><br><span class="line"><span class="comment">// client:代表的是客户端的连接socket对象</span></span><br><span class="line">wss.<span class="title function_">on</span>(<span class="string">&#x27;connection&#x27;</span>, <span class="function"><span class="params">client</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;有客户端连接成功了...&#x27;</span>)</span><br><span class="line">  <span class="comment">// 对客户端的连接对象进行message事件的监听</span></span><br><span class="line">  <span class="comment">// msg: 由客户端发给服务端的数据</span></span><br><span class="line">  client.<span class="title function_">on</span>(<span class="string">&#x27;message&#x27;</span>, <span class="keyword">async</span> msg =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;客户端发送数据给服务端了: &#x27;</span> + msg)</span><br><span class="line">    <span class="keyword">let</span> payload = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(msg)</span><br><span class="line">    <span class="keyword">const</span> action = payload.<span class="property">action</span></span><br><span class="line">    <span class="keyword">if</span> (action === <span class="string">&#x27;getData&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> filePath = <span class="string">&#x27;../data/&#x27;</span> + payload.<span class="property">chartName</span> + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">      <span class="comment">// payload.chartName // trend seller map rank hot stock</span></span><br><span class="line">      filePath = path.<span class="title function_">join</span>(__dirname, filePath)</span><br><span class="line">      <span class="keyword">const</span> ret = <span class="keyword">await</span> fileUtils.<span class="title function_">getFileJsonData</span>(filePath)</span><br><span class="line">      <span class="comment">// 需要在服务端获取到数据的基础之上, 增加一个data的字段</span></span><br><span class="line">      <span class="comment">// data所对应的值,就是某个json文件的内容</span></span><br><span class="line">      payload.<span class="property">data</span> = ret</span><br><span class="line">      client.<span class="title function_">send</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(payload))</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 原封不动的将所接收到的数据转发给每一个处于连接状态的客户端</span></span><br><span class="line">      <span class="comment">// wss.clients // 所有客户端的连接</span></span><br><span class="line">      wss.<span class="property">clients</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">client</span> =&gt;</span> &#123;</span><br><span class="line">        client.<span class="title function_">send</span>(msg)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 由服务端往客户端发送数据</span></span><br><span class="line">    <span class="comment">// client.send(&#x27;hello socket from backend&#x27;)</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<h4 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h4><blockquote>
+<p>客户端运行在浏览器，本身已经存在websocket对象可以直接使用。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;button id=&quot;connect&quot;&gt;连接&lt;/button&gt;</span><br><span class="line">  &lt;button id=&quot;send&quot; disabled=&quot;true&quot;&gt;发送数据&lt;/button&gt; &lt;br&gt;</span><br><span class="line">  从服务端接收的数据如下: &lt;br&gt;</span><br><span class="line">  &lt;span id=&quot;recv&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var connect = document.querySelector(&#x27;#connect&#x27;)</span><br><span class="line">    var send = document.querySelector(&#x27;#send&#x27;)</span><br><span class="line">    var recv = document.querySelector(&#x27;#recv&#x27;)</span><br><span class="line">    let ws = null</span><br><span class="line">    connect.onclick = function()&#123;</span><br><span class="line">      ws = new WebSocket(&#x27;ws://localhost:9998&#x27;)</span><br><span class="line">      ws.onopen = () =&gt; &#123;</span><br><span class="line">        console.log(&#x27;连接服务端成功了...&#x27;)</span><br><span class="line">        send.disabled = false</span><br><span class="line">      &#125;</span><br><span class="line">      ws.onclose = () =&gt; &#123;</span><br><span class="line">        console.log(&#x27;连接服务器失败/关闭&#x27;)</span><br><span class="line">        send.disabled = true</span><br><span class="line">      &#125;</span><br><span class="line">      ws.onmessage = msg =&gt; &#123;</span><br><span class="line">        console.log(&#x27;接收到从服务端发送过来的数据了&#x27;)</span><br><span class="line">        console.log(msg)</span><br><span class="line">        recv.innerHTML = msg.data</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    send.onclick = function()&#123;</span><br><span class="line">      ws.send(JSON.stringify(&#123;</span><br><span class="line">        action: &#x27;themeChange&#x27;,</span><br><span class="line">        socketType: &#x27;themeChange&#x27;,</span><br><span class="line">        chartName: &#x27;&#x27;,</span><br><span class="line">        value: &#x27;chalk&#x27;</span><br><span class="line">      &#125;))</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="websocket常用方法"><a href="#websocket常用方法" class="headerlink" title="websocket常用方法"></a>websocket常用方法</h3><hr>
+<blockquote>
+<p>WebSocket 协议本质上是一个基于 TCP 的协议。为了建立一个 WebSocket 连接，客户端浏览器首先要向服务器发起一个 HTTP 请求，这个请求和通常的 HTTP 请求不同，包含了一些附加头信息，其中附加头信息”Upgrade: WebSocket”表明这是一个申请协议升级的 HTTP 请求，服务器端解析这些附加的头信息然后产生应答信息返回给客户端，客户端和服务器端的 WebSocket 连接就建立起来了，双方就可以通过这个连接通道自由的传递信息，并且这个连接会持续存在直到客户端或者服务器端的某一方主动的关闭连接。</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">Socket</span> = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(url, [protocol] );</span><br></pre></td></tr></table></figure>
+<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><blockquote>
+<p>socket指的是websocket实例，例如上面例子的<code>wss、ws</code></p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th>属性</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Socket.readyState</td>
+<td>只读属性 readyState 表示连接状态，可以是以下值： 0 - 表示连接尚未建立。  1 - 表示连接已建立，可以进行通信。  2 - 表示连接正在进行关闭。  3 - 表示连接已经关闭或者连接不能打开。</td>
+</tr>
+<tr>
+<td>Socket.bufferedAmount</td>
+<td>只读属性 bufferedAmount 已被 send() 放入正在队列中等待传输，但是还没有发出的 UTF-8 文本字节数。</td>
+</tr>
+</tbody></table>
+<p><code>示例</code></p>
+<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (ws.<span class="property">readyState</span>) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CONNECTING</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">OPEN</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CLOSING</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CLOSED</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="attr">default</span>:</span><br><span class="line">    <span class="comment">// this never happens</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><table>
+<thead>
+<tr>
+<th>事件</th>
+<th>事件处理程序</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>open</td>
+<td>Socket.onopen</td>
+<td>连接建立时触发</td>
+</tr>
+<tr>
+<td>message</td>
+<td>Socket.onmessage</td>
+<td>客户端接收服务端数据时触发</td>
+</tr>
+<tr>
+<td>error</td>
+<td>Socket.onerror</td>
+<td>通信发生错误时触发</td>
+</tr>
+<tr>
+<td>close</td>
+<td>Socket.onclose</td>
+<td>连接关闭时触发</td>
+</tr>
+</tbody></table>
+<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><table>
+<thead>
+<tr>
+<th>方法</th>
+<th>描述</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>Socket.send()</td>
+<td>使用连接发送数据</td>
+</tr>
+<tr>
+<td>Socket.close()</td>
+<td>关闭连接</td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>http</tag>
+        <tag>websocket</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Mysql基础使用</title>
     <url>/2022/06/24/Mysql%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="MySql基础操作"><a href="#MySql基础操作" class="headerlink" title="MySql基础操作"></a>MySql基础操作</h1><hr>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="MySql基础操作"><a href="#MySql基础操作" class="headerlink" title="MySql基础操作"></a>MySql基础操作</h1><hr>
 <h3 id="下载安装"><a href="#下载安装" class="headerlink" title="下载安装"></a>下载安装</h3><p><a href="https://blog.csdn.net/lingyiwin/article/details/81839435">https://blog.csdn.net/lingyiwin/article/details/81839435</a></p>
 <p><a href="https://www.runoob.com/mysql/mysql-install.html">https://www.runoob.com/mysql/mysql-install.html</a></p>
 <h3 id="1-create-database创建数据库"><a href="#1-create-database创建数据库" class="headerlink" title="1.create database创建数据库"></a>1.create database创建数据库</h3><figure class="highlight sql"><table><tr><td class="code"><pre><span class="line"><span class="keyword">create</span> dtabase test;</span><br></pre></td></tr></table></figure>
@@ -1101,118 +1155,11 @@
       </tags>
   </entry>
   <entry>
-    <title>WebSocket基本使用</title>
-    <url>/2022/06/24/WebSocket%E5%9F%BA%E6%9C%AC%E4%BD%BF%E7%94%A8/</url>
-    <content><![CDATA[<h1 id="websocket基本使用"><a href="#websocket基本使用" class="headerlink" title="websocket基本使用"></a>websocket基本使用</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><hr>
-<blockquote>
-<p>HTTP 协议有一个缺陷：通信只能由客户端发起。举例来说，我们想了解今天的天气，只能是客户端向服务器发出请求，服务器返回查询结果。HTTP 协议做不到服务器主动向客户端推送信息。</p>
-</blockquote>
-<p>早期，很多网站为了实现推送技术，所用的技术都是轮询（也叫短轮询）。轮询是指由浏览器每隔一段时间向服务器发出 HTTP 请求，然后服务器返回最新的数据给客户端。<br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519580-0346483d-b96b-49c7-84ac-6308c9d222c6.png#crop=0&crop=0&crop=1&crop=1&id=Ooh9L&originHeight=425&originWidth=913&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519720-ab191b32-57a7-4304-a833-01b36ff24cc7.png#crop=0&crop=0&crop=1&crop=1&id=JbfwO&originHeight=239&originWidth=847&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="><br>这种传统的模式带来很明显的缺点，即浏览器需要不断的向服务器发出请求，然而 HTTP 请求与响应可能会包含较长的头部，其中真正有效的数据可能只是很小的一部分，所以这样会消耗很多带宽资源。</p>
-<h3 id="websocket简介"><a href="#websocket简介" class="headerlink" title="websocket简介"></a>websocket简介</h3><blockquote>
-<p>WebSocket 是一种网络传输协议，可在单个 TCP 连接上进行全双工通信，位于 OSI 模型的应用层,它使得客户端和服务器之间的数据交换变得更加简单，允许服务端主动向客户端推送数据。在 WebSocket API 中，<strong>浏览器和服务器只需要完成一次握手，两者之间就可以创建持久性的连接，并进行双向数据传输。</strong></p>
-</blockquote>
-<p><img src="https://cdn.nlark.com/yuque/0/2022/png/12420419/1656060519834-eab3354d-d019-43ea-a2a8-82239786640f.png#crop=0&crop=0&crop=1&crop=1&id=rWW5K&originHeight=444&originWidth=834&originalType=binary&ratio=1&rotation=0&showTitle=false&status=done&style=none&title="></p>
-<ul>
-<li>建立在 TCP 协议之上，服务器端的实现比较容易。</li>
-</ul>
-<p>与 HTTP 协议有着良好的兼容性。默认端口也是80和443 <em>，并且握手阶段采用 HTTP 协议，因此握手时不容易屏蔽，能通过各种 HTTP 代理服务器。</em><br>数据格式比较轻量，性能开销小，通信高效。<br>可以发送文本，也可以发送二进制数据 <em>。</em><br>没有同源限制，客户端可以与任意服务器通信。<br>协议标识符是 <em>（如果加密，则为</em> <em>），服务器网址就是 URL。</em></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="attr">ws</span>:<span class="comment">//example.com:80/some/path</span></span><br></pre></td></tr></table></figure>
-<p>![](image&#x2F;image _-xV1C1x15i.png)</p>
-<h3 id="简单实现"><a href="#简单实现" class="headerlink" title="简单实现"></a>简单实现</h3><hr>
-<h4 id="服务端"><a href="#服务端" class="headerlink" title="服务端"></a>服务端</h4><blockquote>
-<p>服务端需要安装websocket模块。已koa服务器为例<code>npm install ws --save</code></p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">const</span> path = <span class="built_in">require</span>(<span class="string">&#x27;path&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> fileUtils = <span class="built_in">require</span>(<span class="string">&#x27;../utils/file_utils&#x27;</span>)</span><br><span class="line"><span class="keyword">const</span> <span class="title class_">WebSocket</span> = <span class="built_in">require</span>(<span class="string">&#x27;ws&#x27;</span>)</span><br><span class="line"><span class="comment">// 创建WebSocket服务端的对象, 绑定的端口号是9998</span></span><br><span class="line"><span class="keyword">const</span> wss = <span class="keyword">new</span> <span class="title class_">WebSocket</span>.<span class="title class_">Server</span>(&#123;</span><br><span class="line">  <span class="attr">port</span>: <span class="number">9998</span></span><br><span class="line">&#125;)</span><br><span class="line"><span class="comment">// 服务端开启了监听</span></span><br><span class="line"><span class="comment">// 对客户端的连接事件进行监听</span></span><br><span class="line"><span class="comment">// client:代表的是客户端的连接socket对象</span></span><br><span class="line">wss.<span class="title function_">on</span>(<span class="string">&#x27;connection&#x27;</span>, <span class="function"><span class="params">client</span> =&gt;</span> &#123;</span><br><span class="line">  <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;有客户端连接成功了...&#x27;</span>)</span><br><span class="line">  <span class="comment">// 对客户端的连接对象进行message事件的监听</span></span><br><span class="line">  <span class="comment">// msg: 由客户端发给服务端的数据</span></span><br><span class="line">  client.<span class="title function_">on</span>(<span class="string">&#x27;message&#x27;</span>, <span class="keyword">async</span> msg =&gt; &#123;</span><br><span class="line">    <span class="variable language_">console</span>.<span class="title function_">log</span>(<span class="string">&#x27;客户端发送数据给服务端了: &#x27;</span> + msg)</span><br><span class="line">    <span class="keyword">let</span> payload = <span class="title class_">JSON</span>.<span class="title function_">parse</span>(msg)</span><br><span class="line">    <span class="keyword">const</span> action = payload.<span class="property">action</span></span><br><span class="line">    <span class="keyword">if</span> (action === <span class="string">&#x27;getData&#x27;</span>) &#123;</span><br><span class="line">      <span class="keyword">let</span> filePath = <span class="string">&#x27;../data/&#x27;</span> + payload.<span class="property">chartName</span> + <span class="string">&#x27;.json&#x27;</span></span><br><span class="line">      <span class="comment">// payload.chartName // trend seller map rank hot stock</span></span><br><span class="line">      filePath = path.<span class="title function_">join</span>(__dirname, filePath)</span><br><span class="line">      <span class="keyword">const</span> ret = <span class="keyword">await</span> fileUtils.<span class="title function_">getFileJsonData</span>(filePath)</span><br><span class="line">      <span class="comment">// 需要在服务端获取到数据的基础之上, 增加一个data的字段</span></span><br><span class="line">      <span class="comment">// data所对应的值,就是某个json文件的内容</span></span><br><span class="line">      payload.<span class="property">data</span> = ret</span><br><span class="line">      client.<span class="title function_">send</span>(<span class="title class_">JSON</span>.<span class="title function_">stringify</span>(payload))</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">      <span class="comment">// 原封不动的将所接收到的数据转发给每一个处于连接状态的客户端</span></span><br><span class="line">      <span class="comment">// wss.clients // 所有客户端的连接</span></span><br><span class="line">      wss.<span class="property">clients</span>.<span class="title function_">forEach</span>(<span class="function"><span class="params">client</span> =&gt;</span> &#123;</span><br><span class="line">        client.<span class="title function_">send</span>(msg)</span><br><span class="line">      &#125;)</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">// 由服务端往客户端发送数据</span></span><br><span class="line">    <span class="comment">// client.send(&#x27;hello socket from backend&#x27;)</span></span><br><span class="line">  &#125;)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
-<h4 id="客户端"><a href="#客户端" class="headerlink" title="客户端"></a>客户端</h4><blockquote>
-<p>客户端运行在浏览器，本身已经存在websocket对象可以直接使用。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line">&lt;!<span class="variable constant_">DOCTYPE</span> html&gt;</span><br><span class="line">&lt;html lang=&quot;en&quot;&gt;</span><br><span class="line">&lt;head&gt;</span><br><span class="line">  &lt;meta charset=&quot;UTF-8&quot;&gt;</span><br><span class="line">  &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;</span><br><span class="line">  &lt;meta http-equiv=&quot;X-UA-Compatible&quot; content=&quot;ie=edge&quot;&gt;</span><br><span class="line">  &lt;title&gt;Document&lt;/title&gt;</span><br><span class="line">&lt;/head&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">  &lt;button id=&quot;connect&quot;&gt;连接&lt;/button&gt;</span><br><span class="line">  &lt;button id=&quot;send&quot; disabled=&quot;true&quot;&gt;发送数据&lt;/button&gt; &lt;br&gt;</span><br><span class="line">  从服务端接收的数据如下: &lt;br&gt;</span><br><span class="line">  &lt;span id=&quot;recv&quot;&gt;&lt;/span&gt;</span><br><span class="line">  &lt;script&gt;</span><br><span class="line">    var connect = document.querySelector(&#x27;#connect&#x27;)</span><br><span class="line">    var send = document.querySelector(&#x27;#send&#x27;)</span><br><span class="line">    var recv = document.querySelector(&#x27;#recv&#x27;)</span><br><span class="line">    let ws = null</span><br><span class="line">    connect.onclick = function()&#123;</span><br><span class="line">      ws = new WebSocket(&#x27;ws://localhost:9998&#x27;)</span><br><span class="line">      ws.onopen = () =&gt; &#123;</span><br><span class="line">        console.log(&#x27;连接服务端成功了...&#x27;)</span><br><span class="line">        send.disabled = false</span><br><span class="line">      &#125;</span><br><span class="line">      ws.onclose = () =&gt; &#123;</span><br><span class="line">        console.log(&#x27;连接服务器失败/关闭&#x27;)</span><br><span class="line">        send.disabled = true</span><br><span class="line">      &#125;</span><br><span class="line">      ws.onmessage = msg =&gt; &#123;</span><br><span class="line">        console.log(&#x27;接收到从服务端发送过来的数据了&#x27;)</span><br><span class="line">        console.log(msg)</span><br><span class="line">        recv.innerHTML = msg.data</span><br><span class="line">      &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    send.onclick = function()&#123;</span><br><span class="line">      ws.send(JSON.stringify(&#123;</span><br><span class="line">        action: &#x27;themeChange&#x27;,</span><br><span class="line">        socketType: &#x27;themeChange&#x27;,</span><br><span class="line">        chartName: &#x27;&#x27;,</span><br><span class="line">        value: &#x27;chalk&#x27;</span><br><span class="line">      &#125;))</span><br><span class="line">    &#125;</span><br><span class="line">  &lt;/script&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="websocket常用方法"><a href="#websocket常用方法" class="headerlink" title="websocket常用方法"></a>websocket常用方法</h3><hr>
-<blockquote>
-<p>WebSocket 协议本质上是一个基于 TCP 的协议。为了建立一个 WebSocket 连接，客户端浏览器首先要向服务器发起一个 HTTP 请求，这个请求和通常的 HTTP 请求不同，包含了一些附加头信息，其中附加头信息”Upgrade: WebSocket”表明这是一个申请协议升级的 HTTP 请求，服务器端解析这些附加的头信息然后产生应答信息返回给客户端，客户端和服务器端的 WebSocket 连接就建立起来了，双方就可以通过这个连接通道自由的传递信息，并且这个连接会持续存在直到客户端或者服务器端的某一方主动的关闭连接。</p>
-</blockquote>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">var</span> <span class="title class_">Socket</span> = <span class="keyword">new</span> <span class="title class_">WebSocket</span>(url, [protocol] );</span><br></pre></td></tr></table></figure>
-<h4 id="属性"><a href="#属性" class="headerlink" title="属性"></a>属性</h4><blockquote>
-<p>socket指的是websocket实例，例如上面例子的<code>wss、ws</code></p>
-</blockquote>
-<table>
-<thead>
-<tr>
-<th>属性</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Socket.readyState</td>
-<td>只读属性 readyState 表示连接状态，可以是以下值： 0 - 表示连接尚未建立。  1 - 表示连接已建立，可以进行通信。  2 - 表示连接正在进行关闭。  3 - 表示连接已经关闭或者连接不能打开。</td>
-</tr>
-<tr>
-<td>Socket.bufferedAmount</td>
-<td>只读属性 bufferedAmount 已被 send() 放入正在队列中等待传输，但是还没有发出的 UTF-8 文本字节数。</td>
-</tr>
-</tbody></table>
-<p><code>示例</code></p>
-<figure class="highlight javascript"><table><tr><td class="code"><pre><span class="line"><span class="keyword">switch</span> (ws.<span class="property">readyState</span>) &#123;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CONNECTING</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">OPEN</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CLOSING</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="keyword">case</span> <span class="title class_">WebSocket</span>.<span class="property">CLOSED</span>:</span><br><span class="line">    <span class="comment">// do something</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">  <span class="attr">default</span>:</span><br><span class="line">    <span class="comment">// this never happens</span></span><br><span class="line">    <span class="keyword">break</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="事件"><a href="#事件" class="headerlink" title="事件"></a>事件</h4><table>
-<thead>
-<tr>
-<th>事件</th>
-<th>事件处理程序</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>open</td>
-<td>Socket.onopen</td>
-<td>连接建立时触发</td>
-</tr>
-<tr>
-<td>message</td>
-<td>Socket.onmessage</td>
-<td>客户端接收服务端数据时触发</td>
-</tr>
-<tr>
-<td>error</td>
-<td>Socket.onerror</td>
-<td>通信发生错误时触发</td>
-</tr>
-<tr>
-<td>close</td>
-<td>Socket.onclose</td>
-<td>连接关闭时触发</td>
-</tr>
-</tbody></table>
-<h4 id="方法"><a href="#方法" class="headerlink" title="方法"></a>方法</h4><table>
-<thead>
-<tr>
-<th>方法</th>
-<th>描述</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>Socket.send()</td>
-<td>使用连接发送数据</td>
-</tr>
-<tr>
-<td>Socket.close()</td>
-<td>关闭连接</td>
-</tr>
-</tbody></table>
-]]></content>
-      <categories>
-        <category>前端</category>
-        <category>网络</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>http</tag>
-        <tag>websocket</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>hexo博客搭建</title>
     <url>/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
-    <content><![CDATA[<h1 id="Hexo博客搭建"><a href="#Hexo博客搭建" class="headerlink" title="Hexo博客搭建"></a>Hexo博客搭建</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="Hexo博客搭建"><a href="#Hexo博客搭建" class="headerlink" title="Hexo博客搭建"></a>Hexo博客搭建</h1><h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><blockquote>
 <p>Hexo 是一个快速、简洁且高效的博客框架。Hexo 使用 <a href="https://www.zybuluo.com/mdeditor">Markdown</a>（或其他渲染引擎）解析文章，在几秒内，即可利用靓丽的主题生成静态网页。</p>
 </blockquote>
 <p><code>优点</code></p>
@@ -1354,7 +1301,9 @@
   <entry>
     <title>hexo博客美化</title>
     <url>/2022/06/20/hexo%E5%8D%9A%E5%AE%A2%E7%BE%8E%E5%8C%96/</url>
-    <content><![CDATA[<h2 id="hexo博客美化"><a href="#hexo博客美化" class="headerlink" title="hexo博客美化"></a>hexo博客美化</h2><h3 id="修改基本信息"><a href="#修改基本信息" class="headerlink" title="修改基本信息"></a>修改基本信息</h3><blockquote>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h2 id="hexo博客美化"><a href="#hexo博客美化" class="headerlink" title="hexo博客美化"></a>hexo博客美化</h2><h3 id="修改基本信息"><a href="#修改基本信息" class="headerlink" title="修改基本信息"></a>修改基本信息</h3><blockquote>
 <p>打开博客目录下的<code>_config.yml</code>文件，修改网站的标题、标签等基本信息。</p>
 </blockquote>
 <table>
@@ -1506,27 +1455,11 @@
       </tags>
   </entry>
   <entry>
-    <title>Hexo基础命令</title>
-    <url>/2022/06/20/hexo%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
-    <content><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! 这个是第一篇文档. 查看<a href="https://hexo.io/docs/">documentation</a> 了解更多信息.</p>
-<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
-
-<p>了解更多: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
-
-<p>了解更多: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
-
-<p>了解更多: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
     <title>跨域请求</title>
     <url>/2022/06/24/%E8%B7%A8%E5%9F%9F%E8%AF%B7%E6%B1%82/</url>
-    <content><![CDATA[<h1 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h1><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><blockquote>
+    <content><![CDATA[<meta name="referrer" content="no-referrer">
+
+<h1 id="跨域请求"><a href="#跨域请求" class="headerlink" title="跨域请求"></a>跨域请求</h1><h4 id="概述"><a href="#概述" class="headerlink" title="概述"></a>概述</h4><blockquote>
 <p>在 HTML 中，<code>&lt;a&gt;</code>, <code>&lt;form&gt;</code>, <code>&lt;img&gt;</code>, <code>&lt;script&gt;</code>, <code>&lt;iframe&gt;</code>, <code>&lt;link&gt;</code> 等标签以及 Ajax 都可以指向一个资源地址，而所谓的<strong>跨域请求</strong>就是指：当前发起请求的域与该请求指向的资源所在的域不一样。<strong>这里的域指的是这样的一个概念：我们认为若协议 + 域名 + 端口号均相同，那么就是同域。</strong></p>
 </blockquote>
 <h4 id="跨域请求的安全问题"><a href="#跨域请求的安全问题" class="headerlink" title="跨域请求的安全问题"></a>跨域请求的安全问题</h4><blockquote>
@@ -1633,5 +1566,23 @@
         <tag>跨域请求</tag>
         <tag>cors</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>Hexo基础命令</title>
+    <url>/2022/06/20/hexo%E5%9F%BA%E7%A1%80%E5%91%BD%E4%BB%A4/</url>
+    <content><![CDATA[<p>欢迎使用 <a href="https://hexo.io/">Hexo</a>! 这个是第一篇文档. 查看<a href="https://hexo.io/docs/">documentation</a> 了解更多信息.</p>
+<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><h3 id="创建新文章"><a href="#创建新文章" class="headerlink" title="创建新文章"></a>创建新文章</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="本地预览"><a href="#本地预览" class="headerlink" title="本地预览"></a>本地预览</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo s</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="生成静态文件"><a href="#生成静态文件" class="headerlink" title="生成静态文件"></a>生成静态文件</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo g</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="推送到远程仓库"><a href="#推送到远程仓库" class="headerlink" title="推送到远程仓库"></a>推送到远程仓库</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo d</span><br></pre></td></tr></table></figure>
+
+<p>了解更多: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
   </entry>
 </search>
